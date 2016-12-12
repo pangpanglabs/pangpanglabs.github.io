@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PangPang Labs</title>
+    <link>http://pangpanglabs.github.io/index.xml</link>
+    <description>Recent content on PangPang Labs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://pangpanglabs.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Getting Started</title>
+      <link>http://pangpanglabs.github.io/getting-started/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pangpanglabs.github.io/getting-started/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iOS</title>
+      <link>http://pangpanglabs.github.io/getting-started/ios/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pangpanglabs.github.io/getting-started/ios/</guid>
+      <description>
+
+&lt;h3 id=&#34;swift&#34;&gt;Swift&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Import&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import Pos
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Init&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]
+P2PosInit(path)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Call API&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;let result = P2PosCall(&amp;quot;pp:///account/login?username=username&amp;amp;password=password&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;objective-c&#34;&gt;Objective-C&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Import&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#import &amp;lt;Pos/Pos.h&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Init&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;NSString* path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,
+                                                  NSUserDomainMask,
+                                                  YES) objectAtIndex:0];
+P2PosInit(path);
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Call API&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;NSString* result = P2PosCall(@&amp;quot;pp:///account/login?username=username&amp;amp;password=password&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;h3 id=&#34;setting&#34;&gt;Setting&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Drag and Drop &lt;code&gt;Pos.framework&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;in &lt;code&gt;Project&lt;/code&gt;-&amp;gt;&lt;code&gt;Target&lt;/code&gt;-&amp;gt;&lt;code&gt;Build Settings&lt;/code&gt;&lt;br /&gt;
+Search &lt;code&gt;Enable Bitcode&lt;/code&gt;&lt;br /&gt;
+set &lt;code&gt;NO&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>swagger</title>
+      <link>http://pangpanglabs.github.io/getting-started/swagger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pangpanglabs.github.io/getting-started/swagger/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://staging.p2shop.cn:52001/&#34;&gt;http://staging.p2shop.cn:52001/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
