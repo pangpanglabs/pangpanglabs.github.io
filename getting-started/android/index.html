@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>iOS</title>
+    <title>Android</title>
     <link href="/css/nucleus.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     
 
   </head>
-  <body class="" data-url="/getting-started/ios/">
+  <body class="" data-url="/getting-started/android/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -84,7 +84,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/getting-started/android/">
+            <li class="dd-item active" data-nav-id="/getting-started/android/">
               <a href="/getting-started/android/">
                 <span>Android     </i></span>
               </a>
@@ -92,7 +92,7 @@
           
           
           
-            <li class="dd-item active" data-nav-id="/getting-started/ios/">
+            <li class="dd-item " data-nav-id="/getting-started/ios/">
               <a href="/getting-started/ios/">
                 <span>iOS     </i></span>
               </a>
@@ -145,7 +145,7 @@
                     
                   
                 
-                <span itemprop="title"> iOS</span>
+                <span itemprop="title"> Android</span>
               </div>
               
 
@@ -153,61 +153,57 @@
             
     	        <div id="body-inner">
                 
-                <h1>iOS</h1>
+                <h1>Android</h1>
                 
 
 
 
-<h3 id="swift">Swift</h3>
-
 <ol>
+<li><p>Set Permission in <code>AndroidManifest.xml</code> file</p>
+
+<pre><code>&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
+</code></pre></li>
+
 <li><p>Import</p>
 
-<pre><code>import Pos
+<pre><code>import cn.p2shop.pos.Pos;
 </code></pre></li>
 
 <li><p>Init</p>
 
-<pre><code>let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]
-P2PosInit(path)
+<pre><code>String path;
+if (android.os.Build.VERSION.SDK_INT &gt;=android.os.Build.VERSION_CODES.LOLLIPOP){
+path = getNoBackupFilesDir().getAbsolutePath();
+} else{
+path = getFilesDir().getAbsolutePath();
+}
+Pos.init(path);
 </code></pre></li>
 
 <li><p>Call API</p>
 
-<pre><code>let result = P2PosCall(&quot;pp:///account/login?username=username&amp;password=password&quot;)
-</code></pre></li>
-</ol>
-
-<h3 id="objective-c">Objective-C</h3>
-
-<ol>
-<li><p>Import</p>
-
-<pre><code>#import &lt;Pos/Pos.h&gt;
-</code></pre></li>
-
-<li><p>Init</p>
-
-<pre><code>NSString* path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,
-                                                  NSUserDomainMask,
-                                                  YES) objectAtIndex:0];
-P2PosInit(path);
-</code></pre></li>
-
-<li><p>Call API</p>
-
-<pre><code>NSString* result = P2PosCall(@&quot;pp:///account/login?username=username&amp;password=password&quot;);
+<pre><code>String result = Pos.call(&quot;pp:///account/login?username=username&amp;password=password&quot;);
 </code></pre></li>
 </ol>
 
 <blockquote>
 <h3 id="setting">Setting</h3>
 
+<p>In Project Structure</p>
+
 <ol>
-<li>Drag and Drop <code>Pos.framework</code> file</li>
-<li>in <code>Project</code>-&gt;<code>Target</code>-&gt;<code>Build Settings</code><br />
-Search <code>Enable Bitcode</code><br />
-set <code>NO</code></li>
+<li>click <code>+</code></li>
+<li>select <code>import .JAR/.AAR Package</code></li>
+<li>click <code>Next</code></li>
+<li>select <code>pos.aar</code> file</li>
+<li>click <code>Finish</code></li>
+<li>click <code>OK</code> and re-open <code>Project Structure</code></li>
+<li>select <code>app</code> modules</li>
+<li>select <code>Dependencies</code> tab</li>
+<li>click <code>+</code> button</li>
+<li>select <code>3. Module Dependency</code></li>
+<li>select <code>possdk</code></li>
+<li>click <code>OK</code></li>
 </ol>
 </blockquote>
 

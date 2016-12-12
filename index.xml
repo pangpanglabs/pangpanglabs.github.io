@@ -18,6 +18,65 @@
     </item>
     
     <item>
+      <title>Android</title>
+      <link>http://pangpanglabs.github.io/getting-started/android/</link>
+      <pubDate>Mon, 12 Dec 2016 09:46:02 +0800</pubDate>
+      
+      <guid>http://pangpanglabs.github.io/getting-started/android/</guid>
+      <description>
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Set Permission in &lt;code&gt;AndroidManifest.xml&lt;/code&gt; file&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Import&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import cn.p2shop.pos.Pos;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Init&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;String path;
+if (android.os.Build.VERSION.SDK_INT &amp;gt;=android.os.Build.VERSION_CODES.LOLLIPOP){
+path = getNoBackupFilesDir().getAbsolutePath();
+} else{
+path = getFilesDir().getAbsolutePath();
+}
+Pos.init(path);
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Call API&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;String result = Pos.call(&amp;quot;pp:///account/login?username=username&amp;amp;password=password&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;h3 id=&#34;setting&#34;&gt;Setting&lt;/h3&gt;
+
+&lt;p&gt;In Project Structure&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;click &lt;code&gt;+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;select &lt;code&gt;import .JAR/.AAR Package&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;click &lt;code&gt;Next&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;select &lt;code&gt;pos.aar&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;click &lt;code&gt;Finish&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;click &lt;code&gt;OK&lt;/code&gt; and re-open &lt;code&gt;Project Structure&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;select &lt;code&gt;app&lt;/code&gt; modules&lt;/li&gt;
+&lt;li&gt;select &lt;code&gt;Dependencies&lt;/code&gt; tab&lt;/li&gt;
+&lt;li&gt;click &lt;code&gt;+&lt;/code&gt; button&lt;/li&gt;
+&lt;li&gt;select &lt;code&gt;3. Module Dependency&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;select &lt;code&gt;possdk&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;click &lt;code&gt;OK&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
       <title>iOS</title>
       <link>http://pangpanglabs.github.io/getting-started/ios/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
