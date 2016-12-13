@@ -9,7 +9,7 @@
     <atom:link href="http://pangpanglabs.github.io/getting-started/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Getting Started</title>
+      <title>1. Getting Started</title>
       <link>http://pangpanglabs.github.io/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -40,9 +40,9 @@
 
 &lt;pre&gt;&lt;code&gt;String path;
 if (android.os.Build.VERSION.SDK_INT &amp;gt;=android.os.Build.VERSION_CODES.LOLLIPOP){
-path = getNoBackupFilesDir().getAbsolutePath();
+    path = getNoBackupFilesDir().getAbsolutePath();
 } else{
-path = getFilesDir().getAbsolutePath();
+    path = getFilesDir().getAbsolutePath();
 }
 Pos.init(path);
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
@@ -56,7 +56,11 @@ Pos.init(path);
 &lt;blockquote&gt;
 &lt;h3 id=&#34;setting&#34;&gt;Setting&lt;/h3&gt;
 
-&lt;p&gt;In Project Structure&lt;/p&gt;
+&lt;h4 id=&#34;download-pos-aar-file&#34;&gt;Download &lt;code&gt;pos.aar&lt;/code&gt; file&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar&#34;&gt;http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;in-project-structure&#34;&gt;In Project Structure&lt;/h4&gt;
 
 &lt;ol&gt;
 &lt;li&gt;click &lt;code&gt;+&lt;/code&gt;&lt;/li&gt;
@@ -115,8 +119,8 @@ P2PosInit(path)
 &lt;li&gt;&lt;p&gt;Init&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;NSString* path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,
-                                                  NSUserDomainMask,
-                                                  YES) objectAtIndex:0];
+                                                      NSUserDomainMask,
+                                                      YES) objectAtIndex:0];
 P2PosInit(path);
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
@@ -130,6 +134,8 @@ P2PosInit(path);
 &lt;h3 id=&#34;setting&#34;&gt;Setting&lt;/h3&gt;
 
 &lt;ol&gt;
+&lt;li&gt;Download &lt;code&gt;Pos.framework.zip&lt;/code&gt; and extract.&lt;br /&gt;
+&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/Pos.framework.zip&#34;&gt;http://possdk.oss-cn-hangzhou.aliyuncs.com/Pos.framework.zip&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Drag and Drop &lt;code&gt;Pos.framework&lt;/code&gt; file&lt;/li&gt;
 &lt;li&gt;in &lt;code&gt;Project&lt;/code&gt;-&amp;gt;&lt;code&gt;Target&lt;/code&gt;-&amp;gt;&lt;code&gt;Build Settings&lt;/code&gt;&lt;br /&gt;
 Search &lt;code&gt;Enable Bitcode&lt;/code&gt;&lt;br /&gt;
