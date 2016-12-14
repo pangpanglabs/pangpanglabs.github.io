@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>swagger</title>
+    <title>Error Code Description</title>
     <link href="/css/nucleus.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     
 
   </head>
-  <body class="" data-url="/getting-started/swagger/">
+  <body class="" data-url="/api/error-code-description/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -79,7 +79,7 @@
       
       
 
-      <li class="dd-item  parent" data-nav-id="/getting-started/">
+      <li class="dd-item  " data-nav-id="/getting-started/">
         <a href="/getting-started/">
           <span>
             
@@ -111,7 +111,7 @@
           
           
           
-            <li class="dd-item active" data-nav-id="/getting-started/swagger/">
+            <li class="dd-item " data-nav-id="/getting-started/swagger/">
               <a href="/getting-started/swagger/">
                 <span>swagger     </i></span>
               </a>
@@ -131,7 +131,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/api/">
+      <li class="dd-item  parent" data-nav-id="/api/">
         <a href="/api/">
           <span>
             
@@ -147,7 +147,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/api/error-code-description/">
+            <li class="dd-item active" data-nav-id="/api/error-code-description/">
               <a href="/api/error-code-description/">
                 <span>Error Code Description     </i></span>
               </a>
@@ -182,30 +182,166 @@
                       </a>
                   </span>
                 
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
+                
                 
                 
                 
                   
-                
-                  
                     
                     
-                <a href="/getting-started/" itemprop="url"><span itemprop="title">Getting Started</span></a> <i class="fa fa-angle-right"></i>
+                <a href="/api/" itemprop="url"><span itemprop="title">API Description</span></a> <i class="fa fa-angle-right"></i>
                     
                   
                 
-                <span itemprop="title"> swagger</span>
+                  
+                
+                <span itemprop="title"> Error Code Description</span>
               </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#system">System</a></li>
+<li><a href="#account">Account</a></li>
+<li><a href="#catalog">Catalog</a></li>
+<li><a href="#cart">Cart</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
               
 
             </div>
             
     	        <div id="body-inner">
                 
-                <h1>swagger</h1>
+                <h1>Error Code Description</h1>
                 
 
-<p><a href="http://staging.p2shop.cn:52001/">http://staging.p2shop.cn:52001/</a></p>
+
+
+<h2 id="system">System</h2>
+
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>100</td>
+<td>Pos is not initialized.</td>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Service handler for <code>{path}</code> is not defined.</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Remote Call failed.</td>
+</tr>
+
+<tr>
+<td>103</td>
+<td>Database Repository is null. Please check the pos-init process.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="account">Account</h2>
+
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>200</td>
+<td>Authentication is success. But cannot save account to session storage.</td>
+</tr>
+
+<tr>
+<td>201</td>
+<td>Login Failed.</td>
+</tr>
+
+<tr>
+<td>202</td>
+<td>Cannot get current user from session storage.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="catalog">Catalog</h2>
+
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>300</td>
+<td>Cannot search products from catalog storage.</td>
+</tr>
+
+<tr>
+<td>301</td>
+<td>Cannot search contents from catalog storage.</td>
+</tr>
+
+<tr>
+<td>302</td>
+<td>Cannot find product.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="cart">Cart</h2>
+
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>400</td>
+<td>Cannot find current cart.</td>
+</tr>
+
+<tr>
+<td>401</td>
+<td>Cannot add item to current cart.</td>
+</tr>
+
+<tr>
+<td>402</td>
+<td>Cannot calculate current cart.</td>
+</tr>
+</tbody>
+</table>
 
 
       

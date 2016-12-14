@@ -6,6 +6,10 @@
   </url>
   
   <url>
+    <loc>http://pangpanglabs.github.io/api/</loc>
+  </url>
+  
+  <url>
     <loc>http://pangpanglabs.github.io/getting-started/</loc>
   </url>
   
@@ -20,6 +24,10 @@
   
   <url>
     <loc>http://pangpanglabs.github.io/getting-started/swagger/</loc>
+  </url>
+  
+  <url>
+    <loc>http://pangpanglabs.github.io/api/error-code-description/</loc>
   </url>
   
 </urlset>
