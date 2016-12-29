@@ -27,9 +27,116 @@
     </item>
     
     <item>
+      <title>Overview</title>
+      <link>http://pangpanglabs.github.io/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pangpanglabs.github.io/overview/</guid>
+      <description>
+
+&lt;h1 id=&#34;start-a-business-for-free&#34;&gt;Start A Business For Free&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Available on iOS and Android devices&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Cloud-based&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Work offline&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Products management&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Sales analytics&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Offering&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Loyalty program&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Reselling &amp;amp; Online delivery&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Android SDK&lt;br /&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  pos.aar
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;iOS SDK&lt;br /&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  Pos.framework.zip
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--### Inventory management
+
+- **Items import**  
+  Quickly add thousands of items using the CSV-spreadsheets.  
+  Or use your own ETL tool.
+- **Track Inventory**  
+  Track the stock of products and their components.
+- **Low stock notifications**  
+  Receive daily notifications about low stock to make the necessary item orders in time.
+
+### Employee management
+
+- **Sales by employees**  
+  Track each employee performance and take informed business decisions.
+- **Smart management**  
+  Information on the workload per hour allows for efficient managament of your staff.
+- **Access rights**  
+  Manage access to sensitive information and functions.
+
+### Sales analytics
+
+- **Sales trend**  
+  Track the sales growth or decline compared with the previous day, week, month and promptly react to changes.
+- **Popular items**  
+  Sales by item analytics allows the best-selling items to be determined and therefore the right purchasing decisions can be made.
+- **Shifts**  
+  Identify the cash lack at the end of the shift and track employees inaccuracy or manipulations.
+- **Receipts history**  
+  Receipts history review allows you to monitor each transaction: sales, refunds, discounts.
+- **Reports export**  
+  Export sales data to the spreadsheets for detailed analysis.
+
+---
+
+- Discounts  
+  Apply discounts to the receipt or specific items.
+- Refunds  
+  Refund the selected item or all items on the receipt.
+- Multi Store
+- Products management
+  - 
+- Customer management
+- Inventory management
+- Employee management
+- Sales analytics
+- Loyalty program
+- Customer communication--&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Android</title>
       <link>http://pangpanglabs.github.io/getting-started/android/</link>
-      <pubDate>Mon, 12 Dec 2016 09:46:02 +0800</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://pangpanglabs.github.io/getting-started/android/</guid>
       <description>
@@ -65,9 +172,18 @@ Pos.init(path);
 &lt;blockquote&gt;
 &lt;h3 id=&#34;setting&#34;&gt;Setting&lt;/h3&gt;
 
-&lt;h4 id=&#34;download-pos-aar-file&#34;&gt;Download &lt;code&gt;pos.aar&lt;/code&gt; file&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar&#34;&gt;http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;download-hahahugoshortcode-1hbhb&#34;&gt;Download &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  pos.aar
+  
+&lt;/a&gt;
+&lt;/h4&gt;
 
 &lt;h4 id=&#34;in-project-structure&#34;&gt;In Project Structure&lt;/h4&gt;
 
@@ -86,6 +202,88 @@ Pos.init(path);
 &lt;li&gt;click &lt;code&gt;OK&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Global Settings</title>
+      <link>http://pangpanglabs.github.io/api/global-settings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pangpanglabs.github.io/api/global-settings/</guid>
+      <description>
+
+&lt;h2 id=&#34;system&#34;&gt;System&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Default&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;System.AllowOffline&lt;/td&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;System.TraceInterval&lt;/td&gt;
+&lt;td&gt;integer&lt;/td&gt;
+&lt;td&gt;sending trace log to server interval(seconds)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;60&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;shoppingcart&#34;&gt;ShoppingCart&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Default&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ShoppingCart.Price.RoundPoint&lt;/td&gt;
+&lt;td&gt;integer&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;2&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ShoppingCart.Price.RoundStrategy&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;quot;floor&amp;quot;&lt;/code&gt;round down &lt;br /&gt; &lt;code&gt;&amp;quot;ceil&amp;quot;&lt;/code&gt;: round up &lt;br /&gt; &lt;code&gt;&amp;quot;round&amp;quot;&lt;/code&gt;: round to the nearest integer&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;quot;round&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ShoppingCart.Price.Culture&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;quot;USD&amp;quot;&lt;/code&gt;($), &lt;code&gt;&amp;quot;EUR&amp;quot;&lt;/code&gt;(€), &lt;code&gt;&amp;quot;CNY&amp;quot;&lt;/code&gt;(¥), &lt;code&gt;&amp;quot;KRW&amp;quot;&lt;/code&gt;(₩)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;quot;CNY&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ShoppingCart.Payment&lt;/td&gt;
+&lt;td&gt;string array&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;quot;alipay&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;wxpay&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;cash&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;[&amp;quot;alipay&amp;quot;, &amp;quot;wxpay&amp;quot;]&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     
@@ -143,8 +341,19 @@ P2PosInit(path);
 &lt;h3 id=&#34;setting&#34;&gt;Setting&lt;/h3&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Download &lt;code&gt;Pos.framework.zip&lt;/code&gt; and extract.&lt;br /&gt;
-&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/Pos.framework.zip&#34;&gt;http://possdk.oss-cn-hangzhou.aliyuncs.com/Pos.framework.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  Pos.framework.zip
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Extract.&lt;/li&gt;
 &lt;li&gt;Drag and Drop &lt;code&gt;Pos.framework&lt;/code&gt; file&lt;/li&gt;
 &lt;li&gt;in &lt;code&gt;Project&lt;/code&gt;-&amp;gt;&lt;code&gt;Target&lt;/code&gt;-&amp;gt;&lt;code&gt;Build Settings&lt;/code&gt;&lt;br /&gt;
 Search &lt;code&gt;Enable Bitcode&lt;/code&gt;&lt;br /&gt;

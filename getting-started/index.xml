@@ -20,7 +20,7 @@
     <item>
       <title>Android</title>
       <link>http://pangpanglabs.github.io/getting-started/android/</link>
-      <pubDate>Mon, 12 Dec 2016 09:46:02 +0800</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://pangpanglabs.github.io/getting-started/android/</guid>
       <description>
@@ -56,9 +56,18 @@ Pos.init(path);
 &lt;blockquote&gt;
 &lt;h3 id=&#34;setting&#34;&gt;Setting&lt;/h3&gt;
 
-&lt;h4 id=&#34;download-pos-aar-file&#34;&gt;Download &lt;code&gt;pos.aar&lt;/code&gt; file&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar&#34;&gt;http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;download-hahahugoshortcode-1hbhb&#34;&gt;Download &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  pos.aar
+  
+&lt;/a&gt;
+&lt;/h4&gt;
 
 &lt;h4 id=&#34;in-project-structure&#34;&gt;In Project Structure&lt;/h4&gt;
 
@@ -134,8 +143,19 @@ P2PosInit(path);
 &lt;h3 id=&#34;setting&#34;&gt;Setting&lt;/h3&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Download &lt;code&gt;Pos.framework.zip&lt;/code&gt; and extract.&lt;br /&gt;
-&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/Pos.framework.zip&#34;&gt;http://possdk.oss-cn-hangzhou.aliyuncs.com/Pos.framework.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  Pos.framework.zip
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Extract.&lt;/li&gt;
 &lt;li&gt;Drag and Drop &lt;code&gt;Pos.framework&lt;/code&gt; file&lt;/li&gt;
 &lt;li&gt;in &lt;code&gt;Project&lt;/code&gt;-&amp;gt;&lt;code&gt;Target&lt;/code&gt;-&amp;gt;&lt;code&gt;Build Settings&lt;/code&gt;&lt;br /&gt;
 Search &lt;code&gt;Enable Bitcode&lt;/code&gt;&lt;br /&gt;
