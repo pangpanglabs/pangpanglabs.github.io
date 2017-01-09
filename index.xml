@@ -150,27 +150,42 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;100&lt;/td&gt;
-&lt;td&gt;Pos is not initialized.&lt;/td&gt;
+&lt;td&gt;UknownError&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;101&lt;/td&gt;
-&lt;td&gt;Service handler for &lt;code&gt;{path}&lt;/code&gt; is not defined.&lt;/td&gt;
+&lt;td&gt;Pos is not initialized.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;102&lt;/td&gt;
-&lt;td&gt;Remote Call failed.&lt;/td&gt;
+&lt;td&gt;Service handler for &lt;code&gt;{path}&lt;/code&gt; is not defined.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;103&lt;/td&gt;
-&lt;td&gt;Database Repository is null. Please check the pos-init process.&lt;/td&gt;
+&lt;td&gt;Remote Call failed.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;104&lt;/td&gt;
+&lt;td&gt;Cannot access to database file. Please check the pos-init process.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;105&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;{name}&lt;/code&gt; is required parameter.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;106&lt;/td&gt;
+&lt;td&gt;Invalid parameter&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;account&#34;&gt;Account&lt;/h2&gt;
+&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -193,7 +208,17 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;tr&gt;
 &lt;td&gt;202&lt;/td&gt;
-&lt;td&gt;Cannot get current user from session storage.&lt;/td&gt;
+&lt;td&gt;Cannot get current user.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;203&lt;/td&gt;
+&lt;td&gt;Cannot get settings.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;204&lt;/td&gt;
+&lt;td&gt;Not authorized.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -211,12 +236,12 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;300&lt;/td&gt;
-&lt;td&gt;Cannot search products from catalog storage.&lt;/td&gt;
+&lt;td&gt;Cannot search products.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;301&lt;/td&gt;
-&lt;td&gt;Cannot search contents from catalog storage.&lt;/td&gt;
+&lt;td&gt;Cannot search contents.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -239,7 +264,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;400&lt;/td&gt;
-&lt;td&gt;Cannot find current cart.&lt;/td&gt;
+&lt;td&gt;Cannot find cart.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -249,7 +274,45 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;tr&gt;
 &lt;td&gt;402&lt;/td&gt;
+&lt;td&gt;Cannot remove item from current cart.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;403&lt;/td&gt;
 &lt;td&gt;Cannot calculate current cart.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;Cannot create cart.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;405&lt;/td&gt;
+&lt;td&gt;Cannot remove current cart.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;order&#34;&gt;Order&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;Cannot create order.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;501&lt;/td&gt;
+&lt;td&gt;Cannot query orders.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -577,6 +640,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;success&amp;quot;: false,
+  &amp;quot;result&amp;quot;: null,
   &amp;quot;error&amp;quot;: {
     &amp;quot;code&amp;quot;: 201,
     &amp;quot;message&amp;quot;: &amp;quot;Login Failed. Invalid user name or password&amp;quot;
@@ -632,6 +696,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;success&amp;quot;: false,
+  &amp;quot;result&amp;quot;: null,
   &amp;quot;error&amp;quot;: {
     &amp;quot;code&amp;quot;: 202,
     &amp;quot;message&amp;quot;: &amp;quot;Cannot get current user.&amp;quot;
@@ -1075,6 +1140,7 @@ set &lt;code&gt;NO&lt;/code&gt;&lt;/li&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;success&amp;quot;: false,
+  &amp;quot;result&amp;quot;: null,
   &amp;quot;error&amp;quot;: {
     &amp;quot;code&amp;quot;: 404,
     &amp;quot;message&amp;quot;: &amp;quot;Cannot create cart.&amp;quot;
@@ -1160,6 +1226,7 @@ set &lt;code&gt;NO&lt;/code&gt;&lt;/li&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;success&amp;quot;: false,
+  &amp;quot;result&amp;quot;: null,
   &amp;quot;error&amp;quot;: {
     &amp;quot;code&amp;quot;: 401,
     &amp;quot;message&amp;quot;: &amp;quot;Cannot add item to current cart.\nCannot find product for &#39;skuId:12&#39;&amp;quot;
@@ -1245,6 +1312,7 @@ set &lt;code&gt;NO&lt;/code&gt;&lt;/li&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;success&amp;quot;: false,
+  &amp;quot;result&amp;quot;: null,
   &amp;quot;error&amp;quot;: {
     &amp;quot;code&amp;quot;: 402,
     &amp;quot;message&amp;quot;: &amp;quot;Cannot remove item from current cart.\nCannot find item for &#39;skuId:12&#39; in current cart\n&amp;quot;
@@ -1297,6 +1365,7 @@ set &lt;code&gt;NO&lt;/code&gt;&lt;/li&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;success&amp;quot;: false,
+  &amp;quot;result&amp;quot;: null,
   &amp;quot;error&amp;quot;: {
     &amp;quot;code&amp;quot;: 405,
     &amp;quot;message&amp;quot;: &amp;quot;Cannot remove current cart.&amp;quot;
@@ -1468,7 +1537,7 @@ set &lt;code&gt;NO&lt;/code&gt;&lt;/li&gt;
 &lt;tr&gt;
 &lt;td&gt;info&lt;/td&gt;
 &lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;string(json)&lt;/td&gt;
+&lt;td&gt;url-encoded json string&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

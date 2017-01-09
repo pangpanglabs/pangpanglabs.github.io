@@ -29,27 +29,42 @@
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;100&lt;/td&gt;
-&lt;td&gt;Pos is not initialized.&lt;/td&gt;
+&lt;td&gt;UknownError&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;101&lt;/td&gt;
-&lt;td&gt;Service handler for &lt;code&gt;{path}&lt;/code&gt; is not defined.&lt;/td&gt;
+&lt;td&gt;Pos is not initialized.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;102&lt;/td&gt;
-&lt;td&gt;Remote Call failed.&lt;/td&gt;
+&lt;td&gt;Service handler for &lt;code&gt;{path}&lt;/code&gt; is not defined.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;103&lt;/td&gt;
-&lt;td&gt;Database Repository is null. Please check the pos-init process.&lt;/td&gt;
+&lt;td&gt;Remote Call failed.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;104&lt;/td&gt;
+&lt;td&gt;Cannot access to database file. Please check the pos-init process.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;105&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;{name}&lt;/code&gt; is required parameter.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;106&lt;/td&gt;
+&lt;td&gt;Invalid parameter&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;account&#34;&gt;Account&lt;/h2&gt;
+&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -72,7 +87,17 @@
 
 &lt;tr&gt;
 &lt;td&gt;202&lt;/td&gt;
-&lt;td&gt;Cannot get current user from session storage.&lt;/td&gt;
+&lt;td&gt;Cannot get current user.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;203&lt;/td&gt;
+&lt;td&gt;Cannot get settings.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;204&lt;/td&gt;
+&lt;td&gt;Not authorized.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -90,12 +115,12 @@
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;300&lt;/td&gt;
-&lt;td&gt;Cannot search products from catalog storage.&lt;/td&gt;
+&lt;td&gt;Cannot search products.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;301&lt;/td&gt;
-&lt;td&gt;Cannot search contents from catalog storage.&lt;/td&gt;
+&lt;td&gt;Cannot search contents.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -118,7 +143,7 @@
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;400&lt;/td&gt;
-&lt;td&gt;Cannot find current cart.&lt;/td&gt;
+&lt;td&gt;Cannot find cart.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -128,7 +153,45 @@
 
 &lt;tr&gt;
 &lt;td&gt;402&lt;/td&gt;
+&lt;td&gt;Cannot remove item from current cart.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;403&lt;/td&gt;
 &lt;td&gt;Cannot calculate current cart.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;Cannot create cart.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;405&lt;/td&gt;
+&lt;td&gt;Cannot remove current cart.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;order&#34;&gt;Order&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;Cannot create order.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;501&lt;/td&gt;
+&lt;td&gt;Cannot query orders.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

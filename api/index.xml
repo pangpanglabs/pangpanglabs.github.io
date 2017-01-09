@@ -211,6 +211,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;success&amp;quot;: false,
+  &amp;quot;result&amp;quot;: null,
   &amp;quot;error&amp;quot;: {
     &amp;quot;code&amp;quot;: 201,
     &amp;quot;message&amp;quot;: &amp;quot;Login Failed. Invalid user name or password&amp;quot;
@@ -266,6 +267,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;success&amp;quot;: false,
+  &amp;quot;result&amp;quot;: null,
   &amp;quot;error&amp;quot;: {
     &amp;quot;code&amp;quot;: 202,
     &amp;quot;message&amp;quot;: &amp;quot;Cannot get current user.&amp;quot;
@@ -540,6 +542,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;success&amp;quot;: false,
+  &amp;quot;result&amp;quot;: null,
   &amp;quot;error&amp;quot;: {
     &amp;quot;code&amp;quot;: 404,
     &amp;quot;message&amp;quot;: &amp;quot;Cannot create cart.&amp;quot;
@@ -625,6 +628,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;success&amp;quot;: false,
+  &amp;quot;result&amp;quot;: null,
   &amp;quot;error&amp;quot;: {
     &amp;quot;code&amp;quot;: 401,
     &amp;quot;message&amp;quot;: &amp;quot;Cannot add item to current cart.\nCannot find product for &#39;skuId:12&#39;&amp;quot;
@@ -710,6 +714,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;success&amp;quot;: false,
+  &amp;quot;result&amp;quot;: null,
   &amp;quot;error&amp;quot;: {
     &amp;quot;code&amp;quot;: 402,
     &amp;quot;message&amp;quot;: &amp;quot;Cannot remove item from current cart.\nCannot find item for &#39;skuId:12&#39; in current cart\n&amp;quot;
@@ -762,6 +767,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;success&amp;quot;: false,
+  &amp;quot;result&amp;quot;: null,
   &amp;quot;error&amp;quot;: {
     &amp;quot;code&amp;quot;: 405,
     &amp;quot;message&amp;quot;: &amp;quot;Cannot remove current cart.&amp;quot;
@@ -933,7 +939,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;tr&gt;
 &lt;td&gt;info&lt;/td&gt;
 &lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;string(json)&lt;/td&gt;
+&lt;td&gt;url-encoded json string&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
