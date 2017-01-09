@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Android</title>
+    <title>Account</title>
     <link href="/css/nucleus.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/hybrid.css" rel="stylesheet">
@@ -24,7 +24,7 @@
     {display:none !important;}</style>
     <link href="/css/ribbon.css" rel="stylesheet">
   </head>
-  <body class="" data-url="/getting-started/android/">
+  <body class="" data-url="/api/account/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -93,7 +93,7 @@
       
       
 
-      <li class="dd-item  parent" data-nav-id="/getting-started/">
+      <li class="dd-item  " data-nav-id="/getting-started/">
         <a href="/getting-started/">
           <span>
             
@@ -109,7 +109,7 @@
           
           
           
-            <li class="dd-item active" data-nav-id="/getting-started/android/">
+            <li class="dd-item " data-nav-id="/getting-started/android/">
               <a href="/getting-started/android/">
                 <span>Android     </i></span>
               </a>
@@ -145,7 +145,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/api/">
+      <li class="dd-item  parent" data-nav-id="/api/">
         <a href="/api/">
           <span>
             
@@ -161,7 +161,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/api/account/">
+            <li class="dd-item active" data-nav-id="/api/account/">
               <a href="/api/account/">
                 <span>Account     </i></span>
               </a>
@@ -272,17 +272,15 @@
                       </a>
                   </span>
                 
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
                 
                 
                 
-                  
-                
-                  
                 
                   
                     
                     
-                <a href="/getting-started/" itemprop="url"><span itemprop="title">Getting Started</span></a> <i class="fa fa-angle-right"></i>
+                <a href="/api/" itemprop="url"><span itemprop="title">API Description</span></a> <i class="fa fa-angle-right"></i>
                     
                   
                 
@@ -292,80 +290,187 @@
                 
                   
                 
-                <span itemprop="title"> Android</span>
+                  
+                
+                  
+                
+                <span itemprop="title"> Account</span>
               </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#login">Login</a>
+<ul>
+<li>
+<ul>
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#example">Example</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#auto-login">Auto login</a>
+<ul>
+<li>
+<ul>
+<li><a href="#parameters-1">Parameters</a></li>
+<li><a href="#example-1">Example</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
               
 
             </div>
             
     	        <div id="body-inner">
                 
-                <h1>Android</h1>
+                <h1>Account</h1>
                 
 
 
 
-<ol>
-<li><p>Set Permission in <code>AndroidManifest.xml</code> file</p>
+<h2 id="login">Login</h2>
 
-<pre><code>&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
-</code></pre></li>
+<p><code>/v1/account/login</code></p>
 
-<li><p>Import</p>
+<h4 id="parameters">Parameters</h4>
 
-<pre><code>import cn.p2shop.pos.Pos;
-</code></pre></li>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead>
 
-<li><p>Init</p>
+<tbody>
+<tr>
+<td>tenant</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
 
-<pre><code>String path;
-if (android.os.Build.VERSION.SDK_INT &gt;=android.os.Build.VERSION_CODES.LOLLIPOP){
-    path = getNoBackupFilesDir().getAbsolutePath();
-} else{
-    path = getFilesDir().getAbsolutePath();
+<tr>
+<td>username</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>password</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="example">Example</h4>
+
+<p>Request:</p>
+
+<p><code>pp:///v1/account/login?tenant=LABS&amp;username=salesmand&amp;password=1234</code></p>
+
+<p>Success:</p>
+
+<pre><code>{
+  &quot;result&quot;: {
+    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJQb3MiLCJleHAiOjE0O.z19pVl9OBV2RkGTOU2KIuLhLEJi6IS_Q9vxNjhYbjus&quot;,
+    &quot;userId&quot;: 1,
+    &quot;userName&quot;: &quot;salesman&quot;,
+    &quot;roles&quot;: [
+      {
+        &quot;name&quot;: &quot;Salesman&quot;
+      }
+    ],
+    &quot;tenantId&quot;: 1,
+    &quot;tenantCode&quot;: &quot;LABS&quot;,
+    &quot;tenantName&quot;: &quot;Labs&quot;,
+    &quot;spots&quot;: [
+      {
+        &quot;id&quot;: 1,
+        &quot;code&quot;: &quot;AC3E&quot;,
+        &quot;name&quot;: &quot;天山店&quot;
+      }
+    ]
+  },
+  &quot;success&quot;: true,
+  &quot;error&quot;: {}
 }
-Pos.init(path);
-</code></pre></li>
+</code></pre>
 
-<li><p>Call API</p>
+<p>Fail:</p>
 
-<pre><code>String result = Pos.call(&quot;pp:///v1/account/login?tenant=LABS&amp;username=salesman&amp;password=1234&quot;);
-</code></pre></li>
-</ol>
+<pre><code>{
+  &quot;success&quot;: false,
+  &quot;error&quot;: {
+    &quot;code&quot;: 201,
+    &quot;message&quot;: &quot;Login Failed. Invalid user name or password&quot;
+  }
+}
+</code></pre>
 
-<blockquote>
-<h3 id="setting">Setting</h3>
+<hr />
 
-<h4 id="download-hahahugoshortcode-1hbhb">Download <a  href="http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar" target="_blank"  class="btn btn-default">
-  
-  
-  
-    
-  <i class="fa fa-cloud-download"></i>
-    
-  
-  pos.aar
-  
-</a>
-</h4>
+<h2 id="auto-login">Auto login</h2>
 
-<h4 id="in-project-structure">In Project Structure</h4>
+<p><code>/v1/account/autologin</code></p>
 
-<ol>
-<li>click <code>+</code></li>
-<li>select <code>import .JAR/.AAR Package</code></li>
-<li>click <code>Next</code></li>
-<li>select <code>pos.aar</code> file</li>
-<li>click <code>Finish</code></li>
-<li>click <code>OK</code> and re-open <code>Project Structure</code></li>
-<li>select <code>app</code> modules</li>
-<li>select <code>Dependencies</code> tab</li>
-<li>click <code>+</code> button</li>
-<li>select <code>3. Module Dependency</code></li>
-<li>select <code>possdk</code></li>
-<li>click <code>OK</code></li>
-</ol>
-</blockquote>
+<h4 id="parameters-1">Parameters</h4>
+
+<p>None</p>
+
+<h4 id="example-1">Example</h4>
+
+<p>Request:</p>
+
+<p><code>pp:///v1/account/autologin</code></p>
+
+<p>Success:</p>
+
+<pre><code>{
+  &quot;result&quot;: {
+    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJQb3MiLCJleHAiOjE0ODM5MzYxMDQsImh0dHA6Ly93d3cuYXNwbmV0Ym9pbGVycGxhdGUuY29tL2lkZW50aXR5L2NsYWltcy90ZW5hbnRJZCI6IjEiLCJpc3MiOiJMQUJTIiwibmFtZWlkIjoiMSIsIm5iZiI6MTQ4MzY3NjkwNCwicm9sZSI6IlNhbGVzbWFuIiwidW5pcXVlX25hbWUiOiJzYWxlc21hbiJ9.z19pVl9OBV2RkGTOU2KIuLhLEJi6IS_Q9vxNjhYbjus&quot;,
+    &quot;userId&quot;: 1,
+    &quot;userName&quot;: &quot;salesman&quot;,
+    &quot;roles&quot;: [
+      {
+        &quot;name&quot;: &quot;Salesman&quot;
+      }
+    ],
+    &quot;tenantId&quot;: 1,
+    &quot;tenantCode&quot;: &quot;LABS&quot;,
+    &quot;tenantName&quot;: &quot;Labs&quot;,
+    &quot;spots&quot;: [
+      {
+        &quot;id&quot;: 1,
+        &quot;code&quot;: &quot;AC3E&quot;,
+        &quot;name&quot;: &quot;天山店&quot;
+      }
+    ]
+  },
+  &quot;success&quot;: true,
+  &quot;error&quot;: {}
+}
+</code></pre>
+
+<p>Fail:</p>
+
+<pre><code>{
+  &quot;success&quot;: false,
+  &quot;error&quot;: {
+    &quot;code&quot;: 202,
+    &quot;message&quot;: &quot;Cannot get current user.&quot;
+  }
+}
+</code></pre>
 
 
       

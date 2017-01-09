@@ -10,11 +10,27 @@
   </url>
   
   <url>
+    <loc>http://pangpanglabs.github.io/error-code/</loc>
+  </url>
+  
+  <url>
     <loc>http://pangpanglabs.github.io/getting-started/</loc>
   </url>
   
   <url>
-    <loc>http://pangpanglabs.github.io/overview/</loc>
+    <loc>http://pangpanglabs.github.io/global-settings/</loc>
+  </url>
+  
+  <url>
+    <loc>http://pangpanglabs.github.io/introduction/</loc>
+  </url>
+  
+  <url>
+    <loc>http://pangpanglabs.github.io/usecase/</loc>
+  </url>
+  
+  <url>
+    <loc>http://pangpanglabs.github.io/api/account/</loc>
   </url>
   
   <url>
@@ -22,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://pangpanglabs.github.io/api/global-settings/</loc>
+    <loc>http://pangpanglabs.github.io/api/context/</loc>
   </url>
   
   <url>
@@ -30,11 +46,19 @@
   </url>
   
   <url>
-    <loc>http://pangpanglabs.github.io/getting-started/swagger/</loc>
+    <loc>http://pangpanglabs.github.io/api/catalog/</loc>
   </url>
   
   <url>
-    <loc>http://pangpanglabs.github.io/api/error-code-description/</loc>
+    <loc>http://pangpanglabs.github.io/getting-started/web-api/</loc>
+  </url>
+  
+  <url>
+    <loc>http://pangpanglabs.github.io/api/cart/</loc>
+  </url>
+  
+  <url>
+    <loc>http://pangpanglabs.github.io/api/order/</loc>
   </url>
   
 </urlset>

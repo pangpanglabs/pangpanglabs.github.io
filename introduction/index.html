@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Android</title>
+    <title>Introduction</title>
     <link href="/css/nucleus.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/hybrid.css" rel="stylesheet">
@@ -24,7 +24,7 @@
     {display:none !important;}</style>
     <link href="/css/ribbon.css" rel="stylesheet">
   </head>
-  <body class="" data-url="/getting-started/android/">
+  <body class="" data-url="/introduction/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -71,7 +71,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/introduction/">
+      <li class="dd-item active parent" data-nav-id="/introduction/">
         <a href="/introduction/">
           <span>
             
@@ -93,7 +93,7 @@
       
       
 
-      <li class="dd-item  parent" data-nav-id="/getting-started/">
+      <li class="dd-item  " data-nav-id="/getting-started/">
         <a href="/getting-started/">
           <span>
             
@@ -109,7 +109,7 @@
           
           
           
-            <li class="dd-item active" data-nav-id="/getting-started/android/">
+            <li class="dd-item " data-nav-id="/getting-started/android/">
               <a href="/getting-started/android/">
                 <span>Android     </i></span>
               </a>
@@ -280,63 +280,60 @@
                   
                 
                   
+                
+                  
+                
+                  
                     
                     
-                <a href="/getting-started/" itemprop="url"><span itemprop="title">Getting Started</span></a> <i class="fa fa-angle-right"></i>
-                    
                   
                 
                   
                 
-                  
-                
-                  
-                
-                <span itemprop="title"> Android</span>
+                <span itemprop="title"> Introduction</span>
               </div>
               
 
             </div>
             
+              <div id="chapter">
+            
     	        <div id="body-inner">
                 
-                <h1>Android</h1>
-                
 
 
 
-<ol>
-<li><p>Set Permission in <code>AndroidManifest.xml</code> file</p>
+<h1 id="start-a-business-for-free">Start A Business For Free</h1>
 
-<pre><code>&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
-</code></pre></li>
+<p><strong>Available on iOS and Android devices</strong><br />
+<strong>Cloud-based</strong><br />
+<strong>Work offline</strong></p>
 
-<li><p>Import</p>
+<p><img src="/images/pos.png" alt="PangPang POS" /></p>
 
-<pre><code>import cn.p2shop.pos.Pos;
-</code></pre></li>
+<h2 id="features">Features</h2>
 
-<li><p>Init</p>
+<ul class="task-list">
+<li><input type="checkbox" checked disabled class="task-list-item"> Shopping cart</li>
+<li><input type="checkbox" disabled class="task-list-item"> Reselling &amp; Online delivery <em>(~ 2017.01.31)</em></li>
+<li><input type="checkbox" disabled class="task-list-item"> Promotion &amp; Membership <em>(~ 2017.02.28)</em></li>
+<li><input type="checkbox" disabled class="task-list-item"> Sales statistics <em>(~ 2017.03.31)</em>
+<!--- [ ] Legacy Interface *(~ 2017.01.15)*--></li>
+</ul>
 
-<pre><code>String path;
-if (android.os.Build.VERSION.SDK_INT &gt;=android.os.Build.VERSION_CODES.LOLLIPOP){
-    path = getNoBackupFilesDir().getAbsolutePath();
-} else{
-    path = getFilesDir().getAbsolutePath();
-}
-Pos.init(path);
-</code></pre></li>
+<h2 id="not-supported">Not Supported</h2>
 
-<li><p>Call API</p>
+<ul>
+<li>User Interface</li>
+<li>Payment</li>
+<li>Push &amp; Notification</li>
+</ul>
 
-<pre><code>String result = Pos.call(&quot;pp:///v1/account/login?tenant=LABS&amp;username=salesman&amp;password=1234&quot;);
-</code></pre></li>
-</ol>
+<h2 id="downloads">Downloads</h2>
 
-<blockquote>
-<h3 id="setting">Setting</h3>
-
-<h4 id="download-hahahugoshortcode-1hbhb">Download <a  href="http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar" target="_blank"  class="btn btn-default">
+<ul>
+<li>Android SDK<br />
+<a  href="http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar" target="_blank"  class="btn btn-default">
   
   
   
@@ -347,27 +344,73 @@ Pos.init(path);
   pos.aar
   
 </a>
-</h4>
+</li>
+<li>iOS SDK<br />
+<a  href="http://possdk.oss-cn-hangzhou.aliyuncs.com/Pos.framework.zip" target="_blank"  class="btn btn-default">
+  
+  
+  
+    
+  <i class="fa fa-cloud-download"></i>
+    
+  
+  Pos.framework.zip
+  
+</a>
+</li>
+</ul>
 
-<h4 id="in-project-structure">In Project Structure</h4>
+<!--### Inventory management
 
-<ol>
-<li>click <code>+</code></li>
-<li>select <code>import .JAR/.AAR Package</code></li>
-<li>click <code>Next</code></li>
-<li>select <code>pos.aar</code> file</li>
-<li>click <code>Finish</code></li>
-<li>click <code>OK</code> and re-open <code>Project Structure</code></li>
-<li>select <code>app</code> modules</li>
-<li>select <code>Dependencies</code> tab</li>
-<li>click <code>+</code> button</li>
-<li>select <code>3. Module Dependency</code></li>
-<li>select <code>possdk</code></li>
-<li>click <code>OK</code></li>
-</ol>
-</blockquote>
+- **Items import**  
+  Quickly add thousands of items using the CSV-spreadsheets.  
+  Or use your own ETL tool.
+- **Track Inventory**  
+  Track the stock of products and their components.
+- **Low stock notifications**  
+  Receive daily notifications about low stock to make the necessary item orders in time.
+
+### Employee management
+
+- **Sales by employees**  
+  Track each employee performance and take informed business decisions.
+- **Smart management**  
+  Information on the workload per hour allows for efficient managament of your staff.
+- **Access rights**  
+  Manage access to sensitive information and functions.
+
+### Sales analytics
+
+- **Sales trend**  
+  Track the sales growth or decline compared with the previous day, week, month and promptly react to changes.
+- **Popular items**  
+  Sales by item analytics allows the best-selling items to be determined and therefore the right purchasing decisions can be made.
+- **Shifts**  
+  Identify the cash lack at the end of the shift and track employees inaccuracy or manipulations.
+- **Receipts history**  
+  Receipts history review allows you to monitor each transaction: sales, refunds, discounts.
+- **Reports export**  
+  Export sales data to the spreadsheets for detailed analysis.
+
+---
+
+- Discounts  
+  Apply discounts to the receipt or specific items.
+- Refunds  
+  Refund the selected item or all items on the receipt.
+- Multi Store
+- Products management
+  - 
+- Customer management
+- Inventory management
+- Employee management
+- Sales analytics
+- Loyalty program
+- Customer communication-->
 
 
+      
+        </div> 
       
       </div>
     </div>

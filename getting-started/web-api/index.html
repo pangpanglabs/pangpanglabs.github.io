@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Android</title>
+    <title>Web API</title>
     <link href="/css/nucleus.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/hybrid.css" rel="stylesheet">
@@ -24,7 +24,7 @@
     {display:none !important;}</style>
     <link href="/css/ribbon.css" rel="stylesheet">
   </head>
-  <body class="" data-url="/getting-started/android/">
+  <body class="" data-url="/getting-started/web-api/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -109,7 +109,7 @@
           
           
           
-            <li class="dd-item active" data-nav-id="/getting-started/android/">
+            <li class="dd-item " data-nav-id="/getting-started/android/">
               <a href="/getting-started/android/">
                 <span>Android     </i></span>
               </a>
@@ -125,7 +125,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/getting-started/web-api/">
+            <li class="dd-item active" data-nav-id="/getting-started/web-api/">
               <a href="/getting-started/web-api/">
                 <span>Web API     </i></span>
               </a>
@@ -292,7 +292,7 @@
                 
                   
                 
-                <span itemprop="title"> Android</span>
+                <span itemprop="title"> Web API</span>
               </div>
               
 
@@ -300,72 +300,21 @@
             
     	        <div id="body-inner">
                 
-                <h1>Android</h1>
+                <h1>Web API</h1>
                 
 
-
-
-<ol>
-<li><p>Set Permission in <code>AndroidManifest.xml</code> file</p>
-
-<pre><code>&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
-</code></pre></li>
-
-<li><p>Import</p>
-
-<pre><code>import cn.p2shop.pos.Pos;
-</code></pre></li>
-
-<li><p>Init</p>
-
-<pre><code>String path;
-if (android.os.Build.VERSION.SDK_INT &gt;=android.os.Build.VERSION_CODES.LOLLIPOP){
-    path = getNoBackupFilesDir().getAbsolutePath();
-} else{
-    path = getFilesDir().getAbsolutePath();
-}
-Pos.init(path);
-</code></pre></li>
-
-<li><p>Call API</p>
-
-<pre><code>String result = Pos.call(&quot;pp:///v1/account/login?tenant=LABS&amp;username=salesman&amp;password=1234&quot;);
-</code></pre></li>
-</ol>
-
-<blockquote>
-<h3 id="setting">Setting</h3>
-
-<h4 id="download-hahahugoshortcode-1hbhb">Download <a  href="http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar" target="_blank"  class="btn btn-default">
+<a  href="http://staging.p2shop.cn:52001/" target="_blank"  class="btn btn-default">
   
   
   
     
-  <i class="fa fa-cloud-download"></i>
+  <i class="fa fa-hand-pointer-o"></i>
     
   
-  pos.aar
+  Try with Swagger UI!
   
 </a>
-</h4>
 
-<h4 id="in-project-structure">In Project Structure</h4>
-
-<ol>
-<li>click <code>+</code></li>
-<li>select <code>import .JAR/.AAR Package</code></li>
-<li>click <code>Next</code></li>
-<li>select <code>pos.aar</code> file</li>
-<li>click <code>Finish</code></li>
-<li>click <code>OK</code> and re-open <code>Project Structure</code></li>
-<li>select <code>app</code> modules</li>
-<li>select <code>Dependencies</code> tab</li>
-<li>click <code>+</code> button</li>
-<li>select <code>3. Module Dependency</code></li>
-<li>select <code>possdk</code></li>
-<li>click <code>OK</code></li>
-</ol>
-</blockquote>
 
 
       

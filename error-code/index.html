@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Android</title>
+    <title>Error Code Description</title>
     <link href="/css/nucleus.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/hybrid.css" rel="stylesheet">
@@ -24,7 +24,7 @@
     {display:none !important;}</style>
     <link href="/css/ribbon.css" rel="stylesheet">
   </head>
-  <body class="" data-url="/getting-started/android/">
+  <body class="" data-url="/error-code/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -93,7 +93,7 @@
       
       
 
-      <li class="dd-item  parent" data-nav-id="/getting-started/">
+      <li class="dd-item  " data-nav-id="/getting-started/">
         <a href="/getting-started/">
           <span>
             
@@ -109,7 +109,7 @@
           
           
           
-            <li class="dd-item active" data-nav-id="/getting-started/android/">
+            <li class="dd-item " data-nav-id="/getting-started/android/">
               <a href="/getting-started/android/">
                 <span>Android     </i></span>
               </a>
@@ -235,7 +235,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/error-code/">
+      <li class="dd-item active parent" data-nav-id="/error-code/">
         <a href="/error-code/">
           <span>
             
@@ -272,18 +272,16 @@
                       </a>
                   </span>
                 
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
                 
                 
                 
-                  
                 
                   
                 
                   
                     
                     
-                <a href="/getting-started/" itemprop="url"><span itemprop="title">Getting Started</span></a> <i class="fa fa-angle-right"></i>
-                    
                   
                 
                   
@@ -292,80 +290,154 @@
                 
                   
                 
-                <span itemprop="title"> Android</span>
+                  
+                
+                <span itemprop="title"> Error Code Description</span>
               </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#system">System</a></li>
+<li><a href="#account">Account</a></li>
+<li><a href="#catalog">Catalog</a></li>
+<li><a href="#cart">Cart</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
               
 
             </div>
             
     	        <div id="body-inner">
                 
-                <h1>Android</h1>
+                <h1>Error Code Description</h1>
                 
 
 
 
-<ol>
-<li><p>Set Permission in <code>AndroidManifest.xml</code> file</p>
+<h2 id="system">System</h2>
 
-<pre><code>&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
-</code></pre></li>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
 
-<li><p>Import</p>
+<tbody>
+<tr>
+<td>100</td>
+<td>Pos is not initialized.</td>
+</tr>
 
-<pre><code>import cn.p2shop.pos.Pos;
-</code></pre></li>
+<tr>
+<td>101</td>
+<td>Service handler for <code>{path}</code> is not defined.</td>
+</tr>
 
-<li><p>Init</p>
+<tr>
+<td>102</td>
+<td>Remote Call failed.</td>
+</tr>
 
-<pre><code>String path;
-if (android.os.Build.VERSION.SDK_INT &gt;=android.os.Build.VERSION_CODES.LOLLIPOP){
-    path = getNoBackupFilesDir().getAbsolutePath();
-} else{
-    path = getFilesDir().getAbsolutePath();
-}
-Pos.init(path);
-</code></pre></li>
+<tr>
+<td>103</td>
+<td>Database Repository is null. Please check the pos-init process.</td>
+</tr>
+</tbody>
+</table>
 
-<li><p>Call API</p>
+<h2 id="account">Account</h2>
 
-<pre><code>String result = Pos.call(&quot;pp:///v1/account/login?tenant=LABS&amp;username=salesman&amp;password=1234&quot;);
-</code></pre></li>
-</ol>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
 
-<blockquote>
-<h3 id="setting">Setting</h3>
+<tbody>
+<tr>
+<td>200</td>
+<td>Authentication is success. But cannot save account to session storage.</td>
+</tr>
 
-<h4 id="download-hahahugoshortcode-1hbhb">Download <a  href="http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar" target="_blank"  class="btn btn-default">
-  
-  
-  
-    
-  <i class="fa fa-cloud-download"></i>
-    
-  
-  pos.aar
-  
-</a>
-</h4>
+<tr>
+<td>201</td>
+<td>Login Failed.</td>
+</tr>
 
-<h4 id="in-project-structure">In Project Structure</h4>
+<tr>
+<td>202</td>
+<td>Cannot get current user from session storage.</td>
+</tr>
+</tbody>
+</table>
 
-<ol>
-<li>click <code>+</code></li>
-<li>select <code>import .JAR/.AAR Package</code></li>
-<li>click <code>Next</code></li>
-<li>select <code>pos.aar</code> file</li>
-<li>click <code>Finish</code></li>
-<li>click <code>OK</code> and re-open <code>Project Structure</code></li>
-<li>select <code>app</code> modules</li>
-<li>select <code>Dependencies</code> tab</li>
-<li>click <code>+</code> button</li>
-<li>select <code>3. Module Dependency</code></li>
-<li>select <code>possdk</code></li>
-<li>click <code>OK</code></li>
-</ol>
-</blockquote>
+<h2 id="catalog">Catalog</h2>
+
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>300</td>
+<td>Cannot search products from catalog storage.</td>
+</tr>
+
+<tr>
+<td>301</td>
+<td>Cannot search contents from catalog storage.</td>
+</tr>
+
+<tr>
+<td>302</td>
+<td>Cannot find product.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="cart">Cart</h2>
+
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>400</td>
+<td>Cannot find current cart.</td>
+</tr>
+
+<tr>
+<td>401</td>
+<td>Cannot add item to current cart.</td>
+</tr>
+
+<tr>
+<td>402</td>
+<td>Cannot calculate current cart.</td>
+</tr>
+</tbody>
+</table>
 
 
       

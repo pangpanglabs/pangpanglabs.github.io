@@ -14,215 +14,974 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://pangpanglabs.github.io/api/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Global Settings</title>
-      <link>http://pangpanglabs.github.io/api/global-settings/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://pangpanglabs.github.io/api/global-settings/</guid>
       <description>
 
-&lt;h2 id=&#34;system&#34;&gt;System&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;http://pangpanglabs.github.io/images/sdk.png&#34; alt=&#34;PangPang POS&#34; /&gt;&lt;/p&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
+&lt;h2 id=&#34;how-to-initialize-sdk&#34;&gt;How to Initialize SDK&lt;/h2&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;System.AllowOffline&lt;/td&gt;
-&lt;td&gt;boolean&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
+&lt;p&gt;PosSDK use local database. When initializing, you have to send the path where the database file will be stored.&lt;/p&gt;
 
-&lt;tr&gt;
-&lt;td&gt;System.TraceInterval&lt;/td&gt;
-&lt;td&gt;integer&lt;/td&gt;
-&lt;td&gt;sending trace log to server interval(seconds)&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;60&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;h4 id=&#34;android&#34;&gt;Android&lt;/h4&gt;
 
-&lt;h2 id=&#34;shoppingcart&#34;&gt;ShoppingCart&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;For using network, Android require extra permissions.&lt;br /&gt;
+Set Permission in &lt;code&gt;AndroidManifest.xml&lt;/code&gt; file&lt;/p&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;ShoppingCart.Price.RoundPoint&lt;/td&gt;
-&lt;td&gt;integer&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;2&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
+&lt;li&gt;&lt;p&gt;Import&lt;/p&gt;
 
-&lt;tr&gt;
-&lt;td&gt;ShoppingCart.Price.RoundStrategy&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;quot;floor&amp;quot;&lt;/code&gt;round down &lt;br /&gt; &lt;code&gt;&amp;quot;ceil&amp;quot;&lt;/code&gt;: round up &lt;br /&gt; &lt;code&gt;&amp;quot;round&amp;quot;&lt;/code&gt;: round to the nearest integer&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;quot;round&amp;quot;&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
+&lt;pre&gt;&lt;code&gt;import cn.p2shop.pos.Pos;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;tr&gt;
-&lt;td&gt;ShoppingCart.Price.Culture&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;quot;USD&amp;quot;&lt;/code&gt;($), &lt;code&gt;&amp;quot;EUR&amp;quot;&lt;/code&gt;(€), &lt;code&gt;&amp;quot;CNY&amp;quot;&lt;/code&gt;(¥), &lt;code&gt;&amp;quot;KRW&amp;quot;&lt;/code&gt;(₩)&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;quot;CNY&amp;quot;&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
+&lt;li&gt;&lt;p&gt;Init&lt;/p&gt;
 
-&lt;tr&gt;
-&lt;td&gt;ShoppingCart.Payment&lt;/td&gt;
-&lt;td&gt;string array&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;quot;alipay&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;wxpay&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;cash&amp;quot;&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;[&amp;quot;alipay&amp;quot;, &amp;quot;wxpay&amp;quot;]&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;pre&gt;&lt;code&gt;String path;
+if (android.os.Build.VERSION.SDK_INT &amp;gt;=android.os.Build.VERSION_CODES.LOLLIPOP){
+    path = getNoBackupFilesDir().getAbsolutePath();
+} else{
+    path = getFilesDir().getAbsolutePath();
+}
+Pos.init(path);
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&#34;ios&#34;&gt;iOS&lt;/h4&gt;
+
+&lt;h5 id=&#34;swift&#34;&gt;Swift&lt;/h5&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Import&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import Pos
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Init&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]
+P2PosInit(path)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&#34;objective-c&#34;&gt;Objective-C&lt;/h5&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Import&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#import &amp;lt;Pos/Pos.h&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Init&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;NSString* path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,
+                                                      NSUserDomainMask,
+                                                      YES) objectAtIndex:0];
+P2PosInit(path);
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;how-to-use-sdk-features&#34;&gt;How to use SDK features&lt;/h2&gt;
+
+&lt;p&gt;After initializing, you can use all features.
+All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all results are &lt;strong&gt;json string&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The features are described in child pages.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://pangpanglabs.github.io/api/account&#34;&gt;Account&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://pangpanglabs.github.io/api/context&#34;&gt;Context&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://pangpanglabs.github.io/api/catalog&#34;&gt;Catalog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://pangpanglabs.github.io/api/cart&#34;&gt;Cart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://pangpanglabs.github.io/api/order&#34;&gt;Order&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is json response format. All json data should have 3 properties - &lt;code&gt;success&lt;/code&gt;, &lt;code&gt;result&lt;/code&gt;, &lt;code&gt;error&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  success: true, /* true or false */
+  result: {},    /* actual result of api */
+  error: {}      /* error information */
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can call SDK features like this:&lt;/p&gt;
+
+&lt;h4 id=&#34;android-1&#34;&gt;Android&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;String result = Pos.call(&amp;quot;pp:///v1/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;ios-1&#34;&gt;iOS&lt;/h4&gt;
+
+&lt;h5 id=&#34;swift-1&#34;&gt;Swift&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;let result = P2PosCall(&amp;quot;pp:///v1/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;objective-c-1&#34;&gt;Objective-C&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;NSString* result = P2PosCall(@&amp;quot;pp:///v1/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
     <item>
-      <title>Error Code Description</title>
-      <link>http://pangpanglabs.github.io/api/error-code-description/</link>
+      <title>Account</title>
+      <link>http://pangpanglabs.github.io/api/account/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://pangpanglabs.github.io/api/error-code-description/</guid>
+      <guid>http://pangpanglabs.github.io/api/account/</guid>
       <description>
 
-&lt;h2 id=&#34;system&#34;&gt;System&lt;/h2&gt;
+&lt;h2 id=&#34;login&#34;&gt;Login&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/v1/account/login&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;100&lt;/td&gt;
-&lt;td&gt;Pos is not initialized.&lt;/td&gt;
+&lt;td&gt;tenant&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;101&lt;/td&gt;
-&lt;td&gt;Service handler for &lt;code&gt;{path}&lt;/code&gt; is not defined.&lt;/td&gt;
+&lt;td&gt;username&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;102&lt;/td&gt;
-&lt;td&gt;Remote Call failed.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;103&lt;/td&gt;
-&lt;td&gt;Database Repository is null. Please check the pos-init process.&lt;/td&gt;
+&lt;td&gt;password&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;account&#34;&gt;Account&lt;/h2&gt;
+&lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp:///v1/account/login?tenant=LABS&amp;amp;username=salesmand&amp;amp;password=1234&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;token&amp;quot;: &amp;quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJQb3MiLCJleHAiOjE0O.z19pVl9OBV2RkGTOU2KIuLhLEJi6IS_Q9vxNjhYbjus&amp;quot;,
+    &amp;quot;userId&amp;quot;: 1,
+    &amp;quot;userName&amp;quot;: &amp;quot;salesman&amp;quot;,
+    &amp;quot;roles&amp;quot;: [
+      {
+        &amp;quot;name&amp;quot;: &amp;quot;Salesman&amp;quot;
+      }
+    ],
+    &amp;quot;tenantId&amp;quot;: 1,
+    &amp;quot;tenantCode&amp;quot;: &amp;quot;LABS&amp;quot;,
+    &amp;quot;tenantName&amp;quot;: &amp;quot;Labs&amp;quot;,
+    &amp;quot;spots&amp;quot;: [
+      {
+        &amp;quot;id&amp;quot;: 1,
+        &amp;quot;code&amp;quot;: &amp;quot;AC3E&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;
+      }
+    ]
+  },
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fail:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;success&amp;quot;: false,
+  &amp;quot;error&amp;quot;: {
+    &amp;quot;code&amp;quot;: 201,
+    &amp;quot;message&amp;quot;: &amp;quot;Login Failed. Invalid user name or password&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;auto-login&#34;&gt;Auto login&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/v1/account/autologin&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;p&gt;None&lt;/p&gt;
+
+&lt;h4 id=&#34;example-1&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp:///v1/account/autologin&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;token&amp;quot;: &amp;quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJQb3MiLCJleHAiOjE0ODM5MzYxMDQsImh0dHA6Ly93d3cuYXNwbmV0Ym9pbGVycGxhdGUuY29tL2lkZW50aXR5L2NsYWltcy90ZW5hbnRJZCI6IjEiLCJpc3MiOiJMQUJTIiwibmFtZWlkIjoiMSIsIm5iZiI6MTQ4MzY3NjkwNCwicm9sZSI6IlNhbGVzbWFuIiwidW5pcXVlX25hbWUiOiJzYWxlc21hbiJ9.z19pVl9OBV2RkGTOU2KIuLhLEJi6IS_Q9vxNjhYbjus&amp;quot;,
+    &amp;quot;userId&amp;quot;: 1,
+    &amp;quot;userName&amp;quot;: &amp;quot;salesman&amp;quot;,
+    &amp;quot;roles&amp;quot;: [
+      {
+        &amp;quot;name&amp;quot;: &amp;quot;Salesman&amp;quot;
+      }
+    ],
+    &amp;quot;tenantId&amp;quot;: 1,
+    &amp;quot;tenantCode&amp;quot;: &amp;quot;LABS&amp;quot;,
+    &amp;quot;tenantName&amp;quot;: &amp;quot;Labs&amp;quot;,
+    &amp;quot;spots&amp;quot;: [
+      {
+        &amp;quot;id&amp;quot;: 1,
+        &amp;quot;code&amp;quot;: &amp;quot;AC3E&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;
+      }
+    ]
+  },
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fail:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;success&amp;quot;: false,
+  &amp;quot;error&amp;quot;: {
+    &amp;quot;code&amp;quot;: 202,
+    &amp;quot;message&amp;quot;: &amp;quot;Cannot get current user.&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Context</title>
+      <link>http://pangpanglabs.github.io/api/context/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pangpanglabs.github.io/api/context/</guid>
+      <description>
+
+&lt;h2 id=&#34;get-current-user&#34;&gt;Get current user&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/v1/context/user&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;p&gt;None&lt;/p&gt;
+
+&lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp:///v1/context/user&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: {    
+    &amp;quot;userId&amp;quot;: 1,
+    &amp;quot;userName&amp;quot;: &amp;quot;salesman&amp;quot;,
+    &amp;quot;roles&amp;quot;: [
+      {
+        &amp;quot;name&amp;quot;: &amp;quot;Salesman&amp;quot;
+      }
+    ],
+    &amp;quot;tenantId&amp;quot;: 1,
+    &amp;quot;tenantCode&amp;quot;: &amp;quot;LABS&amp;quot;,
+    &amp;quot;tenantName&amp;quot;: &amp;quot;Labs&amp;quot;,
+    &amp;quot;spots&amp;quot;: [
+      {
+        &amp;quot;id&amp;quot;: 1,
+        &amp;quot;code&amp;quot;: &amp;quot;AC3E&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;
+      }
+    ]
+  },
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fail:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;success&amp;quot;: false,
+  &amp;quot;error&amp;quot;: {
+    &amp;quot;code&amp;quot;: 202,
+    &amp;quot;message&amp;quot;: &amp;quot;Cannot get current user.&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;get-system-settings&#34;&gt;Get system settings&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/v1/context/settings&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;p&gt;None&lt;/p&gt;
+
+&lt;h4 id=&#34;example-1&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp:///v1/context/settings&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;tenantId&amp;quot;: 1,
+    &amp;quot;system&amp;quot;: {
+      &amp;quot;allowOffline&amp;quot;: true,
+      &amp;quot;traceInterval&amp;quot;: 10
+    },
+    &amp;quot;price&amp;quot;: {
+      &amp;quot;roundDigit&amp;quot;: 2,
+      &amp;quot;roundStrategy&amp;quot;: &amp;quot;round&amp;quot;,
+      &amp;quot;currency&amp;quot;: &amp;quot;CYN&amp;quot;
+    }
+  },
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fail:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;success&amp;quot;: false,
+  &amp;quot;error&amp;quot;: {
+    &amp;quot;code&amp;quot;: 202,
+    &amp;quot;message&amp;quot;: &amp;quot;Cannot get settings.&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Catalog</title>
+      <link>http://pangpanglabs.github.io/api/catalog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pangpanglabs.github.io/api/catalog/</guid>
+      <description>
+
+&lt;h2 id=&#34;search-products&#34;&gt;Search products&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/v1/catalog/search-products&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;200&lt;/td&gt;
-&lt;td&gt;Authentication is success. But cannot save account to session storage.&lt;/td&gt;
+&lt;td&gt;q&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;201&lt;/td&gt;
-&lt;td&gt;Login Failed.&lt;/td&gt;
+&lt;td&gt;skipCount&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;202&lt;/td&gt;
-&lt;td&gt;Cannot get current user from session storage.&lt;/td&gt;
+&lt;td&gt;maxResultCount&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;catalog&#34;&gt;Catalog&lt;/h2&gt;
+&lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp:///v1/catalog/search-products?q=A&amp;amp;skipCount=0&amp;amp;maxResultCount=10&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;items&amp;quot;: [
+      {
+        &amp;quot;skuId&amp;quot;: 4,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;AP_MBP_13_1&amp;quot;,
+        &amp;quot;contentId&amp;quot;: 4,
+        &amp;quot;name&amp;quot;: &amp;quot;Apple MacBook Pro 13-inch&amp;quot;,
+        &amp;quot;price&amp;quot;: 1800
+      },
+      {
+        &amp;quot;skuId&amp;quot;: 5,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;AS_551_LP_1&amp;quot;,
+        &amp;quot;contentId&amp;quot;: 5,
+        &amp;quot;name&amp;quot;: &amp;quot;Asus N551JK-XO076H Laptop&amp;quot;,
+        &amp;quot;price&amp;quot;: 1500
+      },
+      {
+        &amp;quot;skuId&amp;quot;: 10,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;AD_CS4_PH_1&amp;quot;,
+        &amp;quot;contentId&amp;quot;: 10,
+        &amp;quot;name&amp;quot;: &amp;quot;Adobe Photoshop CS4&amp;quot;,
+        &amp;quot;price&amp;quot;: 75
+      },
+      {
+        &amp;quot;skuId&amp;quot;: 17,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;APPLE_CAM_1&amp;quot;,
+        &amp;quot;contentId&amp;quot;: 17,
+        &amp;quot;name&amp;quot;: &amp;quot;Apple iCam&amp;quot;,
+        &amp;quot;price&amp;quot;: 1300
+      },
+      {
+        &amp;quot;skuId&amp;quot;: 25,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;AD_C80_RS_1&amp;quot;,
+        &amp;quot;contentId&amp;quot;: 25,
+        &amp;quot;name&amp;quot;: &amp;quot;adidas Consortium Campus 80s Running Shoes&amp;quot;,
+        &amp;quot;price&amp;quot;: 27.56
+      }
+    ],
+    &amp;quot;totalCount&amp;quot;: 5
+  },
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fail:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;success&amp;quot;: false,
+  &amp;quot;error&amp;quot;: {
+    &amp;quot;code&amp;quot;: 300,
+    &amp;quot;message&amp;quot;: &amp;quot;Cannot search products.&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cart</title>
+      <link>http://pangpanglabs.github.io/api/cart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pangpanglabs.github.io/api/cart/</guid>
+      <description>
+
+&lt;h2 id=&#34;create-cart&#34;&gt;Create cart&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/v1/cart/create-cart&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;p&gt;None&lt;/p&gt;
+
+&lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp:///v1/cart/create-cart&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;id&amp;quot;: 1,
+    &amp;quot;tenantId&amp;quot;: &amp;quot;&amp;quot;,
+    &amp;quot;items&amp;quot;: [],
+    &amp;quot;subTotal&amp;quot;: 0,
+    &amp;quot;total&amp;quot;: 0,
+    &amp;quot;quantity&amp;quot;: 0,
+    &amp;quot;userId&amp;quot;: 1,
+    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-01-06T04:56:51.667893692Z&amp;quot;,
+    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-01-06T04:56:51.667893692Z&amp;quot;
+  },
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fail:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;success&amp;quot;: false,
+  &amp;quot;error&amp;quot;: {
+    &amp;quot;code&amp;quot;: 404,
+    &amp;quot;message&amp;quot;: &amp;quot;Cannot create cart.&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;add-item-to-cart&#34;&gt;Add item to cart&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/v1/cart/add-item&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;300&lt;/td&gt;
-&lt;td&gt;Cannot search products from catalog storage.&lt;/td&gt;
+&lt;td&gt;cartId&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;301&lt;/td&gt;
-&lt;td&gt;Cannot search contents from catalog storage.&lt;/td&gt;
+&lt;td&gt;skuId&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;302&lt;/td&gt;
-&lt;td&gt;Cannot find product.&lt;/td&gt;
+&lt;td&gt;quantity&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;cart&#34;&gt;Cart&lt;/h2&gt;
+&lt;h4 id=&#34;example-1&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp:///v1/cart/add-item?cartId=1&amp;amp;skuId=12&amp;amp;quantity=2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;id&amp;quot;: 1,
+    &amp;quot;tenantId&amp;quot;: &amp;quot;&amp;quot;,
+    &amp;quot;items&amp;quot;: [
+      {
+        &amp;quot;skuId&amp;quot;: 12,
+        &amp;quot;contentId&amp;quot;: 12,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;SF_PRO_11_1&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;Sound Forge Pro 11 (recurring)&amp;quot;,
+        &amp;quot;quantity&amp;quot;: 2,
+        &amp;quot;unitPrice&amp;quot;: 54.99,
+        &amp;quot;price&amp;quot;: 54.99,
+        &amp;quot;total&amp;quot;: 109.98
+      }
+    ],
+    &amp;quot;subTotal&amp;quot;: 109.98,
+    &amp;quot;total&amp;quot;: 109.98,
+    &amp;quot;quantity&amp;quot;: 2,
+    &amp;quot;userId&amp;quot;: 1,
+    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-01-06T04:56:51.667893692Z&amp;quot;,
+    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-01-06T04:58:53.669251111Z&amp;quot;
+  },
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fail:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;success&amp;quot;: false,
+  &amp;quot;error&amp;quot;: {
+    &amp;quot;code&amp;quot;: 401,
+    &amp;quot;message&amp;quot;: &amp;quot;Cannot add item to current cart.\nCannot find product for &#39;skuId:12&#39;&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;remove-item-from-cart&#34;&gt;Remove item from cart&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/v1/cart/remove-item&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-2&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;400&lt;/td&gt;
-&lt;td&gt;Cannot find current cart.&lt;/td&gt;
+&lt;td&gt;cartId&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;401&lt;/td&gt;
-&lt;td&gt;Cannot add item to current cart.&lt;/td&gt;
+&lt;td&gt;skuId&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;402&lt;/td&gt;
-&lt;td&gt;Cannot calculate current cart.&lt;/td&gt;
+&lt;td&gt;quantity&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;h4 id=&#34;example-2&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp:///v1/cart/remove-item?cartId=1&amp;amp;skuId=12&amp;amp;quantity=1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;id&amp;quot;: 1,
+    &amp;quot;tenantId&amp;quot;: &amp;quot;&amp;quot;,
+    &amp;quot;items&amp;quot;: [
+      {
+        &amp;quot;skuId&amp;quot;: 12,
+        &amp;quot;contentId&amp;quot;: 12,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;SF_PRO_11_1&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;Sound Forge Pro 11 (recurring)&amp;quot;,
+        &amp;quot;quantity&amp;quot;: 1,
+        &amp;quot;unitPrice&amp;quot;: 54.99,
+        &amp;quot;price&amp;quot;: 54.99,
+        &amp;quot;total&amp;quot;: 54.99
+      }
+    ],
+    &amp;quot;subTotal&amp;quot;: 54.99,
+    &amp;quot;total&amp;quot;: 54.99,
+    &amp;quot;quantity&amp;quot;: 1,
+    &amp;quot;userId&amp;quot;: 1,
+    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-01-06T04:56:51.667893692Z&amp;quot;,
+    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-01-06T05:00:03.212766277Z&amp;quot;
+  },
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fail:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;success&amp;quot;: false,
+  &amp;quot;error&amp;quot;: {
+    &amp;quot;code&amp;quot;: 402,
+    &amp;quot;message&amp;quot;: &amp;quot;Cannot remove item from current cart.\nCannot find item for &#39;skuId:12&#39; in current cart\n&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;remove-cart&#34;&gt;Remove cart&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/v1/cart/remove-cart&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-3&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;cartId&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;example-3&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp:///v1/cart/remove-cart&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;result&amp;quot;: null,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fail:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;success&amp;quot;: false,
+  &amp;quot;error&amp;quot;: {
+    &amp;quot;code&amp;quot;: 405,
+    &amp;quot;message&amp;quot;: &amp;quot;Cannot remove current cart.&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;get-all-carts&#34;&gt;Get all carts&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/v1/cart/all-carts&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-4&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;p&gt;None&lt;/p&gt;
+
+&lt;h4 id=&#34;example-4&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp:///v1/cart/all-carts&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: [
+    {
+      &amp;quot;id&amp;quot;: 2,
+      &amp;quot;items&amp;quot;: [
+        {
+          &amp;quot;skuId&amp;quot;: 12,
+          &amp;quot;contentId&amp;quot;: 12,
+          &amp;quot;skuCode&amp;quot;: &amp;quot;SF_PRO_11_1&amp;quot;,
+          &amp;quot;name&amp;quot;: &amp;quot;Sound Forge Pro 11 (recurring)&amp;quot;,
+          &amp;quot;quantity&amp;quot;: 1,
+          &amp;quot;unitPrice&amp;quot;: 54.99,
+          &amp;quot;price&amp;quot;: 54.99,
+          &amp;quot;total&amp;quot;: 54.99
+        }
+      ],
+      &amp;quot;subTotal&amp;quot;: 54.99,
+      &amp;quot;total&amp;quot;: 54.99,
+      &amp;quot;quantity&amp;quot;: 1,
+      &amp;quot;userId&amp;quot;: 1,
+      &amp;quot;createdAt&amp;quot;: &amp;quot;2017-01-06T04:56:51.667893692Z&amp;quot;,
+      &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-01-06T05:00:03.212766277Z&amp;quot;
+    },
+    {
+      &amp;quot;id&amp;quot;: 3,
+      &amp;quot;items&amp;quot;: [
+        {
+          &amp;quot;skuId&amp;quot;: 12,
+          &amp;quot;contentId&amp;quot;: 12,
+          &amp;quot;skuCode&amp;quot;: &amp;quot;SF_PRO_11_1&amp;quot;,
+          &amp;quot;name&amp;quot;: &amp;quot;Sound Forge Pro 11 (recurring)&amp;quot;,
+          &amp;quot;quantity&amp;quot;: 1,
+          &amp;quot;unitPrice&amp;quot;: 54.99,
+          &amp;quot;price&amp;quot;: 54.99,
+          &amp;quot;total&amp;quot;: 54.99
+        }
+      ],
+      &amp;quot;subTotal&amp;quot;: 54.99,
+      &amp;quot;total&amp;quot;: 54.99,
+      &amp;quot;quantity&amp;quot;: 1,
+      &amp;quot;userId&amp;quot;: 1,
+      &amp;quot;createdAt&amp;quot;: &amp;quot;2017-01-08T13:01:48.545481616Z&amp;quot;,
+      &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-01-08T13:01:48.545481616Z&amp;quot;
+    }
+  ],
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;get-cart&#34;&gt;Get cart&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/v1/cart/get-cart&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-5&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;cartId&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;example-5&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp:///v1/cart/get-cart?cartId=2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;id&amp;quot;: 2,
+    &amp;quot;items&amp;quot;: [
+      {
+        &amp;quot;skuId&amp;quot;: 12,
+        &amp;quot;contentId&amp;quot;: 12,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;SF_PRO_11_1&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;Sound Forge Pro 11 (recurring)&amp;quot;,
+        &amp;quot;quantity&amp;quot;: 1,
+        &amp;quot;unitPrice&amp;quot;: 54.99,
+        &amp;quot;price&amp;quot;: 54.99,
+        &amp;quot;total&amp;quot;: 54.99
+      }
+    ],
+    &amp;quot;subTotal&amp;quot;: 54.99,
+    &amp;quot;total&amp;quot;: 54.99,
+    &amp;quot;quantity&amp;quot;: 1,
+    &amp;quot;userId&amp;quot;: 1,
+    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-01-06T04:56:51.667893692Z&amp;quot;,
+    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-01-06T05:00:03.212766277Z&amp;quot;
+  },
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Order</title>
+      <link>http://pangpanglabs.github.io/api/order/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pangpanglabs.github.io/api/order/</guid>
+      <description>
+
+&lt;h2 id=&#34;place-order&#34;&gt;Place order&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/v1/order/place-order&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;cartId&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;info&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;string(json)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp:///v1/order/place-order?cartId=2&amp;amp;info=%7B%22payment%22%3A%22wxpay%22%2C%22customer%22%3A%7B%22id%22%3A2817391%2C%22mileage%22%3A150%7D%7D&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;id&amp;quot;: &amp;quot;d934e8b1-7b5c-48d3-92a9-6c448367d1c3&amp;quot;,
+    &amp;quot;orderNo&amp;quot;: &amp;quot;&amp;quot;,
+    &amp;quot;orderType&amp;quot;: 1,
+    &amp;quot;subTotal&amp;quot;: 0,
+    &amp;quot;discountAmount&amp;quot;: 0,
+    &amp;quot;total&amp;quot;: 0,
+    &amp;quot;items&amp;quot;: [
+      {
+        &amp;quot;skuId&amp;quot;: 12,
+        &amp;quot;contentId&amp;quot;: 12,
+        &amp;quot;quantity&amp;quot;: 2,
+        &amp;quot;unitPrice&amp;quot;: 54.99,
+        &amp;quot;subTotal&amp;quot;: 109.98,
+        &amp;quot;discountAmount&amp;quot;: 0,
+        &amp;quot;total&amp;quot;: 109.98
+      }
+    ],
+    &amp;quot;userId&amp;quot;: 0,
+    &amp;quot;deviceId&amp;quot;: &amp;quot;aeb6b787-bf97-4305-973f-dffd8c09679b&amp;quot;,
+    &amp;quot;spotId&amp;quot;: 0,
+    &amp;quot;tenantId&amp;quot;: 0,
+    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-01-08T13:11:34.720003916Z&amp;quot;,
+    &amp;quot;info&amp;quot;: {
+      &amp;quot;customer&amp;quot;: {
+        &amp;quot;id&amp;quot;: 2817391,
+        &amp;quot;mileage&amp;quot;: 150
+      },
+      &amp;quot;payment&amp;quot;: &amp;quot;wxpay&amp;quot;
+    }
+  },
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

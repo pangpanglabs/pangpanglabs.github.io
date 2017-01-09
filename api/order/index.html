@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Android</title>
+    <title>Order</title>
     <link href="/css/nucleus.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/hybrid.css" rel="stylesheet">
@@ -24,7 +24,7 @@
     {display:none !important;}</style>
     <link href="/css/ribbon.css" rel="stylesheet">
   </head>
-  <body class="" data-url="/getting-started/android/">
+  <body class="" data-url="/api/order/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -93,7 +93,7 @@
       
       
 
-      <li class="dd-item  parent" data-nav-id="/getting-started/">
+      <li class="dd-item  " data-nav-id="/getting-started/">
         <a href="/getting-started/">
           <span>
             
@@ -109,7 +109,7 @@
           
           
           
-            <li class="dd-item active" data-nav-id="/getting-started/android/">
+            <li class="dd-item " data-nav-id="/getting-started/android/">
               <a href="/getting-started/android/">
                 <span>Android     </i></span>
               </a>
@@ -145,7 +145,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/api/">
+      <li class="dd-item  parent" data-nav-id="/api/">
         <a href="/api/">
           <span>
             
@@ -193,7 +193,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/api/order/">
+            <li class="dd-item active" data-nav-id="/api/order/">
               <a href="/api/order/">
                 <span>Order     </i></span>
               </a>
@@ -272,17 +272,15 @@
                       </a>
                   </span>
                 
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
                 
                 
                 
-                  
-                
-                  
                 
                   
                     
                     
-                <a href="/getting-started/" itemprop="url"><span itemprop="title">Getting Started</span></a> <i class="fa fa-angle-right"></i>
+                <a href="/api/" itemprop="url"><span itemprop="title">API Description</span></a> <i class="fa fa-angle-right"></i>
                     
                   
                 
@@ -292,80 +290,118 @@
                 
                   
                 
-                <span itemprop="title"> Android</span>
+                  
+                
+                  
+                
+                <span itemprop="title"> Order</span>
               </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#place-order">Place order</a>
+<ul>
+<li>
+<ul>
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#example">Example</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
               
 
             </div>
             
     	        <div id="body-inner">
                 
-                <h1>Android</h1>
+                <h1>Order</h1>
                 
 
 
 
-<ol>
-<li><p>Set Permission in <code>AndroidManifest.xml</code> file</p>
+<h2 id="place-order">Place order</h2>
 
-<pre><code>&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
-</code></pre></li>
+<p><code>/v1/order/place-order</code></p>
 
-<li><p>Import</p>
+<h4 id="parameters">Parameters</h4>
 
-<pre><code>import cn.p2shop.pos.Pos;
-</code></pre></li>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead>
 
-<li><p>Init</p>
+<tbody>
+<tr>
+<td>cartId</td>
+<td>Yes</td>
+<td>number</td>
+</tr>
 
-<pre><code>String path;
-if (android.os.Build.VERSION.SDK_INT &gt;=android.os.Build.VERSION_CODES.LOLLIPOP){
-    path = getNoBackupFilesDir().getAbsolutePath();
-} else{
-    path = getFilesDir().getAbsolutePath();
+<tr>
+<td>info</td>
+<td>No</td>
+<td>string(json)</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="example">Example</h4>
+
+<p>Request:</p>
+
+<p><code>pp:///v1/order/place-order?cartId=2&amp;info=%7B%22payment%22%3A%22wxpay%22%2C%22customer%22%3A%7B%22id%22%3A2817391%2C%22mileage%22%3A150%7D%7D</code></p>
+
+<p>Success:</p>
+
+<pre><code>{
+  &quot;result&quot;: {
+    &quot;id&quot;: &quot;d934e8b1-7b5c-48d3-92a9-6c448367d1c3&quot;,
+    &quot;orderNo&quot;: &quot;&quot;,
+    &quot;orderType&quot;: 1,
+    &quot;subTotal&quot;: 0,
+    &quot;discountAmount&quot;: 0,
+    &quot;total&quot;: 0,
+    &quot;items&quot;: [
+      {
+        &quot;skuId&quot;: 12,
+        &quot;contentId&quot;: 12,
+        &quot;quantity&quot;: 2,
+        &quot;unitPrice&quot;: 54.99,
+        &quot;subTotal&quot;: 109.98,
+        &quot;discountAmount&quot;: 0,
+        &quot;total&quot;: 109.98
+      }
+    ],
+    &quot;userId&quot;: 0,
+    &quot;deviceId&quot;: &quot;aeb6b787-bf97-4305-973f-dffd8c09679b&quot;,
+    &quot;spotId&quot;: 0,
+    &quot;tenantId&quot;: 0,
+    &quot;createdAt&quot;: &quot;2017-01-08T13:11:34.720003916Z&quot;,
+    &quot;info&quot;: {
+      &quot;customer&quot;: {
+        &quot;id&quot;: 2817391,
+        &quot;mileage&quot;: 150
+      },
+      &quot;payment&quot;: &quot;wxpay&quot;
+    }
+  },
+  &quot;success&quot;: true,
+  &quot;error&quot;: {}
 }
-Pos.init(path);
-</code></pre></li>
-
-<li><p>Call API</p>
-
-<pre><code>String result = Pos.call(&quot;pp:///v1/account/login?tenant=LABS&amp;username=salesman&amp;password=1234&quot;);
-</code></pre></li>
-</ol>
-
-<blockquote>
-<h3 id="setting">Setting</h3>
-
-<h4 id="download-hahahugoshortcode-1hbhb">Download <a  href="http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar" target="_blank"  class="btn btn-default">
-  
-  
-  
-    
-  <i class="fa fa-cloud-download"></i>
-    
-  
-  pos.aar
-  
-</a>
-</h4>
-
-<h4 id="in-project-structure">In Project Structure</h4>
-
-<ol>
-<li>click <code>+</code></li>
-<li>select <code>import .JAR/.AAR Package</code></li>
-<li>click <code>Next</code></li>
-<li>select <code>pos.aar</code> file</li>
-<li>click <code>Finish</code></li>
-<li>click <code>OK</code> and re-open <code>Project Structure</code></li>
-<li>select <code>app</code> modules</li>
-<li>select <code>Dependencies</code> tab</li>
-<li>click <code>+</code> button</li>
-<li>select <code>3. Module Dependency</code></li>
-<li>select <code>possdk</code></li>
-<li>click <code>OK</code></li>
-</ol>
-</blockquote>
+</code></pre>
 
 
       

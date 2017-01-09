@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Android</title>
+    <title>Usecase</title>
     <link href="/css/nucleus.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/hybrid.css" rel="stylesheet">
@@ -24,7 +24,7 @@
     {display:none !important;}</style>
     <link href="/css/ribbon.css" rel="stylesheet">
   </head>
-  <body class="" data-url="/getting-started/android/">
+  <body class="" data-url="/usecase/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -93,7 +93,7 @@
       
       
 
-      <li class="dd-item  parent" data-nav-id="/getting-started/">
+      <li class="dd-item  " data-nav-id="/getting-started/">
         <a href="/getting-started/">
           <span>
             
@@ -109,7 +109,7 @@
           
           
           
-            <li class="dd-item active" data-nav-id="/getting-started/android/">
+            <li class="dd-item " data-nav-id="/getting-started/android/">
               <a href="/getting-started/android/">
                 <span>Android     </i></span>
               </a>
@@ -213,7 +213,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/usecase/">
+      <li class="dd-item active parent" data-nav-id="/usecase/">
         <a href="/usecase/">
           <span>
             
@@ -272,8 +272,16 @@
                       </a>
                   </span>
                 
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
                 
                 
+                
+                
+                  
+                
+                  
+                
+                  
                 
                   
                 
@@ -282,90 +290,54 @@
                   
                     
                     
-                <a href="/getting-started/" itemprop="url"><span itemprop="title">Getting Started</span></a> <i class="fa fa-angle-right"></i>
-                    
                   
                 
-                  
-                
-                  
-                
-                  
-                
-                <span itemprop="title"> Android</span>
+                <span itemprop="title"> Usecase</span>
               </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#login">Login</a></li>
+<li><a href="#cart">Cart</a></li>
+<li><a href="#order">Order</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
               
 
             </div>
             
     	        <div id="body-inner">
                 
-                <h1>Android</h1>
+                <h1>Usecase</h1>
                 
 
 
 
-<ol>
-<li><p>Set Permission in <code>AndroidManifest.xml</code> file</p>
+<ul>
+<li><a href="/usecase/#login">Login</a></li>
+<li><a href="/usecase/#cart">Cart</a></li>
+<li><a href="/usecase/#order">Order</a></li>
+</ul>
 
-<pre><code>&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
-</code></pre></li>
+<h2 id="login">Login</h2>
 
-<li><p>Import</p>
+<p><img src="/images/login.png" alt="login" /></p>
 
-<pre><code>import cn.p2shop.pos.Pos;
-</code></pre></li>
+<h2 id="cart">Cart</h2>
 
-<li><p>Init</p>
+<p><img src="/images/cart.png" alt="cart" /></p>
 
-<pre><code>String path;
-if (android.os.Build.VERSION.SDK_INT &gt;=android.os.Build.VERSION_CODES.LOLLIPOP){
-    path = getNoBackupFilesDir().getAbsolutePath();
-} else{
-    path = getFilesDir().getAbsolutePath();
-}
-Pos.init(path);
-</code></pre></li>
+<h2 id="order">Order</h2>
 
-<li><p>Call API</p>
-
-<pre><code>String result = Pos.call(&quot;pp:///v1/account/login?tenant=LABS&amp;username=salesman&amp;password=1234&quot;);
-</code></pre></li>
-</ol>
-
-<blockquote>
-<h3 id="setting">Setting</h3>
-
-<h4 id="download-hahahugoshortcode-1hbhb">Download <a  href="http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar" target="_blank"  class="btn btn-default">
-  
-  
-  
-    
-  <i class="fa fa-cloud-download"></i>
-    
-  
-  pos.aar
-  
-</a>
-</h4>
-
-<h4 id="in-project-structure">In Project Structure</h4>
-
-<ol>
-<li>click <code>+</code></li>
-<li>select <code>import .JAR/.AAR Package</code></li>
-<li>click <code>Next</code></li>
-<li>select <code>pos.aar</code> file</li>
-<li>click <code>Finish</code></li>
-<li>click <code>OK</code> and re-open <code>Project Structure</code></li>
-<li>select <code>app</code> modules</li>
-<li>select <code>Dependencies</code> tab</li>
-<li>click <code>+</code> button</li>
-<li>select <code>3. Module Dependency</code></li>
-<li>select <code>possdk</code></li>
-<li>click <code>OK</code></li>
-</ol>
-</blockquote>
+<p><img src="/images/order.png" alt="order" /></p>
 
 
       
