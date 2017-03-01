@@ -328,7 +328,7 @@
 <li><a href="#example-2">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#remove-cart">Remove cart</a>
+<li><a href="#set-customer">Set customer</a>
 <ul>
 <li>
 <ul>
@@ -336,7 +336,7 @@
 <li><a href="#example-3">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#get-all-carts">Get all carts</a>
+<li><a href="#set-coupon">Set coupon</a>
 <ul>
 <li>
 <ul>
@@ -344,12 +344,36 @@
 <li><a href="#example-4">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#get-cart">Get cart</a>
+<li><a href="#set-info">Set info</a>
 <ul>
 <li>
 <ul>
 <li><a href="#parameters-5">Parameters</a></li>
 <li><a href="#example-5">Example</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#remove-cart">Remove cart</a>
+<ul>
+<li>
+<ul>
+<li><a href="#parameters-6">Parameters</a></li>
+<li><a href="#example-6">Example</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#get-all-carts">Get all carts</a>
+<ul>
+<li>
+<ul>
+<li><a href="#parameters-7">Parameters</a></li>
+<li><a href="#example-7">Example</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#get-cart">Get cart</a>
+<ul>
+<li>
+<ul>
+<li><a href="#parameters-8">Parameters</a></li>
+<li><a href="#example-8">Example</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -371,7 +395,7 @@
 
 <h2 id="create-cart">Create cart</h2>
 
-<p><code>/v1/cart/create-cart</code></p>
+<p><code>/cart/create-cart</code></p>
 
 <h4 id="parameters">Parameters</h4>
 
@@ -381,21 +405,25 @@
 
 <p>Request:</p>
 
-<p><code>pp:///v1/cart/create-cart</code></p>
+<p><code>pp://staging/cart/create-cart</code></p>
 
 <p>Success:</p>
 
 <pre><code>{
   &quot;result&quot;: {
     &quot;id&quot;: 1,
-    &quot;tenantId&quot;: &quot;&quot;,
-    &quot;items&quot;: [],
-    &quot;subTotal&quot;: 0,
-    &quot;total&quot;: 0,
+    &quot;items&quot;: null,
+    &quot;listPrice&quot;: 0,
+    &quot;salePrice&quot;: 0,
     &quot;quantity&quot;: 0,
+    &quot;discount&quot;: 0,
+    &quot;customerInfo&quot;: null,
+    &quot;couponNo&quot;: &quot;&quot;,
+    &quot;info&quot;: null,
     &quot;userId&quot;: 1,
-    &quot;createdAt&quot;: &quot;2017-01-06T04:56:51.667893692Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-01-06T04:56:51.667893692Z&quot;
+    &quot;spotId&quot;: 2,
+    &quot;createdAt&quot;: &quot;2017-03-01T15:28:49.136503665Z&quot;,
+    &quot;updatedAt&quot;: &quot;2017-03-01T15:28:49.136503665Z&quot;
   },
   &quot;success&quot;: true,
   &quot;error&quot;: {}
@@ -418,7 +446,7 @@
 
 <h2 id="add-item-to-cart">Add item to cart</h2>
 
-<p><code>/v1/cart/add-item</code></p>
+<p><code>/cart/add-item</code></p>
 
 <h4 id="parameters-1">Parameters</h4>
 
@@ -439,9 +467,9 @@
 </tr>
 
 <tr>
-<td>skuId</td>
+<td>uid</td>
 <td>Yes</td>
-<td>number</td>
+<td>string</td>
 </tr>
 
 <tr>
@@ -456,32 +484,39 @@
 
 <p>Request:</p>
 
-<p><code>pp:///v1/cart/add-item?cartId=1&amp;skuId=12&amp;quantity=2</code></p>
+<p><code>pp://staging/cart/add-item?cartId=1&amp;uid=305228&amp;quantity=2</code></p>
 
 <p>Success:</p>
 
 <pre><code>{
   &quot;result&quot;: {
     &quot;id&quot;: 1,
-    &quot;tenantId&quot;: &quot;&quot;,
     &quot;items&quot;: [
       {
-        &quot;skuId&quot;: 12,
-        &quot;contentId&quot;: 12,
-        &quot;skuCode&quot;: &quot;SF_PRO_11_1&quot;,
-        &quot;name&quot;: &quot;Sound Forge Pro 11 (recurring)&quot;,
+        &quot;uid&quot;: &quot;305228&quot;,
+        &quot;name&quot;: &quot;EKJP6CV102, (59)Navy, (135)135&quot;,
+        &quot;skuCode&quot;: &quot;EKJP6CV10259135&quot;,
+        &quot;contentCode&quot;: &quot;EKJP6CV102&quot;,
+        &quot;brandCode&quot;: &quot;EK&quot;,
+        &quot;unitListPrice&quot;: 450,
+        &quot;unitSalePrice&quot;: 450,
         &quot;quantity&quot;: 2,
-        &quot;unitPrice&quot;: 54.99,
-        &quot;price&quot;: 54.99,
-        &quot;total&quot;: 109.98
+        &quot;listPrice&quot;: 900,
+        &quot;salePrice&quot;: 900,
+        &quot;discount&quot;: 0
       }
     ],
-    &quot;subTotal&quot;: 109.98,
-    &quot;total&quot;: 109.98,
+    &quot;listPrice&quot;: 900,
+    &quot;salePrice&quot;: 900,
     &quot;quantity&quot;: 2,
+    &quot;discount&quot;: 0,
+    &quot;customerInfo&quot;: null,
+    &quot;couponNo&quot;: &quot;&quot;,
+    &quot;info&quot;: null,
     &quot;userId&quot;: 1,
-    &quot;createdAt&quot;: &quot;2017-01-06T04:56:51.667893692Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-01-06T04:58:53.669251111Z&quot;
+    &quot;spotId&quot;: 2,
+    &quot;createdAt&quot;: &quot;2017-03-01T15:28:49Z&quot;,
+    &quot;updatedAt&quot;: &quot;2017-03-01T15:33:36.714647541Z&quot;
   },
   &quot;success&quot;: true,
   &quot;error&quot;: {}
@@ -504,7 +539,7 @@
 
 <h2 id="remove-item-from-cart">Remove item from cart</h2>
 
-<p><code>/v1/cart/remove-item</code></p>
+<p><code>/cart/remove-item</code></p>
 
 <h4 id="parameters-2">Parameters</h4>
 
@@ -542,32 +577,39 @@
 
 <p>Request:</p>
 
-<p><code>pp:///v1/cart/remove-item?cartId=1&amp;skuId=12&amp;quantity=1</code></p>
+<p><code>pp://staging/cart/remove-item?cartId=1&amp;uid=305228&amp;quantity=1</code></p>
 
 <p>Success:</p>
 
 <pre><code>{
   &quot;result&quot;: {
     &quot;id&quot;: 1,
-    &quot;tenantId&quot;: &quot;&quot;,
     &quot;items&quot;: [
       {
-        &quot;skuId&quot;: 12,
-        &quot;contentId&quot;: 12,
-        &quot;skuCode&quot;: &quot;SF_PRO_11_1&quot;,
-        &quot;name&quot;: &quot;Sound Forge Pro 11 (recurring)&quot;,
+        &quot;uid&quot;: &quot;305228&quot;,
+        &quot;name&quot;: &quot;EKJP6CV102, (59)Navy, (135)135&quot;,
+        &quot;skuCode&quot;: &quot;EKJP6CV10259135&quot;,
+        &quot;contentCode&quot;: &quot;EKJP6CV102&quot;,
+        &quot;brandCode&quot;: &quot;EK&quot;,
+        &quot;unitListPrice&quot;: 450,
+        &quot;unitSalePrice&quot;: 450,
         &quot;quantity&quot;: 1,
-        &quot;unitPrice&quot;: 54.99,
-        &quot;price&quot;: 54.99,
-        &quot;total&quot;: 54.99
+        &quot;listPrice&quot;: 450,
+        &quot;salePrice&quot;: 450,
+        &quot;discount&quot;: 0
       }
     ],
-    &quot;subTotal&quot;: 54.99,
-    &quot;total&quot;: 54.99,
+    &quot;listPrice&quot;: 1350,
+    &quot;salePrice&quot;: 1350,
     &quot;quantity&quot;: 1,
+    &quot;discount&quot;: 0,
+    &quot;customerInfo&quot;: null,
+    &quot;couponNo&quot;: &quot;&quot;,
+    &quot;info&quot;: null,
     &quot;userId&quot;: 1,
-    &quot;createdAt&quot;: &quot;2017-01-06T04:56:51.667893692Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-01-06T05:00:03.212766277Z&quot;
+    &quot;spotId&quot;: 2,
+    &quot;createdAt&quot;: &quot;2017-03-01T15:28:49Z&quot;,
+    &quot;updatedAt&quot;: &quot;2017-03-01T15:35:56.789085986Z&quot;
   },
   &quot;success&quot;: true,
   &quot;error&quot;: {}
@@ -588,11 +630,298 @@
 
 <hr />
 
-<h2 id="remove-cart">Remove cart</h2>
+<h2 id="set-customer">Set customer</h2>
 
-<p><code>/v1/cart/remove-cart</code></p>
+<p><code>/cart/set-customer</code></p>
 
 <h4 id="parameters-3">Parameters</h4>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>cartId</td>
+<td>Yes</td>
+<td>number</td>
+</tr>
+
+<tr>
+<td>no</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="example-3">Example</h4>
+
+<p>Request:</p>
+
+<p><code>pp://staging/cart/set-customer?cartId=1&amp;no=RC10000000001</code></p>
+
+<p>Success:</p>
+
+<pre><code>{
+  &quot;result&quot;: {
+    &quot;id&quot;: 1,
+    &quot;items&quot;: [
+      {
+        &quot;uid&quot;: &quot;305228&quot;,
+        &quot;name&quot;: &quot;EKJP6CV102, (59)Navy, (135)135&quot;,
+        &quot;skuCode&quot;: &quot;EKJP6CV10259135&quot;,
+        &quot;contentCode&quot;: &quot;EKJP6CV102&quot;,
+        &quot;brandCode&quot;: &quot;EK&quot;,
+        &quot;unitListPrice&quot;: 450,
+        &quot;unitSalePrice&quot;: 450,
+        &quot;quantity&quot;: 1,
+        &quot;listPrice&quot;: 450,
+        &quot;salePrice&quot;: 450,
+        &quot;discount&quot;: 0
+      }
+    ],
+    &quot;listPrice&quot;: 1350,
+    &quot;salePrice&quot;: 1350,
+    &quot;quantity&quot;: 1,
+    &quot;discount&quot;: 0,
+    &quot;customerInfo&quot;: {
+      &quot;no&quot;: &quot;10000000001&quot;,
+      &quot;brandCode&quot;: &quot;RC&quot;,
+      &quot;mobile&quot;: &quot;123456789021&quot;,
+      &quot;grade&quot;: 0,
+      &quot;cardType&quot;: &quot;purpleCard&quot;,
+      &quot;mileage&quot;: {
+        &quot;currentPoints&quot;: 9000,
+        &quot;totalEarnPoints&quot;: 10000,
+        &quot;totalRedeemPoints&quot;: 10,
+        &quot;totalSaleAmount&quot;: &quot;345.0&quot;
+      }
+    },
+    &quot;couponNo&quot;: &quot;&quot;,
+    &quot;info&quot;: null,
+    &quot;userId&quot;: 1,
+    &quot;spotId&quot;: 2,
+    &quot;createdAt&quot;: &quot;2017-03-01T15:28:49Z&quot;,
+    &quot;updatedAt&quot;: &quot;2017-03-01T15:39:08.371314559Z&quot;
+  },
+  &quot;success&quot;: true,
+  &quot;error&quot;: {}
+}
+</code></pre>
+
+<h2 id="set-coupon">Set coupon</h2>
+
+<p><code>/cart/set-coupon</code></p>
+
+<h4 id="parameters-4">Parameters</h4>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>cartId</td>
+<td>Yes</td>
+<td>number</td>
+</tr>
+
+<tr>
+<td>no</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="example-4">Example</h4>
+
+<p>Request:</p>
+
+<p><code>pp://staging/cart/set-coupon?cartId=1&amp;no=WA976CE9199756D5BC</code></p>
+
+<p>Success:</p>
+
+<pre><code>{
+  &quot;result&quot;: {
+    &quot;id&quot;: 1,
+    &quot;items&quot;: [
+      {
+        &quot;uid&quot;: &quot;305228&quot;,
+        &quot;name&quot;: &quot;EKJP6CV102, (59)Navy, (135)135&quot;,
+        &quot;skuCode&quot;: &quot;EKJP6CV10259135&quot;,
+        &quot;contentCode&quot;: &quot;EKJP6CV102&quot;,
+        &quot;brandCode&quot;: &quot;EK&quot;,
+        &quot;unitListPrice&quot;: 450,
+        &quot;unitSalePrice&quot;: 0,
+        &quot;quantity&quot;: 1,
+        &quot;listPrice&quot;: 450,
+        &quot;salePrice&quot;: 450,
+        &quot;discount&quot;: 0
+      },
+      {
+        &quot;uid&quot;: &quot;1&quot;,
+        &quot;name&quot;: &quot;LONG DOWN JUMPER, (39)Ivory, X-SMALL&quot;,
+        &quot;skuCode&quot;: &quot;WHJP64T05C390XS&quot;,
+        &quot;contentCode&quot;: &quot;WHJP64T05C&quot;,
+        &quot;brandCode&quot;: &quot;WA&quot;,
+        &quot;unitListPrice&quot;: 1290,
+        &quot;unitSalePrice&quot;: 0,
+        &quot;quantity&quot;: 2,
+        &quot;listPrice&quot;: 2580,
+        &quot;salePrice&quot;: 1806,
+        &quot;discount&quot;: 774
+      }
+    ],
+    &quot;listPrice&quot;: 4380,
+    &quot;salePrice&quot;: 2256,
+    &quot;quantity&quot;: 3,
+    &quot;discount&quot;: 774,
+    &quot;customerInfo&quot;: {
+      &quot;no&quot;: &quot;10000000001&quot;,
+      &quot;brandCode&quot;: &quot;RC&quot;,
+      &quot;mobile&quot;: &quot;123456789021&quot;,
+      &quot;grade&quot;: 0,
+      &quot;cardType&quot;: &quot;purpleCard&quot;,
+      &quot;mileage&quot;: {
+        &quot;currentPoints&quot;: 9000,
+        &quot;totalEarnPoints&quot;: 10000,
+        &quot;totalRedeemPoints&quot;: 10,
+        &quot;totalSaleAmount&quot;: &quot;345.0&quot;
+      }
+    },
+    &quot;couponNo&quot;: &quot;WA976CE9199756D5BC&quot;,
+    &quot;info&quot;: null,
+    &quot;userId&quot;: 1,
+    &quot;spotId&quot;: 2,
+    &quot;createdAt&quot;: &quot;2017-03-01T15:28:49Z&quot;,
+    &quot;updatedAt&quot;: &quot;2017-03-01T15:43:27.347863336Z&quot;
+  },
+  &quot;success&quot;: true,
+  &quot;error&quot;: {}
+}
+</code></pre>
+
+<h2 id="set-info">Set info</h2>
+
+<p><code>/cart/remove-cart</code></p>
+
+<h4 id="parameters-5">Parameters</h4>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>cartId</td>
+<td>Yes</td>
+<td>number</td>
+</tr>
+
+<tr>
+<td><code>key</code></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="example-5">Example</h4>
+
+<p>Request:</p>
+
+<p><code>pp://staging/cart/set-info?cartId=1&amp;payment[alipay]=150&amp;payment[wxpay]=30&amp;receipt=193018485875930103</code></p>
+
+<p>Success:</p>
+
+<pre><code>{
+  &quot;result&quot;: {
+    &quot;id&quot;: 1,
+    &quot;items&quot;: [
+      {
+        &quot;uid&quot;: &quot;305228&quot;,
+        &quot;name&quot;: &quot;EKJP6CV102, (59)Navy, (135)135&quot;,
+        &quot;skuCode&quot;: &quot;EKJP6CV10259135&quot;,
+        &quot;contentCode&quot;: &quot;EKJP6CV102&quot;,
+        &quot;brandCode&quot;: &quot;EK&quot;,
+        &quot;unitListPrice&quot;: 450,
+        &quot;unitSalePrice&quot;: 450,
+        &quot;quantity&quot;: 1,
+        &quot;listPrice&quot;: 450,
+        &quot;salePrice&quot;: 450,
+        &quot;discount&quot;: 0
+      },
+      {
+        &quot;uid&quot;: &quot;1&quot;,
+        &quot;name&quot;: &quot;LONG DOWN JUMPER, (39)Ivory, X-SMALL&quot;,
+        &quot;skuCode&quot;: &quot;WHJP64T05C390XS&quot;,
+        &quot;contentCode&quot;: &quot;WHJP64T05C&quot;,
+        &quot;brandCode&quot;: &quot;WA&quot;,
+        &quot;unitListPrice&quot;: 1290,
+        &quot;unitSalePrice&quot;: 1290,
+        &quot;quantity&quot;: 2,
+        &quot;listPrice&quot;: 2580,
+        &quot;salePrice&quot;: 2580,
+        &quot;discount&quot;: 774
+      }
+    ],
+    &quot;listPrice&quot;: 7410,
+    &quot;salePrice&quot;: 5286,
+    &quot;quantity&quot;: 3,
+    &quot;discount&quot;: 2124,
+    &quot;customerInfo&quot;: {
+      &quot;no&quot;: &quot;10000000001&quot;,
+      &quot;brandCode&quot;: &quot;RC&quot;,
+      &quot;mobile&quot;: &quot;123456789021&quot;,
+      &quot;grade&quot;: 0,
+      &quot;cardType&quot;: &quot;purpleCard&quot;,
+      &quot;mileage&quot;: {
+        &quot;currentPoints&quot;: 9000,
+        &quot;totalEarnPoints&quot;: 10000,
+        &quot;totalRedeemPoints&quot;: 10,
+        &quot;totalSaleAmount&quot;: &quot;345.0&quot;
+      }
+    },
+    &quot;couponNo&quot;: &quot;WA976CE9199756D5BC&quot;,
+    &quot;info&quot;: {
+      &quot;payment&quot;: {
+        &quot;alipay&quot;: &quot;150&quot;,
+        &quot;wxpay&quot;: &quot;30&quot;
+      },
+      &quot;receipt&quot;: &quot;193018485875930103&quot;
+    },
+    &quot;userId&quot;: 1,
+    &quot;spotId&quot;: 2,
+    &quot;createdAt&quot;: &quot;2017-03-01T15:28:49Z&quot;,
+    &quot;updatedAt&quot;: &quot;2017-03-01T15:44:48.496016435Z&quot;
+  },
+  &quot;success&quot;: true,
+  &quot;error&quot;: {}
+}
+</code></pre>
+
+<h2 id="remove-cart">Remove cart</h2>
+
+<p><code>/cart/remove-cart</code></p>
+
+<h4 id="parameters-6">Parameters</h4>
 
 <table>
 <thead>
@@ -612,11 +941,11 @@
 </tbody>
 </table>
 
-<h4 id="example-3">Example</h4>
+<h4 id="example-6">Example</h4>
 
 <p>Request:</p>
 
-<p><code>pp:///v1/cart/remove-cart</code></p>
+<p><code>pp://staging/cart/remove-cart</code></p>
 
 <p>Success:</p>
 
@@ -643,63 +972,67 @@
 
 <h2 id="get-all-carts">Get all carts</h2>
 
-<p><code>/v1/cart/all-carts</code></p>
+<p><code>/cart/all-carts</code></p>
 
-<h4 id="parameters-4">Parameters</h4>
+<h4 id="parameters-7">Parameters</h4>
 
 <p>None</p>
 
-<h4 id="example-4">Example</h4>
+<h4 id="example-7">Example</h4>
 
 <p>Request:</p>
 
-<p><code>pp:///v1/cart/all-carts</code></p>
+<p><code>pp://staging/cart/all-carts</code></p>
 
 <p>Success:</p>
 
 <pre><code>{
   &quot;result&quot;: [
     {
-      &quot;id&quot;: 2,
-      &quot;items&quot;: [
-        {
-          &quot;skuId&quot;: 12,
-          &quot;contentId&quot;: 12,
-          &quot;skuCode&quot;: &quot;SF_PRO_11_1&quot;,
-          &quot;name&quot;: &quot;Sound Forge Pro 11 (recurring)&quot;,
-          &quot;quantity&quot;: 1,
-          &quot;unitPrice&quot;: 54.99,
-          &quot;price&quot;: 54.99,
-          &quot;total&quot;: 54.99
+      &quot;id&quot;: 1,
+      &quot;listPrice&quot;: 4380,
+      &quot;salePrice&quot;: 2256,
+      &quot;quantity&quot;: 3,
+      &quot;discount&quot;: 774,
+      &quot;customerInfo&quot;: {
+        &quot;no&quot;: &quot;10000000001&quot;,
+        &quot;brandCode&quot;: &quot;RC&quot;,
+        &quot;mobile&quot;: &quot;123456789021&quot;,
+        &quot;grade&quot;: 0,
+        &quot;cardType&quot;: &quot;purpleCard&quot;,
+        &quot;mileage&quot;: {
+          &quot;currentPoints&quot;: 9000,
+          &quot;totalEarnPoints&quot;: 10000,
+          &quot;totalRedeemPoints&quot;: 10,
+          &quot;totalSaleAmount&quot;: &quot;345.0&quot;
         }
-      ],
-      &quot;subTotal&quot;: 54.99,
-      &quot;total&quot;: 54.99,
-      &quot;quantity&quot;: 1,
+      },
+      &quot;couponNo&quot;: &quot;WA976CE9199756D5BC&quot;,
+      &quot;info&quot;: {
+        &quot;payment&quot;: {
+          &quot;alipay&quot;: &quot;150&quot;,
+          &quot;wxpay&quot;: &quot;30&quot;
+        },
+        &quot;receipt&quot;: &quot;193018485875930103&quot;
+      },
       &quot;userId&quot;: 1,
-      &quot;createdAt&quot;: &quot;2017-01-06T04:56:51.667893692Z&quot;,
-      &quot;updatedAt&quot;: &quot;2017-01-06T05:00:03.212766277Z&quot;
-    },
+      &quot;spotId&quot;: 2,
+      &quot;createdAt&quot;: &quot;2017-03-01T15:28:49Z&quot;,
+      &quot;updatedAt&quot;: &quot;2017-03-01T15:44:48Z&quot;
+    }
     {
-      &quot;id&quot;: 3,
-      &quot;items&quot;: [
-        {
-          &quot;skuId&quot;: 12,
-          &quot;contentId&quot;: 12,
-          &quot;skuCode&quot;: &quot;SF_PRO_11_1&quot;,
-          &quot;name&quot;: &quot;Sound Forge Pro 11 (recurring)&quot;,
-          &quot;quantity&quot;: 1,
-          &quot;unitPrice&quot;: 54.99,
-          &quot;price&quot;: 54.99,
-          &quot;total&quot;: 54.99
-        }
-      ],
-      &quot;subTotal&quot;: 54.99,
-      &quot;total&quot;: 54.99,
+      &quot;id&quot;: 2,
+      &quot;listPrice&quot;: 1090,
+      &quot;salePrice&quot;: 1090,
       &quot;quantity&quot;: 1,
+      &quot;discount&quot;: 0,
+      &quot;customerInfo&quot;: null,
+      &quot;couponNo&quot;: &quot;&quot;,
+      &quot;info&quot;: null,
       &quot;userId&quot;: 1,
-      &quot;createdAt&quot;: &quot;2017-01-08T13:01:48.545481616Z&quot;,
-      &quot;updatedAt&quot;: &quot;2017-01-08T13:01:48.545481616Z&quot;
+      &quot;spotId&quot;: 1,
+      &quot;createdAt&quot;: &quot;2017-03-01T15:47:11Z&quot;,
+      &quot;updatedAt&quot;: &quot;2017-03-01T15:47:22Z&quot;
     }
   ],
   &quot;success&quot;: true,
@@ -711,9 +1044,9 @@
 
 <h2 id="get-cart">Get cart</h2>
 
-<p><code>/v1/cart/get-cart</code></p>
+<p><code>/cart/get-cart</code></p>
 
-<h4 id="parameters-5">Parameters</h4>
+<h4 id="parameters-8">Parameters</h4>
 
 <table>
 <thead>
@@ -733,37 +1066,78 @@
 </tbody>
 </table>
 
-<h4 id="example-5">Example</h4>
+<h4 id="example-8">Example</h4>
 
 <p>Request:</p>
 
-<p><code>pp:///v1/cart/get-cart?cartId=2</code></p>
+<p><code>pp://staging/cart/get-cart?cartId=1</code></p>
 
 <p>Success:</p>
 
 <pre><code>{
-  &quot;success&quot;: true,
   &quot;result&quot;: {
-    &quot;id&quot;: 2,
+    &quot;id&quot;: 1,
+    &quot;tenantId&quot;: &quot;&quot;,
+    &quot;channel&quot;: &quot;&quot;,
     &quot;items&quot;: [
       {
-        &quot;skuId&quot;: 12,
-        &quot;contentId&quot;: 12,
-        &quot;skuCode&quot;: &quot;SF_PRO_11_1&quot;,
-        &quot;name&quot;: &quot;Sound Forge Pro 11 (recurring)&quot;,
+        &quot;uid&quot;: &quot;305228&quot;,
+        &quot;name&quot;: &quot;EKJP6CV102, (59)Navy, (135)135&quot;,
+        &quot;skuCode&quot;: &quot;EKJP6CV10259135&quot;,
+        &quot;contentCode&quot;: &quot;EKJP6CV102&quot;,
+        &quot;brandCode&quot;: &quot;EK&quot;,
+        &quot;unitListPrice&quot;: 450,
+        &quot;unitSalePrice&quot;: 0,
         &quot;quantity&quot;: 1,
-        &quot;unitPrice&quot;: 54.99,
-        &quot;price&quot;: 54.99,
-        &quot;total&quot;: 54.99
+        &quot;listPrice&quot;: 450,
+        &quot;salePrice&quot;: 450,
+        &quot;discount&quot;: 0
+      },
+      {
+        &quot;uid&quot;: &quot;1&quot;,
+        &quot;name&quot;: &quot;LONG DOWN JUMPER, (39)Ivory, X-SMALL&quot;,
+        &quot;skuCode&quot;: &quot;WHJP64T05C390XS&quot;,
+        &quot;contentCode&quot;: &quot;WHJP64T05C&quot;,
+        &quot;brandCode&quot;: &quot;WA&quot;,
+        &quot;unitListPrice&quot;: 1290,
+        &quot;unitSalePrice&quot;: 0,
+        &quot;quantity&quot;: 2,
+        &quot;listPrice&quot;: 2580,
+        &quot;salePrice&quot;: 1806,
+        &quot;discount&quot;: 774
       }
     ],
-    &quot;subTotal&quot;: 54.99,
-    &quot;total&quot;: 54.99,
-    &quot;quantity&quot;: 1,
+    &quot;listPrice&quot;: 4380,
+    &quot;salePrice&quot;: 2256,
+    &quot;quantity&quot;: 3,
+    &quot;discount&quot;: 774,
+    &quot;customerInfo&quot;: {
+      &quot;no&quot;: &quot;10000000001&quot;,
+      &quot;brandCode&quot;: &quot;RC&quot;,
+      &quot;mobile&quot;: &quot;123456789021&quot;,
+      &quot;grade&quot;: 0,
+      &quot;cardType&quot;: &quot;purpleCard&quot;,
+      &quot;mileage&quot;: {
+        &quot;currentPoints&quot;: 9000,
+        &quot;totalEarnPoints&quot;: 10000,
+        &quot;totalRedeemPoints&quot;: 10,
+        &quot;totalSaleAmount&quot;: &quot;345.0&quot;
+      }
+    },
+    &quot;couponNo&quot;: &quot;WA976CE9199756D5BC&quot;,
+    &quot;info&quot;: {
+      &quot;payment&quot;: {
+        &quot;alipay&quot;: &quot;150&quot;,
+        &quot;wxpay&quot;: &quot;30&quot;
+      },
+      &quot;receipt&quot;: &quot;193018485875930103&quot;
+    },
     &quot;userId&quot;: 1,
-    &quot;createdAt&quot;: &quot;2017-01-06T04:56:51.667893692Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-01-06T05:00:03.212766277Z&quot;
+    &quot;spotId&quot;: 2,
+    &quot;createdAt&quot;: &quot;2017-03-01T15:28:49Z&quot;,
+    &quot;updatedAt&quot;: &quot;2017-03-01T15:44:48Z&quot;
   },
+  &quot;success&quot;: true,
   &quot;error&quot;: {}
 }
 </code></pre>

@@ -54,7 +54,7 @@ Pos.init(path);
 
 &lt;li&gt;&lt;p&gt;Call API&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;String result = Pos.call(&amp;quot;pp:///v1/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);
+&lt;pre&gt;&lt;code&gt;String result = Pos.call(&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -118,7 +118,7 @@ P2PosInit(path)
 
 &lt;li&gt;&lt;p&gt;Call API&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;let result = P2PosCall(&amp;quot;pp:///v1/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;)
+&lt;pre&gt;&lt;code&gt;let result = P2PosCall(&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -140,7 +140,7 @@ P2PosInit(path);
 
 &lt;li&gt;&lt;p&gt;Call API&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;NSString* result = P2PosCall(@&amp;quot;pp:///v1/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);
+&lt;pre&gt;&lt;code&gt;NSString* result = P2PosCall(@&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -176,7 +176,7 @@ set &lt;code&gt;NO&lt;/code&gt;&lt;/li&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://pangpanglabs.github.io/getting-started/web-api/</guid>
-      <description>&lt;a  href=&#34;http://staging.p2shop.cn:52001/&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+      <description>&lt;a  href=&#34;http://staging.p2shop.cn:54010/docs/&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
   

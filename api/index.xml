@@ -99,6 +99,18 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;li&gt;&lt;a href=&#34;http://pangpanglabs.github.io/api/order&#34;&gt;Order&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;PosSDK use custom uri format like this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pp://production/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;scheme: &lt;code&gt;pp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;host: &lt;code&gt;staging&lt;/code&gt; or &lt;code&gt;production&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;path: api endpoint&lt;/li&gt;
+&lt;li&gt;query: parameters&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;p&gt;This is json response format. All json data should have 3 properties - &lt;code&gt;success&lt;/code&gt;, &lt;code&gt;result&lt;/code&gt;, &lt;code&gt;error&lt;/code&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
@@ -112,19 +124,19 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h4 id=&#34;android-1&#34;&gt;Android&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;String result = Pos.call(&amp;quot;pp:///v1/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);
+&lt;pre&gt;&lt;code&gt;String result = Pos.call(&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h4 id=&#34;ios-1&#34;&gt;iOS&lt;/h4&gt;
 
 &lt;h5 id=&#34;swift-1&#34;&gt;Swift&lt;/h5&gt;
 
-&lt;pre&gt;&lt;code&gt;let result = P2PosCall(&amp;quot;pp:///v1/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;)
+&lt;pre&gt;&lt;code&gt;let result = P2PosCall(&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h5 id=&#34;objective-c-1&#34;&gt;Objective-C&lt;/h5&gt;
 
-&lt;pre&gt;&lt;code&gt;NSString* result = P2PosCall(@&amp;quot;pp:///v1/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);
+&lt;pre&gt;&lt;code&gt;NSString* result = P2PosCall(@&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -139,7 +151,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h2 id=&#34;login&#34;&gt;Login&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;/v1/account/login&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/account/login&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;parameters&#34;&gt;Parameters&lt;/h4&gt;
 
@@ -177,29 +189,43 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp:///v1/account/login?tenant=LABS&amp;amp;username=salesmand&amp;amp;password=1234&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/account/login?tenant=LABS&amp;amp;username=salesmand&amp;amp;password=1234&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;result&amp;quot;: {
-    &amp;quot;token&amp;quot;: &amp;quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJQb3MiLCJleHAiOjE0O.z19pVl9OBV2RkGTOU2KIuLhLEJi6IS_Q9vxNjhYbjus&amp;quot;,
+    &amp;quot;token&amp;quot;: &amp;quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJQb3MiLCJleHAiOjE0ODg2NDA0MTMsImh0dHA6Ly93d3cuYXNwbmV0Ym9pbGVycGxhdGUuY29tL2lkZW50aXR5L2NsYWltcy90ZW5hbnRJZCI6IjEiLCJpc3MiOiJMQUJTIiwibmFtZWlkIjoiMSIsIm5iZiI6MTQ4ODM4MTIxMywicm9sZSI6IlNhbGVzbWFuLE1hbmFnZXIiLCJ1bmlxdWVfbmFtZSI6InNhbGVzbWFuIn0.sC9Qln1-AWgyled5Nj4MZ7tMsOuiLwqskDlAd2hs9vg&amp;quot;,
     &amp;quot;userId&amp;quot;: 1,
     &amp;quot;userName&amp;quot;: &amp;quot;salesman&amp;quot;,
-    &amp;quot;roles&amp;quot;: [
-      {
-        &amp;quot;name&amp;quot;: &amp;quot;Salesman&amp;quot;
-      }
-    ],
     &amp;quot;tenantId&amp;quot;: 1,
     &amp;quot;tenantCode&amp;quot;: &amp;quot;LABS&amp;quot;,
     &amp;quot;tenantName&amp;quot;: &amp;quot;Labs&amp;quot;,
     &amp;quot;spots&amp;quot;: [
       {
         &amp;quot;id&amp;quot;: 1,
-        &amp;quot;code&amp;quot;: &amp;quot;AC3E&amp;quot;,
-        &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;
+        &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;,
+        &amp;quot;brands&amp;quot;: [
+          {
+            &amp;quot;code&amp;quot;: &amp;quot;RC&amp;quot;,
+            &amp;quot;name&amp;quot;: &amp;quot;Roem&amp;quot;
+          }
+        ]
+      },
+      {
+        &amp;quot;id&amp;quot;: 2,
+        &amp;quot;name&amp;quot;: &amp;quot;上海正大广场&amp;quot;,
+        &amp;quot;brands&amp;quot;: [
+          {
+            &amp;quot;code&amp;quot;: &amp;quot;EK&amp;quot;,
+            &amp;quot;name&amp;quot;: &amp;quot;Eland Kids&amp;quot;
+          }
+        ]
       }
+    ],
+    &amp;quot;roles&amp;quot;: [
+      &amp;quot;Salesman&amp;quot;,
+      &amp;quot;Manager&amp;quot;
     ]
   },
   &amp;quot;success&amp;quot;: true,
@@ -223,7 +249,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h2 id=&#34;auto-login&#34;&gt;Auto login&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;/v1/account/autologin&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/account/autologin&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h4&gt;
 
@@ -233,29 +259,43 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp:///v1/account/autologin&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/account/autologin&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;result&amp;quot;: {
-    &amp;quot;token&amp;quot;: &amp;quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJQb3MiLCJleHAiOjE0ODM5MzYxMDQsImh0dHA6Ly93d3cuYXNwbmV0Ym9pbGVycGxhdGUuY29tL2lkZW50aXR5L2NsYWltcy90ZW5hbnRJZCI6IjEiLCJpc3MiOiJMQUJTIiwibmFtZWlkIjoiMSIsIm5iZiI6MTQ4MzY3NjkwNCwicm9sZSI6IlNhbGVzbWFuIiwidW5pcXVlX25hbWUiOiJzYWxlc21hbiJ9.z19pVl9OBV2RkGTOU2KIuLhLEJi6IS_Q9vxNjhYbjus&amp;quot;,
+    &amp;quot;token&amp;quot;: &amp;quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJQb3MiLCJleHAiOjE0ODg2NDA0MTMsImh0dHA6Ly93d3cuYXNwbmV0Ym9pbGVycGxhdGUuY29tL2lkZW50aXR5L2NsYWltcy90ZW5hbnRJZCI6IjEiLCJpc3MiOiJMQUJTIiwibmFtZWlkIjoiMSIsIm5iZiI6MTQ4ODM4MTIxMywicm9sZSI6IlNhbGVzbWFuLE1hbmFnZXIiLCJ1bmlxdWVfbmFtZSI6InNhbGVzbWFuIn0.sC9Qln1-AWgyled5Nj4MZ7tMsOuiLwqskDlAd2hs9vg&amp;quot;,
     &amp;quot;userId&amp;quot;: 1,
     &amp;quot;userName&amp;quot;: &amp;quot;salesman&amp;quot;,
-    &amp;quot;roles&amp;quot;: [
-      {
-        &amp;quot;name&amp;quot;: &amp;quot;Salesman&amp;quot;
-      }
-    ],
     &amp;quot;tenantId&amp;quot;: 1,
     &amp;quot;tenantCode&amp;quot;: &amp;quot;LABS&amp;quot;,
     &amp;quot;tenantName&amp;quot;: &amp;quot;Labs&amp;quot;,
     &amp;quot;spots&amp;quot;: [
       {
         &amp;quot;id&amp;quot;: 1,
-        &amp;quot;code&amp;quot;: &amp;quot;AC3E&amp;quot;,
-        &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;
+        &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;,
+        &amp;quot;brands&amp;quot;: [
+          {
+            &amp;quot;code&amp;quot;: &amp;quot;WA&amp;quot;,
+            &amp;quot;name&amp;quot;: &amp;quot;Paw in Paw&amp;quot;
+          }
+        ]
+      },
+      {
+        &amp;quot;id&amp;quot;: 2,
+        &amp;quot;name&amp;quot;: &amp;quot;上海正大广场&amp;quot;,
+        &amp;quot;brands&amp;quot;: [
+          {
+            &amp;quot;code&amp;quot;: &amp;quot;EK&amp;quot;,
+            &amp;quot;name&amp;quot;: &amp;quot;Eland Kids&amp;quot;
+          }
+        ]
       }
+    ],
+    &amp;quot;roles&amp;quot;: [
+      &amp;quot;Salesman&amp;quot;,
+      &amp;quot;Manager&amp;quot;
     ]
   },
   &amp;quot;success&amp;quot;: true,
@@ -274,6 +314,81 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
   }
 }
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;set-spot&#34;&gt;Set Spot&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/account/set-spot&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-2&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;spotId&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;example-2&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp://staging/account/set-spot?spotId=2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;token&amp;quot;: &amp;quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJQb3MiLCJleHAiOjE0ODg2NDA0MTMsImh0dHA6Ly93d3cuYXNwbmV0Ym9pbGVycGxhdGUuY29tL2lkZW50aXR5L2NsYWltcy90ZW5hbnRJZCI6IjEiLCJpc3MiOiJMQUJTIiwibmFtZWlkIjoiMSIsIm5iZiI6MTQ4ODM4MTIxMywicm9sZSI6IlNhbGVzbWFuLE1hbmFnZXIiLCJzcG90aWQiOiIyIiwidW5pcXVlX25hbWUiOiJzYWxlc21hbiJ9.02OrMulHTrwrwO_2-uDoQUhg1Ur31VRYcihurq5Id-0&amp;quot;,
+    &amp;quot;userId&amp;quot;: 1,
+    &amp;quot;userName&amp;quot;: &amp;quot;salesman&amp;quot;,
+    &amp;quot;tenantId&amp;quot;: 1,
+    &amp;quot;tenantCode&amp;quot;: &amp;quot;LABS&amp;quot;,
+    &amp;quot;tenantName&amp;quot;: &amp;quot;Labs&amp;quot;,
+    &amp;quot;spots&amp;quot;: [
+      {
+        &amp;quot;id&amp;quot;: 1,
+        &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;,
+        &amp;quot;brands&amp;quot;: [
+          {
+            &amp;quot;code&amp;quot;: &amp;quot;WA&amp;quot;,
+            &amp;quot;name&amp;quot;: &amp;quot;Paw in Paw&amp;quot;
+          }
+        ]
+      },
+      {
+        &amp;quot;id&amp;quot;: 2,
+        &amp;quot;name&amp;quot;: &amp;quot;上海正大广场&amp;quot;,
+        &amp;quot;brands&amp;quot;: [
+          {
+            &amp;quot;code&amp;quot;: &amp;quot;EK&amp;quot;,
+            &amp;quot;name&amp;quot;: &amp;quot;Eland Kids&amp;quot;
+          }
+        ]
+      }
+    ],
+    &amp;quot;roles&amp;quot;: [
+      &amp;quot;Salesman&amp;quot;,
+      &amp;quot;Manager&amp;quot;
+    ],
+    &amp;quot;currentSpotId&amp;quot;: 2
+  },
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -287,7 +402,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h2 id=&#34;get-current-user&#34;&gt;Get current user&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;/v1/context/user&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/context/user&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;parameters&#34;&gt;Parameters&lt;/h4&gt;
 
@@ -297,29 +412,45 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp:///v1/context/user&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/context/user&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {    
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;token&amp;quot;: &amp;quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJQb3MiLCJleHAiOjE0ODg2NDA0MTMsImh0dHA6Ly93d3cuYXNwbmV0Ym9pbGVycGxhdGUuY29tL2lkZW50aXR5L2NsYWltcy90ZW5hbnRJZCI6IjEiLCJpc3MiOiJMQUJTIiwibmFtZWlkIjoiMSIsIm5iZiI6MTQ4ODM4MTIxMywicm9sZSI6IlNhbGVzbWFuLE1hbmFnZXIiLCJzcG90aWQiOiIyIiwidW5pcXVlX25hbWUiOiJzYWxlc21hbiJ9.02OrMulHTrwrwO_2-uDoQUhg1Ur31VRYcihurq5Id-0&amp;quot;,
     &amp;quot;userId&amp;quot;: 1,
     &amp;quot;userName&amp;quot;: &amp;quot;salesman&amp;quot;,
-    &amp;quot;roles&amp;quot;: [
-      {
-        &amp;quot;name&amp;quot;: &amp;quot;Salesman&amp;quot;
-      }
-    ],
     &amp;quot;tenantId&amp;quot;: 1,
     &amp;quot;tenantCode&amp;quot;: &amp;quot;LABS&amp;quot;,
     &amp;quot;tenantName&amp;quot;: &amp;quot;Labs&amp;quot;,
     &amp;quot;spots&amp;quot;: [
       {
         &amp;quot;id&amp;quot;: 1,
-        &amp;quot;code&amp;quot;: &amp;quot;AC3E&amp;quot;,
-        &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;
+        &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;,
+        &amp;quot;brands&amp;quot;: [
+          {
+            &amp;quot;code&amp;quot;: &amp;quot;WA&amp;quot;,
+            &amp;quot;name&amp;quot;: &amp;quot;Paw in Paw&amp;quot;
+          }
+        ]
+      },
+      {
+        &amp;quot;id&amp;quot;: 2,
+        &amp;quot;name&amp;quot;: &amp;quot;上海正大广场&amp;quot;,
+        &amp;quot;brands&amp;quot;: [
+          {
+            &amp;quot;code&amp;quot;: &amp;quot;EK&amp;quot;,
+            &amp;quot;name&amp;quot;: &amp;quot;Eland Kids&amp;quot;
+          }
+        ]
       }
-    ]
+    ],
+    &amp;quot;roles&amp;quot;: [
+      &amp;quot;Salesman&amp;quot;,
+      &amp;quot;Manager&amp;quot;
+    ],
+    &amp;quot;currentSpotId&amp;quot;: 2
   },
   &amp;quot;success&amp;quot;: true,
   &amp;quot;error&amp;quot;: {}
@@ -339,9 +470,9 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;get-system-settings&#34;&gt;Get system settings&lt;/h2&gt;
+&lt;h2 id=&#34;get-system-information&#34;&gt;Get system information&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;/v1/context/settings&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/context/settings&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h4&gt;
 
@@ -351,22 +482,24 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp:///v1/context/settings&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/context/system&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;result&amp;quot;: {
-    &amp;quot;tenantId&amp;quot;: 1,
-    &amp;quot;system&amp;quot;: {
-      &amp;quot;allowOffline&amp;quot;: true,
-      &amp;quot;traceInterval&amp;quot;: 10
+    &amp;quot;setting&amp;quot;: {
+      &amp;quot;system&amp;quot;: {
+        &amp;quot;allowOffline&amp;quot;: true,
+        &amp;quot;traceInterval&amp;quot;: 10
+      },
+      &amp;quot;price&amp;quot;: {
+        &amp;quot;roundDigit&amp;quot;: 2,
+        &amp;quot;roundStrategy&amp;quot;: &amp;quot;round&amp;quot;,
+        &amp;quot;currency&amp;quot;: &amp;quot;CYN&amp;quot;
+      }
     },
-    &amp;quot;price&amp;quot;: {
-      &amp;quot;roundDigit&amp;quot;: 2,
-      &amp;quot;roundStrategy&amp;quot;: &amp;quot;round&amp;quot;,
-      &amp;quot;currency&amp;quot;: &amp;quot;CYN&amp;quot;
-    }
+    &amp;quot;version&amp;quot;: &amp;quot;0.0.2&amp;quot;
   },
   &amp;quot;success&amp;quot;: true,
   &amp;quot;error&amp;quot;: {}
@@ -394,11 +527,34 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
       <guid>http://pangpanglabs.github.io/api/catalog/</guid>
       <description>
 
-&lt;h2 id=&#34;search-products&#34;&gt;Search products&lt;/h2&gt;
+&lt;h2 id=&#34;download-products&#34;&gt;Download products&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;/v1/catalog/search-products&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/catalog/download&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;parameters&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;p&gt;None&lt;/p&gt;
+
+&lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp://staging//catalog/download&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: 0,
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;search-products&#34;&gt;Search products&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/catalog/search-products&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -430,11 +586,11 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
+&lt;h4 id=&#34;example-1&#34;&gt;Example&lt;/h4&gt;
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp:///v1/catalog/search-products?q=A&amp;amp;skipCount=0&amp;amp;maxResultCount=10&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/catalog/search-products?q=EK&amp;amp;skipCount=0&amp;amp;maxResultCount=10&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
@@ -442,42 +598,26 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
   &amp;quot;result&amp;quot;: {
     &amp;quot;items&amp;quot;: [
       {
-        &amp;quot;skuId&amp;quot;: 4,
-        &amp;quot;skuCode&amp;quot;: &amp;quot;AP_MBP_13_1&amp;quot;,
-        &amp;quot;contentId&amp;quot;: 4,
-        &amp;quot;name&amp;quot;: &amp;quot;Apple MacBook Pro 13-inch&amp;quot;,
-        &amp;quot;price&amp;quot;: 1800
+        &amp;quot;uid&amp;quot;: &amp;quot;305228&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;EKJP6CV102, (59)Navy, (135)135&amp;quot;,
+        &amp;quot;listPrice&amp;quot;: 450,
+        &amp;quot;salePrice&amp;quot;: 450,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;EKJP6CV10259135&amp;quot;,
+        &amp;quot;contentCode&amp;quot;: &amp;quot;EKJP6CV102&amp;quot;,
+        &amp;quot;brandCode&amp;quot;: &amp;quot;EK&amp;quot;
       },
+      /* ... */
       {
-        &amp;quot;skuId&amp;quot;: 5,
-        &amp;quot;skuCode&amp;quot;: &amp;quot;AS_551_LP_1&amp;quot;,
-        &amp;quot;contentId&amp;quot;: 5,
-        &amp;quot;name&amp;quot;: &amp;quot;Asus N551JK-XO076H Laptop&amp;quot;,
-        &amp;quot;price&amp;quot;: 1500
-      },
-      {
-        &amp;quot;skuId&amp;quot;: 10,
-        &amp;quot;skuCode&amp;quot;: &amp;quot;AD_CS4_PH_1&amp;quot;,
-        &amp;quot;contentId&amp;quot;: 10,
-        &amp;quot;name&amp;quot;: &amp;quot;Adobe Photoshop CS4&amp;quot;,
-        &amp;quot;price&amp;quot;: 75
-      },
-      {
-        &amp;quot;skuId&amp;quot;: 17,
-        &amp;quot;skuCode&amp;quot;: &amp;quot;APPLE_CAM_1&amp;quot;,
-        &amp;quot;contentId&amp;quot;: 17,
-        &amp;quot;name&amp;quot;: &amp;quot;Apple iCam&amp;quot;,
-        &amp;quot;price&amp;quot;: 1300
-      },
-      {
-        &amp;quot;skuId&amp;quot;: 25,
-        &amp;quot;skuCode&amp;quot;: &amp;quot;AD_C80_RS_1&amp;quot;,
-        &amp;quot;contentId&amp;quot;: 25,
-        &amp;quot;name&amp;quot;: &amp;quot;adidas Consortium Campus 80s Running Shoes&amp;quot;,
-        &amp;quot;price&amp;quot;: 27.56
+        &amp;quot;uid&amp;quot;: &amp;quot;305279&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;EKAP7S111K, (25)Pink, (200)200&amp;quot;,
+        &amp;quot;listPrice&amp;quot;: 398,
+        &amp;quot;salePrice&amp;quot;: 398,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;EKAP7S111K25200&amp;quot;,
+        &amp;quot;contentCode&amp;quot;: &amp;quot;EKAP7S111K&amp;quot;,
+        &amp;quot;brandCode&amp;quot;: &amp;quot;EK&amp;quot;
       }
     ],
-    &amp;quot;totalCount&amp;quot;: 5
+    &amp;quot;totalCount&amp;quot;: 11939
   },
   &amp;quot;success&amp;quot;: true,
   &amp;quot;error&amp;quot;: {}
@@ -507,7 +647,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h2 id=&#34;create-cart&#34;&gt;Create cart&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;/v1/cart/create-cart&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/cart/create-cart&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;parameters&#34;&gt;Parameters&lt;/h4&gt;
 
@@ -517,21 +657,25 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp:///v1/cart/create-cart&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/cart/create-cart&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;result&amp;quot;: {
     &amp;quot;id&amp;quot;: 1,
-    &amp;quot;tenantId&amp;quot;: &amp;quot;&amp;quot;,
-    &amp;quot;items&amp;quot;: [],
-    &amp;quot;subTotal&amp;quot;: 0,
-    &amp;quot;total&amp;quot;: 0,
+    &amp;quot;items&amp;quot;: null,
+    &amp;quot;listPrice&amp;quot;: 0,
+    &amp;quot;salePrice&amp;quot;: 0,
     &amp;quot;quantity&amp;quot;: 0,
+    &amp;quot;discount&amp;quot;: 0,
+    &amp;quot;customerInfo&amp;quot;: null,
+    &amp;quot;couponNo&amp;quot;: &amp;quot;&amp;quot;,
+    &amp;quot;info&amp;quot;: null,
     &amp;quot;userId&amp;quot;: 1,
-    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-01-06T04:56:51.667893692Z&amp;quot;,
-    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-01-06T04:56:51.667893692Z&amp;quot;
+    &amp;quot;spotId&amp;quot;: 2,
+    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-01T15:28:49.136503665Z&amp;quot;,
+    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-03-01T15:28:49.136503665Z&amp;quot;
   },
   &amp;quot;success&amp;quot;: true,
   &amp;quot;error&amp;quot;: {}
@@ -554,7 +698,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h2 id=&#34;add-item-to-cart&#34;&gt;Add item to cart&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;/v1/cart/add-item&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/cart/add-item&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h4&gt;
 
@@ -575,9 +719,9 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;skuId&lt;/td&gt;
+&lt;td&gt;uid&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -592,32 +736,39 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp:///v1/cart/add-item?cartId=1&amp;amp;skuId=12&amp;amp;quantity=2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/cart/add-item?cartId=1&amp;amp;uid=305228&amp;amp;quantity=2&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;result&amp;quot;: {
     &amp;quot;id&amp;quot;: 1,
-    &amp;quot;tenantId&amp;quot;: &amp;quot;&amp;quot;,
     &amp;quot;items&amp;quot;: [
       {
-        &amp;quot;skuId&amp;quot;: 12,
-        &amp;quot;contentId&amp;quot;: 12,
-        &amp;quot;skuCode&amp;quot;: &amp;quot;SF_PRO_11_1&amp;quot;,
-        &amp;quot;name&amp;quot;: &amp;quot;Sound Forge Pro 11 (recurring)&amp;quot;,
+        &amp;quot;uid&amp;quot;: &amp;quot;305228&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;EKJP6CV102, (59)Navy, (135)135&amp;quot;,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;EKJP6CV10259135&amp;quot;,
+        &amp;quot;contentCode&amp;quot;: &amp;quot;EKJP6CV102&amp;quot;,
+        &amp;quot;brandCode&amp;quot;: &amp;quot;EK&amp;quot;,
+        &amp;quot;unitListPrice&amp;quot;: 450,
+        &amp;quot;unitSalePrice&amp;quot;: 450,
         &amp;quot;quantity&amp;quot;: 2,
-        &amp;quot;unitPrice&amp;quot;: 54.99,
-        &amp;quot;price&amp;quot;: 54.99,
-        &amp;quot;total&amp;quot;: 109.98
+        &amp;quot;listPrice&amp;quot;: 900,
+        &amp;quot;salePrice&amp;quot;: 900,
+        &amp;quot;discount&amp;quot;: 0
       }
     ],
-    &amp;quot;subTotal&amp;quot;: 109.98,
-    &amp;quot;total&amp;quot;: 109.98,
+    &amp;quot;listPrice&amp;quot;: 900,
+    &amp;quot;salePrice&amp;quot;: 900,
     &amp;quot;quantity&amp;quot;: 2,
+    &amp;quot;discount&amp;quot;: 0,
+    &amp;quot;customerInfo&amp;quot;: null,
+    &amp;quot;couponNo&amp;quot;: &amp;quot;&amp;quot;,
+    &amp;quot;info&amp;quot;: null,
     &amp;quot;userId&amp;quot;: 1,
-    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-01-06T04:56:51.667893692Z&amp;quot;,
-    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-01-06T04:58:53.669251111Z&amp;quot;
+    &amp;quot;spotId&amp;quot;: 2,
+    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-01T15:28:49Z&amp;quot;,
+    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-03-01T15:33:36.714647541Z&amp;quot;
   },
   &amp;quot;success&amp;quot;: true,
   &amp;quot;error&amp;quot;: {}
@@ -640,7 +791,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h2 id=&#34;remove-item-from-cart&#34;&gt;Remove item from cart&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;/v1/cart/remove-item&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/cart/remove-item&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;parameters-2&#34;&gt;Parameters&lt;/h4&gt;
 
@@ -678,32 +829,39 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp:///v1/cart/remove-item?cartId=1&amp;amp;skuId=12&amp;amp;quantity=1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/cart/remove-item?cartId=1&amp;amp;uid=305228&amp;amp;quantity=1&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;result&amp;quot;: {
     &amp;quot;id&amp;quot;: 1,
-    &amp;quot;tenantId&amp;quot;: &amp;quot;&amp;quot;,
     &amp;quot;items&amp;quot;: [
       {
-        &amp;quot;skuId&amp;quot;: 12,
-        &amp;quot;contentId&amp;quot;: 12,
-        &amp;quot;skuCode&amp;quot;: &amp;quot;SF_PRO_11_1&amp;quot;,
-        &amp;quot;name&amp;quot;: &amp;quot;Sound Forge Pro 11 (recurring)&amp;quot;,
+        &amp;quot;uid&amp;quot;: &amp;quot;305228&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;EKJP6CV102, (59)Navy, (135)135&amp;quot;,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;EKJP6CV10259135&amp;quot;,
+        &amp;quot;contentCode&amp;quot;: &amp;quot;EKJP6CV102&amp;quot;,
+        &amp;quot;brandCode&amp;quot;: &amp;quot;EK&amp;quot;,
+        &amp;quot;unitListPrice&amp;quot;: 450,
+        &amp;quot;unitSalePrice&amp;quot;: 450,
         &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;unitPrice&amp;quot;: 54.99,
-        &amp;quot;price&amp;quot;: 54.99,
-        &amp;quot;total&amp;quot;: 54.99
+        &amp;quot;listPrice&amp;quot;: 450,
+        &amp;quot;salePrice&amp;quot;: 450,
+        &amp;quot;discount&amp;quot;: 0
       }
     ],
-    &amp;quot;subTotal&amp;quot;: 54.99,
-    &amp;quot;total&amp;quot;: 54.99,
+    &amp;quot;listPrice&amp;quot;: 1350,
+    &amp;quot;salePrice&amp;quot;: 1350,
     &amp;quot;quantity&amp;quot;: 1,
+    &amp;quot;discount&amp;quot;: 0,
+    &amp;quot;customerInfo&amp;quot;: null,
+    &amp;quot;couponNo&amp;quot;: &amp;quot;&amp;quot;,
+    &amp;quot;info&amp;quot;: null,
     &amp;quot;userId&amp;quot;: 1,
-    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-01-06T04:56:51.667893692Z&amp;quot;,
-    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-01-06T05:00:03.212766277Z&amp;quot;
+    &amp;quot;spotId&amp;quot;: 2,
+    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-01T15:28:49Z&amp;quot;,
+    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-03-01T15:35:56.789085986Z&amp;quot;
   },
   &amp;quot;success&amp;quot;: true,
   &amp;quot;error&amp;quot;: {}
@@ -724,11 +882,298 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;remove-cart&#34;&gt;Remove cart&lt;/h2&gt;
+&lt;h2 id=&#34;set-customer&#34;&gt;Set customer&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;/v1/cart/remove-cart&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/cart/set-customer&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;parameters-3&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;cartId&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;example-3&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp://staging/cart/set-customer?cartId=1&amp;amp;no=RC10000000001&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;id&amp;quot;: 1,
+    &amp;quot;items&amp;quot;: [
+      {
+        &amp;quot;uid&amp;quot;: &amp;quot;305228&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;EKJP6CV102, (59)Navy, (135)135&amp;quot;,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;EKJP6CV10259135&amp;quot;,
+        &amp;quot;contentCode&amp;quot;: &amp;quot;EKJP6CV102&amp;quot;,
+        &amp;quot;brandCode&amp;quot;: &amp;quot;EK&amp;quot;,
+        &amp;quot;unitListPrice&amp;quot;: 450,
+        &amp;quot;unitSalePrice&amp;quot;: 450,
+        &amp;quot;quantity&amp;quot;: 1,
+        &amp;quot;listPrice&amp;quot;: 450,
+        &amp;quot;salePrice&amp;quot;: 450,
+        &amp;quot;discount&amp;quot;: 0
+      }
+    ],
+    &amp;quot;listPrice&amp;quot;: 1350,
+    &amp;quot;salePrice&amp;quot;: 1350,
+    &amp;quot;quantity&amp;quot;: 1,
+    &amp;quot;discount&amp;quot;: 0,
+    &amp;quot;customerInfo&amp;quot;: {
+      &amp;quot;no&amp;quot;: &amp;quot;10000000001&amp;quot;,
+      &amp;quot;brandCode&amp;quot;: &amp;quot;RC&amp;quot;,
+      &amp;quot;mobile&amp;quot;: &amp;quot;123456789021&amp;quot;,
+      &amp;quot;grade&amp;quot;: 0,
+      &amp;quot;cardType&amp;quot;: &amp;quot;purpleCard&amp;quot;,
+      &amp;quot;mileage&amp;quot;: {
+        &amp;quot;currentPoints&amp;quot;: 9000,
+        &amp;quot;totalEarnPoints&amp;quot;: 10000,
+        &amp;quot;totalRedeemPoints&amp;quot;: 10,
+        &amp;quot;totalSaleAmount&amp;quot;: &amp;quot;345.0&amp;quot;
+      }
+    },
+    &amp;quot;couponNo&amp;quot;: &amp;quot;&amp;quot;,
+    &amp;quot;info&amp;quot;: null,
+    &amp;quot;userId&amp;quot;: 1,
+    &amp;quot;spotId&amp;quot;: 2,
+    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-01T15:28:49Z&amp;quot;,
+    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-03-01T15:39:08.371314559Z&amp;quot;
+  },
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;set-coupon&#34;&gt;Set coupon&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/cart/set-coupon&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-4&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;cartId&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;example-4&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp://staging/cart/set-coupon?cartId=1&amp;amp;no=WA976CE9199756D5BC&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;id&amp;quot;: 1,
+    &amp;quot;items&amp;quot;: [
+      {
+        &amp;quot;uid&amp;quot;: &amp;quot;305228&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;EKJP6CV102, (59)Navy, (135)135&amp;quot;,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;EKJP6CV10259135&amp;quot;,
+        &amp;quot;contentCode&amp;quot;: &amp;quot;EKJP6CV102&amp;quot;,
+        &amp;quot;brandCode&amp;quot;: &amp;quot;EK&amp;quot;,
+        &amp;quot;unitListPrice&amp;quot;: 450,
+        &amp;quot;unitSalePrice&amp;quot;: 0,
+        &amp;quot;quantity&amp;quot;: 1,
+        &amp;quot;listPrice&amp;quot;: 450,
+        &amp;quot;salePrice&amp;quot;: 450,
+        &amp;quot;discount&amp;quot;: 0
+      },
+      {
+        &amp;quot;uid&amp;quot;: &amp;quot;1&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;LONG DOWN JUMPER, (39)Ivory, X-SMALL&amp;quot;,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;WHJP64T05C390XS&amp;quot;,
+        &amp;quot;contentCode&amp;quot;: &amp;quot;WHJP64T05C&amp;quot;,
+        &amp;quot;brandCode&amp;quot;: &amp;quot;WA&amp;quot;,
+        &amp;quot;unitListPrice&amp;quot;: 1290,
+        &amp;quot;unitSalePrice&amp;quot;: 0,
+        &amp;quot;quantity&amp;quot;: 2,
+        &amp;quot;listPrice&amp;quot;: 2580,
+        &amp;quot;salePrice&amp;quot;: 1806,
+        &amp;quot;discount&amp;quot;: 774
+      }
+    ],
+    &amp;quot;listPrice&amp;quot;: 4380,
+    &amp;quot;salePrice&amp;quot;: 2256,
+    &amp;quot;quantity&amp;quot;: 3,
+    &amp;quot;discount&amp;quot;: 774,
+    &amp;quot;customerInfo&amp;quot;: {
+      &amp;quot;no&amp;quot;: &amp;quot;10000000001&amp;quot;,
+      &amp;quot;brandCode&amp;quot;: &amp;quot;RC&amp;quot;,
+      &amp;quot;mobile&amp;quot;: &amp;quot;123456789021&amp;quot;,
+      &amp;quot;grade&amp;quot;: 0,
+      &amp;quot;cardType&amp;quot;: &amp;quot;purpleCard&amp;quot;,
+      &amp;quot;mileage&amp;quot;: {
+        &amp;quot;currentPoints&amp;quot;: 9000,
+        &amp;quot;totalEarnPoints&amp;quot;: 10000,
+        &amp;quot;totalRedeemPoints&amp;quot;: 10,
+        &amp;quot;totalSaleAmount&amp;quot;: &amp;quot;345.0&amp;quot;
+      }
+    },
+    &amp;quot;couponNo&amp;quot;: &amp;quot;WA976CE9199756D5BC&amp;quot;,
+    &amp;quot;info&amp;quot;: null,
+    &amp;quot;userId&amp;quot;: 1,
+    &amp;quot;spotId&amp;quot;: 2,
+    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-01T15:28:49Z&amp;quot;,
+    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-03-01T15:43:27.347863336Z&amp;quot;
+  },
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;set-info&#34;&gt;Set info&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/cart/remove-cart&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-5&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;cartId&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;key&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;example-5&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp://staging/cart/set-info?cartId=1&amp;amp;payment[alipay]=150&amp;amp;payment[wxpay]=30&amp;amp;receipt=193018485875930103&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;id&amp;quot;: 1,
+    &amp;quot;items&amp;quot;: [
+      {
+        &amp;quot;uid&amp;quot;: &amp;quot;305228&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;EKJP6CV102, (59)Navy, (135)135&amp;quot;,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;EKJP6CV10259135&amp;quot;,
+        &amp;quot;contentCode&amp;quot;: &amp;quot;EKJP6CV102&amp;quot;,
+        &amp;quot;brandCode&amp;quot;: &amp;quot;EK&amp;quot;,
+        &amp;quot;unitListPrice&amp;quot;: 450,
+        &amp;quot;unitSalePrice&amp;quot;: 450,
+        &amp;quot;quantity&amp;quot;: 1,
+        &amp;quot;listPrice&amp;quot;: 450,
+        &amp;quot;salePrice&amp;quot;: 450,
+        &amp;quot;discount&amp;quot;: 0
+      },
+      {
+        &amp;quot;uid&amp;quot;: &amp;quot;1&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;LONG DOWN JUMPER, (39)Ivory, X-SMALL&amp;quot;,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;WHJP64T05C390XS&amp;quot;,
+        &amp;quot;contentCode&amp;quot;: &amp;quot;WHJP64T05C&amp;quot;,
+        &amp;quot;brandCode&amp;quot;: &amp;quot;WA&amp;quot;,
+        &amp;quot;unitListPrice&amp;quot;: 1290,
+        &amp;quot;unitSalePrice&amp;quot;: 1290,
+        &amp;quot;quantity&amp;quot;: 2,
+        &amp;quot;listPrice&amp;quot;: 2580,
+        &amp;quot;salePrice&amp;quot;: 2580,
+        &amp;quot;discount&amp;quot;: 774
+      }
+    ],
+    &amp;quot;listPrice&amp;quot;: 7410,
+    &amp;quot;salePrice&amp;quot;: 5286,
+    &amp;quot;quantity&amp;quot;: 3,
+    &amp;quot;discount&amp;quot;: 2124,
+    &amp;quot;customerInfo&amp;quot;: {
+      &amp;quot;no&amp;quot;: &amp;quot;10000000001&amp;quot;,
+      &amp;quot;brandCode&amp;quot;: &amp;quot;RC&amp;quot;,
+      &amp;quot;mobile&amp;quot;: &amp;quot;123456789021&amp;quot;,
+      &amp;quot;grade&amp;quot;: 0,
+      &amp;quot;cardType&amp;quot;: &amp;quot;purpleCard&amp;quot;,
+      &amp;quot;mileage&amp;quot;: {
+        &amp;quot;currentPoints&amp;quot;: 9000,
+        &amp;quot;totalEarnPoints&amp;quot;: 10000,
+        &amp;quot;totalRedeemPoints&amp;quot;: 10,
+        &amp;quot;totalSaleAmount&amp;quot;: &amp;quot;345.0&amp;quot;
+      }
+    },
+    &amp;quot;couponNo&amp;quot;: &amp;quot;WA976CE9199756D5BC&amp;quot;,
+    &amp;quot;info&amp;quot;: {
+      &amp;quot;payment&amp;quot;: {
+        &amp;quot;alipay&amp;quot;: &amp;quot;150&amp;quot;,
+        &amp;quot;wxpay&amp;quot;: &amp;quot;30&amp;quot;
+      },
+      &amp;quot;receipt&amp;quot;: &amp;quot;193018485875930103&amp;quot;
+    },
+    &amp;quot;userId&amp;quot;: 1,
+    &amp;quot;spotId&amp;quot;: 2,
+    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-01T15:28:49Z&amp;quot;,
+    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-03-01T15:44:48.496016435Z&amp;quot;
+  },
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;remove-cart&#34;&gt;Remove cart&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/cart/remove-cart&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-6&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -748,11 +1193,11 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;example-3&#34;&gt;Example&lt;/h4&gt;
+&lt;h4 id=&#34;example-6&#34;&gt;Example&lt;/h4&gt;
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp:///v1/cart/remove-cart&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/cart/remove-cart&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
@@ -779,63 +1224,67 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h2 id=&#34;get-all-carts&#34;&gt;Get all carts&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;/v1/cart/all-carts&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/cart/all-carts&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;parameters-4&#34;&gt;Parameters&lt;/h4&gt;
+&lt;h4 id=&#34;parameters-7&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;p&gt;None&lt;/p&gt;
 
-&lt;h4 id=&#34;example-4&#34;&gt;Example&lt;/h4&gt;
+&lt;h4 id=&#34;example-7&#34;&gt;Example&lt;/h4&gt;
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp:///v1/cart/all-carts&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/cart/all-carts&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;result&amp;quot;: [
     {
-      &amp;quot;id&amp;quot;: 2,
-      &amp;quot;items&amp;quot;: [
-        {
-          &amp;quot;skuId&amp;quot;: 12,
-          &amp;quot;contentId&amp;quot;: 12,
-          &amp;quot;skuCode&amp;quot;: &amp;quot;SF_PRO_11_1&amp;quot;,
-          &amp;quot;name&amp;quot;: &amp;quot;Sound Forge Pro 11 (recurring)&amp;quot;,
-          &amp;quot;quantity&amp;quot;: 1,
-          &amp;quot;unitPrice&amp;quot;: 54.99,
-          &amp;quot;price&amp;quot;: 54.99,
-          &amp;quot;total&amp;quot;: 54.99
+      &amp;quot;id&amp;quot;: 1,
+      &amp;quot;listPrice&amp;quot;: 4380,
+      &amp;quot;salePrice&amp;quot;: 2256,
+      &amp;quot;quantity&amp;quot;: 3,
+      &amp;quot;discount&amp;quot;: 774,
+      &amp;quot;customerInfo&amp;quot;: {
+        &amp;quot;no&amp;quot;: &amp;quot;10000000001&amp;quot;,
+        &amp;quot;brandCode&amp;quot;: &amp;quot;RC&amp;quot;,
+        &amp;quot;mobile&amp;quot;: &amp;quot;123456789021&amp;quot;,
+        &amp;quot;grade&amp;quot;: 0,
+        &amp;quot;cardType&amp;quot;: &amp;quot;purpleCard&amp;quot;,
+        &amp;quot;mileage&amp;quot;: {
+          &amp;quot;currentPoints&amp;quot;: 9000,
+          &amp;quot;totalEarnPoints&amp;quot;: 10000,
+          &amp;quot;totalRedeemPoints&amp;quot;: 10,
+          &amp;quot;totalSaleAmount&amp;quot;: &amp;quot;345.0&amp;quot;
         }
-      ],
-      &amp;quot;subTotal&amp;quot;: 54.99,
-      &amp;quot;total&amp;quot;: 54.99,
-      &amp;quot;quantity&amp;quot;: 1,
+      },
+      &amp;quot;couponNo&amp;quot;: &amp;quot;WA976CE9199756D5BC&amp;quot;,
+      &amp;quot;info&amp;quot;: {
+        &amp;quot;payment&amp;quot;: {
+          &amp;quot;alipay&amp;quot;: &amp;quot;150&amp;quot;,
+          &amp;quot;wxpay&amp;quot;: &amp;quot;30&amp;quot;
+        },
+        &amp;quot;receipt&amp;quot;: &amp;quot;193018485875930103&amp;quot;
+      },
       &amp;quot;userId&amp;quot;: 1,
-      &amp;quot;createdAt&amp;quot;: &amp;quot;2017-01-06T04:56:51.667893692Z&amp;quot;,
-      &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-01-06T05:00:03.212766277Z&amp;quot;
-    },
+      &amp;quot;spotId&amp;quot;: 2,
+      &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-01T15:28:49Z&amp;quot;,
+      &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-03-01T15:44:48Z&amp;quot;
+    }
     {
-      &amp;quot;id&amp;quot;: 3,
-      &amp;quot;items&amp;quot;: [
-        {
-          &amp;quot;skuId&amp;quot;: 12,
-          &amp;quot;contentId&amp;quot;: 12,
-          &amp;quot;skuCode&amp;quot;: &amp;quot;SF_PRO_11_1&amp;quot;,
-          &amp;quot;name&amp;quot;: &amp;quot;Sound Forge Pro 11 (recurring)&amp;quot;,
-          &amp;quot;quantity&amp;quot;: 1,
-          &amp;quot;unitPrice&amp;quot;: 54.99,
-          &amp;quot;price&amp;quot;: 54.99,
-          &amp;quot;total&amp;quot;: 54.99
-        }
-      ],
-      &amp;quot;subTotal&amp;quot;: 54.99,
-      &amp;quot;total&amp;quot;: 54.99,
+      &amp;quot;id&amp;quot;: 2,
+      &amp;quot;listPrice&amp;quot;: 1090,
+      &amp;quot;salePrice&amp;quot;: 1090,
       &amp;quot;quantity&amp;quot;: 1,
+      &amp;quot;discount&amp;quot;: 0,
+      &amp;quot;customerInfo&amp;quot;: null,
+      &amp;quot;couponNo&amp;quot;: &amp;quot;&amp;quot;,
+      &amp;quot;info&amp;quot;: null,
       &amp;quot;userId&amp;quot;: 1,
-      &amp;quot;createdAt&amp;quot;: &amp;quot;2017-01-08T13:01:48.545481616Z&amp;quot;,
-      &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-01-08T13:01:48.545481616Z&amp;quot;
+      &amp;quot;spotId&amp;quot;: 1,
+      &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-01T15:47:11Z&amp;quot;,
+      &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-03-01T15:47:22Z&amp;quot;
     }
   ],
   &amp;quot;success&amp;quot;: true,
@@ -847,9 +1296,9 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h2 id=&#34;get-cart&#34;&gt;Get cart&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;/v1/cart/get-cart&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/cart/get-cart&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;parameters-5&#34;&gt;Parameters&lt;/h4&gt;
+&lt;h4 id=&#34;parameters-8&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -869,37 +1318,78 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;example-5&#34;&gt;Example&lt;/h4&gt;
+&lt;h4 id=&#34;example-8&#34;&gt;Example&lt;/h4&gt;
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp:///v1/cart/get-cart?cartId=2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/cart/get-cart?cartId=1&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
-  &amp;quot;success&amp;quot;: true,
   &amp;quot;result&amp;quot;: {
-    &amp;quot;id&amp;quot;: 2,
+    &amp;quot;id&amp;quot;: 1,
+    &amp;quot;tenantId&amp;quot;: &amp;quot;&amp;quot;,
+    &amp;quot;channel&amp;quot;: &amp;quot;&amp;quot;,
     &amp;quot;items&amp;quot;: [
       {
-        &amp;quot;skuId&amp;quot;: 12,
-        &amp;quot;contentId&amp;quot;: 12,
-        &amp;quot;skuCode&amp;quot;: &amp;quot;SF_PRO_11_1&amp;quot;,
-        &amp;quot;name&amp;quot;: &amp;quot;Sound Forge Pro 11 (recurring)&amp;quot;,
+        &amp;quot;uid&amp;quot;: &amp;quot;305228&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;EKJP6CV102, (59)Navy, (135)135&amp;quot;,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;EKJP6CV10259135&amp;quot;,
+        &amp;quot;contentCode&amp;quot;: &amp;quot;EKJP6CV102&amp;quot;,
+        &amp;quot;brandCode&amp;quot;: &amp;quot;EK&amp;quot;,
+        &amp;quot;unitListPrice&amp;quot;: 450,
+        &amp;quot;unitSalePrice&amp;quot;: 0,
         &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;unitPrice&amp;quot;: 54.99,
-        &amp;quot;price&amp;quot;: 54.99,
-        &amp;quot;total&amp;quot;: 54.99
+        &amp;quot;listPrice&amp;quot;: 450,
+        &amp;quot;salePrice&amp;quot;: 450,
+        &amp;quot;discount&amp;quot;: 0
+      },
+      {
+        &amp;quot;uid&amp;quot;: &amp;quot;1&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;LONG DOWN JUMPER, (39)Ivory, X-SMALL&amp;quot;,
+        &amp;quot;skuCode&amp;quot;: &amp;quot;WHJP64T05C390XS&amp;quot;,
+        &amp;quot;contentCode&amp;quot;: &amp;quot;WHJP64T05C&amp;quot;,
+        &amp;quot;brandCode&amp;quot;: &amp;quot;WA&amp;quot;,
+        &amp;quot;unitListPrice&amp;quot;: 1290,
+        &amp;quot;unitSalePrice&amp;quot;: 0,
+        &amp;quot;quantity&amp;quot;: 2,
+        &amp;quot;listPrice&amp;quot;: 2580,
+        &amp;quot;salePrice&amp;quot;: 1806,
+        &amp;quot;discount&amp;quot;: 774
       }
     ],
-    &amp;quot;subTotal&amp;quot;: 54.99,
-    &amp;quot;total&amp;quot;: 54.99,
-    &amp;quot;quantity&amp;quot;: 1,
+    &amp;quot;listPrice&amp;quot;: 4380,
+    &amp;quot;salePrice&amp;quot;: 2256,
+    &amp;quot;quantity&amp;quot;: 3,
+    &amp;quot;discount&amp;quot;: 774,
+    &amp;quot;customerInfo&amp;quot;: {
+      &amp;quot;no&amp;quot;: &amp;quot;10000000001&amp;quot;,
+      &amp;quot;brandCode&amp;quot;: &amp;quot;RC&amp;quot;,
+      &amp;quot;mobile&amp;quot;: &amp;quot;123456789021&amp;quot;,
+      &amp;quot;grade&amp;quot;: 0,
+      &amp;quot;cardType&amp;quot;: &amp;quot;purpleCard&amp;quot;,
+      &amp;quot;mileage&amp;quot;: {
+        &amp;quot;currentPoints&amp;quot;: 9000,
+        &amp;quot;totalEarnPoints&amp;quot;: 10000,
+        &amp;quot;totalRedeemPoints&amp;quot;: 10,
+        &amp;quot;totalSaleAmount&amp;quot;: &amp;quot;345.0&amp;quot;
+      }
+    },
+    &amp;quot;couponNo&amp;quot;: &amp;quot;WA976CE9199756D5BC&amp;quot;,
+    &amp;quot;info&amp;quot;: {
+      &amp;quot;payment&amp;quot;: {
+        &amp;quot;alipay&amp;quot;: &amp;quot;150&amp;quot;,
+        &amp;quot;wxpay&amp;quot;: &amp;quot;30&amp;quot;
+      },
+      &amp;quot;receipt&amp;quot;: &amp;quot;193018485875930103&amp;quot;
+    },
     &amp;quot;userId&amp;quot;: 1,
-    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-01-06T04:56:51.667893692Z&amp;quot;,
-    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-01-06T05:00:03.212766277Z&amp;quot;
+    &amp;quot;spotId&amp;quot;: 2,
+    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-01T15:28:49Z&amp;quot;,
+    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-03-01T15:44:48Z&amp;quot;
   },
+  &amp;quot;success&amp;quot;: true,
   &amp;quot;error&amp;quot;: {}
 }
 &lt;/code&gt;&lt;/pre&gt;
@@ -916,7 +1406,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h2 id=&#34;place-order&#34;&gt;Place order&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;/v1/order/place-order&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/order/place-order&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;parameters&#34;&gt;Parameters&lt;/h4&gt;
 
@@ -935,12 +1425,6 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;td&gt;Yes&lt;/td&gt;
 &lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;info&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;url-encoded json string&lt;/td&gt;
-&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -948,41 +1432,134 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp:///v1/order/place-order?cartId=2&amp;amp;info=%7B%22payment%22%3A%22wxpay%22%2C%22customer%22%3A%7B%22id%22%3A2817391%2C%22mileage%22%3A150%7D%7D&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/order/place-order?cartId=1&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;result&amp;quot;: {
-    &amp;quot;id&amp;quot;: &amp;quot;d934e8b1-7b5c-48d3-92a9-6c448367d1c3&amp;quot;,
+    &amp;quot;id&amp;quot;: &amp;quot;92f8c3cc-11c4-4408-8634-f5701f8f1a7c&amp;quot;,
     &amp;quot;orderNo&amp;quot;: &amp;quot;&amp;quot;,
-    &amp;quot;orderType&amp;quot;: 1,
-    &amp;quot;subTotal&amp;quot;: 0,
-    &amp;quot;discountAmount&amp;quot;: 0,
-    &amp;quot;total&amp;quot;: 0,
+    &amp;quot;listPrice&amp;quot;: 4380,
+    &amp;quot;discount&amp;quot;: 2124,
+    &amp;quot;salePrice&amp;quot;: 2256,
     &amp;quot;items&amp;quot;: [
       {
-        &amp;quot;skuId&amp;quot;: 12,
-        &amp;quot;contentId&amp;quot;: 12,
+        &amp;quot;id&amp;quot;: 1,
+        &amp;quot;name&amp;quot;: &amp;quot;EKJP6CV102, (59)Navy, (135)135&amp;quot;,
+        &amp;quot;channel&amp;quot;: &amp;quot;elandpos&amp;quot;,
+        &amp;quot;uid&amp;quot;: &amp;quot;305228&amp;quot;,
+        &amp;quot;unitListPrice&amp;quot;: 450,
+        &amp;quot;unitSalePrice&amp;quot;: 0,
+        &amp;quot;quantity&amp;quot;: 1,
+        &amp;quot;listPrice&amp;quot;: 450,
+        &amp;quot;salePrice&amp;quot;: 450,
+        &amp;quot;discount&amp;quot;: 0
+      },
+      {
+        &amp;quot;id&amp;quot;: 2,
+        &amp;quot;name&amp;quot;: &amp;quot;LONG DOWN JUMPER, (39)Ivory, X-SMALL&amp;quot;,
+        &amp;quot;channel&amp;quot;: &amp;quot;elandpos&amp;quot;,
+        &amp;quot;uid&amp;quot;: &amp;quot;1&amp;quot;,
+        &amp;quot;unitListPrice&amp;quot;: 1290,
+        &amp;quot;unitSalePrice&amp;quot;: 0,
         &amp;quot;quantity&amp;quot;: 2,
-        &amp;quot;unitPrice&amp;quot;: 54.99,
-        &amp;quot;subTotal&amp;quot;: 109.98,
-        &amp;quot;discountAmount&amp;quot;: 0,
-        &amp;quot;total&amp;quot;: 109.98
+        &amp;quot;listPrice&amp;quot;: 2580,
+        &amp;quot;salePrice&amp;quot;: 1806,
+        &amp;quot;discount&amp;quot;: 774
       }
     ],
-    &amp;quot;userId&amp;quot;: 0,
-    &amp;quot;deviceId&amp;quot;: &amp;quot;aeb6b787-bf97-4305-973f-dffd8c09679b&amp;quot;,
-    &amp;quot;spotId&amp;quot;: 0,
-    &amp;quot;tenantId&amp;quot;: 0,
-    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-01-08T13:11:34.720003916Z&amp;quot;,
+    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-01T15:52:58.903324782Z&amp;quot;,
+    &amp;quot;couponNo&amp;quot;: &amp;quot;WA976CE9199756D5BC&amp;quot;,
     &amp;quot;info&amp;quot;: {
-      &amp;quot;customer&amp;quot;: {
-        &amp;quot;id&amp;quot;: 2817391,
-        &amp;quot;mileage&amp;quot;: 150
+      &amp;quot;payment&amp;quot;: {
+        &amp;quot;alipay&amp;quot;: &amp;quot;150&amp;quot;,
+        &amp;quot;wxpay&amp;quot;: &amp;quot;30&amp;quot;
       },
-      &amp;quot;payment&amp;quot;: &amp;quot;wxpay&amp;quot;
-    }
+      &amp;quot;receipt&amp;quot;: &amp;quot;193018485875930103&amp;quot;
+    },
+    &amp;quot;Status&amp;quot;: 0
+  },
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;all-orders&#34;&gt;All orders&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/order/all-orders&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;skipCount&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;maxResultCount&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;example-1&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp://staging/order/all-orders?skipCount=0&amp;amp;maxResultCount=10&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;items&amp;quot;: [
+      {
+        &amp;quot;id&amp;quot;: &amp;quot;92f8c3cc-11c4-4408-8634-f5701f8f1a7c&amp;quot;,
+        &amp;quot;orderNo&amp;quot;: &amp;quot;&amp;quot;,
+        &amp;quot;listPrice&amp;quot;: 4380,
+        &amp;quot;discount&amp;quot;: 2124,
+        &amp;quot;salePrice&amp;quot;: 2256,
+        &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-01T15:52:58Z&amp;quot;,
+        &amp;quot;customerID&amp;quot;: 0,
+        &amp;quot;couponNo&amp;quot;: &amp;quot;WA976CE9199756D5BC&amp;quot;,
+        &amp;quot;info&amp;quot;: {
+          &amp;quot;payment&amp;quot;: {
+            &amp;quot;alipay&amp;quot;: &amp;quot;150&amp;quot;,
+            &amp;quot;wxpay&amp;quot;: &amp;quot;30&amp;quot;
+          },
+          &amp;quot;receipt&amp;quot;: &amp;quot;193018485875930103&amp;quot;
+        },
+        &amp;quot;Status&amp;quot;: 1
+      },
+      {
+        &amp;quot;id&amp;quot;: &amp;quot;fee5af93-e2db-4ee7-8c70-b179a2054f14&amp;quot;,
+        &amp;quot;orderNo&amp;quot;: &amp;quot;&amp;quot;,
+        &amp;quot;listPrice&amp;quot;: 1090,
+        &amp;quot;discount&amp;quot;: 0,
+        &amp;quot;salePrice&amp;quot;: 1090,
+        &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-01T15:55:59Z&amp;quot;,
+        &amp;quot;customerID&amp;quot;: 1,
+        &amp;quot;couponNo&amp;quot;: &amp;quot;&amp;quot;,
+        &amp;quot;info&amp;quot;: null,
+        &amp;quot;Status&amp;quot;: 1
+      }
+    ],
+    &amp;quot;totalCount&amp;quot;: 2
   },
   &amp;quot;success&amp;quot;: true,
   &amp;quot;error&amp;quot;: {}

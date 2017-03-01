@@ -312,7 +312,7 @@
 <li><a href="#example">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#get-system-settings">Get system settings</a>
+<li><a href="#get-system-information">Get system information</a>
 <ul>
 <li>
 <ul>
@@ -339,7 +339,7 @@
 
 <h2 id="get-current-user">Get current user</h2>
 
-<p><code>/v1/context/user</code></p>
+<p><code>/context/user</code></p>
 
 <h4 id="parameters">Parameters</h4>
 
@@ -349,29 +349,45 @@
 
 <p>Request:</p>
 
-<p><code>pp:///v1/context/user</code></p>
+<p><code>pp://staging/context/user</code></p>
 
 <p>Success:</p>
 
 <pre><code>{
-  &quot;result&quot;: {    
+  &quot;result&quot;: {
+    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJQb3MiLCJleHAiOjE0ODg2NDA0MTMsImh0dHA6Ly93d3cuYXNwbmV0Ym9pbGVycGxhdGUuY29tL2lkZW50aXR5L2NsYWltcy90ZW5hbnRJZCI6IjEiLCJpc3MiOiJMQUJTIiwibmFtZWlkIjoiMSIsIm5iZiI6MTQ4ODM4MTIxMywicm9sZSI6IlNhbGVzbWFuLE1hbmFnZXIiLCJzcG90aWQiOiIyIiwidW5pcXVlX25hbWUiOiJzYWxlc21hbiJ9.02OrMulHTrwrwO_2-uDoQUhg1Ur31VRYcihurq5Id-0&quot;,
     &quot;userId&quot;: 1,
     &quot;userName&quot;: &quot;salesman&quot;,
-    &quot;roles&quot;: [
-      {
-        &quot;name&quot;: &quot;Salesman&quot;
-      }
-    ],
     &quot;tenantId&quot;: 1,
     &quot;tenantCode&quot;: &quot;LABS&quot;,
     &quot;tenantName&quot;: &quot;Labs&quot;,
     &quot;spots&quot;: [
       {
         &quot;id&quot;: 1,
-        &quot;code&quot;: &quot;AC3E&quot;,
-        &quot;name&quot;: &quot;天山店&quot;
+        &quot;name&quot;: &quot;天山店&quot;,
+        &quot;brands&quot;: [
+          {
+            &quot;code&quot;: &quot;WA&quot;,
+            &quot;name&quot;: &quot;Paw in Paw&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;上海正大广场&quot;,
+        &quot;brands&quot;: [
+          {
+            &quot;code&quot;: &quot;EK&quot;,
+            &quot;name&quot;: &quot;Eland Kids&quot;
+          }
+        ]
       }
-    ]
+    ],
+    &quot;roles&quot;: [
+      &quot;Salesman&quot;,
+      &quot;Manager&quot;
+    ],
+    &quot;currentSpotId&quot;: 2
   },
   &quot;success&quot;: true,
   &quot;error&quot;: {}
@@ -391,9 +407,9 @@
 
 <hr />
 
-<h2 id="get-system-settings">Get system settings</h2>
+<h2 id="get-system-information">Get system information</h2>
 
-<p><code>/v1/context/settings</code></p>
+<p><code>/context/settings</code></p>
 
 <h4 id="parameters-1">Parameters</h4>
 
@@ -403,22 +419,24 @@
 
 <p>Request:</p>
 
-<p><code>pp:///v1/context/settings</code></p>
+<p><code>pp://staging/context/system</code></p>
 
 <p>Success:</p>
 
 <pre><code>{
   &quot;result&quot;: {
-    &quot;tenantId&quot;: 1,
-    &quot;system&quot;: {
-      &quot;allowOffline&quot;: true,
-      &quot;traceInterval&quot;: 10
+    &quot;setting&quot;: {
+      &quot;system&quot;: {
+        &quot;allowOffline&quot;: true,
+        &quot;traceInterval&quot;: 10
+      },
+      &quot;price&quot;: {
+        &quot;roundDigit&quot;: 2,
+        &quot;roundStrategy&quot;: &quot;round&quot;,
+        &quot;currency&quot;: &quot;CYN&quot;
+      }
     },
-    &quot;price&quot;: {
-      &quot;roundDigit&quot;: 2,
-      &quot;roundStrategy&quot;: &quot;round&quot;,
-      &quot;currency&quot;: &quot;CYN&quot;
-    }
+    &quot;version&quot;: &quot;0.0.2&quot;
   },
   &quot;success&quot;: true,
   &quot;error&quot;: {}

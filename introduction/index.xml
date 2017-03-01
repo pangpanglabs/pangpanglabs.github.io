@@ -28,9 +28,9 @@
 
 &lt;ul class=&#34;task-list&#34;&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Shopping cart&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Reselling &amp;amp; Online delivery &lt;em&gt;(~ 2017.01.31)&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Promotion &amp;amp; Membership &lt;em&gt;(~ 2017.02.28)&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Sales statistics &lt;em&gt;(~ 2017.03.31)&lt;/em&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Promotion &amp;amp; Membership &lt;em&gt;(~ 2017.02.28)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Sales statistics &lt;em&gt;(~ 2017.03.15)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Reselling &amp;amp; Online delivery &lt;em&gt;(~ 2017.03.31)&lt;/em&gt;
 &lt;!--- [ ] Legacy Interface *(~ 2017.01.15)*--&gt;&lt;/li&gt;
 &lt;/ul&gt;
 

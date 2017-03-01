@@ -426,6 +426,18 @@ All features are definded in <strong>uri format</strong> and all results are <st
 <li><a href="/api/order">Order</a></li>
 </ul>
 
+<p>PosSDK use custom uri format like this.</p>
+
+<pre><code>pp://production/account/login?tenant=LABS&amp;username=salesman&amp;password=1234
+</code></pre>
+
+<ul>
+<li>scheme: <code>pp</code></li>
+<li>host: <code>staging</code> or <code>production</code></li>
+<li>path: api endpoint</li>
+<li>query: parameters</li>
+</ul>
+
 <p>This is json response format. All json data should have 3 properties - <code>success</code>, <code>result</code>, <code>error</code>.</p>
 
 <pre><code>{
@@ -439,19 +451,19 @@ All features are definded in <strong>uri format</strong> and all results are <st
 
 <h4 id="android-1">Android</h4>
 
-<pre><code>String result = Pos.call(&quot;pp:///v1/account/login?tenant=LABS&amp;username=salesman&amp;password=1234&quot;);
+<pre><code>String result = Pos.call(&quot;pp://staging/account/login?tenant=LABS&amp;username=salesman&amp;password=1234&quot;);
 </code></pre>
 
 <h4 id="ios-1">iOS</h4>
 
 <h5 id="swift-1">Swift</h5>
 
-<pre><code>let result = P2PosCall(&quot;pp:///v1/account/login?tenant=LABS&amp;username=salesman&amp;password=1234&quot;)
+<pre><code>let result = P2PosCall(&quot;pp://staging/account/login?tenant=LABS&amp;username=salesman&amp;password=1234&quot;)
 </code></pre>
 
 <h5 id="objective-c-1">Objective-C</h5>
 
-<pre><code>NSString* result = P2PosCall(@&quot;pp:///v1/account/login?tenant=LABS&amp;username=salesman&amp;password=1234&quot;);
+<pre><code>NSString* result = P2PosCall(@&quot;pp://staging/account/login?tenant=LABS&amp;username=salesman&amp;password=1234&quot;);
 </code></pre>
 
 
