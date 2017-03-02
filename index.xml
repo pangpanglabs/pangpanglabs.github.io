@@ -172,12 +172,12 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;tr&gt;
 &lt;td&gt;102&lt;/td&gt;
-&lt;td&gt;Service handler for &lt;code&gt;{path}&lt;/code&gt; is not defined.&lt;/td&gt;
+&lt;td&gt;Host name is not set. use &lt;code&gt;staging&lt;/code&gt; or &lt;code&gt;production&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;103&lt;/td&gt;
-&lt;td&gt;Remote Call failed.&lt;/td&gt;
+&lt;td&gt;Host name:&lt;code&gt;{host}&lt;/code&gt; is not supported&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -187,17 +187,27 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;tr&gt;
 &lt;td&gt;105&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;{name}&lt;/code&gt; is required parameter.&lt;/td&gt;
+&lt;td&gt;Not Found. &lt;code&gt;{path}&lt;/code&gt; is not defined path.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;106&lt;/td&gt;
+&lt;td&gt;Remote Call failed.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;107&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;{name}&lt;/code&gt; is required parameter.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;108&lt;/td&gt;
 &lt;td&gt;Invalid parameter&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
+&lt;h2 id=&#34;account&#34;&gt;Account&lt;/h2&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -210,7 +220,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;200&lt;/td&gt;
-&lt;td&gt;Authentication is success. But cannot save account to session storage.&lt;/td&gt;
+&lt;td&gt;Not authorized.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -230,7 +240,12 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;tr&gt;
 &lt;td&gt;204&lt;/td&gt;
-&lt;td&gt;Not authorized.&lt;/td&gt;
+&lt;td&gt;Cannot save account to session storage.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;205&lt;/td&gt;
+&lt;td&gt;Current Spot is not set.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -253,12 +268,12 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;tr&gt;
 &lt;td&gt;301&lt;/td&gt;
-&lt;td&gt;Cannot search contents.&lt;/td&gt;
+&lt;td&gt;Cannot get the product(&lt;code&gt;{uid}&lt;/code&gt;).&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;302&lt;/td&gt;
-&lt;td&gt;Cannot find product.&lt;/td&gt;
+&lt;td&gt;Cannot download products.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -276,7 +291,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;400&lt;/td&gt;
-&lt;td&gt;Cannot find cart.&lt;/td&gt;
+&lt;td&gt;Cannot find the cart(&lt;code&gt;{id}&lt;/code&gt;).&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -303,6 +318,21 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;td&gt;405&lt;/td&gt;
 &lt;td&gt;Cannot remove current cart.&lt;/td&gt;
 &lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;406&lt;/td&gt;
+&lt;td&gt;Cannot save current cart.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;407&lt;/td&gt;
+&lt;td&gt;Cannot set customer.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;408&lt;/td&gt;
+&lt;td&gt;Cannot set coupon.&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -324,7 +354,12 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;tr&gt;
 &lt;td&gt;501&lt;/td&gt;
-&lt;td&gt;Cannot query orders.&lt;/td&gt;
+&lt;td&gt;Cannot get orders.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;502&lt;/td&gt;
+&lt;td&gt;Cannot find the order(&lt;code&gt;{id}&lt;/code&gt;).&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1220,7 +1255,7 @@ set &lt;code&gt;NO&lt;/code&gt;&lt;/li&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://pangpanglabs.github.io/getting-started/web-api/</guid>
-      <description>&lt;a  href=&#34;http://staging.p2shop.cn:54010/docs/&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+      <description>&lt;a  href=&#34;http://staging.p2shop.cn:54010/docs/#/PosAPI&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
   

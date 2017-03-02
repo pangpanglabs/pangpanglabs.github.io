@@ -303,7 +303,7 @@
 <li>
 <ul>
 <li><a href="#system">System</a></li>
-<li><a href="#context">Context</a></li>
+<li><a href="#account">Account</a></li>
 <li><a href="#catalog">Catalog</a></li>
 <li><a href="#cart">Cart</a></li>
 <li><a href="#order">Order</a></li>
@@ -347,12 +347,12 @@
 
 <tr>
 <td>102</td>
-<td>Service handler for <code>{path}</code> is not defined.</td>
+<td>Host name is not set. use <code>staging</code> or <code>production</code></td>
 </tr>
 
 <tr>
 <td>103</td>
-<td>Remote Call failed.</td>
+<td>Host name:<code>{host}</code> is not supported</td>
 </tr>
 
 <tr>
@@ -362,17 +362,27 @@
 
 <tr>
 <td>105</td>
-<td><code>{name}</code> is required parameter.</td>
+<td>Not Found. <code>{path}</code> is not defined path.</td>
 </tr>
 
 <tr>
 <td>106</td>
+<td>Remote Call failed.</td>
+</tr>
+
+<tr>
+<td>107</td>
+<td><code>{name}</code> is required parameter.</td>
+</tr>
+
+<tr>
+<td>108</td>
 <td>Invalid parameter</td>
 </tr>
 </tbody>
 </table>
 
-<h2 id="context">Context</h2>
+<h2 id="account">Account</h2>
 
 <table>
 <thead>
@@ -385,7 +395,7 @@
 <tbody>
 <tr>
 <td>200</td>
-<td>Authentication is success. But cannot save account to session storage.</td>
+<td>Not authorized.</td>
 </tr>
 
 <tr>
@@ -405,7 +415,12 @@
 
 <tr>
 <td>204</td>
-<td>Not authorized.</td>
+<td>Cannot save account to session storage.</td>
+</tr>
+
+<tr>
+<td>205</td>
+<td>Current Spot is not set.</td>
 </tr>
 </tbody>
 </table>
@@ -428,12 +443,12 @@
 
 <tr>
 <td>301</td>
-<td>Cannot search contents.</td>
+<td>Cannot get the product(<code>{uid}</code>).</td>
 </tr>
 
 <tr>
 <td>302</td>
-<td>Cannot find product.</td>
+<td>Cannot download products.</td>
 </tr>
 </tbody>
 </table>
@@ -451,7 +466,7 @@
 <tbody>
 <tr>
 <td>400</td>
-<td>Cannot find cart.</td>
+<td>Cannot find the cart(<code>{id}</code>).</td>
 </tr>
 
 <tr>
@@ -478,6 +493,21 @@
 <td>405</td>
 <td>Cannot remove current cart.</td>
 </tr>
+
+<tr>
+<td>406</td>
+<td>Cannot save current cart.</td>
+</tr>
+
+<tr>
+<td>407</td>
+<td>Cannot set customer.</td>
+</tr>
+
+<tr>
+<td>408</td>
+<td>Cannot set coupon.</td>
+</tr>
 </tbody>
 </table>
 
@@ -499,7 +529,12 @@
 
 <tr>
 <td>501</td>
-<td>Cannot query orders.</td>
+<td>Cannot get orders.</td>
+</tr>
+
+<tr>
+<td>502</td>
+<td>Cannot find the order(<code>{id}</code>).</td>
 </tr>
 </tbody>
 </table>
