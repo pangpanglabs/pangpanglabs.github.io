@@ -61,7 +61,11 @@ Pos.init(path);
 &lt;blockquote&gt;
 &lt;h3 id=&#34;setting&#34;&gt;Setting&lt;/h3&gt;
 
-&lt;h4 id=&#34;download-hahahugoshortcode-1hbhb&#34;&gt;Download &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+&lt;h4 id=&#34;download&#34;&gt;Download&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Current(v0.0.3)
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.3/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
   
@@ -72,7 +76,21 @@ Pos.init(path);
   pos.aar
   
 &lt;/a&gt;
-&lt;/h4&gt;
+&lt;/li&gt;
+&lt;li&gt;v0.0.2
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.2/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  pos.aar
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&#34;in-project-structure&#34;&gt;In Project Structure&lt;/h4&gt;
 
@@ -147,8 +165,11 @@ P2PosInit(path);
 &lt;blockquote&gt;
 &lt;h3 id=&#34;setting&#34;&gt;Setting&lt;/h3&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Download &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+&lt;h4 id=&#34;download&#34;&gt;Download&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Current(v0.0.3)
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.3/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
   
@@ -160,11 +181,32 @@ P2PosInit(path);
   
 &lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;Extract.&lt;/li&gt;
-&lt;li&gt;Drag and Drop &lt;code&gt;Pos.framework&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;v0.0.2
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.2/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  Pos.framework.zip
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;project-setting&#34;&gt;Project Setting&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Extract &lt;code&gt;Pos.framework.zip&lt;/code&gt; file.&lt;/li&gt;
+&lt;li&gt;Drag and Drop &lt;code&gt;Pos.framework&lt;/code&gt; to Xcode project.&lt;/li&gt;
 &lt;li&gt;in &lt;code&gt;Project&lt;/code&gt;-&amp;gt;&lt;code&gt;Target&lt;/code&gt;-&amp;gt;&lt;code&gt;Build Settings&lt;/code&gt;&lt;br /&gt;
-Search &lt;code&gt;Enable Bitcode&lt;/code&gt;&lt;br /&gt;
-set &lt;code&gt;NO&lt;/code&gt;&lt;/li&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Search &lt;code&gt;Enable Bitcode&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;set &lt;code&gt;NO&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 </description>
@@ -176,7 +218,7 @@ set &lt;code&gt;NO&lt;/code&gt;&lt;/li&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://pangpanglabs.github.io/getting-started/web-api/</guid>
-      <description>&lt;a  href=&#34;http://staging.p2shop.cn:54010/docs/#/PosAPI&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+      <description>&lt;a  href=&#34;http://staging.p2shop.cn:54100/docs/#/PosAPI&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
   

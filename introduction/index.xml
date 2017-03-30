@@ -44,9 +44,11 @@
 
 &lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
 
+&lt;h3 id=&#34;current-v0-0-3&#34;&gt;Current(v0.0.3)&lt;/h3&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.3/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
   
@@ -59,7 +61,38 @@
 &lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.3/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  Pos.framework.zip
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;v0-0-2&#34;&gt;v0.0.2&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Android SDK&lt;br /&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.2/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  pos.aar
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;iOS SDK&lt;br /&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.2/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
   

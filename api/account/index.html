@@ -11,15 +11,15 @@
 
     
     <title>Account</title>
-    <link href="/css/nucleus.css" rel="stylesheet">
-    <link href="/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/css/hybrid.css" rel="stylesheet">
-    <link href="/css/featherlight.min.css" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css" rel="stylesheet">
-    <link href="/css/horsey.css" rel="stylesheet">
-    <link href="/css/theme.css" rel="stylesheet">
-    <link href="/css/hugo-theme.css" rel="stylesheet">
-    <script src="/js/jquery-2.x.min.js"></script>
+    <link href="http://pangpanglabs.github.io//css/nucleus.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/hybrid.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/featherlight.min.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/horsey.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/theme.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/hugo-theme.css" rel="stylesheet">
+    <script src="http://pangpanglabs.github.io//js/jquery-2.x.min.js"></script>
     <style type="text/css">:root #header + #content > #left > #rlblock_left
     {display:none !important;}</style>
     <link href="/css/ribbon.css" rel="stylesheet">
@@ -255,6 +255,7 @@
      
     <section id="footer">
       <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fa fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
     </section>
   </div>
 </nav>
@@ -391,37 +392,49 @@
 
 <pre><code>{
   &quot;result&quot;: {
-    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJQb3MiLCJleHAiOjE0ODg2NDA0MTMsImh0dHA6Ly93d3cuYXNwbmV0Ym9pbGVycGxhdGUuY29tL2lkZW50aXR5L2NsYWltcy90ZW5hbnRJZCI6IjEiLCJpc3MiOiJMQUJTIiwibmFtZWlkIjoiMSIsIm5iZiI6MTQ4ODM4MTIxMywicm9sZSI6IlNhbGVzbWFuLE1hbmFnZXIiLCJ1bmlxdWVfbmFtZSI6InNhbGVzbWFuIn0.sC9Qln1-AWgyled5Nj4MZ7tMsOuiLwqskDlAd2hs9vg&quot;,
-    &quot;userId&quot;: 1,
-    &quot;userName&quot;: &quot;salesman&quot;,
-    &quot;tenantId&quot;: 1,
+    &quot;token&quot;: &quot;YOUR_TOKEN&quot;,
+    &quot;userId&quot;: 1000001,
+    &quot;userName&quot;: &quot;saleswoman&quot;,
+    &quot;tenantId&quot;: 10,
     &quot;tenantCode&quot;: &quot;LABS&quot;,
-    &quot;tenantName&quot;: &quot;Labs&quot;,
+    &quot;tenantName&quot;: &quot;LABS&quot;,
     &quot;spots&quot;: [
       {
-        &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;天山店&quot;,
-        &quot;brands&quot;: [
+        &quot;id&quot;: 2000001,
+        &quot;tenantId&quot;: 0,
+        &quot;name&quot;: &quot;Event Hall&quot;,
+        &quot;contracts&quot;: [
           {
-            &quot;code&quot;: &quot;RC&quot;,
-            &quot;name&quot;: &quot;Roem&quot;
+            &quot;BrandCode&quot;: &quot;Calvin Klein&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;Ted Baker&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;Lilly Pulitzer&quot;,
           }
         ]
       },
       {
-        &quot;id&quot;: 2,
-        &quot;name&quot;: &quot;上海正大广场&quot;,
-        &quot;brands&quot;: [
+        &quot;id&quot;: 2000002,
+        &quot;tenantId&quot;: 0,
+        &quot;name&quot;: &quot;天山店&quot;,
+        &quot;contracts&quot;: [
           {
-            &quot;code&quot;: &quot;EK&quot;,
-            &quot;name&quot;: &quot;Eland Kids&quot;
+            &quot;BrandCode&quot;: &quot;EE&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;EK&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;EA&quot;,
           }
         ]
       }
     ],
     &quot;roles&quot;: [
-      &quot;Salesman&quot;,
-      &quot;Manager&quot;
+      &quot;salesman&quot;,
+      &quot;manager&quot;
     ]
   },
   &quot;success&quot;: true,
@@ -461,37 +474,49 @@
 
 <pre><code>{
   &quot;result&quot;: {
-    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJQb3MiLCJleHAiOjE0ODg2NDA0MTMsImh0dHA6Ly93d3cuYXNwbmV0Ym9pbGVycGxhdGUuY29tL2lkZW50aXR5L2NsYWltcy90ZW5hbnRJZCI6IjEiLCJpc3MiOiJMQUJTIiwibmFtZWlkIjoiMSIsIm5iZiI6MTQ4ODM4MTIxMywicm9sZSI6IlNhbGVzbWFuLE1hbmFnZXIiLCJ1bmlxdWVfbmFtZSI6InNhbGVzbWFuIn0.sC9Qln1-AWgyled5Nj4MZ7tMsOuiLwqskDlAd2hs9vg&quot;,
-    &quot;userId&quot;: 1,
-    &quot;userName&quot;: &quot;salesman&quot;,
-    &quot;tenantId&quot;: 1,
+    &quot;token&quot;: &quot;YOUR_TOKEN&quot;,
+    &quot;userId&quot;: 1000001,
+    &quot;userName&quot;: &quot;saleswoman&quot;,
+    &quot;tenantId&quot;: 10,
     &quot;tenantCode&quot;: &quot;LABS&quot;,
-    &quot;tenantName&quot;: &quot;Labs&quot;,
+    &quot;tenantName&quot;: &quot;LABS&quot;,
     &quot;spots&quot;: [
       {
-        &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;天山店&quot;,
-        &quot;brands&quot;: [
+        &quot;id&quot;: 2000001,
+        &quot;tenantId&quot;: 0,
+        &quot;name&quot;: &quot;Event Hall&quot;,
+        &quot;contracts&quot;: [
           {
-            &quot;code&quot;: &quot;WA&quot;,
-            &quot;name&quot;: &quot;Paw in Paw&quot;
+            &quot;BrandCode&quot;: &quot;Calvin Klein&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;Ted Baker&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;Lilly Pulitzer&quot;,
           }
         ]
       },
       {
-        &quot;id&quot;: 2,
-        &quot;name&quot;: &quot;上海正大广场&quot;,
-        &quot;brands&quot;: [
+        &quot;id&quot;: 2000002,
+        &quot;tenantId&quot;: 0,
+        &quot;name&quot;: &quot;天山店&quot;,
+        &quot;contracts&quot;: [
           {
-            &quot;code&quot;: &quot;EK&quot;,
-            &quot;name&quot;: &quot;Eland Kids&quot;
+            &quot;BrandCode&quot;: &quot;EE&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;EK&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;EA&quot;,
           }
         ]
       }
     ],
     &quot;roles&quot;: [
-      &quot;Salesman&quot;,
-      &quot;Manager&quot;
+      &quot;salesman&quot;,
+      &quot;manager&quot;
     ]
   },
   &quot;success&quot;: true,
@@ -547,39 +572,51 @@
 
 <pre><code>{
   &quot;result&quot;: {
-    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJQb3MiLCJleHAiOjE0ODg2NDA0MTMsImh0dHA6Ly93d3cuYXNwbmV0Ym9pbGVycGxhdGUuY29tL2lkZW50aXR5L2NsYWltcy90ZW5hbnRJZCI6IjEiLCJpc3MiOiJMQUJTIiwibmFtZWlkIjoiMSIsIm5iZiI6MTQ4ODM4MTIxMywicm9sZSI6IlNhbGVzbWFuLE1hbmFnZXIiLCJzcG90aWQiOiIyIiwidW5pcXVlX25hbWUiOiJzYWxlc21hbiJ9.02OrMulHTrwrwO_2-uDoQUhg1Ur31VRYcihurq5Id-0&quot;,
-    &quot;userId&quot;: 1,
-    &quot;userName&quot;: &quot;salesman&quot;,
-    &quot;tenantId&quot;: 1,
+    &quot;token&quot;: &quot;YOUR_TOKEN&quot;,
+    &quot;userId&quot;: 1000001,
+    &quot;userName&quot;: &quot;saleswoman&quot;,
+    &quot;tenantId&quot;: 10,
     &quot;tenantCode&quot;: &quot;LABS&quot;,
-    &quot;tenantName&quot;: &quot;Labs&quot;,
+    &quot;tenantName&quot;: &quot;LABS&quot;,
     &quot;spots&quot;: [
       {
-        &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;天山店&quot;,
-        &quot;brands&quot;: [
+        &quot;id&quot;: 2000001,
+        &quot;tenantId&quot;: 0,
+        &quot;name&quot;: &quot;Event Hall&quot;,
+        &quot;contracts&quot;: [
           {
-            &quot;code&quot;: &quot;WA&quot;,
-            &quot;name&quot;: &quot;Paw in Paw&quot;
+            &quot;BrandCode&quot;: &quot;Calvin Klein&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;Ted Baker&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;Lilly Pulitzer&quot;,
           }
         ]
       },
       {
-        &quot;id&quot;: 2,
-        &quot;name&quot;: &quot;上海正大广场&quot;,
-        &quot;brands&quot;: [
+        &quot;id&quot;: 2000002,
+        &quot;tenantId&quot;: 0,
+        &quot;name&quot;: &quot;天山店&quot;,
+        &quot;contracts&quot;: [
           {
-            &quot;code&quot;: &quot;EK&quot;,
-            &quot;name&quot;: &quot;Eland Kids&quot;
+            &quot;BrandCode&quot;: &quot;EE&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;EK&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;EA&quot;,
           }
         ]
       }
     ],
     &quot;roles&quot;: [
-      &quot;Salesman&quot;,
-      &quot;Manager&quot;
+      &quot;salesman&quot;,
+      &quot;manager&quot;
     ],
-    &quot;currentSpotId&quot;: 2
+    &quot;currentSpotId&quot;: 2000001
   },
   &quot;success&quot;: true,
   &quot;error&quot;: {}
@@ -594,23 +631,24 @@
     <div id="navigation">
         
         
+        
     </div>
 
     </section>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js"></script>
-    <script src="/js/perfect-scrollbar.min.js"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js"></script>
-    <script src="/js/jquery.sticky-kit.min.js"></script>
-    <script src="/js/featherlight.min.js"></script>
-    <script src="/js/html5shiv-printshiv.min.js"></script>
-    <script src="/js/highlight.pack.js"></script>
+    <script src="http://pangpanglabs.github.io//js/clipboard.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/perfect-scrollbar.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/jquery.sticky-kit.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/featherlight.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/html5shiv-printshiv.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js"></script>
-    <script src="/js/learn.js"></script>
-    <script src="/js/hugo-learn.js"></script>
+    <script src="http://pangpanglabs.github.io//js/modernizr.custom.71422.js"></script>
+    <script src="http://pangpanglabs.github.io//js/learn.js"></script>
+    <script src="http://pangpanglabs.github.io//js/hugo-learn.js"></script>
     
 
   </body>

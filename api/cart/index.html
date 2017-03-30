@@ -11,15 +11,15 @@
 
     
     <title>Cart</title>
-    <link href="/css/nucleus.css" rel="stylesheet">
-    <link href="/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/css/hybrid.css" rel="stylesheet">
-    <link href="/css/featherlight.min.css" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css" rel="stylesheet">
-    <link href="/css/horsey.css" rel="stylesheet">
-    <link href="/css/theme.css" rel="stylesheet">
-    <link href="/css/hugo-theme.css" rel="stylesheet">
-    <script src="/js/jquery-2.x.min.js"></script>
+    <link href="http://pangpanglabs.github.io//css/nucleus.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/hybrid.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/featherlight.min.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/horsey.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/theme.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/hugo-theme.css" rel="stylesheet">
+    <script src="http://pangpanglabs.github.io//js/jquery-2.x.min.js"></script>
     <style type="text/css">:root #header + #content > #left > #rlblock_left
     {display:none !important;}</style>
     <link href="/css/ribbon.css" rel="stylesheet">
@@ -255,6 +255,7 @@
      
     <section id="footer">
       <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fa fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
     </section>
   </div>
 </nav>
@@ -411,19 +412,23 @@
 
 <pre><code>{
   &quot;result&quot;: {
-    &quot;id&quot;: 1,
+    &quot;id&quot;: 326,
+    &quot;tenantId&quot;: 10,
     &quot;items&quot;: null,
     &quot;listPrice&quot;: 0,
     &quot;salePrice&quot;: 0,
     &quot;quantity&quot;: 0,
     &quot;discount&quot;: 0,
+    &quot;remainAmount&quot;: 0,
     &quot;customerInfo&quot;: null,
     &quot;couponNo&quot;: &quot;&quot;,
     &quot;info&quot;: null,
-    &quot;userId&quot;: 1,
-    &quot;spotId&quot;: 2,
-    &quot;createdAt&quot;: &quot;2017-03-01T15:28:49.136503665Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-03-01T15:28:49.136503665Z&quot;
+    &quot;discountInfo&quot;: null,
+    &quot;payments&quot;: null,
+    &quot;userId&quot;: 1000001,
+    &quot;spotId&quot;: 2000001,
+    &quot;createdAt&quot;: &quot;2017-03-29T07:47:02.773134948Z&quot;,
+    &quot;updatedAt&quot;: &quot;0001-01-01T00:00:00Z&quot;
   },
   &quot;success&quot;: true,
   &quot;error&quot;: {}
@@ -484,39 +489,73 @@
 
 <p>Request:</p>
 
-<p><code>pp://staging/cart/add-item?cartId=1&amp;uid=305228&amp;quantity=2</code></p>
+<p><code>pp://staging/cart/add-item?cartId=326&amp;skuId=169&amp;quantity=2</code></p>
 
 <p>Success:</p>
 
 <pre><code>{
   &quot;result&quot;: {
-    &quot;id&quot;: 1,
+    &quot;id&quot;: 326,
+    &quot;tenantId&quot;: 10,
     &quot;items&quot;: [
       {
-        &quot;uid&quot;: &quot;305228&quot;,
-        &quot;name&quot;: &quot;EKJP6CV102, (59)Navy, (135)135&quot;,
-        &quot;skuCode&quot;: &quot;EKJP6CV10259135&quot;,
-        &quot;contentCode&quot;: &quot;EKJP6CV102&quot;,
-        &quot;brandCode&quot;: &quot;EK&quot;,
-        &quot;unitListPrice&quot;: 450,
-        &quot;unitSalePrice&quot;: 450,
+        &quot;sku&quot;: {
+          &quot;id&quot;: 169,
+          &quot;contentId&quot;: 10,
+          &quot;name&quot;: &quot;Calvin Klein Jeans Women's Gmt Dyed Ankle Skinny Pant, Monument, 26&quot;,
+          &quot;code&quot;: &quot;42AB600-1&quot;,
+          &quot;listPrice&quot;: 69.5,
+          &quot;salePrice&quot;: 69.5,
+          &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+          &quot;contentCode&quot;: &quot;42AB600&quot;,
+          &quot;images&quot;: {
+            &quot;large&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
+              &quot;width&quot;: 385,
+              &quot;height&quot;: 500
+            },
+            &quot;medium&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
+              &quot;width&quot;: 123,
+              &quot;height&quot;: 160
+            },
+            &quot;small&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
+              &quot;width&quot;: 58,
+              &quot;height&quot;: 75
+            }
+          },
+          &quot;options&quot;: [
+            {
+              &quot;k&quot;: &quot;Size&quot;,
+              &quot;v&quot;: &quot;26&quot;
+            },
+            {
+              &quot;k&quot;: &quot;Color&quot;,
+              &quot;v&quot;: &quot;Monument&quot;
+            }
+          ]
+        },
         &quot;quantity&quot;: 2,
-        &quot;listPrice&quot;: 900,
-        &quot;salePrice&quot;: 900,
+        &quot;listPrice&quot;: 139,
+        &quot;salePrice&quot;: 139,
         &quot;discount&quot;: 0
       }
     ],
-    &quot;listPrice&quot;: 900,
-    &quot;salePrice&quot;: 900,
+    &quot;listPrice&quot;: 139,
+    &quot;salePrice&quot;: 139,
     &quot;quantity&quot;: 2,
     &quot;discount&quot;: 0,
+    &quot;remainAmount&quot;: 139,
     &quot;customerInfo&quot;: null,
     &quot;couponNo&quot;: &quot;&quot;,
     &quot;info&quot;: null,
-    &quot;userId&quot;: 1,
-    &quot;spotId&quot;: 2,
-    &quot;createdAt&quot;: &quot;2017-03-01T15:28:49Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-03-01T15:33:36.714647541Z&quot;
+    &quot;discountInfo&quot;: null,
+    &quot;payments&quot;: null,
+    &quot;userId&quot;: 1000001,
+    &quot;spotId&quot;: 2000001,
+    &quot;createdAt&quot;: &quot;2017-03-29T07:47:02Z&quot;,
+    &quot;updatedAt&quot;: &quot;2017-03-29T07:47:54.783140997Z&quot;
   },
   &quot;success&quot;: true,
   &quot;error&quot;: {}
@@ -577,39 +616,73 @@
 
 <p>Request:</p>
 
-<p><code>pp://staging/cart/remove-item?cartId=1&amp;uid=305228&amp;quantity=1</code></p>
+<p><code>pp://staging/cart/remove-item?cartId=326&amp;skuId=169&amp;quantity=1</code></p>
 
 <p>Success:</p>
 
 <pre><code>{
   &quot;result&quot;: {
-    &quot;id&quot;: 1,
+    &quot;id&quot;: 326,
+    &quot;tenantId&quot;: 10,
     &quot;items&quot;: [
       {
-        &quot;uid&quot;: &quot;305228&quot;,
-        &quot;name&quot;: &quot;EKJP6CV102, (59)Navy, (135)135&quot;,
-        &quot;skuCode&quot;: &quot;EKJP6CV10259135&quot;,
-        &quot;contentCode&quot;: &quot;EKJP6CV102&quot;,
-        &quot;brandCode&quot;: &quot;EK&quot;,
-        &quot;unitListPrice&quot;: 450,
-        &quot;unitSalePrice&quot;: 450,
+        &quot;sku&quot;: {
+          &quot;id&quot;: 169,
+          &quot;contentId&quot;: 10,
+          &quot;name&quot;: &quot;Calvin Klein Jeans Women's Gmt Dyed Ankle Skinny Pant, Monument, 26&quot;,
+          &quot;code&quot;: &quot;42AB600-1&quot;,
+          &quot;listPrice&quot;: 69.5,
+          &quot;salePrice&quot;: 69.5,
+          &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+          &quot;contentCode&quot;: &quot;42AB600&quot;,
+          &quot;images&quot;: {
+            &quot;large&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
+              &quot;width&quot;: 385,
+              &quot;height&quot;: 500
+            },
+            &quot;medium&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
+              &quot;width&quot;: 123,
+              &quot;height&quot;: 160
+            },
+            &quot;small&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
+              &quot;width&quot;: 58,
+              &quot;height&quot;: 75
+            }
+          },
+          &quot;options&quot;: [
+            {
+              &quot;k&quot;: &quot;Size&quot;,
+              &quot;v&quot;: &quot;26&quot;
+            },
+            {
+              &quot;k&quot;: &quot;Color&quot;,
+              &quot;v&quot;: &quot;Monument&quot;
+            }
+          ]
+        },
         &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 450,
-        &quot;salePrice&quot;: 450,
+        &quot;listPrice&quot;: 69.5,
+        &quot;salePrice&quot;: 69.5,
         &quot;discount&quot;: 0
       }
     ],
-    &quot;listPrice&quot;: 1350,
-    &quot;salePrice&quot;: 1350,
+    &quot;listPrice&quot;: 69.5,
+    &quot;salePrice&quot;: 69.5,
     &quot;quantity&quot;: 1,
     &quot;discount&quot;: 0,
+    &quot;remainAmount&quot;: 69.5,
     &quot;customerInfo&quot;: null,
     &quot;couponNo&quot;: &quot;&quot;,
     &quot;info&quot;: null,
-    &quot;userId&quot;: 1,
-    &quot;spotId&quot;: 2,
-    &quot;createdAt&quot;: &quot;2017-03-01T15:28:49Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-03-01T15:35:56.789085986Z&quot;
+    &quot;discountInfo&quot;: null,
+    &quot;payments&quot;: null,
+    &quot;userId&quot;: 1000001,
+    &quot;spotId&quot;: 2000001,
+    &quot;createdAt&quot;: &quot;2017-03-29T07:47:02Z&quot;,
+    &quot;updatedAt&quot;: &quot;2017-03-29T07:49:29.971205281Z&quot;
   },
   &quot;success&quot;: true,
   &quot;error&quot;: {}
@@ -669,49 +742,83 @@
 <p>Success:</p>
 
 <pre><code>{
-  &quot;result&quot;: {
-    &quot;id&quot;: 1,
-    &quot;items&quot;: [
-      {
-        &quot;uid&quot;: &quot;305228&quot;,
-        &quot;name&quot;: &quot;EKJP6CV102, (59)Navy, (135)135&quot;,
-        &quot;skuCode&quot;: &quot;EKJP6CV10259135&quot;,
-        &quot;contentCode&quot;: &quot;EKJP6CV102&quot;,
-        &quot;brandCode&quot;: &quot;EK&quot;,
-        &quot;unitListPrice&quot;: 450,
-        &quot;unitSalePrice&quot;: 450,
+    &quot;result&quot;: {
+        &quot;id&quot;: 326,
+        &quot;tenantId&quot;: 10,
+        &quot;items&quot;: [
+            {
+                &quot;sku&quot;: {
+                    &quot;id&quot;: 169,
+                    &quot;contentId&quot;: 10,
+                    &quot;name&quot;: &quot;Calvin Klein Jeans Women's Gmt Dyed Ankle Skinny Pant, Monument, 26&quot;,
+                    &quot;code&quot;: &quot;42AB600-1&quot;,
+                    &quot;listPrice&quot;: 69.5,
+                    &quot;salePrice&quot;: 69.5,
+                    &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+                    &quot;contentCode&quot;: &quot;42AB600&quot;,
+                    &quot;images&quot;: {
+                        &quot;large&quot;: {
+                            &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
+                            &quot;width&quot;: 385,
+                            &quot;height&quot;: 500
+                        },
+                        &quot;medium&quot;: {
+                            &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
+                            &quot;width&quot;: 123,
+                            &quot;height&quot;: 160
+                        },
+                        &quot;small&quot;: {
+                            &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
+                            &quot;width&quot;: 58,
+                            &quot;height&quot;: 75
+                        }
+                    },
+                    &quot;options&quot;: [
+                        {
+                            &quot;k&quot;: &quot;Size&quot;,
+                            &quot;v&quot;: &quot;26&quot;
+                        },
+                        {
+                            &quot;k&quot;: &quot;Color&quot;,
+                            &quot;v&quot;: &quot;Monument&quot;
+                        }
+                    ]
+                },
+                &quot;quantity&quot;: 1,
+                &quot;listPrice&quot;: 69.5,
+                &quot;salePrice&quot;: 69.5,
+                &quot;discount&quot;: 0
+            }
+        ],
+        &quot;listPrice&quot;: 69.5,
+        &quot;salePrice&quot;: 69.5,
         &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 450,
-        &quot;salePrice&quot;: 450,
-        &quot;discount&quot;: 0
-      }
-    ],
-    &quot;listPrice&quot;: 1350,
-    &quot;salePrice&quot;: 1350,
-    &quot;quantity&quot;: 1,
-    &quot;discount&quot;: 0,
-    &quot;customerInfo&quot;: {
-      &quot;no&quot;: &quot;10000000001&quot;,
-      &quot;brandCode&quot;: &quot;RC&quot;,
-      &quot;mobile&quot;: &quot;123456789021&quot;,
-      &quot;grade&quot;: 0,
-      &quot;cardType&quot;: &quot;purpleCard&quot;,
-      &quot;mileage&quot;: {
-        &quot;currentPoints&quot;: 9000,
-        &quot;totalEarnPoints&quot;: 10000,
-        &quot;totalRedeemPoints&quot;: 10,
-        &quot;totalSaleAmount&quot;: &quot;345.0&quot;
-      }
+        &quot;discount&quot;: 0,
+        &quot;remainAmount&quot;: 69.5,
+        &quot;customerInfo&quot;: {
+            &quot;no&quot;: &quot;10000000001&quot;,
+            &quot;brandCode&quot;: &quot;RC&quot;,
+            &quot;mobile&quot;: &quot;123456789021&quot;,
+            &quot;grade&quot;: 0,
+            &quot;cardType&quot;: &quot;purpleCard&quot;,
+            &quot;mileage&quot;: {
+                &quot;currentPoints&quot;: 9000,
+                &quot;totalEarnPoints&quot;: 10000,
+                &quot;totalRedeemPoints&quot;: 10,
+                &quot;totalSaleAmount&quot;: &quot;345.0&quot;
+            }
+        },
+        &quot;couponNo&quot;: &quot;&quot;,
+        &quot;info&quot;: null,
+        &quot;discountInfo&quot;: null,
+        &quot;payments&quot;: null,
+        &quot;userId&quot;: 1000001,
+        &quot;spotId&quot;: 2000001,
+        &quot;createdAt&quot;: &quot;2017-03-29T07:47:02Z&quot;,
+        &quot;updatedAt&quot;: &quot;2017-03-29T07:49:29.971205281Z&quot;
     },
-    &quot;couponNo&quot;: &quot;&quot;,
-    &quot;info&quot;: null,
-    &quot;userId&quot;: 1,
-    &quot;spotId&quot;: 2,
-    &quot;createdAt&quot;: &quot;2017-03-01T15:28:49Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-03-01T15:39:08.371314559Z&quot;
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
+    &quot;success&quot;: true,
+    &quot;error&quot;: {}
 }
 </code></pre>
 
@@ -755,58 +862,110 @@
 
 <pre><code>{
   &quot;result&quot;: {
-    &quot;id&quot;: 1,
+    &quot;id&quot;: 326,
+    &quot;tenantId&quot;: 10,
     &quot;items&quot;: [
       {
-        &quot;uid&quot;: &quot;305228&quot;,
-        &quot;name&quot;: &quot;EKJP6CV102, (59)Navy, (135)135&quot;,
-        &quot;skuCode&quot;: &quot;EKJP6CV10259135&quot;,
-        &quot;contentCode&quot;: &quot;EKJP6CV102&quot;,
-        &quot;brandCode&quot;: &quot;EK&quot;,
-        &quot;unitListPrice&quot;: 450,
-        &quot;unitSalePrice&quot;: 0,
+        &quot;sku&quot;: {
+          &quot;id&quot;: 169,
+          &quot;contentId&quot;: 10,
+          &quot;name&quot;: &quot;Calvin Klein Jeans Women's Gmt Dyed Ankle Skinny Pant, Monument, 26&quot;,
+          &quot;code&quot;: &quot;42AB600-1&quot;,
+          &quot;listPrice&quot;: 69.5,
+          &quot;salePrice&quot;: 69.5,
+          &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+          &quot;contentCode&quot;: &quot;42AB600&quot;,
+          &quot;images&quot;: {
+            &quot;large&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
+              &quot;width&quot;: 385,
+              &quot;height&quot;: 500
+            },
+            &quot;medium&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
+              &quot;width&quot;: 123,
+              &quot;height&quot;: 160
+            },
+            &quot;small&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
+              &quot;width&quot;: 58,
+              &quot;height&quot;: 75
+            }
+          },
+          &quot;options&quot;: [
+            {
+              &quot;k&quot;: &quot;Size&quot;,
+              &quot;v&quot;: &quot;26&quot;
+            },
+            {
+              &quot;k&quot;: &quot;Color&quot;,
+              &quot;v&quot;: &quot;Monument&quot;
+            }
+          ]
+        },
         &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 450,
-        &quot;salePrice&quot;: 450,
+        &quot;listPrice&quot;: 69.5,
+        &quot;salePrice&quot;: 69.5,
         &quot;discount&quot;: 0
       },
       {
-        &quot;uid&quot;: &quot;1&quot;,
-        &quot;name&quot;: &quot;LONG DOWN JUMPER, (39)Ivory, X-SMALL&quot;,
-        &quot;skuCode&quot;: &quot;WHJP64T05C390XS&quot;,
-        &quot;contentCode&quot;: &quot;WHJP64T05C&quot;,
-        &quot;brandCode&quot;: &quot;WA&quot;,
-        &quot;unitListPrice&quot;: 1290,
-        &quot;unitSalePrice&quot;: 0,
+        &quot;sku&quot;: {
+          &quot;id&quot;: 2454,
+          &quot;contentId&quot;: 445,
+          &quot;name&quot;: &quot;EEAA8A011, 101, 000&quot;,
+          &quot;code&quot;: &quot;EEAA8A011101000&quot;,
+          &quot;listPrice&quot;: 28,
+          &quot;salePrice&quot;: 28,
+          &quot;brandCode&quot;: &quot;EE&quot;,
+          &quot;contentCode&quot;: &quot;EEAA8A011&quot;,
+          &quot;images&quot;: null,
+          &quot;options&quot;: [
+            {
+              &quot;k&quot;: &quot;Size&quot;,
+              &quot;v&quot;: &quot;(000)生产代表尺寸&quot;
+            },
+            {
+              &quot;k&quot;: &quot;Color&quot;,
+              &quot;v&quot;: &quot;(101)red&quot;
+            }
+          ]
+        },
         &quot;quantity&quot;: 2,
-        &quot;listPrice&quot;: 2580,
-        &quot;salePrice&quot;: 1806,
-        &quot;discount&quot;: 774
+        &quot;listPrice&quot;: 56,
+        &quot;salePrice&quot;: 44.8,
+        &quot;discount&quot;: 11.2
       }
     ],
-    &quot;listPrice&quot;: 4380,
-    &quot;salePrice&quot;: 2256,
+    &quot;listPrice&quot;: 125.5,
+    &quot;salePrice&quot;: 114.3,
     &quot;quantity&quot;: 3,
-    &quot;discount&quot;: 774,
+    &quot;discount&quot;: 11.2,
+    &quot;remainAmount&quot;: 114.3,
     &quot;customerInfo&quot;: {
-      &quot;no&quot;: &quot;10000000001&quot;,
-      &quot;brandCode&quot;: &quot;RC&quot;,
-      &quot;mobile&quot;: &quot;123456789021&quot;,
-      &quot;grade&quot;: 0,
-      &quot;cardType&quot;: &quot;purpleCard&quot;,
-      &quot;mileage&quot;: {
-        &quot;currentPoints&quot;: 9000,
-        &quot;totalEarnPoints&quot;: 10000,
-        &quot;totalRedeemPoints&quot;: 10,
-        &quot;totalSaleAmount&quot;: &quot;345.0&quot;
-      }
+        &quot;no&quot;: &quot;10000000001&quot;,
+        &quot;brandCode&quot;: &quot;RC&quot;,
+        &quot;mobile&quot;: &quot;123456789021&quot;,
+        &quot;grade&quot;: 0,
+        &quot;cardType&quot;: &quot;purpleCard&quot;,
+        &quot;mileage&quot;: {
+            &quot;currentPoints&quot;: 9000,
+            &quot;totalEarnPoints&quot;: 10000,
+            &quot;totalRedeemPoints&quot;: 10,
+            &quot;totalSaleAmount&quot;: &quot;345.0&quot;
+        }
     },
-    &quot;couponNo&quot;: &quot;WA976CE9199756D5BC&quot;,
-    &quot;info&quot;: null,
-    &quot;userId&quot;: 1,
-    &quot;spotId&quot;: 2,
-    &quot;createdAt&quot;: &quot;2017-03-01T15:28:49Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-03-01T15:43:27.347863336Z&quot;
+    &quot;couponNo&quot;: &quot;EE4E52FEF46F7B30DE&quot;,    
+    &quot;discountInfo&quot;: {
+      &quot;couponType&quot;: &quot;Discount&quot;,
+      &quot;discountName&quot;: &quot;8折优惠&quot;,
+      &quot;eventId&quot;: &quot;EE2017030024&quot;
+    },
+    &quot;info&quot;: {},
+    &quot;payments&quot;: null,
+    &quot;userId&quot;: 1000001,
+    &quot;spotId&quot;: 2000001,
+    &quot;createdAt&quot;: &quot;2017-03-29T07:47:02Z&quot;,
+    &quot;updatedAt&quot;: &quot;2017-03-29T08:12:44.017761577Z&quot;
   },
   &quot;success&quot;: true,
   &quot;error&quot;: {}
@@ -847,70 +1006,119 @@
 
 <p>Request:</p>
 
-<p><code>pp://staging/cart/set-info?cartId=1&amp;payment[alipay]=150&amp;payment[wxpay]=30&amp;receipt=193018485875930103</code></p>
+<p><code>pp://staging/cart/set-info?cartId=326&amp;receipt=193018485875930103&amp;casher=nancy</code></p>
 
 <p>Success:</p>
 
 <pre><code>{
   &quot;result&quot;: {
-    &quot;id&quot;: 1,
+    &quot;id&quot;: 326,
+    &quot;tenantId&quot;: 10,
     &quot;items&quot;: [
       {
-        &quot;uid&quot;: &quot;305228&quot;,
-        &quot;name&quot;: &quot;EKJP6CV102, (59)Navy, (135)135&quot;,
-        &quot;skuCode&quot;: &quot;EKJP6CV10259135&quot;,
-        &quot;contentCode&quot;: &quot;EKJP6CV102&quot;,
-        &quot;brandCode&quot;: &quot;EK&quot;,
-        &quot;unitListPrice&quot;: 450,
-        &quot;unitSalePrice&quot;: 450,
+        &quot;sku&quot;: {
+          &quot;id&quot;: 169,
+          &quot;contentId&quot;: 10,
+          &quot;name&quot;: &quot;Calvin Klein Jeans Women's Gmt Dyed Ankle Skinny Pant, Monument, 26&quot;,
+          &quot;code&quot;: &quot;42AB600-1&quot;,
+          &quot;listPrice&quot;: 69.5,
+          &quot;salePrice&quot;: 69.5,
+          &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+          &quot;contentCode&quot;: &quot;42AB600&quot;,
+          &quot;images&quot;: {
+            &quot;large&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
+              &quot;width&quot;: 385,
+              &quot;height&quot;: 500
+            },
+            &quot;medium&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
+              &quot;width&quot;: 123,
+              &quot;height&quot;: 160
+            },
+            &quot;small&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
+              &quot;width&quot;: 58,
+              &quot;height&quot;: 75
+            }
+          },
+          &quot;options&quot;: [
+            {
+              &quot;k&quot;: &quot;Size&quot;,
+              &quot;v&quot;: &quot;26&quot;
+            },
+            {
+              &quot;k&quot;: &quot;Color&quot;,
+              &quot;v&quot;: &quot;Monument&quot;
+            }
+          ]
+        },
         &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 450,
-        &quot;salePrice&quot;: 450,
+        &quot;listPrice&quot;: 69.5,
+        &quot;salePrice&quot;: 69.5,
         &quot;discount&quot;: 0
       },
       {
-        &quot;uid&quot;: &quot;1&quot;,
-        &quot;name&quot;: &quot;LONG DOWN JUMPER, (39)Ivory, X-SMALL&quot;,
-        &quot;skuCode&quot;: &quot;WHJP64T05C390XS&quot;,
-        &quot;contentCode&quot;: &quot;WHJP64T05C&quot;,
-        &quot;brandCode&quot;: &quot;WA&quot;,
-        &quot;unitListPrice&quot;: 1290,
-        &quot;unitSalePrice&quot;: 1290,
+        &quot;sku&quot;: {
+          &quot;id&quot;: 2454,
+          &quot;contentId&quot;: 445,
+          &quot;name&quot;: &quot;EEAA8A011, 101, 000&quot;,
+          &quot;code&quot;: &quot;EEAA8A011101000&quot;,
+          &quot;listPrice&quot;: 28,
+          &quot;salePrice&quot;: 28,
+          &quot;brandCode&quot;: &quot;EE&quot;,
+          &quot;contentCode&quot;: &quot;EEAA8A011&quot;,
+          &quot;images&quot;: null,
+          &quot;options&quot;: [
+            {
+              &quot;k&quot;: &quot;Size&quot;,
+              &quot;v&quot;: &quot;(000)生产代表尺寸&quot;
+            },
+            {
+              &quot;k&quot;: &quot;Color&quot;,
+              &quot;v&quot;: &quot;(101)red&quot;
+            }
+          ]
+        },
         &quot;quantity&quot;: 2,
-        &quot;listPrice&quot;: 2580,
-        &quot;salePrice&quot;: 2580,
-        &quot;discount&quot;: 774
+        &quot;listPrice&quot;: 56,
+        &quot;salePrice&quot;: 44.8,
+        &quot;discount&quot;: 11.2
       }
     ],
-    &quot;listPrice&quot;: 7410,
-    &quot;salePrice&quot;: 5286,
+    &quot;listPrice&quot;: 125.5,
+    &quot;salePrice&quot;: 114.3,
     &quot;quantity&quot;: 3,
-    &quot;discount&quot;: 2124,
+    &quot;discount&quot;: 11.2,
+    &quot;remainAmount&quot;: 114.3,
     &quot;customerInfo&quot;: {
-      &quot;no&quot;: &quot;10000000001&quot;,
-      &quot;brandCode&quot;: &quot;RC&quot;,
-      &quot;mobile&quot;: &quot;123456789021&quot;,
-      &quot;grade&quot;: 0,
-      &quot;cardType&quot;: &quot;purpleCard&quot;,
-      &quot;mileage&quot;: {
-        &quot;currentPoints&quot;: 9000,
-        &quot;totalEarnPoints&quot;: 10000,
-        &quot;totalRedeemPoints&quot;: 10,
-        &quot;totalSaleAmount&quot;: &quot;345.0&quot;
-      }
+        &quot;no&quot;: &quot;10000000001&quot;,
+        &quot;brandCode&quot;: &quot;RC&quot;,
+        &quot;mobile&quot;: &quot;123456789021&quot;,
+        &quot;grade&quot;: 0,
+        &quot;cardType&quot;: &quot;purpleCard&quot;,
+        &quot;mileage&quot;: {
+            &quot;currentPoints&quot;: 9000,
+            &quot;totalEarnPoints&quot;: 10000,
+            &quot;totalRedeemPoints&quot;: 10,
+            &quot;totalSaleAmount&quot;: &quot;345.0&quot;
+        }
     },
-    &quot;couponNo&quot;: &quot;WA976CE9199756D5BC&quot;,
+    &quot;couponNo&quot;: &quot;EE4E52FEF46F7B30DE&quot;,    
+    &quot;discountInfo&quot;: {
+      &quot;couponType&quot;: &quot;Discount&quot;,
+      &quot;discountName&quot;: &quot;8折优惠&quot;,
+      &quot;eventId&quot;: &quot;EE2017030024&quot;
+    },
     &quot;info&quot;: {
-      &quot;payment&quot;: {
-        &quot;alipay&quot;: &quot;150&quot;,
-        &quot;wxpay&quot;: &quot;30&quot;
-      },
-      &quot;receipt&quot;: &quot;193018485875930103&quot;
+        &quot;casher&quot;: &quot;nancy&quot;,
+        &quot;receipt&quot;: &quot;193018485875930103&quot;
     },
-    &quot;userId&quot;: 1,
-    &quot;spotId&quot;: 2,
-    &quot;createdAt&quot;: &quot;2017-03-01T15:28:49Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-03-01T15:44:48.496016435Z&quot;
+    &quot;payments&quot;: null,
+    &quot;userId&quot;: 1000001,
+    &quot;spotId&quot;: 2000001,
+    &quot;createdAt&quot;: &quot;2017-03-29T07:47:02Z&quot;,
+    &quot;updatedAt&quot;: &quot;2017-03-29T08:12:44.017761577Z&quot;
   },
   &quot;success&quot;: true,
   &quot;error&quot;: {}
@@ -945,7 +1153,7 @@
 
 <p>Request:</p>
 
-<p><code>pp://staging/cart/remove-cart</code></p>
+<p><code>pp://staging/cart/remove-cart?cartId=326</code></p>
 
 <p>Success:</p>
 
@@ -989,50 +1197,41 @@
 <pre><code>{
   &quot;result&quot;: [
     {
-      &quot;id&quot;: 1,
-      &quot;listPrice&quot;: 4380,
-      &quot;salePrice&quot;: 2256,
+      &quot;id&quot;: 326,
+      &quot;tenantId&quot;: 10,    
+      &quot;listPrice&quot;: 125.5,
+      &quot;salePrice&quot;: 114.3,
       &quot;quantity&quot;: 3,
-      &quot;discount&quot;: 774,
+      &quot;discount&quot;: 11.2,
+      &quot;remainAmount&quot;: 114.3,
       &quot;customerInfo&quot;: {
-        &quot;no&quot;: &quot;10000000001&quot;,
-        &quot;brandCode&quot;: &quot;RC&quot;,
-        &quot;mobile&quot;: &quot;123456789021&quot;,
-        &quot;grade&quot;: 0,
-        &quot;cardType&quot;: &quot;purpleCard&quot;,
-        &quot;mileage&quot;: {
-          &quot;currentPoints&quot;: 9000,
-          &quot;totalEarnPoints&quot;: 10000,
-          &quot;totalRedeemPoints&quot;: 10,
-          &quot;totalSaleAmount&quot;: &quot;345.0&quot;
-        }
+          &quot;no&quot;: &quot;10000000001&quot;,
+          &quot;brandCode&quot;: &quot;RC&quot;,
+          &quot;mobile&quot;: &quot;123456789021&quot;,
+          &quot;grade&quot;: 0,
+          &quot;cardType&quot;: &quot;purpleCard&quot;,
+          &quot;mileage&quot;: {
+              &quot;currentPoints&quot;: 9000,
+              &quot;totalEarnPoints&quot;: 10000,
+              &quot;totalRedeemPoints&quot;: 10,
+              &quot;totalSaleAmount&quot;: &quot;345.0&quot;
+          }
       },
-      &quot;couponNo&quot;: &quot;WA976CE9199756D5BC&quot;,
+      &quot;couponNo&quot;: &quot;EE4E52FEF46F7B30DE&quot;,    
+      &quot;discountInfo&quot;: {
+        &quot;couponType&quot;: &quot;Discount&quot;,
+        &quot;discountName&quot;: &quot;8折优惠&quot;,
+        &quot;eventId&quot;: &quot;EE2017030024&quot;
+      },
       &quot;info&quot;: {
-        &quot;payment&quot;: {
-          &quot;alipay&quot;: &quot;150&quot;,
-          &quot;wxpay&quot;: &quot;30&quot;
-        },
-        &quot;receipt&quot;: &quot;193018485875930103&quot;
+          &quot;casher&quot;: &quot;nancy&quot;,
+          &quot;receipt&quot;: &quot;193018485875930103&quot;
       },
-      &quot;userId&quot;: 1,
-      &quot;spotId&quot;: 2,
-      &quot;createdAt&quot;: &quot;2017-03-01T15:28:49Z&quot;,
-      &quot;updatedAt&quot;: &quot;2017-03-01T15:44:48Z&quot;
-    }
-    {
-      &quot;id&quot;: 2,
-      &quot;listPrice&quot;: 1090,
-      &quot;salePrice&quot;: 1090,
-      &quot;quantity&quot;: 1,
-      &quot;discount&quot;: 0,
-      &quot;customerInfo&quot;: null,
-      &quot;couponNo&quot;: &quot;&quot;,
-      &quot;info&quot;: null,
-      &quot;userId&quot;: 1,
-      &quot;spotId&quot;: 1,
-      &quot;createdAt&quot;: &quot;2017-03-01T15:47:11Z&quot;,
-      &quot;updatedAt&quot;: &quot;2017-03-01T15:47:22Z&quot;
+      &quot;payments&quot;: null,
+      &quot;userId&quot;: 1000001,
+      &quot;spotId&quot;: 2000001,
+      &quot;createdAt&quot;: &quot;2017-03-29T07:47:02Z&quot;,
+      &quot;updatedAt&quot;: &quot;2017-03-29T08:12:44.017761577Z&quot;
     }
   ],
   &quot;success&quot;: true,
@@ -1070,72 +1269,119 @@
 
 <p>Request:</p>
 
-<p><code>pp://staging/cart/get-cart?cartId=1</code></p>
+<p><code>pp://staging/cart/get-cart?cartId=326</code></p>
 
 <p>Success:</p>
 
 <pre><code>{
   &quot;result&quot;: {
-    &quot;id&quot;: 1,
-    &quot;tenantId&quot;: &quot;&quot;,
-    &quot;channel&quot;: &quot;&quot;,
+    &quot;id&quot;: 326,
+    &quot;tenantId&quot;: 10,
     &quot;items&quot;: [
       {
-        &quot;uid&quot;: &quot;305228&quot;,
-        &quot;name&quot;: &quot;EKJP6CV102, (59)Navy, (135)135&quot;,
-        &quot;skuCode&quot;: &quot;EKJP6CV10259135&quot;,
-        &quot;contentCode&quot;: &quot;EKJP6CV102&quot;,
-        &quot;brandCode&quot;: &quot;EK&quot;,
-        &quot;unitListPrice&quot;: 450,
-        &quot;unitSalePrice&quot;: 0,
+        &quot;sku&quot;: {
+          &quot;id&quot;: 169,
+          &quot;contentId&quot;: 10,
+          &quot;name&quot;: &quot;Calvin Klein Jeans Women's Gmt Dyed Ankle Skinny Pant, Monument, 26&quot;,
+          &quot;code&quot;: &quot;42AB600-1&quot;,
+          &quot;listPrice&quot;: 69.5,
+          &quot;salePrice&quot;: 69.5,
+          &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+          &quot;contentCode&quot;: &quot;42AB600&quot;,
+          &quot;images&quot;: {
+            &quot;large&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
+              &quot;width&quot;: 385,
+              &quot;height&quot;: 500
+            },
+            &quot;medium&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
+              &quot;width&quot;: 123,
+              &quot;height&quot;: 160
+            },
+            &quot;small&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
+              &quot;width&quot;: 58,
+              &quot;height&quot;: 75
+            }
+          },
+          &quot;options&quot;: [
+            {
+              &quot;k&quot;: &quot;Size&quot;,
+              &quot;v&quot;: &quot;26&quot;
+            },
+            {
+              &quot;k&quot;: &quot;Color&quot;,
+              &quot;v&quot;: &quot;Monument&quot;
+            }
+          ]
+        },
         &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 450,
-        &quot;salePrice&quot;: 450,
+        &quot;listPrice&quot;: 69.5,
+        &quot;salePrice&quot;: 69.5,
         &quot;discount&quot;: 0
       },
       {
-        &quot;uid&quot;: &quot;1&quot;,
-        &quot;name&quot;: &quot;LONG DOWN JUMPER, (39)Ivory, X-SMALL&quot;,
-        &quot;skuCode&quot;: &quot;WHJP64T05C390XS&quot;,
-        &quot;contentCode&quot;: &quot;WHJP64T05C&quot;,
-        &quot;brandCode&quot;: &quot;WA&quot;,
-        &quot;unitListPrice&quot;: 1290,
-        &quot;unitSalePrice&quot;: 0,
+        &quot;sku&quot;: {
+          &quot;id&quot;: 2454,
+          &quot;contentId&quot;: 445,
+          &quot;name&quot;: &quot;EEAA8A011, 101, 000&quot;,
+          &quot;code&quot;: &quot;EEAA8A011101000&quot;,
+          &quot;listPrice&quot;: 28,
+          &quot;salePrice&quot;: 28,
+          &quot;brandCode&quot;: &quot;EE&quot;,
+          &quot;contentCode&quot;: &quot;EEAA8A011&quot;,
+          &quot;images&quot;: null,
+          &quot;options&quot;: [
+            {
+              &quot;k&quot;: &quot;Size&quot;,
+              &quot;v&quot;: &quot;(000)生产代表尺寸&quot;
+            },
+            {
+              &quot;k&quot;: &quot;Color&quot;,
+              &quot;v&quot;: &quot;(101)red&quot;
+            }
+          ]
+        },
         &quot;quantity&quot;: 2,
-        &quot;listPrice&quot;: 2580,
-        &quot;salePrice&quot;: 1806,
-        &quot;discount&quot;: 774
+        &quot;listPrice&quot;: 56,
+        &quot;salePrice&quot;: 44.8,
+        &quot;discount&quot;: 11.2
       }
     ],
-    &quot;listPrice&quot;: 4380,
-    &quot;salePrice&quot;: 2256,
+    &quot;listPrice&quot;: 125.5,
+    &quot;salePrice&quot;: 114.3,
     &quot;quantity&quot;: 3,
-    &quot;discount&quot;: 774,
+    &quot;discount&quot;: 11.2,
+    &quot;remainAmount&quot;: 114.3,
     &quot;customerInfo&quot;: {
-      &quot;no&quot;: &quot;10000000001&quot;,
-      &quot;brandCode&quot;: &quot;RC&quot;,
-      &quot;mobile&quot;: &quot;123456789021&quot;,
-      &quot;grade&quot;: 0,
-      &quot;cardType&quot;: &quot;purpleCard&quot;,
-      &quot;mileage&quot;: {
-        &quot;currentPoints&quot;: 9000,
-        &quot;totalEarnPoints&quot;: 10000,
-        &quot;totalRedeemPoints&quot;: 10,
-        &quot;totalSaleAmount&quot;: &quot;345.0&quot;
-      }
+        &quot;no&quot;: &quot;10000000001&quot;,
+        &quot;brandCode&quot;: &quot;RC&quot;,
+        &quot;mobile&quot;: &quot;123456789021&quot;,
+        &quot;grade&quot;: 0,
+        &quot;cardType&quot;: &quot;purpleCard&quot;,
+        &quot;mileage&quot;: {
+            &quot;currentPoints&quot;: 9000,
+            &quot;totalEarnPoints&quot;: 10000,
+            &quot;totalRedeemPoints&quot;: 10,
+            &quot;totalSaleAmount&quot;: &quot;345.0&quot;
+        }
     },
-    &quot;couponNo&quot;: &quot;WA976CE9199756D5BC&quot;,
+    &quot;couponNo&quot;: &quot;EE4E52FEF46F7B30DE&quot;,    
+    &quot;discountInfo&quot;: {
+      &quot;couponType&quot;: &quot;Discount&quot;,
+      &quot;discountName&quot;: &quot;8折优惠&quot;,
+      &quot;eventId&quot;: &quot;EE2017030024&quot;
+    },
     &quot;info&quot;: {
-      &quot;payment&quot;: {
-        &quot;alipay&quot;: &quot;150&quot;,
-        &quot;wxpay&quot;: &quot;30&quot;
-      },
-      &quot;receipt&quot;: &quot;193018485875930103&quot;
+        &quot;casher&quot;: &quot;nancy&quot;,
+        &quot;receipt&quot;: &quot;193018485875930103&quot;
     },
-    &quot;userId&quot;: 1,
-    &quot;spotId&quot;: 2,
-    &quot;createdAt&quot;: &quot;2017-03-01T15:28:49Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-03-01T15:44:48Z&quot;
+    &quot;payments&quot;: null,
+    &quot;userId&quot;: 1000001,
+    &quot;spotId&quot;: 2000001,
+    &quot;createdAt&quot;: &quot;2017-03-29T07:47:02Z&quot;,
+    &quot;updatedAt&quot;: &quot;2017-03-29T08:12:44.017761577Z&quot;
   },
   &quot;success&quot;: true,
   &quot;error&quot;: {}
@@ -1150,23 +1396,24 @@
     <div id="navigation">
         
         
+        
     </div>
 
     </section>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js"></script>
-    <script src="/js/perfect-scrollbar.min.js"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js"></script>
-    <script src="/js/jquery.sticky-kit.min.js"></script>
-    <script src="/js/featherlight.min.js"></script>
-    <script src="/js/html5shiv-printshiv.min.js"></script>
-    <script src="/js/highlight.pack.js"></script>
+    <script src="http://pangpanglabs.github.io//js/clipboard.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/perfect-scrollbar.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/jquery.sticky-kit.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/featherlight.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/html5shiv-printshiv.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js"></script>
-    <script src="/js/learn.js"></script>
-    <script src="/js/hugo-learn.js"></script>
+    <script src="http://pangpanglabs.github.io//js/modernizr.custom.71422.js"></script>
+    <script src="http://pangpanglabs.github.io//js/learn.js"></script>
+    <script src="http://pangpanglabs.github.io//js/hugo-learn.js"></script>
     
 
   </body>

@@ -11,15 +11,15 @@
 
     
     <title>Catalog</title>
-    <link href="/css/nucleus.css" rel="stylesheet">
-    <link href="/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/css/hybrid.css" rel="stylesheet">
-    <link href="/css/featherlight.min.css" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css" rel="stylesheet">
-    <link href="/css/horsey.css" rel="stylesheet">
-    <link href="/css/theme.css" rel="stylesheet">
-    <link href="/css/hugo-theme.css" rel="stylesheet">
-    <script src="/js/jquery-2.x.min.js"></script>
+    <link href="http://pangpanglabs.github.io//css/nucleus.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/hybrid.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/featherlight.min.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/horsey.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/theme.css" rel="stylesheet">
+    <link href="http://pangpanglabs.github.io//css/hugo-theme.css" rel="stylesheet">
+    <script src="http://pangpanglabs.github.io//js/jquery-2.x.min.js"></script>
     <style type="text/css">:root #header + #content > #left > #rlblock_left
     {display:none !important;}</style>
     <link href="/css/ribbon.css" rel="stylesheet">
@@ -255,6 +255,7 @@
      
     <section id="footer">
       <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fa fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
     </section>
   </div>
 </nav>
@@ -312,12 +313,36 @@
 <li><a href="#example">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#search-products">Search products</a>
+<li><a href="#search-contents">Search contents</a>
 <ul>
 <li>
 <ul>
 <li><a href="#parameters-1">Parameters</a></li>
 <li><a href="#example-1">Example</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#get-content">Get content</a>
+<ul>
+<li>
+<ul>
+<li><a href="#parameters-2">Parameters</a></li>
+<li><a href="#example-2">Example</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#search-skus">Search skus</a>
+<ul>
+<li>
+<ul>
+<li><a href="#parameters-3">Parameters</a></li>
+<li><a href="#example-3">Example</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#deprecated-search-products">[Deprecated]<del>Search products</del></a>
+<ul>
+<li>
+<ul>
+<li><a href="#parameters-4">Parameters</a></li>
+<li><a href="#example-4">Example</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -360,9 +385,9 @@
 }
 </code></pre>
 
-<h2 id="search-products">Search products</h2>
+<h2 id="search-contents">Search contents</h2>
 
-<p><code>/catalog/search-products</code></p>
+<p><code>/catalog/search-contents</code></p>
 
 <h4 id="parameters-1">Parameters</h4>
 
@@ -397,6 +422,441 @@
 </table>
 
 <h4 id="example-1">Example</h4>
+
+<p>Request:</p>
+
+<p><code>pp://staging/catalog/search-contents?q=42&amp;skipCount=0&amp;maxResultCount=10</code></p>
+
+<p>Success:</p>
+
+<pre><code>{
+    &quot;result&quot;: {
+        &quot;items&quot;: [
+            {
+                &quot;id&quot;: 10,
+                &quot;code&quot;: &quot;42AB600&quot;,
+                &quot;name&quot;: &quot;Calvin Klein Jeans Women's Garment Dyed Ankle Skinny Pant&quot;,
+                &quot;desc&quot;: &quot;&lt;p&gt;Mid-rise - sits below natural waist - skinny fit. Through hip and thigh - super skinny at ankle. Through waist, hip and thigh - skinny at ankle&lt;/p&gt;&lt;p&gt;Five-pocket styling with signature omega stitch on back pocket.&lt;/p&gt;&lt;p&gt;Zip fly with button closure&lt;/p&gt;&lt;&quot;,
+                &quot;listPrice&quot;: 69.5,
+                &quot;salePrice&quot;: 69.5,
+                &quot;lowestPrice&quot;: 0,
+                &quot;highestPrice&quot;: 0,
+                &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+                &quot;options&quot;: {
+                    &quot;Color&quot;: [
+                        &quot;Ivy Mist&quot;,
+                        &quot;Monument&quot;,
+                        &quot;Rose Dust&quot;,
+                        &quot;Vanilla Ice&quot;
+                    ],
+                    &quot;Size&quot;: [&quot;26&quot;, &quot;27&quot;, &quot;28&quot;, &quot;29&quot;, &quot;30&quot;, &quot;31&quot;, &quot;32&quot;, &quot;33&quot;]
+                },
+                &quot;attributes&quot;: [
+                    {
+                        &quot;k&quot;: &quot;ProductGroup&quot;,
+                        &quot;v&quot;: &quot;Apparel&quot;
+                    },
+                    {
+                        &quot;k&quot;: &quot;ProductType&quot;,
+                        &quot;v&quot;: &quot;PANTS&quot;
+                    },
+                    {
+                        &quot;k&quot;: &quot;Department&quot;,
+                        &quot;v&quot;: &quot;womens&quot;
+                    }
+                ],
+                &quot;images&quot;: {
+                    &quot;large&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
+                        &quot;width&quot;: 385,
+                        &quot;height&quot;: 500
+                    },
+                    &quot;medium&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
+                        &quot;width&quot;: 123,
+                        &quot;height&quot;: 160
+                    },
+                    &quot;small&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
+                        &quot;width&quot;: 58,
+                        &quot;height&quot;: 75
+                    }
+                },
+                &quot;skus&quot;: null,
+                &quot;channelInfos&quot;: null,
+                &quot;tags&quot;: null
+            },
+            {
+                &quot;id&quot;: 13,
+                &quot;code&quot;: &quot;42AB616&quot;,
+                &quot;name&quot;: &quot;Calvin Klein Jeans Women's Utility Short&quot;,
+                &quot;desc&quot;: &quot;&lt;p&gt;These utility shorts are comfortable and stylish. They pair well with a Calvin Klein tee for a modern look&lt;/p&gt;&lt;p&gt;Inseam: 3.5 inch&lt;/p&gt;&lt;p&gt;Features large front and back utility pockets which give this short a fashionable look&lt;/p&gt;&lt;p&gt;Button fly with zip clo&quot;,
+                &quot;listPrice&quot;: 49.5,
+                &quot;salePrice&quot;: 49.5,
+                &quot;lowestPrice&quot;: 0,
+                &quot;highestPrice&quot;: 0,
+                &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+                &quot;options&quot;: {
+                    &quot;Color&quot;: [
+                        &quot;Black&quot;,
+                        &quot;Ivy Mist&quot;,
+                        &quot;Maple Butter&quot;,
+                        &quot;Poise&quot;,
+                        &quot;Snow White&quot;
+                    ],
+                    &quot;Size&quot;: [&quot;25&quot;, &quot;26&quot;, &quot;27&quot;, &quot;28&quot;, &quot;29&quot;, &quot;30&quot;, &quot;31&quot;, &quot;32&quot;, &quot;33&quot;]
+                    ]
+                },
+                &quot;attributes&quot;: [
+                    {
+                        &quot;k&quot;: &quot;ProductGroup&quot;,
+                        &quot;v&quot;: &quot;Apparel&quot;
+                    },
+                    {
+                        &quot;k&quot;: &quot;ProductType&quot;,
+                        &quot;v&quot;: &quot;SHORTS&quot;
+                    },
+                    {
+                        &quot;k&quot;: &quot;Department&quot;,
+                        &quot;v&quot;: &quot;womens&quot;
+                    }
+                ],
+                &quot;images&quot;: {
+                    &quot;large&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/41oEs6gO5BL.jpg&quot;,
+                        &quot;width&quot;: 385,
+                        &quot;height&quot;: 500
+                    },
+                    &quot;medium&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/41oEs6gO5BL._SL160_.jpg&quot;,
+                        &quot;width&quot;: 123,
+                        &quot;height&quot;: 160
+                    },
+                    &quot;small&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/41oEs6gO5BL._SL75_.jpg&quot;,
+                        &quot;width&quot;: 58,
+                        &quot;height&quot;: 75
+                    }
+                },
+                &quot;skus&quot;: null,
+                &quot;channelInfos&quot;: null,
+                &quot;tags&quot;: null
+            }
+        ],
+        &quot;totalCount&quot;: 2
+    },
+    &quot;success&quot;: true,
+    &quot;error&quot;: {}
+}
+</code></pre>
+
+<h2 id="get-content">Get content</h2>
+
+<p><code>/catalog/get-content</code></p>
+
+<h4 id="parameters-2">Parameters</h4>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>id</td>
+<td>Yes</td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="example-2">Example</h4>
+
+<p>Request:</p>
+
+<p><code>pp://staging/catalog/get-content?id=10</code></p>
+
+<pre><code>{
+  &quot;result&quot;: {
+    &quot;id&quot;: 10,
+    &quot;code&quot;: &quot;42AB600&quot;,
+    &quot;name&quot;: &quot;Calvin Klein Jeans Women's Garment Dyed Ankle Skinny Pant&quot;,
+    &quot;desc&quot;: &quot;&lt;p&gt;Mid-rise - sits below natural waist - skinny fit. Through hip and thigh - super skinny at ankle. Through waist, hip and thigh - skinny at ankle&lt;/p&gt;&lt;p&gt;Five-pocket styling with signature omega stitch on back pocket.&lt;/p&gt;&lt;p&gt;Zip fly with button closure&lt;/p&gt;&lt;&quot;,
+    &quot;listPrice&quot;: 69.5,
+    &quot;salePrice&quot;: 69.5,
+    &quot;lowestPrice&quot;: 0,
+    &quot;highestPrice&quot;: 0,
+    &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+    &quot;options&quot;: {
+      &quot;Color&quot;: [
+        &quot;Ivy Mist&quot;,
+        &quot;Monument&quot;,
+        &quot;Rose Dust&quot;,
+        &quot;Vanilla Ice&quot;
+      ],
+      &quot;Size&quot;: [&quot;26&quot;, &quot;27&quot;, &quot;28&quot;, &quot;29&quot;, &quot;30&quot;, &quot;31&quot;, &quot;32&quot;, &quot;33&quot;]
+    },
+    &quot;attributes&quot;: [
+      {
+        &quot;k&quot;: &quot;ProductGroup&quot;,
+        &quot;v&quot;: &quot;Apparel&quot;
+      },
+      {
+        &quot;k&quot;: &quot;ProductType&quot;,
+        &quot;v&quot;: &quot;PANTS&quot;
+      },
+      {
+        &quot;k&quot;: &quot;Department&quot;,
+        &quot;v&quot;: &quot;womens&quot;
+      }
+    ],
+    &quot;images&quot;: {
+      &quot;large&quot;: {
+        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
+        &quot;width&quot;: 385,
+        &quot;height&quot;: 500
+      },
+      &quot;medium&quot;: {
+        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
+        &quot;width&quot;: 123,
+        &quot;height&quot;: 160
+      },
+      &quot;small&quot;: {
+        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
+        &quot;width&quot;: 58,
+        &quot;height&quot;: 75
+      }
+    },
+    &quot;skus&quot;: [
+      {
+        &quot;id&quot;: 168,
+        &quot;contentId&quot;: 10,
+        &quot;name&quot;: &quot;Calvin Klein Jeans Women's Gmt Dyed Ankle Skinny Pant, Ivy Mist, 26&quot;,
+        &quot;code&quot;: &quot;42AB600-0&quot;,
+        &quot;listPrice&quot;: 69.5,
+        &quot;salePrice&quot;: 69.5,
+        &quot;images&quot;: {
+          &quot;large&quot;: {
+            &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
+            &quot;width&quot;: 385,
+            &quot;height&quot;: 500
+          },
+          &quot;medium&quot;: {
+            &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
+            &quot;width&quot;: 123,
+            &quot;height&quot;: 160
+          },
+          &quot;small&quot;: {
+            &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
+            &quot;width&quot;: 58,
+            &quot;height&quot;: 75
+          }
+        },
+        &quot;options&quot;: [
+          {
+            &quot;k&quot;: &quot;Size&quot;,
+            &quot;v&quot;: &quot;26&quot;
+          },
+          {
+            &quot;k&quot;: &quot;Color&quot;,
+            &quot;v&quot;: &quot;Ivy Mist&quot;
+          }
+        ],
+        &quot;uids&quot;: [
+          {
+            &quot;id&quot;: 107,
+            &quot;skuId&quot;: 168,
+            &quot;idType&quot;: &quot;EAN&quot;,
+            &quot;uid&quot;: &quot;0637865273456&quot;
+          },
+          {
+            &quot;id&quot;: 108,
+            &quot;skuId&quot;: 168,
+            &quot;idType&quot;: &quot;UPC&quot;,
+            &quot;uid&quot;: &quot;637865273456&quot;
+          }
+        ]
+      },
+      /* ... sku ... */      
+    ],
+    &quot;channelInfos&quot;: null,
+    &quot;tags&quot;: null
+  },
+  &quot;success&quot;: true,
+  &quot;error&quot;: {}
+}
+</code></pre>
+
+<h2 id="search-skus">Search skus</h2>
+
+<p><code>/catalog/search-skus</code></p>
+
+<h4 id="parameters-3">Parameters</h4>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>q</td>
+<td>No</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>skipCount</td>
+<td>No</td>
+<td>number</td>
+</tr>
+
+<tr>
+<td>maxResultCount</td>
+<td>No</td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="example-3">Example</h4>
+
+<p>Request:</p>
+
+<p><code>pp://staging/catalog/search-skus?q=42&amp;skipCount=0&amp;maxResultCount=10</code></p>
+
+<p>Success:</p>
+
+<pre><code>{
+    &quot;result&quot;: {
+        &quot;items&quot;: [
+            {
+                &quot;id&quot;: 168,
+                &quot;contentId&quot;: 10,
+                &quot;name&quot;: &quot;Calvin Klein Jeans Women's Gmt Dyed Ankle Skinny Pant, Ivy Mist, 26&quot;,
+                &quot;code&quot;: &quot;42AB600-0&quot;,
+                &quot;listPrice&quot;: 69.5,
+                &quot;salePrice&quot;: 69.5,
+                &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+                &quot;contentCode&quot;: &quot;42AB600&quot;,
+                &quot;images&quot;: {
+                    &quot;large&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
+                        &quot;width&quot;: 385,
+                        &quot;height&quot;: 500
+                    },
+                    &quot;medium&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
+                        &quot;width&quot;: 123,
+                        &quot;height&quot;: 160
+                    },
+                    &quot;small&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
+                        &quot;width&quot;: 58,
+                        &quot;height&quot;: 75
+                    }
+                },
+                &quot;options&quot;: [
+                    {
+                        &quot;k&quot;: &quot;Size&quot;,
+                        &quot;v&quot;: &quot;26&quot;
+                    },
+                    {
+                        &quot;k&quot;: &quot;Color&quot;,
+                        &quot;v&quot;: &quot;Ivy Mist&quot;
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 169,
+                &quot;contentId&quot;: 10,
+                &quot;name&quot;: &quot;Calvin Klein Jeans Women's Gmt Dyed Ankle Skinny Pant, Monument, 26&quot;,
+                &quot;code&quot;: &quot;42AB600-1&quot;,
+                &quot;listPrice&quot;: 69.5,
+                &quot;salePrice&quot;: 69.5,
+                &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+                &quot;contentCode&quot;: &quot;42AB600&quot;,
+                &quot;images&quot;: {
+                    &quot;large&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
+                        &quot;width&quot;: 385,
+                        &quot;height&quot;: 500
+                    },
+                    &quot;medium&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
+                        &quot;width&quot;: 123,
+                        &quot;height&quot;: 160
+                    },
+                    &quot;small&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
+                        &quot;width&quot;: 58,
+                        &quot;height&quot;: 75
+                    }
+                },
+                &quot;options&quot;: [
+                    {
+                        &quot;k&quot;: &quot;Size&quot;,
+                        &quot;v&quot;: &quot;26&quot;
+                    },
+                    {
+                        &quot;k&quot;: &quot;Color&quot;,
+                        &quot;v&quot;: &quot;Monument&quot;
+                    }
+                ]
+            }
+        ],
+        &quot;totalCount&quot;: 76
+    },
+    &quot;success&quot;: true,
+    &quot;error&quot;: {}
+}
+</code></pre>
+
+<h2 id="deprecated-search-products">[Deprecated]<del>Search products</del></h2>
+
+<p><code>/catalog/search-products</code></p>
+
+<h4 id="parameters-4">Parameters</h4>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>q</td>
+<td>No</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>skipCount</td>
+<td>No</td>
+<td>number</td>
+</tr>
+
+<tr>
+<td>maxResultCount</td>
+<td>No</td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="example-4">Example</h4>
 
 <p>Request:</p>
 
@@ -453,23 +913,24 @@
     <div id="navigation">
         
         
+        
     </div>
 
     </section>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js"></script>
-    <script src="/js/perfect-scrollbar.min.js"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js"></script>
-    <script src="/js/jquery.sticky-kit.min.js"></script>
-    <script src="/js/featherlight.min.js"></script>
-    <script src="/js/html5shiv-printshiv.min.js"></script>
-    <script src="/js/highlight.pack.js"></script>
+    <script src="http://pangpanglabs.github.io//js/clipboard.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/perfect-scrollbar.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/jquery.sticky-kit.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/featherlight.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/html5shiv-printshiv.min.js"></script>
+    <script src="http://pangpanglabs.github.io//js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js"></script>
-    <script src="/js/learn.js"></script>
-    <script src="/js/hugo-learn.js"></script>
+    <script src="http://pangpanglabs.github.io//js/modernizr.custom.71422.js"></script>
+    <script src="http://pangpanglabs.github.io//js/learn.js"></script>
+    <script src="http://pangpanglabs.github.io//js/hugo-learn.js"></script>
     
 
   </body>
