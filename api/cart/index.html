@@ -352,7 +352,7 @@
 <li><a href="#example-5">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#remove-cart">Remove cart</a>
+<li><a href="#set-payment">Set payment</a>
 <ul>
 <li>
 <ul>
@@ -360,7 +360,7 @@
 <li><a href="#example-6">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#get-all-carts">Get all carts</a>
+<li><a href="#remove-cart">Remove cart</a>
 <ul>
 <li>
 <ul>
@@ -368,12 +368,20 @@
 <li><a href="#example-7">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#get-cart">Get cart</a>
+<li><a href="#get-all-carts">Get all carts</a>
 <ul>
 <li>
 <ul>
 <li><a href="#parameters-8">Parameters</a></li>
 <li><a href="#example-8">Example</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#get-cart">Get cart</a>
+<ul>
+<li>
+<ul>
+<li><a href="#parameters-9">Parameters</a></li>
+<li><a href="#example-9">Example</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -736,7 +744,7 @@
 
 <p>Request:</p>
 
-<p><code>pp://staging/cart/set-customer?cartId=1&amp;no=RC10000000001</code></p>
+<p><code>pp://staging/cart/set-customer?cartId=326&amp;no=RC10000000001</code></p>
 
 <p>Success:</p>
 
@@ -855,7 +863,7 @@
 
 <p>Request:</p>
 
-<p><code>pp://staging/cart/set-coupon?cartId=1&amp;no=WA976CE9199756D5BC</code></p>
+<p><code>pp://staging/cart/set-coupon?cartId=326&amp;no=WA976CE9199756D5BC</code></p>
 
 <p>Success:</p>
 
@@ -973,7 +981,7 @@
 
 <h2 id="set-info">Set info</h2>
 
-<p><code>/cart/remove-cart</code></p>
+<p><code>/cart/set-info</code></p>
 
 <h4 id="parameters-5">Parameters</h4>
 
@@ -1124,11 +1132,179 @@
 }
 </code></pre>
 
+<h2 id="set-payment">Set payment</h2>
+
+<p><code>/cart/set-payment</code></p>
+
+<h4 id="parameters-6">Parameters</h4>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>cartId</td>
+<td>Yes</td>
+<td>number</td>
+</tr>
+
+<tr>
+<td>method</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>amount</td>
+<td>Yes</td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="example-6">Example</h4>
+
+<p>Request:</p>
+
+<p><code>pp://staging/cart/set-payment?cartId=326&amp;method=alipay&amp;amount=50</code></p>
+
+<p>Success:</p>
+
+<pre><code>{
+  &quot;result&quot;: {
+    &quot;id&quot;: 326,
+    &quot;tenantId&quot;: 10,
+    &quot;items&quot;: [
+      {
+        &quot;sku&quot;: {
+          &quot;id&quot;: 169,
+          &quot;contentId&quot;: 10,
+          &quot;name&quot;: &quot;Calvin Klein Jeans Women's Gmt Dyed Ankle Skinny Pant, Monument, 26&quot;,
+          &quot;code&quot;: &quot;42AB600-1&quot;,
+          &quot;listPrice&quot;: 69.5,
+          &quot;salePrice&quot;: 69.5,
+          &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+          &quot;contentCode&quot;: &quot;42AB600&quot;,
+          &quot;images&quot;: {
+            &quot;large&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
+              &quot;width&quot;: 385,
+              &quot;height&quot;: 500
+            },
+            &quot;medium&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
+              &quot;width&quot;: 123,
+              &quot;height&quot;: 160
+            },
+            &quot;small&quot;: {
+              &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
+              &quot;width&quot;: 58,
+              &quot;height&quot;: 75
+            }
+          },
+          &quot;options&quot;: [
+            {
+              &quot;k&quot;: &quot;Size&quot;,
+              &quot;v&quot;: &quot;26&quot;
+            },
+            {
+              &quot;k&quot;: &quot;Color&quot;,
+              &quot;v&quot;: &quot;Monument&quot;
+            }
+          ]
+        },
+        &quot;quantity&quot;: 1,
+        &quot;listPrice&quot;: 69.5,
+        &quot;salePrice&quot;: 69.5,
+        &quot;discount&quot;: 0
+      },
+      {
+        &quot;sku&quot;: {
+          &quot;id&quot;: 2454,
+          &quot;contentId&quot;: 445,
+          &quot;name&quot;: &quot;EEAA8A011, 101, 000&quot;,
+          &quot;code&quot;: &quot;EEAA8A011101000&quot;,
+          &quot;listPrice&quot;: 28,
+          &quot;salePrice&quot;: 28,
+          &quot;brandCode&quot;: &quot;EE&quot;,
+          &quot;contentCode&quot;: &quot;EEAA8A011&quot;,
+          &quot;images&quot;: null,
+          &quot;options&quot;: [
+            {
+              &quot;k&quot;: &quot;Size&quot;,
+              &quot;v&quot;: &quot;(000)生产代表尺寸&quot;
+            },
+            {
+              &quot;k&quot;: &quot;Color&quot;,
+              &quot;v&quot;: &quot;(101)red&quot;
+            }
+          ]
+        },
+        &quot;quantity&quot;: 2,
+        &quot;listPrice&quot;: 56,
+        &quot;salePrice&quot;: 44.8,
+        &quot;discount&quot;: 11.2
+      }
+    ],
+    &quot;listPrice&quot;: 125.5,
+    &quot;salePrice&quot;: 114.3,
+    &quot;quantity&quot;: 3,
+    &quot;discount&quot;: 11.2,
+    &quot;remainAmount&quot;: 4.3,
+    &quot;customerInfo&quot;: {
+        &quot;no&quot;: &quot;10000000001&quot;,
+        &quot;brandCode&quot;: &quot;RC&quot;,
+        &quot;mobile&quot;: &quot;123456789021&quot;,
+        &quot;grade&quot;: 0,
+        &quot;cardType&quot;: &quot;purpleCard&quot;,
+        &quot;mileage&quot;: {
+            &quot;currentPoints&quot;: 9000,
+            &quot;totalEarnPoints&quot;: 10000,
+            &quot;totalRedeemPoints&quot;: 10,
+            &quot;totalSaleAmount&quot;: &quot;345.0&quot;
+        }
+    },
+    &quot;couponNo&quot;: &quot;EE4E52FEF46F7B30DE&quot;,    
+    &quot;discountInfo&quot;: {
+      &quot;couponType&quot;: &quot;Discount&quot;,
+      &quot;discountName&quot;: &quot;8折优惠&quot;,
+      &quot;eventId&quot;: &quot;EE2017030024&quot;
+    },
+    &quot;info&quot;: {
+        &quot;casher&quot;: &quot;nancy&quot;,
+        &quot;receipt&quot;: &quot;193018485875930103&quot;
+    },
+    &quot;payments&quot;: [
+      {
+        &quot;method&quot;: &quot;alipay&quot;,
+        &quot;amount&quot;: 50
+      },
+      {
+        &quot;method&quot;: &quot;wxpay&quot;,
+        &quot;amount&quot;: 60
+      }
+    ],
+    &quot;userId&quot;: 1000001,
+    &quot;spotId&quot;: 2000001,
+    &quot;createdAt&quot;: &quot;2017-03-29T07:47:02Z&quot;,
+    &quot;updatedAt&quot;: &quot;2017-03-29T08:12:44.017761577Z&quot;
+  },
+  &quot;success&quot;: true,
+  &quot;error&quot;: {}
+}
+</code></pre>
+
 <h2 id="remove-cart">Remove cart</h2>
 
 <p><code>/cart/remove-cart</code></p>
 
-<h4 id="parameters-6">Parameters</h4>
+<h4 id="parameters-7">Parameters</h4>
 
 <table>
 <thead>
@@ -1148,7 +1324,7 @@
 </tbody>
 </table>
 
-<h4 id="example-6">Example</h4>
+<h4 id="example-7">Example</h4>
 
 <p>Request:</p>
 
@@ -1181,11 +1357,11 @@
 
 <p><code>/cart/all-carts</code></p>
 
-<h4 id="parameters-7">Parameters</h4>
+<h4 id="parameters-8">Parameters</h4>
 
 <p>None</p>
 
-<h4 id="example-7">Example</h4>
+<h4 id="example-8">Example</h4>
 
 <p>Request:</p>
 
@@ -1244,7 +1420,7 @@
 
 <p><code>/cart/get-cart</code></p>
 
-<h4 id="parameters-8">Parameters</h4>
+<h4 id="parameters-9">Parameters</h4>
 
 <table>
 <thead>
@@ -1264,7 +1440,7 @@
 </tbody>
 </table>
 
-<h4 id="example-8">Example</h4>
+<h4 id="example-9">Example</h4>
 
 <p>Request:</p>
 
