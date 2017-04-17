@@ -328,6 +328,14 @@
 <li><a href="#example-2">Example</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#external-login">External Login</a>
+<ul>
+<li>
+<ul>
+<li><a href="#parameters-3">Parameters</a></li>
+<li><a href="#example-3">Example</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -619,6 +627,128 @@
   },
   &quot;success&quot;: true,
   &quot;error&quot;: {}
+}
+</code></pre>
+
+<hr />
+
+<h2 id="external-login">External Login</h2>
+
+<p><code>/account/external-login</code></p>
+
+<h4 id="parameters-3">Parameters</h4>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Type</th>
+<th>Desc</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>tenant</td>
+<td>Yes</td>
+<td>string</td>
+<td></td>
+</tr>
+
+<tr>
+<td>token</td>
+<td>Yes</td>
+<td>string</td>
+<td>JWT token</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>JWT token payload
+
+<ul>
+<li>username</li>
+<li>spotname</li>
+<li>channelname</li>
+</ul></li>
+<li>Secret
+
+<ul>
+<li>YOUR_TENANT_SCRET</li>
+</ul></li>
+</ul>
+
+<h4 id="example-3">Example</h4>
+
+<p>Request:</p>
+
+<p><code>pp://staging/account/external-login?tenant=YOUR_TENANT_NAME&amp;token=JWT_TOKEN</code></p>
+
+<p>Success:</p>
+
+<pre><code>{
+  &quot;result&quot;: {
+    &quot;token&quot;: &quot;YOUR_TOKEN&quot;,
+    &quot;userId&quot;: 1000001,
+    &quot;userName&quot;: &quot;saleswoman&quot;,
+    &quot;tenantId&quot;: 10,
+    &quot;tenantCode&quot;: &quot;LABS&quot;,
+    &quot;tenantName&quot;: &quot;LABS&quot;,
+    &quot;spots&quot;: [
+      {
+        &quot;id&quot;: 2000001,
+        &quot;tenantId&quot;: 0,
+        &quot;name&quot;: &quot;Event Hall&quot;,
+        &quot;contracts&quot;: [
+          {
+            &quot;BrandCode&quot;: &quot;Calvin Klein&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;Ted Baker&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;Lilly Pulitzer&quot;,
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: 2000002,
+        &quot;tenantId&quot;: 0,
+        &quot;name&quot;: &quot;天山店&quot;,
+        &quot;contracts&quot;: [
+          {
+            &quot;BrandCode&quot;: &quot;EE&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;EK&quot;,
+          },
+          {
+            &quot;BrandCode&quot;: &quot;EA&quot;,
+          }
+        ]
+      }
+    ],
+    &quot;roles&quot;: [
+      &quot;salesman&quot;,
+      &quot;manager&quot;
+    ]
+  },
+  &quot;success&quot;: true,
+  &quot;error&quot;: {}
+}
+</code></pre>
+
+<p>Fail:</p>
+
+<pre><code>{
+  &quot;success&quot;: false,
+  &quot;result&quot;: null,
+  &quot;error&quot;: {
+    &quot;code&quot;: 201,
+    &quot;message&quot;: &quot;Login Failed. Invalid token.&quot;
+  }
 }
 </code></pre>
 
