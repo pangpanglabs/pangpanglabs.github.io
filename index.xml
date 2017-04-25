@@ -503,7 +503,41 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
 
-&lt;h3 id=&#34;current-v0-0-4&#34;&gt;Current(v0.0.4)&lt;/h3&gt;
+&lt;h3 id=&#34;current-v0-0-5&#34;&gt;Current(v0.0.5)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Android SDK&lt;br /&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.5/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  pos.aar
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;iOS SDK&lt;br /&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.5/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  Pos.framework.zip
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;archived-versions&#34;&gt;Archived versions&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.0.4
 
 &lt;ul&gt;
 &lt;li&gt;Android SDK&lt;br /&gt;
@@ -532,9 +566,8 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
   
 &lt;/a&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;v0-0-3&#34;&gt;v0.0.3&lt;/h3&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;v0.0.3
 
 &lt;ul&gt;
 &lt;li&gt;Android SDK&lt;br /&gt;
@@ -563,9 +596,8 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
   
 &lt;/a&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;v0-0-2&#34;&gt;v0.0.2&lt;/h3&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;v0.0.2
 
 &lt;ul&gt;
 &lt;li&gt;Android SDK&lt;br /&gt;
@@ -594,6 +626,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
   
 &lt;/a&gt;
 &lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;!--### Inventory management
@@ -1130,7 +1163,20 @@ Pos.init(path);
 &lt;h4 id=&#34;download&#34;&gt;Download&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Current(v0.0.4)
+&lt;li&gt;Current(v0.0.5)
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.5/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  pos.aar
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;v0.0.4
 &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.4/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
@@ -1398,7 +1444,20 @@ P2PosInit(path);
 &lt;h4 id=&#34;download&#34;&gt;Download&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Current(v0.0.4)
+&lt;li&gt;Current(v0.0.5)
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.5/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  Pos.framework.zip
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;v0.0.4
 &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.4/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
@@ -1411,7 +1470,7 @@ P2PosInit(path);
   
 &lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;Current(v0.0.3)
+&lt;li&gt;v0.0.3
 &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.3/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
@@ -1540,8 +1599,26 @@ P2PosInit(path);
                 &amp;quot;desc&amp;quot;: &amp;quot;&amp;lt;p&amp;gt;Mid-rise - sits below natural waist - skinny fit. Through hip and thigh - super skinny at ankle. Through waist, hip and thigh - skinny at ankle&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Five-pocket styling with signature omega stitch on back pocket.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Zip fly with button closure&amp;lt;/p&amp;gt;&amp;lt;&amp;quot;,
                 &amp;quot;listPrice&amp;quot;: 69.5,
                 &amp;quot;salePrice&amp;quot;: 50,
-                &amp;quot;discountName&amp;quot;: &amp;quot;Summer Promotion! ￥50&amp;quot;,
+                &amp;quot;offerName&amp;quot;: &amp;quot;Summer Promotion! ￥50&amp;quot;,
                 &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
+                &amp;quot;offers&amp;quot;: [
+                    {
+                        &amp;quot;id&amp;quot;: 8,
+                        &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Hot Sale&amp;quot;,
+                        &amp;quot;salePrice&amp;quot;: 50,
+                        &amp;quot;channelName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
+                        &amp;quot;startAt&amp;quot;: &amp;quot;2017-01-01T00:00:00Z&amp;quot;,
+                        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-31T00:00:00Z&amp;quot;
+                    },
+                    {
+                        &amp;quot;id&amp;quot;: 9,
+                        &amp;quot;name&amp;quot;: &amp;quot;All Brand 10% Discount&amp;quot;,
+                        &amp;quot;salePrice&amp;quot;: 62.55,
+                        &amp;quot;channelName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
+                        &amp;quot;startAt&amp;quot;: &amp;quot;2017-01-01T00:00:00Z&amp;quot;,
+                        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-31T00:00:00Z&amp;quot;
+                    }
+                ],
                 &amp;quot;options&amp;quot;: {
                     &amp;quot;Color&amp;quot;: [
                         &amp;quot;Ivy Mist&amp;quot;,
@@ -1593,7 +1670,7 @@ P2PosInit(path);
                 &amp;quot;desc&amp;quot;: &amp;quot;&amp;lt;p&amp;gt;These utility shorts are comfortable and stylish. They pair well with a Calvin Klein tee for a modern look&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Inseam: 3.5 inch&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Features large front and back utility pockets which give this short a fashionable look&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Button fly with zip clo&amp;quot;,
                 &amp;quot;listPrice&amp;quot;: 49.5,
                 &amp;quot;salePrice&amp;quot;: 49.5,
-                &amp;quot;discountName&amp;quot;: &amp;quot;&amp;quot;,
+                &amp;quot;offerName&amp;quot;: &amp;quot;&amp;quot;,
                 &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
                 &amp;quot;options&amp;quot;: {
                     &amp;quot;Color&amp;quot;: [
@@ -1687,8 +1764,26 @@ P2PosInit(path);
     &amp;quot;desc&amp;quot;: &amp;quot;&amp;lt;p&amp;gt;Mid-rise - sits below natural waist - skinny fit. Through hip and thigh - super skinny at ankle. Through waist, hip and thigh - skinny at ankle&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Five-pocket styling with signature omega stitch on back pocket.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Zip fly with button closure&amp;lt;/p&amp;gt;&amp;lt;&amp;quot;,
     &amp;quot;listPrice&amp;quot;: 69.5,
     &amp;quot;salePrice&amp;quot;: 50,
-    &amp;quot;discountName&amp;quot;: &amp;quot;Summer Promotion! ￥50&amp;quot;,
+    &amp;quot;offerName&amp;quot;: &amp;quot;Summer Promotion! ￥50&amp;quot;,
     &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
+    &amp;quot;offers&amp;quot;: [
+        {
+            &amp;quot;id&amp;quot;: 8,
+            &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Hot Sale&amp;quot;,
+            &amp;quot;salePrice&amp;quot;: 50,
+            &amp;quot;channelName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
+            &amp;quot;startAt&amp;quot;: &amp;quot;2017-01-01T00:00:00Z&amp;quot;,
+            &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-31T00:00:00Z&amp;quot;
+        },
+        {
+            &amp;quot;id&amp;quot;: 9,
+            &amp;quot;name&amp;quot;: &amp;quot;All Brand 10% Discount&amp;quot;,
+            &amp;quot;salePrice&amp;quot;: 62.55,
+            &amp;quot;channelName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
+            &amp;quot;startAt&amp;quot;: &amp;quot;2017-01-01T00:00:00Z&amp;quot;,
+            &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-31T00:00:00Z&amp;quot;
+        }
+    ],
     &amp;quot;options&amp;quot;: {
       &amp;quot;Color&amp;quot;: [
         &amp;quot;Ivy Mist&amp;quot;,
@@ -1843,9 +1938,27 @@ P2PosInit(path);
                 &amp;quot;code&amp;quot;: &amp;quot;42AB600-0&amp;quot;,
                 &amp;quot;listPrice&amp;quot;: 69.5,
                 &amp;quot;salePrice&amp;quot;: 50,
-                &amp;quot;discountName&amp;quot;: &amp;quot;Summer Promotion! ￥50&amp;quot;,
+                &amp;quot;offerName&amp;quot;: &amp;quot;Summer Promotion! ￥50&amp;quot;,
                 &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
                 &amp;quot;contentCode&amp;quot;: &amp;quot;42AB600&amp;quot;,
+                &amp;quot;offers&amp;quot;: [
+                    {
+                        &amp;quot;id&amp;quot;: 8,
+                        &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Hot Sale&amp;quot;,
+                        &amp;quot;salePrice&amp;quot;: 50,
+                        &amp;quot;channelName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
+                        &amp;quot;startAt&amp;quot;: &amp;quot;2017-01-01T00:00:00Z&amp;quot;,
+                        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-31T00:00:00Z&amp;quot;
+                    },
+                    {
+                        &amp;quot;id&amp;quot;: 9,
+                        &amp;quot;name&amp;quot;: &amp;quot;All Brand 10% Discount&amp;quot;,
+                        &amp;quot;salePrice&amp;quot;: 62.55,
+                        &amp;quot;channelName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
+                        &amp;quot;startAt&amp;quot;: &amp;quot;2017-01-01T00:00:00Z&amp;quot;,
+                        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-31T00:00:00Z&amp;quot;
+                    }
+                ],
                 &amp;quot;images&amp;quot;: {
                     &amp;quot;large&amp;quot;: {
                         &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
@@ -1881,7 +1994,7 @@ P2PosInit(path);
                 &amp;quot;code&amp;quot;: &amp;quot;42AB600-1&amp;quot;,
                 &amp;quot;listPrice&amp;quot;: 69.5,
                 &amp;quot;salePrice&amp;quot;: 50,
-                &amp;quot;discountName&amp;quot;: &amp;quot;Summer Promotion! ￥50&amp;quot;,
+                &amp;quot;offerName&amp;quot;: &amp;quot;Summer Promotion! ￥50&amp;quot;,
                 &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
                 &amp;quot;contentCode&amp;quot;: &amp;quot;42AB600&amp;quot;,
                 &amp;quot;images&amp;quot;: {
@@ -2129,6 +2242,12 @@ P2PosInit(path);
 &lt;td&gt;Yes&lt;/td&gt;
 &lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;offerId&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -2136,7 +2255,7 @@ P2PosInit(path);
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp://staging/cart/add-item?cartId=1349&amp;amp;skuId=184184&amp;amp;quantity=2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/cart/add-item?cartId=1349&amp;amp;skuId=184184&amp;amp;quantity=2&amp;amp;offerId=8&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
@@ -2171,7 +2290,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 498,
           &amp;quot;salePrice&amp;quot;: 498,
-          &amp;quot;discountName&amp;quot;: &amp;quot;&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
@@ -2215,7 +2334,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 598,
           &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;discountName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
@@ -2246,6 +2365,7 @@ P2PosInit(path);
             }
           ]
         },
+        &amp;quot;offerId&amp;quot;: 8,
         &amp;quot;quantity&amp;quot;: 2,
         &amp;quot;listPrice&amp;quot;: 1196,
         &amp;quot;salePrice&amp;quot;: 1000,
@@ -2328,6 +2448,12 @@ P2PosInit(path);
 &lt;td&gt;Yes&lt;/td&gt;
 &lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;offerId&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -2335,7 +2461,7 @@ P2PosInit(path);
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp://staging/cart/remove-item?cartId=1349&amp;amp;skuId=184184&amp;amp;quantity=1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/cart/remove-item?cartId=1349&amp;amp;skuId=184184&amp;amp;quantity=1&amp;amp;offerId=8&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
@@ -2370,7 +2496,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 498,
           &amp;quot;salePrice&amp;quot;: 498,
-          &amp;quot;discountName&amp;quot;: &amp;quot;&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
@@ -2414,7 +2540,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 598,
           &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;discountName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
@@ -2445,6 +2571,7 @@ P2PosInit(path);
             }
           ]
         },
+        &amp;quot;offerId&amp;quot;: 8,
         &amp;quot;quantity&amp;quot;: 1,
         &amp;quot;listPrice&amp;quot;: 598,
         &amp;quot;salePrice&amp;quot;: 500,
@@ -2584,7 +2711,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 498,
           &amp;quot;salePrice&amp;quot;: 498,
-          &amp;quot;discountName&amp;quot;: &amp;quot;&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
@@ -2628,7 +2755,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 598,
           &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;discountName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
@@ -2771,7 +2898,7 @@ P2PosInit(path);
     &amp;quot;couponInfo&amp;quot;: {
       &amp;quot;no&amp;quot;: &amp;quot;EE4EEDE03E762A2AA2&amp;quot;,
       &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,
-      &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
+      &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
       &amp;quot;eventId&amp;quot;: &amp;quot;EE2017030024&amp;quot;
     },
     &amp;quot;info&amp;quot;: null,
@@ -2789,7 +2916,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 498,
           &amp;quot;salePrice&amp;quot;: 398,
-          &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
@@ -2833,7 +2960,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 598,
           &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;discountName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
@@ -2976,7 +3103,7 @@ P2PosInit(path);
     &amp;quot;couponInfo&amp;quot;: {
       &amp;quot;no&amp;quot;: &amp;quot;EE4EEDE03E762A2AA2&amp;quot;,
       &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,
-      &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
+      &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
       &amp;quot;eventId&amp;quot;: &amp;quot;EE2017030024&amp;quot;
     },
     &amp;quot;info&amp;quot;: {
@@ -2997,7 +3124,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 498,
           &amp;quot;salePrice&amp;quot;: 398,
-          &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
@@ -3041,7 +3168,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 598,
           &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;discountName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
@@ -3184,7 +3311,7 @@ P2PosInit(path);
     &amp;quot;couponInfo&amp;quot;: {
       &amp;quot;no&amp;quot;: &amp;quot;EE4EEDE03E762A2AA2&amp;quot;,
       &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,
-      &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
+      &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
       &amp;quot;eventId&amp;quot;: &amp;quot;EE2017030024&amp;quot;
     },
     &amp;quot;info&amp;quot;: {
@@ -3205,7 +3332,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 498,
           &amp;quot;salePrice&amp;quot;: 398,
-          &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
@@ -3249,7 +3376,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 598,
           &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;discountName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
@@ -3398,7 +3525,7 @@ P2PosInit(path);
     &amp;quot;couponInfo&amp;quot;: {
       &amp;quot;no&amp;quot;: &amp;quot;EE4EEDE03E762A2AA2&amp;quot;,
       &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,
-      &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
+      &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
       &amp;quot;eventId&amp;quot;: &amp;quot;EE2017030024&amp;quot;
     },
     &amp;quot;info&amp;quot;: {
@@ -3424,7 +3551,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 498,
           &amp;quot;salePrice&amp;quot;: 398,
-          &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
@@ -3468,7 +3595,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 598,
           &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;discountName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
@@ -3732,7 +3859,7 @@ P2PosInit(path);
     &amp;quot;couponInfo&amp;quot;: {
       &amp;quot;no&amp;quot;: &amp;quot;EE4EEDE03E762A2AA2&amp;quot;,
       &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,
-      &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
+      &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
       &amp;quot;eventId&amp;quot;: &amp;quot;EE2017030024&amp;quot;
     },
     &amp;quot;info&amp;quot;: {
@@ -3758,7 +3885,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 498,
           &amp;quot;salePrice&amp;quot;: 398,
-          &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
@@ -3802,7 +3929,7 @@ P2PosInit(path);
           &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
           &amp;quot;listPrice&amp;quot;: 598,
           &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;discountName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
+          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
           &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
           &amp;quot;images&amp;quot;: {
