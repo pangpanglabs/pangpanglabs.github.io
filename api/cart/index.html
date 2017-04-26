@@ -392,6 +392,14 @@
 <li><a href="#example-10">Example</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#set-salesman">Set salesman</a>
+<ul>
+<li>
+<ul>
+<li><a href="#parameters-11">Parameters</a></li>
+<li><a href="#example-11">Example</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -2249,6 +2257,60 @@
         ]
       }
     ]
+  },
+  &quot;success&quot;: true,
+  &quot;error&quot;: {}
+}
+</code></pre>
+
+<h2 id="set-salesman">Set salesman</h2>
+
+<p><code>/cart/set-salesman</code></p>
+
+<h4 id="parameters-11">Parameters</h4>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>cartId</td>
+<td>Yes</td>
+<td>number</td>
+</tr>
+
+<tr>
+<td>salesmanId</td>
+<td>Yes</td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="example-11">Example</h4>
+
+<p>Request:</p>
+
+<p><code>pp://staging/cart/set-salesman?cartId=1349&amp;salesmanId=58</code></p>
+
+<p>Success:</p>
+
+<pre><code>{
+  &quot;result&quot;: {
+    &quot;id&quot;: 1349,
+    &quot;tenantId&quot;: 12,
+    &quot;userId&quot;: 1000002,
+    &quot;spotId&quot;: 2000001,
+    &quot;salesmanId&quot;: 58,
+    &quot;createdAt&quot;: &quot;2017-04-13T15:50:41Z&quot;,
+    &quot;updatedAt&quot;: &quot;2017-04-13T16:00:48.401563037Z&quot;,
+    /* ... */
   },
   &quot;success&quot;: true,
   &quot;error&quot;: {}

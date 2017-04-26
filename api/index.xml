@@ -3204,6 +3204,60 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
   &amp;quot;error&amp;quot;: {}
 }
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;set-salesman&#34;&gt;Set salesman&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/cart/set-salesman&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-11&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;cartId&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;salesmanId&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;example-11&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp://staging/cart/set-salesman?cartId=1349&amp;amp;salesmanId=58&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;result&amp;quot;: {
+    &amp;quot;id&amp;quot;: 1349,
+    &amp;quot;tenantId&amp;quot;: 12,
+    &amp;quot;userId&amp;quot;: 1000002,
+    &amp;quot;spotId&amp;quot;: 2000001,
+    &amp;quot;salesmanId&amp;quot;: 58,
+    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-04-13T15:50:41Z&amp;quot;,
+    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-04-13T16:00:48.401563037Z&amp;quot;,
+    /* ... */
+  },
+  &amp;quot;success&amp;quot;: true,
+  &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
