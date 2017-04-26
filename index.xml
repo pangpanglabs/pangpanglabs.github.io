@@ -1036,9 +1036,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;li&gt;JWT token payload
 
 &lt;ul&gt;
-&lt;li&gt;username&lt;/li&gt;
-&lt;li&gt;spotname&lt;/li&gt;
-&lt;li&gt;channelname&lt;/li&gt;
+&lt;li&gt;shopCode&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Secret
 
@@ -1116,6 +1114,59 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
     &amp;quot;code&amp;quot;: 201,
     &amp;quot;message&amp;quot;: &amp;quot;Login Failed. Invalid token.&amp;quot;
   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;create-token&#34;&gt;Create Token&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/account/create-external-token&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-4&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Desc&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;secret&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[KEY]&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;JWT payload key&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[VALUE]&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;JWT payload value&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;example-4&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp://staging/account/create-external-token?secret=YOUR_SECRET&amp;amp;shopCode=C24A&amp;amp;userName=jackson&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;token&amp;quot;: &amp;quot;NEW_TOKEN&amp;quot;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
