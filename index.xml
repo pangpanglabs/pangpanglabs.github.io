@@ -1086,42 +1086,42 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;result&amp;quot;: {
-    &amp;quot;token&amp;quot;: &amp;quot;YOUR_TOKEN&amp;quot;,
-    &amp;quot;userId&amp;quot;: 1000001,
-    &amp;quot;userName&amp;quot;: &amp;quot;saleswoman&amp;quot;,
-    &amp;quot;tenantId&amp;quot;: 10,
-    &amp;quot;tenantCode&amp;quot;: &amp;quot;LABS&amp;quot;,
-    &amp;quot;tenantName&amp;quot;: &amp;quot;LABS&amp;quot;,
+    &amp;quot;token&amp;quot;: &amp;quot;YOUR_AUTH_TOKEN&amp;quot;,
+    &amp;quot;userId&amp;quot;: 9,
+    &amp;quot;userName&amp;quot;: &amp;quot;HANGUANG-EE-0000&amp;quot;,
+    &amp;quot;tenantId&amp;quot;: 5,
+    &amp;quot;tenantCode&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
+    &amp;quot;tenantName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
     &amp;quot;spots&amp;quot;: [
       {
-        &amp;quot;id&amp;quot;: 2000001,
-        &amp;quot;tenantId&amp;quot;: 0,
-        &amp;quot;name&amp;quot;: &amp;quot;Event Hall&amp;quot;,
+        &amp;quot;id&amp;quot;: 24,
+        &amp;quot;channelId&amp;quot;: 3,
+        &amp;quot;code&amp;quot;: &amp;quot;EE-0000&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;HG Virtual Shop&amp;quot;,
         &amp;quot;colleagues&amp;quot;: [
           {
-            &amp;quot;userId&amp;quot;: 1,
-            &amp;quot;username&amp;quot;: &amp;quot;700004567&amp;quot;,
-            &amp;quot;displayName&amp;quot;: &amp;quot;将在秀&amp;quot;
-          }
-        ]
-      },
-      {
-        &amp;quot;id&amp;quot;: 2000002,
-        &amp;quot;tenantId&amp;quot;: 0,
-        &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;,
-        &amp;quot;colleagues&amp;quot;: [
+            &amp;quot;userId&amp;quot;: 6,
+            &amp;quot;username&amp;quot;: &amp;quot;100000000123&amp;quot;,
+            &amp;quot;displayName&amp;quot;: &amp;quot;***&amp;quot;
+          },
           {
-            &amp;quot;userId&amp;quot;: 1,
-            &amp;quot;username&amp;quot;: &amp;quot;700004567&amp;quot;,
-            &amp;quot;displayName&amp;quot;: &amp;quot;将在秀&amp;quot;
+            &amp;quot;userId&amp;quot;: 7,
+            &amp;quot;username&amp;quot;: &amp;quot;100000000124&amp;quot;,
+            &amp;quot;displayName&amp;quot;: &amp;quot;***&amp;quot;
+          },
+          {
+            &amp;quot;userId&amp;quot;: 5,
+            &amp;quot;username&amp;quot;: &amp;quot;100000000126&amp;quot;,
+            &amp;quot;displayName&amp;quot;: &amp;quot;***&amp;quot;
           }
         ]
       }
     ],
     &amp;quot;roles&amp;quot;: [
-      &amp;quot;salesman&amp;quot;,
-      &amp;quot;manager&amp;quot;
-    ]
+      &amp;quot;salesman&amp;quot;
+    ],
+    &amp;quot;currentSpotId&amp;quot;: 24,
+    &amp;quot;currentChannelId&amp;quot;: 3
   },
   &amp;quot;success&amp;quot;: true,
   &amp;quot;error&amp;quot;: {}
