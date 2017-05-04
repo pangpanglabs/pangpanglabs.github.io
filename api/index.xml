@@ -465,6 +465,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;li&gt;JWT token payload
 
 &lt;ul&gt;
+&lt;li&gt;brandCode&lt;/li&gt;
 &lt;li&gt;shopCode&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Secret
@@ -495,15 +496,11 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
         &amp;quot;id&amp;quot;: 2000001,
         &amp;quot;tenantId&amp;quot;: 0,
         &amp;quot;name&amp;quot;: &amp;quot;Event Hall&amp;quot;,
-        &amp;quot;contracts&amp;quot;: [
+        &amp;quot;colleagues&amp;quot;: [
           {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;Ted Baker&amp;quot;,
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;Lilly Pulitzer&amp;quot;,
+            &amp;quot;userId&amp;quot;: 1,
+            &amp;quot;username&amp;quot;: &amp;quot;700004567&amp;quot;,
+            &amp;quot;displayName&amp;quot;: &amp;quot;将在秀&amp;quot;
           }
         ]
       },
@@ -511,15 +508,11 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
         &amp;quot;id&amp;quot;: 2000002,
         &amp;quot;tenantId&amp;quot;: 0,
         &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;,
-        &amp;quot;contracts&amp;quot;: [
+        &amp;quot;colleagues&amp;quot;: [
           {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;EK&amp;quot;,
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;EA&amp;quot;,
+            &amp;quot;userId&amp;quot;: 1,
+            &amp;quot;username&amp;quot;: &amp;quot;700004567&amp;quot;,
+            &amp;quot;displayName&amp;quot;: &amp;quot;将在秀&amp;quot;
           }
         ]
       }
