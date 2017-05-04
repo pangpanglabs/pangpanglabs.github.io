@@ -3283,6 +3283,12 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;td&gt;Yes&lt;/td&gt;
 &lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;uid&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -3290,7 +3296,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp://staging/order/place-order?cartId=1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/order/place-order?cartId=1&amp;amp;uid=1705021039401&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
@@ -3298,6 +3304,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
     &amp;quot;result&amp;quot;: {
         &amp;quot;id&amp;quot;: 132,
         &amp;quot;orderNo&amp;quot;: &amp;quot;14907758150132&amp;quot;,
+        &amp;quot;uid&amp;quot;: &amp;quot;1705021039401&amp;quot;,
         &amp;quot;quantity&amp;quot;: 3,
         &amp;quot;listPrice&amp;quot;: 125.5,
         &amp;quot;salePrice&amp;quot;: 114.3,
@@ -3700,6 +3707,12 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;td&gt;Yes&lt;/td&gt;
 &lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;uid&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -3707,7 +3720,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp://staging/order/return?orderId=132&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/order/return?orderId=132&amp;amp;uid=1705021039402&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
@@ -3715,6 +3728,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
     &amp;quot;result&amp;quot;: {
         &amp;quot;id&amp;quot;: 132,
         &amp;quot;orderNo&amp;quot;: &amp;quot;14907758150132&amp;quot;,
+        &amp;quot;uid&amp;quot;: &amp;quot;1705021039402&amp;quot;,
         &amp;quot;quantity&amp;quot;: -3,
         &amp;quot;listPrice&amp;quot;: -125.5,
         &amp;quot;salePrice&amp;quot;: -114.3,

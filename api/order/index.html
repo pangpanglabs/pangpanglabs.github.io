@@ -374,6 +374,12 @@
 <td>Yes</td>
 <td>number</td>
 </tr>
+
+<tr>
+<td>uid</td>
+<td>No</td>
+<td>string</td>
+</tr>
 </tbody>
 </table>
 
@@ -381,7 +387,7 @@
 
 <p>Request:</p>
 
-<p><code>pp://staging/order/place-order?cartId=1</code></p>
+<p><code>pp://staging/order/place-order?cartId=1&amp;uid=1705021039401</code></p>
 
 <p>Success:</p>
 
@@ -389,6 +395,7 @@
     &quot;result&quot;: {
         &quot;id&quot;: 132,
         &quot;orderNo&quot;: &quot;14907758150132&quot;,
+        &quot;uid&quot;: &quot;1705021039401&quot;,
         &quot;quantity&quot;: 3,
         &quot;listPrice&quot;: 125.5,
         &quot;salePrice&quot;: 114.3,
@@ -791,6 +798,12 @@
 <td>Yes</td>
 <td>number</td>
 </tr>
+
+<tr>
+<td>uid</td>
+<td>No</td>
+<td>string</td>
+</tr>
 </tbody>
 </table>
 
@@ -798,7 +811,7 @@
 
 <p>Request:</p>
 
-<p><code>pp://staging/order/return?orderId=132</code></p>
+<p><code>pp://staging/order/return?orderId=132&amp;uid=1705021039402</code></p>
 
 <p>Success:</p>
 
@@ -806,6 +819,7 @@
     &quot;result&quot;: {
         &quot;id&quot;: 132,
         &quot;orderNo&quot;: &quot;14907758150132&quot;,
+        &quot;uid&quot;: &quot;1705021039402&quot;,
         &quot;quantity&quot;: -3,
         &quot;listPrice&quot;: -125.5,
         &quot;salePrice&quot;: -114.3,
