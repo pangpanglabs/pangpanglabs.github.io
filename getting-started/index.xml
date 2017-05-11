@@ -64,7 +64,20 @@ Pos.init(path);
 &lt;h4 id=&#34;download&#34;&gt;Download&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Current(v0.0.6)
+&lt;li&gt;Current(v0.0.7)
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  pos.aar
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;v0.0.6
 &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.6/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
@@ -207,7 +220,33 @@ P2PosInit(path);
 &lt;h4 id=&#34;download&#34;&gt;Download&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Current(v0.0.5)
+&lt;li&gt;Current(v0.0.7)
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  Pos.framework.zip
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;v0.0.6
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.6/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  Pos.framework.zip
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;v0.0.5
 &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.5/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   

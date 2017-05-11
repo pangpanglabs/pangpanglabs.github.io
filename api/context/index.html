@@ -354,67 +354,45 @@
 <p>Success:</p>
 
 <pre><code>{
-  &quot;result&quot;: {
-    &quot;token&quot;: &quot;YOUR_TOKEN&quot;,
-    &quot;userId&quot;: 1000001,
-    &quot;userName&quot;: &quot;saleswoman&quot;,
-    &quot;tenantId&quot;: 10,
-    &quot;tenantCode&quot;: &quot;LABS&quot;,
-    &quot;tenantName&quot;: &quot;LABS&quot;,
-    &quot;spots&quot;: [
-      {
-        &quot;id&quot;: 2000001,
-        &quot;tenantId&quot;: 0,
-        &quot;name&quot;: &quot;Calvin Klein&quot;,
-        &quot;contracts&quot;: [
-          {
-            &quot;BrandCode&quot;: &quot;Calvin Klein&quot;,
-            &quot;ShopCode&quot;: &quot;&quot;,
-            &quot;IsChief&quot;: false
-          },
-          {
-            &quot;BrandCode&quot;: &quot;Ted Baker&quot;,
-            &quot;ShopCode&quot;: &quot;&quot;,
-            &quot;IsChief&quot;: false
-          },
-          {
-            &quot;BrandCode&quot;: &quot;Lilly Pulitzer&quot;,
-            &quot;ShopCode&quot;: &quot;&quot;,
-            &quot;IsChief&quot;: false
-          }
-        ]
-      },
-      {
-        &quot;id&quot;: 2000002,
-        &quot;tenantId&quot;: 0,
-        &quot;name&quot;: &quot;天山店&quot;,
-        &quot;contracts&quot;: [
-          {
-            &quot;BrandCode&quot;: &quot;EE&quot;,
-            &quot;ShopCode&quot;: &quot;&quot;,
-            &quot;IsChief&quot;: false
-          },
-          {
-            &quot;BrandCode&quot;: &quot;EK&quot;,
-            &quot;ShopCode&quot;: &quot;&quot;,
-            &quot;IsChief&quot;: false
-          },
-          {
-            &quot;BrandCode&quot;: &quot;EA&quot;,
-            &quot;ShopCode&quot;: &quot;&quot;,
-            &quot;IsChief&quot;: false
-          }
-        ]
-      }
-    ],
-    &quot;roles&quot;: [
-      &quot;salesman&quot;,
-      &quot;manager&quot;
-    ],
-    &quot;currentSpotId&quot;: 2000001
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
+    &quot;result&quot;: {
+        &quot;userId&quot;: 11,
+        &quot;userName&quot;: &quot;HANGUANG-EE-C30R&quot;,
+        &quot;tenantId&quot;: 5,
+        &quot;tenantCode&quot;: &quot;HANGUANG&quot;,
+        &quot;tenantName&quot;: &quot;HANGUANG&quot;,
+        &quot;spots&quot;: [
+            {
+                &quot;id&quot;: 26,
+                &quot;channelId&quot;: 12,
+                &quot;code&quot;: &quot;EE-C30R&quot;,
+                &quot;name&quot;: &quot;EE 北京中友&quot;,
+                &quot;colleagues&quot;: [
+                    {
+                        &quot;userId&quot;: 19,
+                        &quot;username&quot;: &quot;7000056022&quot;,
+                        &quot;displayName&quot;: &quot;李桥秀&quot;
+                    },
+                    {
+                        &quot;userId&quot;: 17,
+                        &quot;username&quot;: &quot;7000041934&quot;,
+                        &quot;displayName&quot;: &quot;康小伐&quot;
+                    },
+                    {
+                        &quot;userId&quot;: 12,
+                        &quot;username&quot;: &quot;6000079545&quot;,
+                        &quot;displayName&quot;: &quot;武凯&quot;
+                    }
+                ]
+            }
+        ],
+        &quot;roles&quot;: [
+            &quot;salesman&quot;
+        ],
+        &quot;currentSpotId&quot;: 26,
+        &quot;currentChannelId&quot;: 12
+    },
+    &quot;success&quot;: true,
+    &quot;error&quot;: {}
 }
 </code></pre>
 
@@ -433,7 +411,7 @@
 
 <h2 id="get-system-information">Get system information</h2>
 
-<p><code>/context/settings</code></p>
+<p><code>/context/system</code></p>
 
 <h4 id="parameters-1">Parameters</h4>
 
@@ -448,22 +426,22 @@
 <p>Success:</p>
 
 <pre><code>{
-  &quot;result&quot;: {
-    &quot;setting&quot;: {
-      &quot;system&quot;: {
-        &quot;allowOffline&quot;: false,
-        &quot;traceInterval&quot;: 10
-      },
-      &quot;price&quot;: {
-        &quot;roundDigit&quot;: 2,
-        &quot;roundStrategy&quot;: &quot;round&quot;,
-        &quot;currency&quot;: &quot;CYN&quot;
-      }
+    &quot;result&quot;: {
+        &quot;version&quot;: &quot;0.0.6&quot;,
+        &quot;setting&quot;: {
+            &quot;system&quot;: {
+                &quot;allowOffline&quot;: false,
+                &quot;traceInterval&quot;: 10
+            },
+            &quot;price&quot;: {
+                &quot;roundDigit&quot;: 2,
+                &quot;roundStrategy&quot;: &quot;round&quot;,
+                &quot;currency&quot;: &quot;CYN&quot;
+            }
+        }        
     },
-    &quot;version&quot;: &quot;0.0.3&quot;
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
+    &quot;success&quot;: true,
+    &quot;error&quot;: {}
 }
 </code></pre>
 

@@ -304,6 +304,7 @@
 <ul>
 <li>
 <ul>
+<li><a href="#cart-result-example">Cart result example</a></li>
 <li><a href="#create-cart">Create cart</a>
 <ul>
 <li>
@@ -328,7 +329,7 @@
 <li><a href="#example-2">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#set-customer">Set customer</a>
+<li><a href="#change-item-offer">Change item offer</a>
 <ul>
 <li>
 <ul>
@@ -336,7 +337,7 @@
 <li><a href="#example-3">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#set-coupon">Set coupon</a>
+<li><a href="#set-customer">Set customer</a>
 <ul>
 <li>
 <ul>
@@ -344,7 +345,7 @@
 <li><a href="#example-4">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#set-info">Set info</a>
+<li><a href="#set-coupon">Set coupon</a>
 <ul>
 <li>
 <ul>
@@ -352,7 +353,7 @@
 <li><a href="#example-5">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#use-mileage">Use mileage</a>
+<li><a href="#set-info">Set info</a>
 <ul>
 <li>
 <ul>
@@ -360,7 +361,7 @@
 <li><a href="#example-6">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#set-payment">Set payment</a>
+<li><a href="#use-mileage">Use mileage</a>
 <ul>
 <li>
 <ul>
@@ -368,7 +369,7 @@
 <li><a href="#example-7">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#remove-cart">Remove cart</a>
+<li><a href="#set-payment">Set payment</a>
 <ul>
 <li>
 <ul>
@@ -376,7 +377,7 @@
 <li><a href="#example-8">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#get-all-carts">Get all carts</a>
+<li><a href="#remove-cart">Remove cart</a>
 <ul>
 <li>
 <ul>
@@ -384,7 +385,7 @@
 <li><a href="#example-9">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#get-cart">Get cart</a>
+<li><a href="#get-all-carts">Get all carts</a>
 <ul>
 <li>
 <ul>
@@ -392,12 +393,20 @@
 <li><a href="#example-10">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#set-salesman">Set salesman</a>
+<li><a href="#get-cart">Get cart</a>
 <ul>
 <li>
 <ul>
 <li><a href="#parameters-11">Parameters</a></li>
 <li><a href="#example-11">Example</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#set-salesman">Set salesman</a>
+<ul>
+<li>
+<ul>
+<li><a href="#parameters-12">Parameters</a></li>
+<li><a href="#example-12">Example</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -417,6 +426,239 @@
 
 
 
+<h2 id="cart-result-example">Cart result example</h2>
+
+<pre><code>{
+    &quot;result&quot;: {
+        &quot;id&quot;: 3520,
+        &quot;tenantId&quot;: 4,
+        &quot;listPrice&quot;: 3588,
+        &quot;salePrice&quot;: 2511.6,
+        &quot;quantity&quot;: 4,
+        &quot;discount&quot;: 1076.4,
+        &quot;remainAmount&quot;: 1033.6,
+        &quot;customerInfo&quot;: {
+            &quot;id&quot;: 1065586,
+            &quot;no&quot;: &quot;0000053147&quot;,
+            &quot;brandCode&quot;: &quot;EE&quot;,
+            &quot;mobile&quot;: &quot;13818448893&quot;,
+            &quot;grade&quot;: 3,
+            &quot;cardType&quot;: &quot;diamondCard&quot;,
+            &quot;mileage&quot;: {
+                &quot;currentPoints&quot;: 78,
+                &quot;totalEarnPoints&quot;: 1227,
+                &quot;totalRedeemPoints&quot;: 1149,
+                &quot;totalSaleAmount&quot;: 39422.94
+            },
+            &quot;benefit&quot;: {
+                &quot;mileage&quot;: 78,
+                &quot;max_mileage_percent&quot;: 50,
+                &quot;discount_percent&quot;: 5,
+                &quot;max_discount_price&quot;: 0,
+                &quot;birthday_discount_percent&quot;: 0,
+                &quot;max_birthday_price&quot;: 0
+            }
+        },
+        &quot;mileage&quot;: {
+            &quot;current&quot;: 78,
+            &quot;available&quot;: 78,
+            &quot;use&quot;: 78
+        },
+        &quot;couponInfo&quot;: {
+            &quot;no&quot;: &quot;EEB5AA500E8539665E&quot;,
+            &quot;title&quot;: &quot;多级折扣型&quot;,
+            &quot;desc&quot;: &quot;多级折扣型&quot;,
+            &quot;startAt&quot;: &quot;2017-05-02T16:00:00Z&quot;,
+            &quot;endAt&quot;: &quot;2017-06-01T15:59:59Z&quot;,
+            &quot;enable&quot;: true,
+            &quot;couponType&quot;: &quot;Discount&quot;,
+            &quot;eventId&quot;: &quot;EE2017050013&quot;,
+            &quot;offerName&quot;: &quot;多级折扣型&quot;
+        },
+        &quot;info&quot;: {
+            &quot;receipt&quot;: &quot;483017401830101&quot;
+        },
+        &quot;payments&quot;: [
+            {
+                &quot;method&quot;: &quot;ALIPAY&quot;,
+                &quot;amount&quot;: 50
+            },
+            {
+                &quot;method&quot;: &quot;WXPAY&quot;,
+                &quot;amount&quot;: 350
+            },
+            {
+                &quot;method&quot;: &quot;CASH&quot;,
+                &quot;amount&quot;: 1000
+            }
+        ],
+        &quot;items&quot;: [
+            {
+                &quot;id&quot;: 4638,
+                &quot;sku&quot;: {
+                    &quot;id&quot;: 184184,
+                    &quot;contentId&quot;: 21673,
+                    &quot;name&quot;: &quot;EEYC64T51M, (62)Hunter, (160)160&quot;,
+                    &quot;code&quot;: &quot;EEYC64T51M62160&quot;,
+                    &quot;images&quot;: null,
+                    &quot;options&quot;: [
+                        {
+                            &quot;k&quot;: &quot;Size&quot;,
+                            &quot;v&quot;: &quot;(160)160&quot;
+                        },
+                        {
+                            &quot;k&quot;: &quot;Color&quot;,
+                            &quot;v&quot;: &quot;(62)Hunter&quot;
+                        }
+                    ],
+                    &quot;brandCode&quot;: &quot;EE&quot;,
+                    &quot;contentCode&quot;: &quot;EEYC64T51M&quot;,
+                    &quot;listPrice&quot;: 598,
+                    &quot;offers&quot;: [
+                        {
+                            &quot;id&quot;: 1952,
+                            &quot;code&quot;: &quot;C108097&quot;,
+                            &quot;name&quot;: &quot;百货店vip 9折&quot;,
+                            &quot;salePrice&quot;: 538.2,
+                            &quot;channelName&quot;: &quot;北京汉光&quot;,
+                            &quot;startAt&quot;: &quot;2017-05-01T00:00:00Z&quot;,
+                            &quot;endAt&quot;: &quot;2017-06-02T00:00:00Z&quot;,
+                            &quot;requirement&quot;: {}
+                        }
+                    ]
+                },
+                &quot;offer&quot;: {
+                    &quot;id&quot;: 1952,
+                    &quot;code&quot;: &quot;C108097&quot;,
+                    &quot;name&quot;: &quot;百货店vip 9折&quot;,
+                    &quot;salePrice&quot;: 538.2,
+                    &quot;channelName&quot;: &quot;北京汉光&quot;,
+                    &quot;startAt&quot;: &quot;2017-05-01T00:00:00Z&quot;,
+                    &quot;endAt&quot;: &quot;2017-06-02T00:00:00Z&quot;,
+                    &quot;requirement&quot;: {}
+                },
+                &quot;quantity&quot;: 2,
+                &quot;listPrice&quot;: 1196,
+                &quot;salePrice&quot;: 1076.4,
+                &quot;discount&quot;: 119.6
+            },
+            {
+                &quot;id&quot;: 4639,
+                &quot;sku&quot;: {
+                    &quot;id&quot;: 184184,
+                    &quot;contentId&quot;: 21673,
+                    &quot;name&quot;: &quot;EEYC64T51M, (62)Hunter, (160)160&quot;,
+                    &quot;code&quot;: &quot;EEYC64T51M62160&quot;,
+                    &quot;images&quot;: null,
+                    &quot;options&quot;: [
+                        {
+                            &quot;k&quot;: &quot;Size&quot;,
+                            &quot;v&quot;: &quot;(160)160&quot;
+                        },
+                        {
+                            &quot;k&quot;: &quot;Color&quot;,
+                            &quot;v&quot;: &quot;(62)Hunter&quot;
+                        }
+                    ],
+                    &quot;brandCode&quot;: &quot;EE&quot;,
+                    &quot;contentCode&quot;: &quot;EEYC64T51M&quot;,
+                    &quot;listPrice&quot;: 598,
+                    &quot;offers&quot;: [
+                        {
+                            &quot;id&quot;: 1952,
+                            &quot;code&quot;: &quot;C108097&quot;,
+                            &quot;name&quot;: &quot;百货店vip 9折&quot;,
+                            &quot;salePrice&quot;: 538.2,
+                            &quot;channelName&quot;: &quot;北京汉光&quot;,
+                            &quot;startAt&quot;: &quot;2017-05-01T00:00:00Z&quot;,
+                            &quot;endAt&quot;: &quot;2017-06-02T00:00:00Z&quot;,
+                            &quot;requirement&quot;: {}
+                        }
+                    ]
+                },
+                &quot;offer&quot;: null,
+                &quot;quantity&quot;: 2,
+                &quot;listPrice&quot;: 1196,
+                &quot;salePrice&quot;: 717.6,
+                &quot;discount&quot;: 478.4
+            },
+            {
+                &quot;id&quot;: 4640,
+                &quot;sku&quot;: {
+                    &quot;id&quot;: 186184,
+                    &quot;contentId&quot;: 24108,
+                    &quot;name&quot;: &quot;EETJ72403A, (52)D/Blue, (165)165&quot;,
+                    &quot;code&quot;: &quot;EETJ72403A52165&quot;,
+                    &quot;images&quot;: null,
+                    &quot;options&quot;: [
+                        {
+                            &quot;k&quot;: &quot;Size&quot;,
+                            &quot;v&quot;: &quot;(165)165&quot;
+                        },
+                        {
+                            &quot;k&quot;: &quot;Color&quot;,
+                            &quot;v&quot;: &quot;(52)D/Blue&quot;
+                        }
+                    ],
+                    &quot;brandCode&quot;: &quot;EE&quot;,
+                    &quot;contentCode&quot;: &quot;EETJ72403A&quot;,
+                    &quot;listPrice&quot;: 598,
+                    &quot;offers&quot;: [
+                        {
+                            &quot;id&quot;: 1952,
+                            &quot;code&quot;: &quot;C108097&quot;,
+                            &quot;name&quot;: &quot;百货店vip 9折&quot;,
+                            &quot;salePrice&quot;: 538.2,
+                            &quot;channelName&quot;: &quot;北京汉光&quot;,
+                            &quot;startAt&quot;: &quot;2017-05-01T00:00:00Z&quot;,
+                            &quot;endAt&quot;: &quot;2017-06-02T00:00:00Z&quot;,
+                            &quot;requirement&quot;: {
+                                &quot;customerGroup&quot;: &quot;VIP&quot;
+                            }
+                        }
+                    ]
+                },
+                &quot;offer&quot;: null,
+                &quot;quantity&quot;: 2,
+                &quot;listPrice&quot;: 1196,
+                &quot;salePrice&quot;: 717.6,
+                &quot;discount&quot;: 478.4
+            }
+        ],
+        &quot;suggests&quot;: [
+            {
+                &quot;name&quot;: &quot;EERA72505 Bundle Sale&quot;,
+                &quot;desc&quot;: &quot;&quot;,
+                &quot;listPrice&quot;: 796,
+                &quot;salePrice&quot;: 600,
+                &quot;startAt&quot;: &quot;2017-04-13T11:32:47Z&quot;,
+                &quot;endAt&quot;: &quot;2017-05-13T11:32:47Z&quot;,
+                &quot;channelName&quot;: &quot;北京汉光&quot;,
+                &quot;virtualContents&quot;: [
+                    {
+                        &quot;code&quot;: &quot;EERA72505R&quot;,
+                        &quot;listPrice&quot;: 498,
+                        &quot;salePrice&quot;: 400
+                    },
+                    {
+                        &quot;code&quot;: &quot;EERA72505B&quot;,
+                        &quot;listPrice&quot;: 298,
+                        &quot;salePrice&quot;: 200
+                    }
+                ]
+            }
+        ],
+        &quot;userId&quot;: 14,
+        &quot;spotId&quot;: 26,
+        &quot;salesmanId&quot;: 3149,
+        &quot;createdAt&quot;: &quot;2017-05-11T16:19:33Z&quot;,
+        &quot;updatedAt&quot;: &quot;2017-05-11T16:24:19.216021056Z&quot;
+    },
+    &quot;success&quot;: true,
+    &quot;error&quot;: {}
+}
+</code></pre>
+
 <h2 id="create-cart">Create cart</h2>
 
 <p><code>/cart/create-cart</code></p>
@@ -427,53 +669,7 @@
 
 <h4 id="example">Example</h4>
 
-<p>Request:</p>
-
 <p><code>pp://staging/cart/create-cart</code></p>
-
-<p>Success:</p>
-
-<pre><code>{
-  &quot;result&quot;: {
-    &quot;id&quot;: 1349,
-    &quot;tenantId&quot;: 12,
-    &quot;listPrice&quot;: 0,
-    &quot;salePrice&quot;: 0,
-    &quot;quantity&quot;: 0,
-    &quot;discount&quot;: 0,
-    &quot;remainAmount&quot;: 0,
-    &quot;mileage&quot;: {
-      &quot;current&quot;: 0,
-      &quot;available&quot;: 0,
-      &quot;use&quot;: 0
-    },
-    &quot;customerInfo&quot;: null,
-    &quot;couponInfo&quot;: null,
-    &quot;info&quot;: null,
-    &quot;payments&quot;: null,
-    &quot;userId&quot;: 1000001,
-    &quot;spotId&quot;: 2000001,
-    &quot;createdAt&quot;: &quot;2017-03-29T07:47:02.773134948Z&quot;,
-    &quot;updatedAt&quot;: &quot;0001-01-01T00:00:00Z&quot;,
-    &quot;items&quot;: null,
-    &quot;suggests&quot;: null
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
-}
-</code></pre>
-
-<p>Fail:</p>
-
-<pre><code>{
-  &quot;success&quot;: false,
-  &quot;result&quot;: null,
-  &quot;error&quot;: {
-    &quot;code&quot;: 404,
-    &quot;message&quot;: &quot;Cannot create cart.&quot;
-  }
-}
-</code></pre>
 
 <hr />
 
@@ -521,165 +717,7 @@
 
 <h4 id="example-1">Example</h4>
 
-<p>Request:</p>
-
-<p><code>pp://staging/cart/add-item?cartId=1349&amp;skuId=184184&amp;quantity=2&amp;offerId=8</code></p>
-
-<p>Success:</p>
-
-<pre><code>{
-  &quot;result&quot;: {
-    &quot;id&quot;: 1349,
-    &quot;tenantId&quot;: 12,
-    &quot;listPrice&quot;: 1694,
-    &quot;salePrice&quot;: 1498,
-    &quot;quantity&quot;: 3,
-    &quot;discount&quot;: 196,
-    &quot;remainAmount&quot;: 1498,
-    &quot;customerInfo&quot;: null,
-    &quot;mileage&quot;: {
-      &quot;current&quot;: 0,
-      &quot;available&quot;: 0,
-      &quot;use&quot;: 0
-    },
-    &quot;couponInfo&quot;: null,
-    &quot;info&quot;: null,
-    &quot;payments&quot;: null,
-    &quot;userId&quot;: 1000002,
-    &quot;spotId&quot;: 2000001,
-    &quot;createdAt&quot;: &quot;2017-04-13T15:50:41Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-04-13T16:03:30.373911583Z&quot;,
-    &quot;items&quot;: [
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184184,
-          &quot;contentId&quot;: 15579,
-          &quot;name&quot;: &quot;EERA72505B, (30)Yellow, (160)160&quot;,
-          &quot;code&quot;: &quot;EERA72505B30160&quot;,
-          &quot;listPrice&quot;: 498,
-          &quot;salePrice&quot;: 498,
-          &quot;offerName&quot;: &quot;&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(160)160&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(30)Yellow&quot;
-            }
-          ]
-        },
-        &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 498,
-        &quot;salePrice&quot;: 498,
-        &quot;discount&quot;: 0
-      },
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184413,
-          &quot;contentId&quot;: 15621,
-          &quot;name&quot;: &quot;EETA72553N, (59)Navy, (155)155&quot;,
-          &quot;code&quot;: &quot;EETA72553N59155&quot;,
-          &quot;listPrice&quot;: 598,
-          &quot;salePrice&quot;: 500,
-          &quot;offerName&quot;: &quot;EETA72553N Discount! ￥500&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(155)155&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(59)Navy&quot;
-            }
-          ]
-        },
-        &quot;offerId&quot;: 8,
-        &quot;quantity&quot;: 2,
-        &quot;listPrice&quot;: 1196,
-        &quot;salePrice&quot;: 1000,
-        &quot;discount&quot;: 196
-      }
-    ],
-    &quot;suggests&quot;: [
-      {
-        &quot;name&quot;: &quot;EERA72505 Bundle Sale&quot;,
-        &quot;desc&quot;: &quot;&quot;,
-        &quot;listPrice&quot;: 796,
-        &quot;salePrice&quot;: 600,
-        &quot;startAt&quot;: &quot;2017-04-13T11:32:47Z&quot;,
-        &quot;endAt&quot;: &quot;2017-05-13T11:32:47Z&quot;,
-        &quot;channelId&quot;: 0,
-        &quot;virtualContents&quot;: [
-          {
-            &quot;contentId&quot;: 15579,
-            &quot;listPrice&quot;: 498,
-            &quot;salePrice&quot;: 400
-          },
-          {
-            &quot;contentId&quot;: 15628,
-            &quot;listPrice&quot;: 298,
-            &quot;salePrice&quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
-}
-</code></pre>
-
-<p>Fail:</p>
-
-<pre><code>{
-  &quot;success&quot;: false,
-  &quot;result&quot;: null,
-  &quot;error&quot;: {
-    &quot;code&quot;: 401,
-    &quot;message&quot;: &quot;Cannot add item to current cart.\nCannot find product for 'skuId:12'&quot;
-  }
-}
-</code></pre>
+<p><code>pp://staging/cart/add-item?cartId=1349&amp;skuId=502&amp;quantity=2&amp;offerId=1928</code></p>
 
 <hr />
 
@@ -727,171 +765,13 @@
 
 <h4 id="example-2">Example</h4>
 
-<p>Request:</p>
-
 <p><code>pp://staging/cart/remove-item?cartId=1349&amp;skuId=184184&amp;quantity=1&amp;offerId=8</code></p>
-
-<p>Success:</p>
-
-<pre><code>{
-  &quot;result&quot;: {
-    &quot;id&quot;: 1349,
-    &quot;tenantId&quot;: 12,
-    &quot;listPrice&quot;: 1096,
-    &quot;salePrice&quot;: 998,
-    &quot;quantity&quot;: 2,
-    &quot;discount&quot;: 98,
-    &quot;remainAmount&quot;: 998,
-    &quot;customerInfo&quot;: null,
-    &quot;mileage&quot;: {
-      &quot;current&quot;: 0,
-      &quot;available&quot;: 0,
-      &quot;use&quot;: 0
-    },
-    &quot;couponInfo&quot;: null,
-    &quot;info&quot;: null,
-    &quot;payments&quot;: null,
-    &quot;userId&quot;: 1000002,
-    &quot;spotId&quot;: 2000001,
-    &quot;createdAt&quot;: &quot;2017-04-13T15:50:41Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-04-13T16:00:48.401563037Z&quot;,
-    &quot;items&quot;: [
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184184,
-          &quot;contentId&quot;: 15579,
-          &quot;name&quot;: &quot;EERA72505B, (30)Yellow, (160)160&quot;,
-          &quot;code&quot;: &quot;EERA72505B30160&quot;,
-          &quot;listPrice&quot;: 498,
-          &quot;salePrice&quot;: 498,
-          &quot;offerName&quot;: &quot;&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(160)160&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(30)Yellow&quot;
-            }
-          ]
-        },
-        &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 498,
-        &quot;salePrice&quot;: 498,
-        &quot;discount&quot;: 0
-      },
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184413,
-          &quot;contentId&quot;: 15621,
-          &quot;name&quot;: &quot;EETA72553N, (59)Navy, (155)155&quot;,
-          &quot;code&quot;: &quot;EETA72553N59155&quot;,
-          &quot;listPrice&quot;: 598,
-          &quot;salePrice&quot;: 500,
-          &quot;offerName&quot;: &quot;EETA72553N Discount! ￥500&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(155)155&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(59)Navy&quot;
-            }
-          ]
-        },
-        &quot;offerId&quot;: 8,
-        &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 598,
-        &quot;salePrice&quot;: 500,
-        &quot;discount&quot;: 98
-      }
-    ],
-    &quot;suggests&quot;: [
-      {
-        &quot;name&quot;: &quot;EERA72505 Bundle Sale&quot;,
-        &quot;desc&quot;: &quot;&quot;,
-        &quot;listPrice&quot;: 796,
-        &quot;salePrice&quot;: 600,
-        &quot;startAt&quot;: &quot;2017-04-13T11:32:47Z&quot;,
-        &quot;endAt&quot;: &quot;2017-05-13T11:32:47Z&quot;,
-        &quot;channelId&quot;: 0,
-        &quot;virtualContents&quot;: [
-          {
-            &quot;contentId&quot;: 15579,
-            &quot;listPrice&quot;: 498,
-            &quot;salePrice&quot;: 400
-          },
-          {
-            &quot;contentId&quot;: 15628,
-            &quot;listPrice&quot;: 298,
-            &quot;salePrice&quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
-}
-</code></pre>
-
-<p>Fail:</p>
-
-<pre><code>{
-  &quot;success&quot;: false,
-  &quot;result&quot;: null,
-  &quot;error&quot;: {
-    &quot;code&quot;: 402,
-    &quot;message&quot;: &quot;Cannot remove item from current cart.\nCannot find item for 'skuId:12' in current cart\n&quot;
-  }
-}
-</code></pre>
 
 <hr />
 
-<h2 id="set-customer">Set customer</h2>
+<h2 id="change-item-offer">Change item offer</h2>
 
-<p><code>/cart/set-customer</code></p>
+<p><code>/cart/edit-item</code></p>
 
 <h4 id="parameters-3">Parameters</h4>
 
@@ -912,186 +792,28 @@
 </tr>
 
 <tr>
-<td>no</td>
+<td>itemId</td>
 <td>Yes</td>
-<td>string</td>
+<td>number</td>
+</tr>
+
+<tr>
+<td>offerId</td>
+<td>Yes</td>
+<td>number</td>
 </tr>
 </tbody>
 </table>
 
 <h4 id="example-3">Example</h4>
 
-<p>Request:</p>
+<p><code>pp://staging/cart/edit-item?cartId=1349&amp;itemId=4638&amp;offerId=0</code></p>
 
-<p><code>pp://staging/cart/set-customer?cartId=1349&amp;no=EE0000053147</code></p>
+<hr />
 
-<p>Success:</p>
+<h2 id="set-customer">Set customer</h2>
 
-<pre><code>{
-  &quot;result&quot;: {
-    &quot;id&quot;: 1349,
-    &quot;tenantId&quot;: 12,
-    &quot;listPrice&quot;: 1096,
-    &quot;salePrice&quot;: 998,
-    &quot;quantity&quot;: 2,
-    &quot;discount&quot;: 98,
-    &quot;remainAmount&quot;: 998,
-    &quot;customerInfo&quot;: {
-      &quot;id&quot;: 1065586,
-      &quot;no&quot;: &quot;0000053147&quot;,
-      &quot;brandCode&quot;: &quot;EE&quot;,
-      &quot;mobile&quot;: &quot;13818448893&quot;,
-      &quot;grade&quot;: 3,
-      &quot;cardType&quot;: &quot;diamondCard&quot;,
-      &quot;mileage&quot;: {
-        &quot;currentPoints&quot;: 208,
-        &quot;totalEarnPoints&quot;: 1108,
-        &quot;totalRedeemPoints&quot;: 900,
-        &quot;totalSaleAmount&quot;: 36330.94
-      },
-      &quot;benefit&quot;: {
-        &quot;mileage&quot;: 208,
-        &quot;max_mileage_percent&quot;: 50,
-        &quot;discount_percent&quot;: 5,
-        &quot;max_discount_price&quot;: 0,
-        &quot;birthday_discount_percent&quot;: 30,
-        &quot;max_birthday_price&quot;: 5000
-      }
-    },
-    &quot;mileage&quot;: {
-      &quot;current&quot;: 208,
-      &quot;available&quot;: 208,
-      &quot;use&quot;: 0
-    },
-    &quot;couponInfo&quot;: null,
-    &quot;info&quot;: null,
-    &quot;payments&quot;: null,
-    &quot;userId&quot;: 1000002,
-    &quot;spotId&quot;: 2000001,
-    &quot;createdAt&quot;: &quot;2017-04-13T15:50:41Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-04-13T16:00:48.401563037Z&quot;,
-    &quot;items&quot;: [
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184184,
-          &quot;contentId&quot;: 15579,
-          &quot;name&quot;: &quot;EERA72505B, (30)Yellow, (160)160&quot;,
-          &quot;code&quot;: &quot;EERA72505B30160&quot;,
-          &quot;listPrice&quot;: 498,
-          &quot;salePrice&quot;: 498,
-          &quot;offerName&quot;: &quot;&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(160)160&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(30)Yellow&quot;
-            }
-          ]
-        },
-        &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 498,
-        &quot;salePrice&quot;: 498,
-        &quot;discount&quot;: 0
-      },
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184413,
-          &quot;contentId&quot;: 15621,
-          &quot;name&quot;: &quot;EETA72553N, (59)Navy, (155)155&quot;,
-          &quot;code&quot;: &quot;EETA72553N59155&quot;,
-          &quot;listPrice&quot;: 598,
-          &quot;salePrice&quot;: 500,
-          &quot;offerName&quot;: &quot;EETA72553N Discount! ￥500&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(155)155&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(59)Navy&quot;
-            }
-          ]
-        },
-        &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 598,
-        &quot;salePrice&quot;: 500,
-        &quot;discount&quot;: 98
-      }
-    ],
-    &quot;suggests&quot;: [
-      {
-        &quot;name&quot;: &quot;EERA72505 Bundle Sale&quot;,
-        &quot;desc&quot;: &quot;&quot;,
-        &quot;listPrice&quot;: 796,
-        &quot;salePrice&quot;: 600,
-        &quot;startAt&quot;: &quot;2017-04-13T11:32:47Z&quot;,
-        &quot;endAt&quot;: &quot;2017-05-13T11:32:47Z&quot;,
-        &quot;channelId&quot;: 0,
-        &quot;virtualContents&quot;: [
-          {
-            &quot;contentId&quot;: 15579,
-            &quot;listPrice&quot;: 498,
-            &quot;salePrice&quot;: 400
-          },
-          {
-            &quot;contentId&quot;: 15628,
-            &quot;listPrice&quot;: 298,
-            &quot;salePrice&quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
-}
-</code></pre>
-
-<h2 id="set-coupon">Set coupon</h2>
-
-<p><code>/cart/set-coupon</code></p>
+<p><code>/cart/set-customer</code></p>
 
 <h4 id="parameters-4">Parameters</h4>
 
@@ -1121,184 +843,47 @@
 
 <h4 id="example-4">Example</h4>
 
-<p>Request:</p>
+<p><code>pp://staging/cart/set-customer?cartId=1349&amp;no=EE0000053147</code></p>
+
+<h2 id="set-coupon">Set coupon</h2>
+
+<p><code>/cart/set-coupon</code></p>
+
+<h4 id="parameters-5">Parameters</h4>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>cartId</td>
+<td>Yes</td>
+<td>number</td>
+</tr>
+
+<tr>
+<td>no</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="example-5">Example</h4>
 
 <p><code>pp://staging/cart/set-coupon?cartId=1349&amp;no=EE4EEDE03E762A2AA2</code></p>
-
-<p>Success:</p>
-
-<pre><code>{
-  &quot;result&quot;: {
-    &quot;id&quot;: 1349,
-    &quot;tenantId&quot;: 12,
-    &quot;listPrice&quot;: 1096,
-    &quot;salePrice&quot;: 898,
-    &quot;quantity&quot;: 2,
-    &quot;discount&quot;: 198,
-    &quot;remainAmount&quot;: 898,
-    &quot;customerInfo&quot;: {
-      &quot;id&quot;: 1065586,
-      &quot;no&quot;: &quot;0000053147&quot;,
-      &quot;brandCode&quot;: &quot;EE&quot;,
-      &quot;mobile&quot;: &quot;13818448893&quot;,
-      &quot;grade&quot;: 3,
-      &quot;cardType&quot;: &quot;diamondCard&quot;,
-      &quot;mileage&quot;: {
-        &quot;currentPoints&quot;: 208,
-        &quot;totalEarnPoints&quot;: 1108,
-        &quot;totalRedeemPoints&quot;: 900,
-        &quot;totalSaleAmount&quot;: 36330.94
-      },
-      &quot;benefit&quot;: {
-        &quot;mileage&quot;: 208,
-        &quot;max_mileage_percent&quot;: 50,
-        &quot;discount_percent&quot;: 5,
-        &quot;max_discount_price&quot;: 0,
-        &quot;birthday_discount_percent&quot;: 30,
-        &quot;max_birthday_price&quot;: 5000
-      }
-    },
-    &quot;mileage&quot;: {
-      &quot;current&quot;: 208,
-      &quot;available&quot;: 208,
-      &quot;use&quot;: 0
-    },
-    &quot;couponInfo&quot;: {
-      &quot;no&quot;: &quot;EE4EEDE03E762A2AA2&quot;,
-      &quot;couponType&quot;: &quot;Discount&quot;,
-      &quot;offerName&quot;: &quot;8折优惠&quot;,
-      &quot;eventId&quot;: &quot;EE2017030024&quot;
-    },
-    &quot;info&quot;: null,
-    &quot;payments&quot;: null,
-    &quot;userId&quot;: 1000002,
-    &quot;spotId&quot;: 2000001,
-    &quot;createdAt&quot;: &quot;2017-04-13T15:50:41Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-04-13T16:00:48.401563037Z&quot;,
-    &quot;items&quot;: [
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184184,
-          &quot;contentId&quot;: 15579,
-          &quot;name&quot;: &quot;EERA72505B, (30)Yellow, (160)160&quot;,
-          &quot;code&quot;: &quot;EERA72505B30160&quot;,
-          &quot;listPrice&quot;: 498,
-          &quot;salePrice&quot;: 398,
-          &quot;offerName&quot;: &quot;8折优惠&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(160)160&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(30)Yellow&quot;
-            }
-          ]
-        },
-        &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 498,
-        &quot;salePrice&quot;: 398,
-        &quot;discount&quot;: 100
-      },
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184413,
-          &quot;contentId&quot;: 15621,
-          &quot;name&quot;: &quot;EETA72553N, (59)Navy, (155)155&quot;,
-          &quot;code&quot;: &quot;EETA72553N59155&quot;,
-          &quot;listPrice&quot;: 598,
-          &quot;salePrice&quot;: 500,
-          &quot;offerName&quot;: &quot;EETA72553N Discount! ￥500&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(155)155&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(59)Navy&quot;
-            }
-          ]
-        },
-        &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 598,
-        &quot;salePrice&quot;: 500,
-        &quot;discount&quot;: 98
-      }
-    ],
-    &quot;suggests&quot;: [
-      {
-        &quot;name&quot;: &quot;EERA72505 Bundle Sale&quot;,
-        &quot;desc&quot;: &quot;&quot;,
-        &quot;listPrice&quot;: 796,
-        &quot;salePrice&quot;: 600,
-        &quot;startAt&quot;: &quot;2017-04-13T11:32:47Z&quot;,
-        &quot;endAt&quot;: &quot;2017-05-13T11:32:47Z&quot;,
-        &quot;channelId&quot;: 0,
-        &quot;virtualContents&quot;: [
-          {
-            &quot;contentId&quot;: 15579,
-            &quot;listPrice&quot;: 498,
-            &quot;salePrice&quot;: 400
-          },
-          {
-            &quot;contentId&quot;: 15628,
-            &quot;listPrice&quot;: 298,
-            &quot;salePrice&quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
-}
-</code></pre>
 
 <h2 id="set-info">Set info</h2>
 
 <p><code>/cart/set-info</code></p>
 
-<h4 id="parameters-5">Parameters</h4>
+<h4 id="parameters-6">Parameters</h4>
 
 <table>
 <thead>
@@ -1324,189 +909,15 @@
 </tbody>
 </table>
 
-<h4 id="example-5">Example</h4>
-
-<p>Request:</p>
+<h4 id="example-6">Example</h4>
 
 <p><code>pp://staging/cart/set-info?cartId=326&amp;receipt=193018485875930103&amp;casher=nancy</code></p>
-
-<p>Success:</p>
-
-<pre><code>{
-  &quot;result&quot;: {
-    &quot;id&quot;: 1349,
-    &quot;tenantId&quot;: 12,
-    &quot;listPrice&quot;: 1096,
-    &quot;salePrice&quot;: 898,
-    &quot;quantity&quot;: 2,
-    &quot;discount&quot;: 198,
-    &quot;remainAmount&quot;: 898,
-    &quot;customerInfo&quot;: {
-      &quot;id&quot;: 1065586,
-      &quot;no&quot;: &quot;0000053147&quot;,
-      &quot;brandCode&quot;: &quot;EE&quot;,
-      &quot;mobile&quot;: &quot;13818448893&quot;,
-      &quot;grade&quot;: 3,
-      &quot;cardType&quot;: &quot;diamondCard&quot;,
-      &quot;mileage&quot;: {
-        &quot;currentPoints&quot;: 208,
-        &quot;totalEarnPoints&quot;: 1108,
-        &quot;totalRedeemPoints&quot;: 900,
-        &quot;totalSaleAmount&quot;: 36330.94
-      },
-      &quot;benefit&quot;: {
-        &quot;mileage&quot;: 208,
-        &quot;max_mileage_percent&quot;: 50,
-        &quot;discount_percent&quot;: 5,
-        &quot;max_discount_price&quot;: 0,
-        &quot;birthday_discount_percent&quot;: 30,
-        &quot;max_birthday_price&quot;: 5000
-      }
-    },
-    &quot;mileage&quot;: {
-      &quot;current&quot;: 208,
-      &quot;available&quot;: 208,
-      &quot;use&quot;: 0
-    },
-    &quot;couponInfo&quot;: {
-      &quot;no&quot;: &quot;EE4EEDE03E762A2AA2&quot;,
-      &quot;couponType&quot;: &quot;Discount&quot;,
-      &quot;offerName&quot;: &quot;8折优惠&quot;,
-      &quot;eventId&quot;: &quot;EE2017030024&quot;
-    },
-    &quot;info&quot;: {
-      &quot;receipt&quot;: &quot;193018485875930103&quot;,
-      &quot;casher&quot;: &quot;nancy&quot;
-    },
-    &quot;payments&quot;: null,
-    &quot;userId&quot;: 1000002,
-    &quot;spotId&quot;: 2000001,
-    &quot;createdAt&quot;: &quot;2017-04-13T15:50:41Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-04-13T16:00:48.401563037Z&quot;,
-    &quot;items&quot;: [
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184184,
-          &quot;contentId&quot;: 15579,
-          &quot;name&quot;: &quot;EERA72505B, (30)Yellow, (160)160&quot;,
-          &quot;code&quot;: &quot;EERA72505B30160&quot;,
-          &quot;listPrice&quot;: 498,
-          &quot;salePrice&quot;: 398,
-          &quot;offerName&quot;: &quot;8折优惠&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(160)160&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(30)Yellow&quot;
-            }
-          ]
-        },
-        &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 498,
-        &quot;salePrice&quot;: 398,
-        &quot;discount&quot;: 100
-      },
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184413,
-          &quot;contentId&quot;: 15621,
-          &quot;name&quot;: &quot;EETA72553N, (59)Navy, (155)155&quot;,
-          &quot;code&quot;: &quot;EETA72553N59155&quot;,
-          &quot;listPrice&quot;: 598,
-          &quot;salePrice&quot;: 500,
-          &quot;offerName&quot;: &quot;EETA72553N Discount! ￥500&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(155)155&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(59)Navy&quot;
-            }
-          ]
-        },
-        &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 598,
-        &quot;salePrice&quot;: 500,
-        &quot;discount&quot;: 98
-      }
-    ],
-    &quot;suggests&quot;: [
-      {
-        &quot;name&quot;: &quot;EERA72505 Bundle Sale&quot;,
-        &quot;desc&quot;: &quot;&quot;,
-        &quot;listPrice&quot;: 796,
-        &quot;salePrice&quot;: 600,
-        &quot;startAt&quot;: &quot;2017-04-13T11:32:47Z&quot;,
-        &quot;endAt&quot;: &quot;2017-05-13T11:32:47Z&quot;,
-        &quot;channelId&quot;: 0,
-        &quot;virtualContents&quot;: [
-          {
-            &quot;contentId&quot;: 15579,
-            &quot;listPrice&quot;: 498,
-            &quot;salePrice&quot;: 400
-          },
-          {
-            &quot;contentId&quot;: 15628,
-            &quot;listPrice&quot;: 298,
-            &quot;salePrice&quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
-}
-</code></pre>
 
 <h2 id="use-mileage">Use mileage</h2>
 
 <p><code>/cart/use-mileage</code></p>
 
-<h4 id="parameters-6">Parameters</h4>
+<h4 id="parameters-7">Parameters</h4>
 
 <table>
 <thead>
@@ -1532,189 +943,15 @@
 </tbody>
 </table>
 
-<h4 id="example-6">Example</h4>
-
-<p>Request:</p>
+<h4 id="example-7">Example</h4>
 
 <p><code>pp://staging/cart/use-mileage?cartId=1349&amp;amount=208</code></p>
-
-<p>Success:</p>
-
-<pre><code>{
-  &quot;result&quot;: {
-    &quot;id&quot;: 1349,
-    &quot;tenantId&quot;: 12,
-    &quot;listPrice&quot;: 1096,
-    &quot;salePrice&quot;: 898,
-    &quot;quantity&quot;: 2,
-    &quot;discount&quot;: 198,
-    &quot;remainAmount&quot;: 690,
-    &quot;customerInfo&quot;: {
-      &quot;id&quot;: 1065586,
-      &quot;no&quot;: &quot;0000053147&quot;,
-      &quot;brandCode&quot;: &quot;EE&quot;,
-      &quot;mobile&quot;: &quot;13818448893&quot;,
-      &quot;grade&quot;: 3,
-      &quot;cardType&quot;: &quot;diamondCard&quot;,
-      &quot;mileage&quot;: {
-        &quot;currentPoints&quot;: 208,
-        &quot;totalEarnPoints&quot;: 1108,
-        &quot;totalRedeemPoints&quot;: 900,
-        &quot;totalSaleAmount&quot;: 36330.94
-      },
-      &quot;benefit&quot;: {
-        &quot;mileage&quot;: 208,
-        &quot;max_mileage_percent&quot;: 50,
-        &quot;discount_percent&quot;: 5,
-        &quot;max_discount_price&quot;: 0,
-        &quot;birthday_discount_percent&quot;: 30,
-        &quot;max_birthday_price&quot;: 5000
-      }
-    },
-    &quot;mileage&quot;: {
-      &quot;current&quot;: 208,
-      &quot;available&quot;: 208,
-      &quot;use&quot;: 208
-    },
-    &quot;couponInfo&quot;: {
-      &quot;no&quot;: &quot;EE4EEDE03E762A2AA2&quot;,
-      &quot;couponType&quot;: &quot;Discount&quot;,
-      &quot;offerName&quot;: &quot;8折优惠&quot;,
-      &quot;eventId&quot;: &quot;EE2017030024&quot;
-    },
-    &quot;info&quot;: {
-      &quot;receipt&quot;: &quot;193018485875930103&quot;,
-      &quot;casher&quot;: &quot;nancy&quot;
-    },
-    &quot;payments&quot;: null,
-    &quot;userId&quot;: 1000002,
-    &quot;spotId&quot;: 2000001,
-    &quot;createdAt&quot;: &quot;2017-04-13T15:50:41Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-04-13T16:00:48.401563037Z&quot;,
-    &quot;items&quot;: [
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184184,
-          &quot;contentId&quot;: 15579,
-          &quot;name&quot;: &quot;EERA72505B, (30)Yellow, (160)160&quot;,
-          &quot;code&quot;: &quot;EERA72505B30160&quot;,
-          &quot;listPrice&quot;: 498,
-          &quot;salePrice&quot;: 398,
-          &quot;offerName&quot;: &quot;8折优惠&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(160)160&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(30)Yellow&quot;
-            }
-          ]
-        },
-        &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 498,
-        &quot;salePrice&quot;: 398,
-        &quot;discount&quot;: 100
-      },
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184413,
-          &quot;contentId&quot;: 15621,
-          &quot;name&quot;: &quot;EETA72553N, (59)Navy, (155)155&quot;,
-          &quot;code&quot;: &quot;EETA72553N59155&quot;,
-          &quot;listPrice&quot;: 598,
-          &quot;salePrice&quot;: 500,
-          &quot;offerName&quot;: &quot;EETA72553N Discount! ￥500&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(155)155&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(59)Navy&quot;
-            }
-          ]
-        },
-        &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 598,
-        &quot;salePrice&quot;: 500,
-        &quot;discount&quot;: 98
-      }
-    ],
-    &quot;suggests&quot;: [
-      {
-        &quot;name&quot;: &quot;EERA72505 Bundle Sale&quot;,
-        &quot;desc&quot;: &quot;&quot;,
-        &quot;listPrice&quot;: 796,
-        &quot;salePrice&quot;: 600,
-        &quot;startAt&quot;: &quot;2017-04-13T11:32:47Z&quot;,
-        &quot;endAt&quot;: &quot;2017-05-13T11:32:47Z&quot;,
-        &quot;channelId&quot;: 0,
-        &quot;virtualContents&quot;: [
-          {
-            &quot;contentId&quot;: 15579,
-            &quot;listPrice&quot;: 498,
-            &quot;salePrice&quot;: 400
-          },
-          {
-            &quot;contentId&quot;: 15628,
-            &quot;listPrice&quot;: 298,
-            &quot;salePrice&quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
-}
-</code></pre>
 
 <h2 id="set-payment">Set payment</h2>
 
 <p><code>/cart/set-payment</code></p>
 
-<h4 id="parameters-7">Parameters</h4>
+<h4 id="parameters-8">Parameters</h4>
 
 <table>
 <thead>
@@ -1746,194 +983,15 @@
 </tbody>
 </table>
 
-<h4 id="example-7">Example</h4>
-
-<p>Request:</p>
+<h4 id="example-8">Example</h4>
 
 <p><code>pp://staging/cart/set-payment?cartId=1349&amp;method=alipay&amp;amount=690</code></p>
-
-<p>Success:</p>
-
-<pre><code>{
-  &quot;result&quot;: {
-    &quot;id&quot;: 1349,
-    &quot;tenantId&quot;: 12,
-    &quot;listPrice&quot;: 1096,
-    &quot;salePrice&quot;: 898,
-    &quot;quantity&quot;: 2,
-    &quot;discount&quot;: 198,
-    &quot;remainAmount&quot;: 0,
-    &quot;customerInfo&quot;: {
-      &quot;id&quot;: 1065586,
-      &quot;no&quot;: &quot;0000053147&quot;,
-      &quot;brandCode&quot;: &quot;EE&quot;,
-      &quot;mobile&quot;: &quot;13818448893&quot;,
-      &quot;grade&quot;: 3,
-      &quot;cardType&quot;: &quot;diamondCard&quot;,
-      &quot;mileage&quot;: {
-        &quot;currentPoints&quot;: 208,
-        &quot;totalEarnPoints&quot;: 1108,
-        &quot;totalRedeemPoints&quot;: 900,
-        &quot;totalSaleAmount&quot;: 36330.94
-      },
-      &quot;benefit&quot;: {
-        &quot;mileage&quot;: 208,
-        &quot;max_mileage_percent&quot;: 50,
-        &quot;discount_percent&quot;: 5,
-        &quot;max_discount_price&quot;: 0,
-        &quot;birthday_discount_percent&quot;: 30,
-        &quot;max_birthday_price&quot;: 5000
-      }
-    },
-    &quot;mileage&quot;: {
-      &quot;current&quot;: 208,
-      &quot;available&quot;: 208,
-      &quot;use&quot;: 208
-    },
-    &quot;couponInfo&quot;: {
-      &quot;no&quot;: &quot;EE4EEDE03E762A2AA2&quot;,
-      &quot;couponType&quot;: &quot;Discount&quot;,
-      &quot;offerName&quot;: &quot;8折优惠&quot;,
-      &quot;eventId&quot;: &quot;EE2017030024&quot;
-    },
-    &quot;info&quot;: {
-      &quot;receipt&quot;: &quot;193018485875930103&quot;,
-      &quot;casher&quot;: &quot;nancy&quot;
-    },
-    &quot;payments&quot;: [
-      {
-        &quot;method&quot;: &quot;alipay&quot;,
-        &quot;amount&quot;: 690
-      }
-    ],
-    &quot;userId&quot;: 1000002,
-    &quot;spotId&quot;: 2000001,
-    &quot;createdAt&quot;: &quot;2017-04-13T15:50:41Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-04-13T16:00:48.401563037Z&quot;,
-    &quot;items&quot;: [
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184184,
-          &quot;contentId&quot;: 15579,
-          &quot;name&quot;: &quot;EERA72505B, (30)Yellow, (160)160&quot;,
-          &quot;code&quot;: &quot;EERA72505B30160&quot;,
-          &quot;listPrice&quot;: 498,
-          &quot;salePrice&quot;: 398,
-          &quot;offerName&quot;: &quot;8折优惠&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(160)160&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(30)Yellow&quot;
-            }
-          ]
-        },
-        &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 498,
-        &quot;salePrice&quot;: 398,
-        &quot;discount&quot;: 100
-      },
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184413,
-          &quot;contentId&quot;: 15621,
-          &quot;name&quot;: &quot;EETA72553N, (59)Navy, (155)155&quot;,
-          &quot;code&quot;: &quot;EETA72553N59155&quot;,
-          &quot;listPrice&quot;: 598,
-          &quot;salePrice&quot;: 500,
-          &quot;offerName&quot;: &quot;EETA72553N Discount! ￥500&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(155)155&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(59)Navy&quot;
-            }
-          ]
-        },
-        &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 598,
-        &quot;salePrice&quot;: 500,
-        &quot;discount&quot;: 98
-      }
-    ],
-    &quot;suggests&quot;: [
-      {
-        &quot;name&quot;: &quot;EERA72505 Bundle Sale&quot;,
-        &quot;desc&quot;: &quot;&quot;,
-        &quot;listPrice&quot;: 796,
-        &quot;salePrice&quot;: 600,
-        &quot;startAt&quot;: &quot;2017-04-13T11:32:47Z&quot;,
-        &quot;endAt&quot;: &quot;2017-05-13T11:32:47Z&quot;,
-        &quot;channelId&quot;: 0,
-        &quot;virtualContents&quot;: [
-          {
-            &quot;contentId&quot;: 15579,
-            &quot;listPrice&quot;: 498,
-            &quot;salePrice&quot;: 400
-          },
-          {
-            &quot;contentId&quot;: 15628,
-            &quot;listPrice&quot;: 298,
-            &quot;salePrice&quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
-}
-</code></pre>
 
 <h2 id="remove-cart">Remove cart</h2>
 
 <p><code>/cart/remove-cart</code></p>
 
-<h4 id="parameters-8">Parameters</h4>
+<h4 id="parameters-9">Parameters</h4>
 
 <table>
 <thead>
@@ -1953,32 +1011,9 @@
 </tbody>
 </table>
 
-<h4 id="example-8">Example</h4>
-
-<p>Request:</p>
+<h4 id="example-9">Example</h4>
 
 <p><code>pp://staging/cart/remove-cart?cartId=1349</code></p>
-
-<p>Success:</p>
-
-<pre><code>{
-  &quot;success&quot;: true,
-  &quot;result&quot;: null,
-  &quot;error&quot;: {}
-}
-</code></pre>
-
-<p>Fail:</p>
-
-<pre><code>{
-  &quot;success&quot;: false,
-  &quot;result&quot;: null,
-  &quot;error&quot;: {
-    &quot;code&quot;: 405,
-    &quot;message&quot;: &quot;Cannot remove current cart.&quot;
-  }
-}
-</code></pre>
 
 <hr />
 
@@ -1986,73 +1021,13 @@
 
 <p><code>/cart/all-carts</code></p>
 
-<h4 id="parameters-9">Parameters</h4>
+<h4 id="parameters-10">Parameters</h4>
 
 <p>None</p>
 
-<h4 id="example-9">Example</h4>
-
-<p>Request:</p>
+<h4 id="example-10">Example</h4>
 
 <p><code>pp://staging/cart/all-carts</code></p>
-
-<p>Success:</p>
-
-<pre><code>{
-  &quot;result&quot;: [
-    {
-      &quot;id&quot;: 347,
-      &quot;tenantId&quot;: 12,
-      &quot;listPrice&quot;: 148,
-      &quot;salePrice&quot;: 148,
-      &quot;quantity&quot;: 1,
-      &quot;discount&quot;: 0,
-      &quot;remainAmount&quot;: 148,
-      &quot;customerInfo&quot;: null,
-      &quot;mileage&quot;: {
-        &quot;current&quot;: 0,
-        &quot;available&quot;: 0,
-        &quot;use&quot;: 0
-      },
-      &quot;couponInfo&quot;: null,
-      &quot;info&quot;: null,
-      &quot;payments&quot;: null,
-      &quot;userId&quot;: 1000002,
-      &quot;spotId&quot;: 2000001,
-      &quot;createdAt&quot;: &quot;2017-03-29T16:10:45Z&quot;,
-      &quot;updatedAt&quot;: &quot;0001-01-01T00:00:00Z&quot;,
-      &quot;items&quot;: null,
-      &quot;suggests&quot;: null
-    },
-    {
-      &quot;id&quot;: 352,
-      &quot;tenantId&quot;: 12,
-      &quot;listPrice&quot;: 0,
-      &quot;salePrice&quot;: 0,
-      &quot;quantity&quot;: 0,
-      &quot;discount&quot;: 0,
-      &quot;remainAmount&quot;: 0,
-      &quot;customerInfo&quot;: null,
-      &quot;mileage&quot;: {
-        &quot;current&quot;: 0,
-        &quot;available&quot;: 0,
-        &quot;use&quot;: 0
-      },
-      &quot;couponInfo&quot;: null,
-      &quot;info&quot;: null,
-      &quot;payments&quot;: null,
-      &quot;userId&quot;: 1000002,
-      &quot;spotId&quot;: 2000001,
-      &quot;createdAt&quot;: &quot;2017-03-29T16:31:33Z&quot;,
-      &quot;updatedAt&quot;: &quot;0001-01-01T00:00:00Z&quot;,
-      &quot;items&quot;: null,
-      &quot;suggests&quot;: null
-    }
-  ],
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
-}
-</code></pre>
 
 <hr />
 
@@ -2060,7 +1035,7 @@
 
 <p><code>/cart/get-cart</code></p>
 
-<h4 id="parameters-10">Parameters</h4>
+<h4 id="parameters-11">Parameters</h4>
 
 <table>
 <thead>
@@ -2080,194 +1055,15 @@
 </tbody>
 </table>
 
-<h4 id="example-10">Example</h4>
-
-<p>Request:</p>
+<h4 id="example-11">Example</h4>
 
 <p><code>pp://staging/cart/get-cart?cartId=1349</code></p>
-
-<p>Success:</p>
-
-<pre><code>{
-  &quot;result&quot;: {
-    &quot;id&quot;: 1349,
-    &quot;tenantId&quot;: 12,
-    &quot;listPrice&quot;: 1096,
-    &quot;salePrice&quot;: 898,
-    &quot;quantity&quot;: 2,
-    &quot;discount&quot;: 198,
-    &quot;remainAmount&quot;: 0,
-    &quot;customerInfo&quot;: {
-      &quot;id&quot;: 1065586,
-      &quot;no&quot;: &quot;0000053147&quot;,
-      &quot;brandCode&quot;: &quot;EE&quot;,
-      &quot;mobile&quot;: &quot;13818448893&quot;,
-      &quot;grade&quot;: 3,
-      &quot;cardType&quot;: &quot;diamondCard&quot;,
-      &quot;mileage&quot;: {
-        &quot;currentPoints&quot;: 208,
-        &quot;totalEarnPoints&quot;: 1108,
-        &quot;totalRedeemPoints&quot;: 900,
-        &quot;totalSaleAmount&quot;: 36330.94
-      },
-      &quot;benefit&quot;: {
-        &quot;mileage&quot;: 208,
-        &quot;max_mileage_percent&quot;: 50,
-        &quot;discount_percent&quot;: 5,
-        &quot;max_discount_price&quot;: 0,
-        &quot;birthday_discount_percent&quot;: 30,
-        &quot;max_birthday_price&quot;: 5000
-      }
-    },
-    &quot;mileage&quot;: {
-      &quot;current&quot;: 208,
-      &quot;available&quot;: 208,
-      &quot;use&quot;: 208
-    },
-    &quot;couponInfo&quot;: {
-      &quot;no&quot;: &quot;EE4EEDE03E762A2AA2&quot;,
-      &quot;couponType&quot;: &quot;Discount&quot;,
-      &quot;offerName&quot;: &quot;8折优惠&quot;,
-      &quot;eventId&quot;: &quot;EE2017030024&quot;
-    },
-    &quot;info&quot;: {
-      &quot;receipt&quot;: &quot;193018485875930103&quot;,
-      &quot;casher&quot;: &quot;nancy&quot;
-    },
-    &quot;payments&quot;: [
-      {
-        &quot;method&quot;: &quot;alipay&quot;,
-        &quot;amount&quot;: 690
-      }
-    ],
-    &quot;userId&quot;: 1000002,
-    &quot;spotId&quot;: 2000001,
-    &quot;createdAt&quot;: &quot;2017-04-13T15:50:41Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-04-13T16:00:48.401563037Z&quot;,
-    &quot;items&quot;: [
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184184,
-          &quot;contentId&quot;: 15579,
-          &quot;name&quot;: &quot;EERA72505B, (30)Yellow, (160)160&quot;,
-          &quot;code&quot;: &quot;EERA72505B30160&quot;,
-          &quot;listPrice&quot;: 498,
-          &quot;salePrice&quot;: 398,
-          &quot;offerName&quot;: &quot;8折优惠&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(160)160&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(30)Yellow&quot;
-            }
-          ]
-        },
-        &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 498,
-        &quot;salePrice&quot;: 398,
-        &quot;discount&quot;: 100
-      },
-      {
-        &quot;sku&quot;: {
-          &quot;id&quot;: 184413,
-          &quot;contentId&quot;: 15621,
-          &quot;name&quot;: &quot;EETA72553N, (59)Navy, (155)155&quot;,
-          &quot;code&quot;: &quot;EETA72553N59155&quot;,
-          &quot;listPrice&quot;: 598,
-          &quot;salePrice&quot;: 500,
-          &quot;offerName&quot;: &quot;EETA72553N Discount! ￥500&quot;,
-          &quot;brandCode&quot;: &quot;EE&quot;,
-          &quot;contentCode&quot;: &quot;EE&quot;,
-          &quot;images&quot;: {
-              &quot;large&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-                  &quot;width&quot;: 385,
-                  &quot;height&quot;: 500
-              },
-              &quot;medium&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-                  &quot;width&quot;: 123,
-                  &quot;height&quot;: 160
-              },
-              &quot;small&quot;: {
-                  &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-                  &quot;width&quot;: 58,
-                  &quot;height&quot;: 75
-              }
-          },
-          &quot;options&quot;: [
-            {
-              &quot;k&quot;: &quot;Size&quot;,
-              &quot;v&quot;: &quot;(155)155&quot;
-            },
-            {
-              &quot;k&quot;: &quot;Color&quot;,
-              &quot;v&quot;: &quot;(59)Navy&quot;
-            }
-          ]
-        },
-        &quot;quantity&quot;: 1,
-        &quot;listPrice&quot;: 598,
-        &quot;salePrice&quot;: 500,
-        &quot;discount&quot;: 98
-      }
-    ],
-    &quot;suggests&quot;: [
-      {
-        &quot;name&quot;: &quot;EERA72505 Bundle Sale&quot;,
-        &quot;desc&quot;: &quot;&quot;,
-        &quot;listPrice&quot;: 796,
-        &quot;salePrice&quot;: 600,
-        &quot;startAt&quot;: &quot;2017-04-13T11:32:47Z&quot;,
-        &quot;endAt&quot;: &quot;2017-05-13T11:32:47Z&quot;,
-        &quot;channelId&quot;: 0,
-        &quot;virtualContents&quot;: [
-          {
-            &quot;contentId&quot;: 15579,
-            &quot;listPrice&quot;: 498,
-            &quot;salePrice&quot;: 400
-          },
-          {
-            &quot;contentId&quot;: 15628,
-            &quot;listPrice&quot;: 298,
-            &quot;salePrice&quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
-}
-</code></pre>
 
 <h2 id="set-salesman">Set salesman</h2>
 
 <p><code>/cart/set-salesman</code></p>
 
-<h4 id="parameters-11">Parameters</h4>
+<h4 id="parameters-12">Parameters</h4>
 
 <table>
 <thead>
@@ -2293,29 +1089,9 @@
 </tbody>
 </table>
 
-<h4 id="example-11">Example</h4>
-
-<p>Request:</p>
+<h4 id="example-12">Example</h4>
 
 <p><code>pp://staging/cart/set-salesman?cartId=1349&amp;salesmanId=58</code></p>
-
-<p>Success:</p>
-
-<pre><code>{
-  &quot;result&quot;: {
-    &quot;id&quot;: 1349,
-    &quot;tenantId&quot;: 12,
-    &quot;userId&quot;: 1000002,
-    &quot;spotId&quot;: 2000001,
-    &quot;salesmanId&quot;: 58,
-    &quot;createdAt&quot;: &quot;2017-04-13T15:50:41Z&quot;,
-    &quot;updatedAt&quot;: &quot;2017-04-13T16:00:48.401563037Z&quot;,
-    /* ... */
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
-}
-</code></pre>
 
 
       

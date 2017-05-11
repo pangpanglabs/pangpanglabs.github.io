@@ -320,28 +320,12 @@
 <li><a href="#example-1">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#set-spot">Set Spot</a>
+<li><a href="#external-login">External Login</a>
 <ul>
 <li>
 <ul>
 <li><a href="#parameters-2">Parameters</a></li>
 <li><a href="#example-2">Example</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#external-login">External Login</a>
-<ul>
-<li>
-<ul>
-<li><a href="#parameters-3">Parameters</a></li>
-<li><a href="#example-3">Example</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#create-token">Create Token</a>
-<ul>
-<li>
-<ul>
-<li><a href="#parameters-4">Parameters</a></li>
-<li><a href="#example-4">Example</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -406,66 +390,57 @@
 <p>Success:</p>
 
 <pre><code>{
-  &quot;result&quot;: {
-    &quot;token&quot;: &quot;YOUR_TOKEN&quot;,
-    &quot;userId&quot;: 1000001,
-    &quot;userName&quot;: &quot;saleswoman&quot;,
-    &quot;tenantId&quot;: 10,
-    &quot;tenantCode&quot;: &quot;LABS&quot;,
-    &quot;tenantName&quot;: &quot;LABS&quot;,
-    &quot;spots&quot;: [
-      {
-        &quot;id&quot;: 2000001,
-        &quot;tenantId&quot;: 0,
-        &quot;name&quot;: &quot;Event Hall&quot;,
-        &quot;contracts&quot;: [
-          {
-            &quot;BrandCode&quot;: &quot;Calvin Klein&quot;,
-          },
-          {
-            &quot;BrandCode&quot;: &quot;Ted Baker&quot;,
-          },
-          {
-            &quot;BrandCode&quot;: &quot;Lilly Pulitzer&quot;,
-          }
-        ]
-      },
-      {
-        &quot;id&quot;: 2000002,
-        &quot;tenantId&quot;: 0,
-        &quot;name&quot;: &quot;天山店&quot;,
-        &quot;contracts&quot;: [
-          {
-            &quot;BrandCode&quot;: &quot;EE&quot;,
-          },
-          {
-            &quot;BrandCode&quot;: &quot;EK&quot;,
-          },
-          {
-            &quot;BrandCode&quot;: &quot;EA&quot;,
-          }
-        ]
-      }
-    ],
-    &quot;roles&quot;: [
-      &quot;salesman&quot;,
-      &quot;manager&quot;
-    ]
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
+    &quot;result&quot;: {
+        &quot;userId&quot;: 11,
+        &quot;userName&quot;: &quot;HANGUANG-EE-C30R&quot;,
+        &quot;tenantId&quot;: 5,
+        &quot;tenantCode&quot;: &quot;HANGUANG&quot;,
+        &quot;tenantName&quot;: &quot;HANGUANG&quot;,
+        &quot;spots&quot;: [
+            {
+                &quot;id&quot;: 26,
+                &quot;channelId&quot;: 12,
+                &quot;code&quot;: &quot;EE-C30R&quot;,
+                &quot;name&quot;: &quot;EE 北京中友&quot;,
+                &quot;colleagues&quot;: [
+                    {
+                        &quot;userId&quot;: 19,
+                        &quot;username&quot;: &quot;7000056022&quot;,
+                        &quot;displayName&quot;: &quot;李桥秀&quot;
+                    },
+                    {
+                        &quot;userId&quot;: 17,
+                        &quot;username&quot;: &quot;7000041934&quot;,
+                        &quot;displayName&quot;: &quot;康小伐&quot;
+                    },
+                    {
+                        &quot;userId&quot;: 12,
+                        &quot;username&quot;: &quot;6000079545&quot;,
+                        &quot;displayName&quot;: &quot;武凯&quot;
+                    }
+                ]
+            }
+        ],
+        &quot;roles&quot;: [
+            &quot;salesman&quot;
+        ],
+        &quot;currentSpotId&quot;: 26,
+        &quot;currentChannelId&quot;: 12
+    },
+    &quot;success&quot;: true,
+    &quot;error&quot;: {}
 }
 </code></pre>
 
 <p>Fail:</p>
 
 <pre><code>{
-  &quot;success&quot;: false,
-  &quot;result&quot;: null,
-  &quot;error&quot;: {
-    &quot;code&quot;: 201,
-    &quot;message&quot;: &quot;Login Failed. Invalid user name or password&quot;
-  }
+    &quot;result&quot;: null,
+    &quot;success&quot;: false,
+    &quot;error&quot;: {
+        &quot;code&quot;: 201,
+        &quot;message&quot;: &quot;Login Failed.\nInvalid password.&quot;
+    }
 }
 </code></pre>
 
@@ -488,54 +463,45 @@
 <p>Success:</p>
 
 <pre><code>{
-  &quot;result&quot;: {
-    &quot;token&quot;: &quot;YOUR_TOKEN&quot;,
-    &quot;userId&quot;: 1000001,
-    &quot;userName&quot;: &quot;saleswoman&quot;,
-    &quot;tenantId&quot;: 10,
-    &quot;tenantCode&quot;: &quot;LABS&quot;,
-    &quot;tenantName&quot;: &quot;LABS&quot;,
-    &quot;spots&quot;: [
-      {
-        &quot;id&quot;: 2000001,
-        &quot;tenantId&quot;: 0,
-        &quot;name&quot;: &quot;Event Hall&quot;,
-        &quot;contracts&quot;: [
-          {
-            &quot;BrandCode&quot;: &quot;Calvin Klein&quot;,
-          },
-          {
-            &quot;BrandCode&quot;: &quot;Ted Baker&quot;,
-          },
-          {
-            &quot;BrandCode&quot;: &quot;Lilly Pulitzer&quot;,
-          }
-        ]
-      },
-      {
-        &quot;id&quot;: 2000002,
-        &quot;tenantId&quot;: 0,
-        &quot;name&quot;: &quot;天山店&quot;,
-        &quot;contracts&quot;: [
-          {
-            &quot;BrandCode&quot;: &quot;EE&quot;,
-          },
-          {
-            &quot;BrandCode&quot;: &quot;EK&quot;,
-          },
-          {
-            &quot;BrandCode&quot;: &quot;EA&quot;,
-          }
-        ]
-      }
-    ],
-    &quot;roles&quot;: [
-      &quot;salesman&quot;,
-      &quot;manager&quot;
-    ]
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
+    &quot;result&quot;: {
+        &quot;userId&quot;: 11,
+        &quot;userName&quot;: &quot;HANGUANG-EE-C30R&quot;,
+        &quot;tenantId&quot;: 5,
+        &quot;tenantCode&quot;: &quot;HANGUANG&quot;,
+        &quot;tenantName&quot;: &quot;HANGUANG&quot;,
+        &quot;spots&quot;: [
+            {
+                &quot;id&quot;: 26,
+                &quot;channelId&quot;: 12,
+                &quot;code&quot;: &quot;EE-C30R&quot;,
+                &quot;name&quot;: &quot;EE 北京中友&quot;,
+                &quot;colleagues&quot;: [
+                    {
+                        &quot;userId&quot;: 19,
+                        &quot;username&quot;: &quot;7000056022&quot;,
+                        &quot;displayName&quot;: &quot;李桥秀&quot;
+                    },
+                    {
+                        &quot;userId&quot;: 17,
+                        &quot;username&quot;: &quot;7000041934&quot;,
+                        &quot;displayName&quot;: &quot;康小伐&quot;
+                    },
+                    {
+                        &quot;userId&quot;: 12,
+                        &quot;username&quot;: &quot;6000079545&quot;,
+                        &quot;displayName&quot;: &quot;武凯&quot;
+                    }
+                ]
+            }
+        ],
+        &quot;roles&quot;: [
+            &quot;salesman&quot;
+        ],
+        &quot;currentSpotId&quot;: 26,
+        &quot;currentChannelId&quot;: 12
+    },
+    &quot;success&quot;: true,
+    &quot;error&quot;: {}
 }
 </code></pre>
 
@@ -553,90 +519,78 @@
 
 <hr />
 
-<h2 id="set-spot">Set Spot</h2>
+<!--## Set Spot
 
-<p><code>/account/set-spot</code></p>
+`/account/set-spot`
 
-<h4 id="parameters-2">Parameters</h4>
+#### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Required</th>
-<th>Type</th>
-</tr>
-</thead>
+|Name|Required|Type|
+|---|---|---|
+|spotId|Yes|number|
 
-<tbody>
-<tr>
-<td>spotId</td>
-<td>Yes</td>
-<td>number</td>
-</tr>
-</tbody>
-</table>
 
-<h4 id="example-2">Example</h4>
+#### Example
 
-<p>Request:</p>
+Request:
 
-<p><code>pp://staging/account/set-spot?spotId=2</code></p>
+`pp://staging/account/set-spot?spotId=2`
 
-<p>Success:</p>
+Success:
 
-<pre><code>{
-  &quot;result&quot;: {
-    &quot;token&quot;: &quot;YOUR_TOKEN&quot;,
-    &quot;userId&quot;: 1000001,
-    &quot;userName&quot;: &quot;saleswoman&quot;,
-    &quot;tenantId&quot;: 10,
-    &quot;tenantCode&quot;: &quot;LABS&quot;,
-    &quot;tenantName&quot;: &quot;LABS&quot;,
-    &quot;spots&quot;: [
+```
+{
+  "result": {
+    "token": "YOUR_TOKEN",
+    "userId": 1000001,
+    "userName": "saleswoman",
+    "tenantId": 10,
+    "tenantCode": "LABS",
+    "tenantName": "LABS",
+    "spots": [
       {
-        &quot;id&quot;: 2000001,
-        &quot;tenantId&quot;: 0,
-        &quot;name&quot;: &quot;Event Hall&quot;,
-        &quot;contracts&quot;: [
+        "id": 2000001,
+        "tenantId": 0,
+        "name": "Event Hall",
+        "contracts": [
           {
-            &quot;BrandCode&quot;: &quot;Calvin Klein&quot;,
+            "BrandCode": "Calvin Klein",
           },
           {
-            &quot;BrandCode&quot;: &quot;Ted Baker&quot;,
+            "BrandCode": "Ted Baker",
           },
           {
-            &quot;BrandCode&quot;: &quot;Lilly Pulitzer&quot;,
+            "BrandCode": "Lilly Pulitzer",
           }
         ]
       },
       {
-        &quot;id&quot;: 2000002,
-        &quot;tenantId&quot;: 0,
-        &quot;name&quot;: &quot;天山店&quot;,
-        &quot;contracts&quot;: [
+        "id": 2000002,
+        "tenantId": 0,
+        "name": "天山店",
+        "contracts": [
           {
-            &quot;BrandCode&quot;: &quot;EE&quot;,
+            "BrandCode": "EE",
           },
           {
-            &quot;BrandCode&quot;: &quot;EK&quot;,
+            "BrandCode": "EK",
           },
           {
-            &quot;BrandCode&quot;: &quot;EA&quot;,
+            "BrandCode": "EA",
           }
         ]
       }
     ],
-    &quot;roles&quot;: [
-      &quot;salesman&quot;,
-      &quot;manager&quot;
+    "roles": [
+      "salesman",
+      "manager"
     ],
-    &quot;currentSpotId&quot;: 2000001
+    "currentSpotId": 2000001
   },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
+  "success": true,
+  "error": {}
 }
-</code></pre>
+```-->
 
 <hr />
 
@@ -644,7 +598,7 @@
 
 <p><code>/account/external-login</code></p>
 
-<h4 id="parameters-3">Parameters</h4>
+<h4 id="parameters-2">Parameters</h4>
 
 <table>
 <thead>
@@ -687,7 +641,7 @@
 </ul></li>
 </ul>
 
-<h4 id="example-3">Example</h4>
+<h4 id="example-2">Example</h4>
 
 <p>Request:</p>
 
@@ -696,46 +650,45 @@
 <p>Success:</p>
 
 <pre><code>{
-  &quot;result&quot;: {
-    &quot;token&quot;: &quot;YOUR_AUTH_TOKEN&quot;,
-    &quot;userId&quot;: 9,
-    &quot;userName&quot;: &quot;HANGUANG-EE-0000&quot;,
-    &quot;tenantId&quot;: 5,
-    &quot;tenantCode&quot;: &quot;HANGUANG&quot;,
-    &quot;tenantName&quot;: &quot;HANGUANG&quot;,
-    &quot;spots&quot;: [
-      {
-        &quot;id&quot;: 24,
-        &quot;channelId&quot;: 3,
-        &quot;code&quot;: &quot;EE-0000&quot;,
-        &quot;name&quot;: &quot;HG Virtual Shop&quot;,
-        &quot;colleagues&quot;: [
-          {
-            &quot;userId&quot;: 6,
-            &quot;username&quot;: &quot;100000000123&quot;,
-            &quot;displayName&quot;: &quot;***&quot;
-          },
-          {
-            &quot;userId&quot;: 7,
-            &quot;username&quot;: &quot;100000000124&quot;,
-            &quot;displayName&quot;: &quot;***&quot;
-          },
-          {
-            &quot;userId&quot;: 5,
-            &quot;username&quot;: &quot;100000000126&quot;,
-            &quot;displayName&quot;: &quot;***&quot;
-          }
-        ]
-      }
-    ],
-    &quot;roles&quot;: [
-      &quot;salesman&quot;
-    ],
-    &quot;currentSpotId&quot;: 24,
-    &quot;currentChannelId&quot;: 3
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
+    &quot;result&quot;: {
+        &quot;userId&quot;: 11,
+        &quot;userName&quot;: &quot;HANGUANG-EE-C30R&quot;,
+        &quot;tenantId&quot;: 5,
+        &quot;tenantCode&quot;: &quot;HANGUANG&quot;,
+        &quot;tenantName&quot;: &quot;HANGUANG&quot;,
+        &quot;spots&quot;: [
+            {
+                &quot;id&quot;: 26,
+                &quot;channelId&quot;: 12,
+                &quot;code&quot;: &quot;EE-C30R&quot;,
+                &quot;name&quot;: &quot;EE 北京中友&quot;,
+                &quot;colleagues&quot;: [
+                    {
+                        &quot;userId&quot;: 19,
+                        &quot;username&quot;: &quot;7000056022&quot;,
+                        &quot;displayName&quot;: &quot;李桥秀&quot;
+                    },
+                    {
+                        &quot;userId&quot;: 17,
+                        &quot;username&quot;: &quot;7000041934&quot;,
+                        &quot;displayName&quot;: &quot;康小伐&quot;
+                    },
+                    {
+                        &quot;userId&quot;: 12,
+                        &quot;username&quot;: &quot;6000079545&quot;,
+                        &quot;displayName&quot;: &quot;武凯&quot;
+                    }
+                ]
+            }
+        ],
+        &quot;roles&quot;: [
+            &quot;salesman&quot;
+        ],
+        &quot;currentSpotId&quot;: 26,
+        &quot;currentChannelId&quot;: 12
+    },
+    &quot;success&quot;: true,
+    &quot;error&quot;: {}
 }
 </code></pre>
 
@@ -748,52 +701,6 @@
     &quot;code&quot;: 201,
     &quot;message&quot;: &quot;Login Failed. Invalid token.&quot;
   }
-}
-</code></pre>
-
-<h2 id="create-token">Create Token</h2>
-
-<p><code>/account/create-external-token</code></p>
-
-<h4 id="parameters-4">Parameters</h4>
-
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Required</th>
-<th>Type</th>
-<th>Desc</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>secret</td>
-<td>Yes</td>
-<td>string</td>
-<td></td>
-</tr>
-
-<tr>
-<td>[KEY=VALUE]</td>
-<td>Yes</td>
-<td>string</td>
-<td>JWT payload</td>
-</tr>
-</tbody>
-</table>
-
-<h4 id="example-4">Example</h4>
-
-<p>Request:</p>
-
-<p><code>pp://staging/account/create-external-token?secret=YOUR_SECRET&amp;shopCode=C24A&amp;userName=jackson</code></p>
-
-<p>Success:</p>
-
-<pre><code>{
-  &quot;token&quot;: &quot;NEW_TOKEN&quot;
 }
 </code></pre>
 

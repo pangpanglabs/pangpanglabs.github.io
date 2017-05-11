@@ -44,7 +44,41 @@
 
 &lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
 
-&lt;h3 id=&#34;current-v0-0-6&#34;&gt;Current(v0.0.6)&lt;/h3&gt;
+&lt;h3 id=&#34;current-v0-0-7&#34;&gt;Current(v0.0.7)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Android SDK&lt;br /&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  pos.aar
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;iOS SDK&lt;br /&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  Pos.framework.zip
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;archived-versions&#34;&gt;Archived versions&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.0.6
 
 &lt;ul&gt;
 &lt;li&gt;Android SDK&lt;br /&gt;
@@ -73,11 +107,7 @@
   
 &lt;/a&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;archived-versions&#34;&gt;Archived versions&lt;/h3&gt;
-
-&lt;ul&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;0.0.5
 
 &lt;ul&gt;

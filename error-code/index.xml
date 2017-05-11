@@ -119,6 +119,11 @@
 &lt;td&gt;205&lt;/td&gt;
 &lt;td&gt;Current Spot is not set.&lt;/td&gt;
 &lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;206&lt;/td&gt;
+&lt;td&gt;Cannot set current spot.&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -146,6 +151,11 @@
 &lt;tr&gt;
 &lt;td&gt;302&lt;/td&gt;
 &lt;td&gt;Cannot download products.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;303&lt;/td&gt;
+&lt;td&gt;Product(&lt;code&gt;{uid}&lt;/code&gt;) is not found.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -205,6 +215,26 @@
 &lt;td&gt;408&lt;/td&gt;
 &lt;td&gt;Cannot set coupon.&lt;/td&gt;
 &lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;409&lt;/td&gt;
+&lt;td&gt;Coupon is invalid.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;410&lt;/td&gt;
+&lt;td&gt;Cannot set info.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;411&lt;/td&gt;
+&lt;td&gt;Cannot set payment.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;412&lt;/td&gt;
+&lt;td&gt;Cannot set salesman.&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -232,6 +262,11 @@
 &lt;tr&gt;
 &lt;td&gt;502&lt;/td&gt;
 &lt;td&gt;Cannot find the order(&lt;code&gt;{id}&lt;/code&gt;).&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;503&lt;/td&gt;
+&lt;td&gt;Cannot return the order(&lt;code&gt;{id}&lt;/code&gt;).&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

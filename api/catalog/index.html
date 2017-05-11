@@ -336,7 +336,7 @@
 <li><a href="#example-3">Example</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#deprecated-search-products">[Deprecated]<del>Search products</del></a>
+<li><a href="#get-sku">Get sku</a>
 <ul>
 <li>
 <ul>
@@ -424,7 +424,7 @@
 
 <p>Request:</p>
 
-<p><code>pp://staging/catalog/search-contents?q=42&amp;skipCount=0&amp;maxResultCount=10</code></p>
+<p><code>pp://staging/catalog/search-contents?q=CD&amp;skipCount=0&amp;maxResultCount=10</code></p>
 
 <p>Success:</p>
 
@@ -432,30 +432,32 @@
     &quot;result&quot;: {
         &quot;items&quot;: [
             {
-                &quot;id&quot;: 10,
-                &quot;code&quot;: &quot;42AB600&quot;,
-                &quot;name&quot;: &quot;Calvin Klein Jeans Women's Garment Dyed Ankle Skinny Pant&quot;,
-                &quot;desc&quot;: &quot;&lt;p&gt;Mid-rise - sits below natural waist - skinny fit. Through hip and thigh - super skinny at ankle. Through waist, hip and thigh - skinny at ankle&lt;/p&gt;&lt;p&gt;Five-pocket styling with signature omega stitch on back pocket.&lt;/p&gt;&lt;p&gt;Zip fly with button closure&lt;/p&gt;&lt;&quot;,
-                &quot;listPrice&quot;: 69.5,
-                &quot;salePrice&quot;: 50,
-                &quot;offerName&quot;: &quot;Summer Promotion! ￥50&quot;,
+                &quot;id&quot;: 23,
+                &quot;code&quot;: &quot;CD7C1B4P&quot;,
+                &quot;name&quot;: &quot;Calvin Klein Women's Scuba Crepe Starburst Sheath Dress&quot;,
+                &quot;desc&quot;: &quot;&lt;p&gt;Starburst detail&lt;/p&gt;&lt;p&gt;Sheath dress&lt;/p&gt;&quot;,
+                &quot;listPrice&quot;: 89.98,
                 &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
                 &quot;offers&quot;: [
                     {
-                        &quot;id&quot;: 8,
-                        &quot;name&quot;: &quot;Calvin Klein Hot Sale&quot;,
-                        &quot;salePrice&quot;: 50,
-                        &quot;channelName&quot;: &quot;HANGUANG&quot;,
-                        &quot;startAt&quot;: &quot;2017-01-01T00:00:00Z&quot;,
-                        &quot;endAt&quot;: &quot;2017-05-31T00:00:00Z&quot;
+                        &quot;id&quot;: 1928,
+                        &quot;code&quot;: &quot;C194017&quot;,
+                        &quot;name&quot;: &quot;VIP Sale&quot;,
+                        &quot;salePrice&quot;: 71.18,
+                        &quot;startAt&quot;: &quot;2017-05-08T12:46:00Z&quot;,
+                        &quot;endAt&quot;: &quot;2017-06-09T12:46:00Z&quot;,
+                        &quot;requirement&quot;: {
+                            &quot;customerGroup&quot;: &quot;VIP&quot;
+                        }
                     },
                     {
-                        &quot;id&quot;: 9,
-                        &quot;name&quot;: &quot;All Brand 10% Discount&quot;,
-                        &quot;salePrice&quot;: 62.55,
-                        &quot;channelName&quot;: &quot;HANGUANG&quot;,
-                        &quot;startAt&quot;: &quot;2017-01-01T00:00:00Z&quot;,
-                        &quot;endAt&quot;: &quot;2017-05-31T00:00:00Z&quot;
+                        &quot;id&quot;: 1925,
+                        &quot;code&quot;: &quot;S194014&quot;,
+                        &quot;name&quot;: &quot;Hot Sale&quot;,
+                        &quot;salePrice&quot;: 89.98,
+                        &quot;startAt&quot;: &quot;2017-05-08T12:46:00Z&quot;,
+                        &quot;endAt&quot;: &quot;2017-06-09T12:46:00Z&quot;,
+                        &quot;requirement&quot;: null
                     }
                 ],
                 &quot;options&quot;: {
@@ -465,7 +467,7 @@
                         &quot;Rose Dust&quot;,
                         &quot;Vanilla Ice&quot;
                     ],
-                    &quot;Size&quot;: [&quot;26&quot;, &quot;27&quot;, &quot;28&quot;, &quot;29&quot;, &quot;30&quot;, &quot;31&quot;, &quot;32&quot;, &quot;33&quot;]
+                    &quot;Size&quot;: [&quot;26&quot;,&quot;27&quot;,&quot;28&quot;,&quot;29&quot;,&quot;30&quot;,&quot;31&quot;,&quot;32&quot;,&quot;33&quot;]
                 },
                 &quot;attributes&quot;: [
                     {
@@ -483,33 +485,28 @@
                 ],
                 &quot;images&quot;: {
                     &quot;large&quot;: {
-                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&quot;,
                         &quot;width&quot;: 385,
                         &quot;height&quot;: 500
                     },
                     &quot;medium&quot;: {
-                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&quot;,
                         &quot;width&quot;: 123,
                         &quot;height&quot;: 160
                     },
                     &quot;small&quot;: {
-                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&quot;,
                         &quot;width&quot;: 58,
                         &quot;height&quot;: 75
                     }
-                },
-                &quot;skus&quot;: null,
-                &quot;channelInfos&quot;: null,
-                &quot;tags&quot;: null
+                }
             },
             {
-                &quot;id&quot;: 13,
-                &quot;code&quot;: &quot;42AB616&quot;,
-                &quot;name&quot;: &quot;Calvin Klein Jeans Women's Utility Short&quot;,
-                &quot;desc&quot;: &quot;&lt;p&gt;These utility shorts are comfortable and stylish. They pair well with a Calvin Klein tee for a modern look&lt;/p&gt;&lt;p&gt;Inseam: 3.5 inch&lt;/p&gt;&lt;p&gt;Features large front and back utility pockets which give this short a fashionable look&lt;/p&gt;&lt;p&gt;Button fly with zip clo&quot;,
-                &quot;listPrice&quot;: 49.5,
-                &quot;salePrice&quot;: 49.5,
-                &quot;offerName&quot;: &quot;&quot;,
+                &quot;id&quot;: 21,
+                &quot;code&quot;: &quot;CD7C1B4P&quot;,
+                &quot;name&quot;: &quot;Calvin Klein Women's Scuba Crepe Starburst Sheath Dress&quot;,
+                &quot;desc&quot;: &quot;&lt;p&gt;Starburst detail&lt;/p&gt;&lt;p&gt;Sheath dress&lt;/p&gt;&quot;,
+                &quot;listPrice&quot;: 89.98,
                 &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
                 &quot;options&quot;: {
                     &quot;Color&quot;: [
@@ -519,8 +516,7 @@
                         &quot;Poise&quot;,
                         &quot;Snow White&quot;
                     ],
-                    &quot;Size&quot;: [&quot;25&quot;, &quot;26&quot;, &quot;27&quot;, &quot;28&quot;, &quot;29&quot;, &quot;30&quot;, &quot;31&quot;, &quot;32&quot;, &quot;33&quot;]
-                    ]
+                    &quot;Size&quot;: [&quot;25&quot;,&quot;26&quot;,&quot;27&quot;,&quot;28&quot;,&quot;29&quot;,&quot;30&quot;,&quot;31&quot;,&quot;32&quot;,&quot;33&quot;]
                 },
                 &quot;attributes&quot;: [
                     {
@@ -538,24 +534,21 @@
                 ],
                 &quot;images&quot;: {
                     &quot;large&quot;: {
-                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/41oEs6gO5BL.jpg&quot;,
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&quot;,
                         &quot;width&quot;: 385,
                         &quot;height&quot;: 500
                     },
                     &quot;medium&quot;: {
-                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/41oEs6gO5BL._SL160_.jpg&quot;,
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&quot;,
                         &quot;width&quot;: 123,
                         &quot;height&quot;: 160
                     },
                     &quot;small&quot;: {
-                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/41oEs6gO5BL._SL75_.jpg&quot;,
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&quot;,
                         &quot;width&quot;: 58,
                         &quot;height&quot;: 75
                     }
-                },
-                &quot;skus&quot;: null,
-                &quot;channelInfos&quot;: null,
-                &quot;tags&quot;: null
+                }
             }
         ],
         &quot;totalCount&quot;: 2
@@ -593,133 +586,191 @@
 
 <p>Request:</p>
 
-<p><code>pp://staging/catalog/get-content?id=10</code></p>
+<p><code>pp://staging/catalog/get-content?id=23</code></p>
 
 <pre><code>{
-  &quot;result&quot;: {
-    &quot;id&quot;: 10,
-    &quot;code&quot;: &quot;42AB600&quot;,
-    &quot;name&quot;: &quot;Calvin Klein Jeans Women's Garment Dyed Ankle Skinny Pant&quot;,
-    &quot;desc&quot;: &quot;&lt;p&gt;Mid-rise - sits below natural waist - skinny fit. Through hip and thigh - super skinny at ankle. Through waist, hip and thigh - skinny at ankle&lt;/p&gt;&lt;p&gt;Five-pocket styling with signature omega stitch on back pocket.&lt;/p&gt;&lt;p&gt;Zip fly with button closure&lt;/p&gt;&lt;&quot;,
-    &quot;listPrice&quot;: 69.5,
-    &quot;salePrice&quot;: 50,
-    &quot;offerName&quot;: &quot;Summer Promotion! ￥50&quot;,
-    &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
-    &quot;offers&quot;: [
-        {
-            &quot;id&quot;: 8,
-            &quot;name&quot;: &quot;Calvin Klein Hot Sale&quot;,
-            &quot;salePrice&quot;: 50,
-            &quot;channelName&quot;: &quot;HANGUANG&quot;,
-            &quot;startAt&quot;: &quot;2017-01-01T00:00:00Z&quot;,
-            &quot;endAt&quot;: &quot;2017-05-31T00:00:00Z&quot;
-        },
-        {
-            &quot;id&quot;: 9,
-            &quot;name&quot;: &quot;All Brand 10% Discount&quot;,
-            &quot;salePrice&quot;: 62.55,
-            &quot;channelName&quot;: &quot;HANGUANG&quot;,
-            &quot;startAt&quot;: &quot;2017-01-01T00:00:00Z&quot;,
-            &quot;endAt&quot;: &quot;2017-05-31T00:00:00Z&quot;
-        }
-    ],
-    &quot;options&quot;: {
-      &quot;Color&quot;: [
-        &quot;Ivy Mist&quot;,
-        &quot;Monument&quot;,
-        &quot;Rose Dust&quot;,
-        &quot;Vanilla Ice&quot;
-      ],
-      &quot;Size&quot;: [&quot;26&quot;, &quot;27&quot;, &quot;28&quot;, &quot;29&quot;, &quot;30&quot;, &quot;31&quot;, &quot;32&quot;, &quot;33&quot;]
-    },
-    &quot;attributes&quot;: [
-      {
-        &quot;k&quot;: &quot;ProductGroup&quot;,
-        &quot;v&quot;: &quot;Apparel&quot;
-      },
-      {
-        &quot;k&quot;: &quot;ProductType&quot;,
-        &quot;v&quot;: &quot;PANTS&quot;
-      },
-      {
-        &quot;k&quot;: &quot;Department&quot;,
-        &quot;v&quot;: &quot;womens&quot;
-      }
-    ],
-    &quot;images&quot;: {
-      &quot;large&quot;: {
-        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-        &quot;width&quot;: 385,
-        &quot;height&quot;: 500
-      },
-      &quot;medium&quot;: {
-        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-        &quot;width&quot;: 123,
-        &quot;height&quot;: 160
-      },
-      &quot;small&quot;: {
-        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-        &quot;width&quot;: 58,
-        &quot;height&quot;: 75
-      }
-    },
-    &quot;skus&quot;: [
-      {
-        &quot;id&quot;: 168,
-        &quot;contentId&quot;: 10,
-        &quot;name&quot;: &quot;Calvin Klein Jeans Women's Gmt Dyed Ankle Skinny Pant, Ivy Mist, 26&quot;,
-        &quot;code&quot;: &quot;42AB600-0&quot;,
-        &quot;listPrice&quot;: 69.5,
-        &quot;salePrice&quot;: 69.5,
-        &quot;images&quot;: {
-          &quot;large&quot;: {
-            &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
-            &quot;width&quot;: 385,
-            &quot;height&quot;: 500
-          },
-          &quot;medium&quot;: {
-            &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
-            &quot;width&quot;: 123,
-            &quot;height&quot;: 160
-          },
-          &quot;small&quot;: {
-            &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
-            &quot;width&quot;: 58,
-            &quot;height&quot;: 75
-          }
-        },
-        &quot;options&quot;: [
-          {
-            &quot;k&quot;: &quot;Size&quot;,
-            &quot;v&quot;: &quot;26&quot;
-          },
-          {
-            &quot;k&quot;: &quot;Color&quot;,
-            &quot;v&quot;: &quot;Ivy Mist&quot;
-          }
+    &quot;result&quot;: {
+        &quot;id&quot;: 23,
+        &quot;code&quot;: &quot;CD7C1B4P&quot;,
+        &quot;name&quot;: &quot;Calvin Klein Women's Scuba Crepe Starburst Sheath Dress&quot;,
+        &quot;desc&quot;: &quot;&lt;p&gt;Starburst detail&lt;/p&gt;&lt;p&gt;Sheath dress&lt;/p&gt;&quot;,
+        &quot;listPrice&quot;: 89.98,
+        &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+        &quot;offers&quot;: [
+            {
+                &quot;id&quot;: 1928,
+                &quot;code&quot;: &quot;C194017&quot;,
+                &quot;name&quot;: &quot;VIP Sale&quot;,
+                &quot;salePrice&quot;: 71.18,
+                &quot;startAt&quot;: &quot;2017-05-08T12:46:00Z&quot;,
+                &quot;endAt&quot;: &quot;2017-06-09T12:46:00Z&quot;,
+                &quot;requirement&quot;: {
+                    &quot;customerGroup&quot;: &quot;VIP&quot;
+                }
+            },
+            {
+                &quot;id&quot;: 1925,
+                &quot;code&quot;: &quot;S194014&quot;,
+                &quot;name&quot;: &quot;Hot Sale&quot;,
+                &quot;salePrice&quot;: 89.98,
+                &quot;startAt&quot;: &quot;2017-05-08T12:46:00Z&quot;,
+                &quot;endAt&quot;: &quot;2017-06-09T12:46:00Z&quot;,
+                &quot;requirement&quot;: null
+            }
         ],
-        &quot;uids&quot;: [
-          {
-            &quot;id&quot;: 107,
-            &quot;skuId&quot;: 168,
-            &quot;idType&quot;: &quot;EAN&quot;,
-            &quot;uid&quot;: &quot;0637865273456&quot;
-          },
-          {
-            &quot;id&quot;: 108,
-            &quot;skuId&quot;: 168,
-            &quot;idType&quot;: &quot;UPC&quot;,
-            &quot;uid&quot;: &quot;637865273456&quot;
-          }
+        &quot;options&quot;: {
+            &quot;Color&quot;: [
+                &quot;Ivy Mist&quot;,
+                &quot;Monument&quot;,
+                &quot;Rose Dust&quot;,
+                &quot;Vanilla Ice&quot;
+            ],
+            &quot;Size&quot;: [&quot;26&quot;, &quot;27&quot;, &quot;28&quot;, &quot;29&quot;, &quot;30&quot;, &quot;31&quot;, &quot;32&quot;, &quot;33&quot;]
+        },
+        &quot;attributes&quot;: [
+            {
+                &quot;k&quot;: &quot;ProductGroup&quot;,
+                &quot;v&quot;: &quot;Apparel&quot;
+            },
+            {
+                &quot;k&quot;: &quot;ProductType&quot;,
+                &quot;v&quot;: &quot;PANTS&quot;
+            },
+            {
+                &quot;k&quot;: &quot;Department&quot;,
+                &quot;v&quot;: &quot;womens&quot;
+            }
+        ],
+        &quot;images&quot;: {
+            &quot;large&quot;: {
+                &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&quot;,
+                &quot;width&quot;: 385,
+                &quot;height&quot;: 500
+            },
+            &quot;medium&quot;: {
+                &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&quot;,
+                &quot;width&quot;: 123,
+                &quot;height&quot;: 160
+            },
+            &quot;small&quot;: {
+                &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&quot;,
+                &quot;width&quot;: 58,
+                &quot;height&quot;: 75
+            }
+        },
+        &quot;skus&quot;: [
+            {
+                &quot;id&quot;: 502,
+                &quot;contentId&quot;: 23,
+                &quot;name&quot;: &quot;Calvin Klein Women's Scuba Crepe Starburst Sheath Dress, Blossom, 2&quot;,
+                &quot;code&quot;: &quot;CD7C1B4P-0&quot;,
+                &quot;images&quot;: {
+                    &quot;large&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&quot;,
+                        &quot;width&quot;: 385,
+                        &quot;height&quot;: 500
+                    },
+                    &quot;medium&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&quot;,
+                        &quot;width&quot;: 123,
+                        &quot;height&quot;: 160
+                    },
+                    &quot;small&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&quot;,
+                        &quot;width&quot;: 58,
+                        &quot;height&quot;: 75
+                    }
+                },
+                &quot;options&quot;: [
+                    {
+                        &quot;k&quot;: &quot;Size&quot;,
+                        &quot;v&quot;: &quot;2&quot;
+                    },
+                    {
+                        &quot;k&quot;: &quot;Color&quot;,
+                        &quot;v&quot;: &quot;Blossom&quot;
+                    }
+                ],
+                &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+                &quot;contentCode&quot;: &quot;CD7C1B4P&quot;,
+                &quot;listPrice&quot;: 89.98
+            },
+            {
+                &quot;id&quot;: 503,
+                &quot;contentId&quot;: 23,
+                &quot;name&quot;: &quot;Calvin Klein Women's Scuba Crepe Starburst Sheath Dress, Cerulean, 2&quot;,
+                &quot;code&quot;: &quot;CD7C1B4P-1&quot;,
+                &quot;images&quot;: {
+                    &quot;large&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&quot;,
+                        &quot;width&quot;: 385,
+                        &quot;height&quot;: 500
+                    },
+                    &quot;medium&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&quot;,
+                        &quot;width&quot;: 123,
+                        &quot;height&quot;: 160
+                    },
+                    &quot;small&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&quot;,
+                        &quot;width&quot;: 58,
+                        &quot;height&quot;: 75
+                    }
+                },
+                &quot;options&quot;: [
+                    {
+                        &quot;k&quot;: &quot;Size&quot;,
+                        &quot;v&quot;: &quot;2&quot;
+                    },
+                    {
+                        &quot;k&quot;: &quot;Color&quot;,
+                        &quot;v&quot;: &quot;Cerulean&quot;
+                    }
+                ],
+                &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+                &quot;contentCode&quot;: &quot;CD7C1B4P&quot;,
+                &quot;listPrice&quot;: 89.98
+            },
+            {
+                &quot;id&quot;: 504,
+                &quot;contentId&quot;: 23,
+                &quot;name&quot;: &quot;Calvin Klein Women's Scuba Crepe Starburst Sheath Dress, Popcorn, 2&quot;,
+                &quot;code&quot;: &quot;CD7C1B4P-2&quot;,
+                &quot;images&quot;: {
+                    &quot;large&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&quot;,
+                        &quot;width&quot;: 385,
+                        &quot;height&quot;: 500
+                    },
+                    &quot;medium&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&quot;,
+                        &quot;width&quot;: 123,
+                        &quot;height&quot;: 160
+                    },
+                    &quot;small&quot;: {
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&quot;,
+                        &quot;width&quot;: 58,
+                        &quot;height&quot;: 75
+                    }
+                },
+                &quot;options&quot;: [
+                    {
+                        &quot;k&quot;: &quot;Size&quot;,
+                        &quot;v&quot;: &quot;2&quot;
+                    },
+                    {
+                        &quot;k&quot;: &quot;Color&quot;,
+                        &quot;v&quot;: &quot;Popcorn&quot;
+                    }
+                ],
+                &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+                &quot;contentCode&quot;: &quot;CD7C1B4P&quot;,
+                &quot;listPrice&quot;: 89.98
+            }
         ]
-      },
-      /* ... sku ... */      
-    ],
-    &quot;channelInfos&quot;: null,
-    &quot;tags&quot;: null
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
+    },
+    &quot;success&quot;: true,
+    &quot;error&quot;: {}
 }
 </code></pre>
 
@@ -763,7 +814,7 @@
 
 <p>Request:</p>
 
-<p><code>pp://staging/catalog/search-skus?q=42&amp;skipCount=0&amp;maxResultCount=10</code></p>
+<p><code>pp://staging/catalog/search-skus?q=CD&amp;skipCount=0&amp;maxResultCount=10</code></p>
 
 <p>Success:</p>
 
@@ -771,46 +822,48 @@
     &quot;result&quot;: {
         &quot;items&quot;: [
             {
-                &quot;id&quot;: 168,
-                &quot;contentId&quot;: 10,
-                &quot;name&quot;: &quot;Calvin Klein Jeans Women's Gmt Dyed Ankle Skinny Pant, Ivy Mist, 26&quot;,
-                &quot;code&quot;: &quot;42AB600-0&quot;,
-                &quot;listPrice&quot;: 69.5,
-                &quot;salePrice&quot;: 50,
-                &quot;offerName&quot;: &quot;Summer Promotion! ￥50&quot;,
+                &quot;id&quot;: 502,
+                &quot;contentId&quot;: 23,
+                &quot;name&quot;: &quot;Calvin Klein Women's Scuba Crepe Starburst Sheath Dress, Blossom, 2&quot;,
+                &quot;code&quot;: &quot;CD7C1B4P-0&quot;,
                 &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
-                &quot;contentCode&quot;: &quot;42AB600&quot;,
+                &quot;contentCode&quot;: &quot;CD7C1B4P&quot;,
+                &quot;listPrice&quot;: 89.98,
                 &quot;offers&quot;: [
                     {
-                        &quot;id&quot;: 8,
-                        &quot;name&quot;: &quot;Calvin Klein Hot Sale&quot;,
-                        &quot;salePrice&quot;: 50,
-                        &quot;channelName&quot;: &quot;HANGUANG&quot;,
-                        &quot;startAt&quot;: &quot;2017-01-01T00:00:00Z&quot;,
-                        &quot;endAt&quot;: &quot;2017-05-31T00:00:00Z&quot;
+                        &quot;id&quot;: 1928,
+                        &quot;code&quot;: &quot;C194017&quot;,
+                        &quot;name&quot;: &quot;VIP Sale&quot;,
+                        &quot;salePrice&quot;: 71.18,
+                        &quot;startAt&quot;: &quot;2017-05-08T12:46:00Z&quot;,
+                        &quot;endAt&quot;: &quot;2017-06-09T12:46:00Z&quot;,
+                        &quot;requirement&quot;: {
+                            &quot;customerGroup&quot;: &quot;VIP&quot;
+                        }
                     },
                     {
-                        &quot;id&quot;: 9,
-                        &quot;name&quot;: &quot;All Brand 10% Discount&quot;,
-                        &quot;salePrice&quot;: 62.55,
-                        &quot;channelName&quot;: &quot;HANGUANG&quot;,
-                        &quot;startAt&quot;: &quot;2017-01-01T00:00:00Z&quot;,
-                        &quot;endAt&quot;: &quot;2017-05-31T00:00:00Z&quot;
+                        &quot;id&quot;: 1925,
+                        &quot;code&quot;: &quot;S194014&quot;,
+                        &quot;name&quot;: &quot;Hot Sale&quot;,
+                        &quot;salePrice&quot;: 89.98,
+                        &quot;startAt&quot;: &quot;2017-05-08T12:46:00Z&quot;,
+                        &quot;endAt&quot;: &quot;2017-06-09T12:46:00Z&quot;,
+                        &quot;requirement&quot;: null
                     }
                 ],
                 &quot;images&quot;: {
                     &quot;large&quot;: {
-                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&quot;,
                         &quot;width&quot;: 385,
                         &quot;height&quot;: 500
                     },
                     &quot;medium&quot;: {
-                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&quot;,
                         &quot;width&quot;: 123,
                         &quot;height&quot;: 160
                     },
                     &quot;small&quot;: {
-                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&quot;,
                         &quot;width&quot;: 58,
                         &quot;height&quot;: 75
                     }
@@ -818,37 +871,57 @@
                 &quot;options&quot;: [
                     {
                         &quot;k&quot;: &quot;Size&quot;,
-                        &quot;v&quot;: &quot;26&quot;
+                        &quot;v&quot;: &quot;2&quot;
                     },
                     {
                         &quot;k&quot;: &quot;Color&quot;,
-                        &quot;v&quot;: &quot;Ivy Mist&quot;
+                        &quot;v&quot;: &quot;Blossom&quot;
                     }
                 ]
             },
             {
-                &quot;id&quot;: 169,
-                &quot;contentId&quot;: 10,
-                &quot;name&quot;: &quot;Calvin Klein Jeans Women's Gmt Dyed Ankle Skinny Pant, Monument, 26&quot;,
-                &quot;code&quot;: &quot;42AB600-1&quot;,
-                &quot;listPrice&quot;: 69.5,
-                &quot;salePrice&quot;: 50,
-                &quot;offerName&quot;: &quot;Summer Promotion! ￥50&quot;,
+                &quot;id&quot;: 503,
+                &quot;contentId&quot;: 23,
+                &quot;name&quot;: &quot;Calvin Klein Women's Scuba Crepe Starburst Sheath Dress, Cerulean, 2&quot;,
+                &quot;code&quot;: &quot;CD7C1B4P-1&quot;,
                 &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
-                &quot;contentCode&quot;: &quot;42AB600&quot;,
+                &quot;contentCode&quot;: &quot;CD7C1B4P&quot;,
+                &quot;listPrice&quot;: 89.98,
+                &quot;offers&quot;: [
+                    {
+                        &quot;id&quot;: 1928,
+                        &quot;code&quot;: &quot;C194017&quot;,
+                        &quot;name&quot;: &quot;VIP Sale&quot;,
+                        &quot;salePrice&quot;: 71.18,
+                        &quot;startAt&quot;: &quot;2017-05-08T12:46:00Z&quot;,
+                        &quot;endAt&quot;: &quot;2017-06-09T12:46:00Z&quot;,
+                        &quot;requirement&quot;: {
+                            &quot;customerGroup&quot;: &quot;VIP&quot;
+                        }
+                    },
+                    {
+                        &quot;id&quot;: 1925,
+                        &quot;code&quot;: &quot;S194014&quot;,
+                        &quot;name&quot;: &quot;Hot Sale&quot;,
+                        &quot;salePrice&quot;: 89.98,
+                        &quot;startAt&quot;: &quot;2017-05-08T12:46:00Z&quot;,
+                        &quot;endAt&quot;: &quot;2017-06-09T12:46:00Z&quot;,
+                        &quot;requirement&quot;: null
+                    }
+                ],
                 &quot;images&quot;: {
                     &quot;large&quot;: {
-                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&quot;,
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&quot;,
                         &quot;width&quot;: 385,
                         &quot;height&quot;: 500
                     },
                     &quot;medium&quot;: {
-                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&quot;,
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&quot;,
                         &quot;width&quot;: 123,
                         &quot;height&quot;: 160
                     },
                     &quot;small&quot;: {
-                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&quot;,
+                        &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&quot;,
                         &quot;width&quot;: 58,
                         &quot;height&quot;: 75
                     }
@@ -856,25 +929,26 @@
                 &quot;options&quot;: [
                     {
                         &quot;k&quot;: &quot;Size&quot;,
-                        &quot;v&quot;: &quot;26&quot;
+                        &quot;v&quot;: &quot;2&quot;
                     },
                     {
                         &quot;k&quot;: &quot;Color&quot;,
-                        &quot;v&quot;: &quot;Monument&quot;
+                        &quot;v&quot;: &quot;Cerulean&quot;
                     }
                 ]
             }
+            /* ... */
         ],
-        &quot;totalCount&quot;: 76
+        &quot;totalCount&quot;: 87
     },
     &quot;success&quot;: true,
     &quot;error&quot;: {}
 }
 </code></pre>
 
-<h2 id="deprecated-search-products">[Deprecated]<del>Search products</del></h2>
+<h2 id="get-sku">Get sku</h2>
 
-<p><code>/catalog/search-products</code></p>
+<p><code>/catalog/get-sku</code></p>
 
 <h4 id="parameters-4">Parameters</h4>
 
@@ -884,26 +958,23 @@
 <th>Name</th>
 <th>Required</th>
 <th>Type</th>
+<th>Desc</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-<td>q</td>
-<td>No</td>
+<td>id</td>
+<td>-</td>
+<td>number</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>uid</td>
+<td>-</td>
 <td>string</td>
-</tr>
-
-<tr>
-<td>skipCount</td>
-<td>No</td>
-<td>number</td>
-</tr>
-
-<tr>
-<td>maxResultCount</td>
-<td>No</td>
-<td>number</td>
+<td>barcode number</td>
 </tr>
 </tbody>
 </table>
@@ -912,48 +983,75 @@
 
 <p>Request:</p>
 
-<p><code>pp://staging/catalog/search-products?q=EK&amp;skipCount=0&amp;maxResultCount=10</code></p>
+<p><code>pp://staging/catalog/get-sku?id=502</code></p>
+
+<p>or</p>
+
+<p><code>pp://staging/catalog/get-sku?uid=0888380454565</code></p>
 
 <p>Success:</p>
 
 <pre><code>{
-  &quot;result&quot;: {
-    &quot;items&quot;: [
-      {
-        &quot;uid&quot;: &quot;305228&quot;,
-        &quot;name&quot;: &quot;EKJP6CV102, (59)Navy, (135)135&quot;,
-        &quot;listPrice&quot;: 450,
-        &quot;salePrice&quot;: 450,
-        &quot;skuCode&quot;: &quot;EKJP6CV10259135&quot;,
-        &quot;contentCode&quot;: &quot;EKJP6CV102&quot;,
-        &quot;brandCode&quot;: &quot;EK&quot;
-      },
-      /* ... */
-      {
-        &quot;uid&quot;: &quot;305279&quot;,
-        &quot;name&quot;: &quot;EKAP7S111K, (25)Pink, (200)200&quot;,
-        &quot;listPrice&quot;: 398,
-        &quot;salePrice&quot;: 398,
-        &quot;skuCode&quot;: &quot;EKAP7S111K25200&quot;,
-        &quot;contentCode&quot;: &quot;EKAP7S111K&quot;,
-        &quot;brandCode&quot;: &quot;EK&quot;
-      }
-    ],
-    &quot;totalCount&quot;: 11939
-  },
-  &quot;success&quot;: true,
-  &quot;error&quot;: {}
-}
-</code></pre>
-
-<p>Fail:</p>
-
-<pre><code>{
-  &quot;success&quot;: false,
-  &quot;error&quot;: {
-    &quot;code&quot;: 300,
-    &quot;message&quot;: &quot;Cannot search products.&quot;
-  }
+    &quot;result&quot;: {
+        &quot;id&quot;: 502,
+        &quot;contentId&quot;: 23,
+        &quot;name&quot;: &quot;Calvin Klein Women's Scuba Crepe Starburst Sheath Dress, Blossom, 2&quot;,
+        &quot;code&quot;: &quot;CD7C1B4P-0&quot;,
+        &quot;brandCode&quot;: &quot;Calvin Klein&quot;,
+        &quot;contentCode&quot;: &quot;CD7C1B4P&quot;,
+        &quot;listPrice&quot;: 89.98,
+        &quot;offers&quot;: [
+            {
+                &quot;id&quot;: 1928,
+                &quot;code&quot;: &quot;C194017&quot;,
+                &quot;name&quot;: &quot;VIP Sale&quot;,
+                &quot;salePrice&quot;: 71.18,
+                &quot;startAt&quot;: &quot;2017-05-08T12:46:00Z&quot;,
+                &quot;endAt&quot;: &quot;2017-06-09T12:46:00Z&quot;,
+                &quot;requirement&quot;: {
+                    &quot;customerGroup&quot;: &quot;VIP&quot;
+                }
+            },
+            {
+                &quot;id&quot;: 1925,
+                &quot;code&quot;: &quot;S194014&quot;,
+                &quot;name&quot;: &quot;Hot Sale&quot;,
+                &quot;salePrice&quot;: 89.98,
+                &quot;startAt&quot;: &quot;2017-05-08T12:46:00Z&quot;,
+                &quot;endAt&quot;: &quot;2017-06-09T12:46:00Z&quot;,
+                &quot;requirement&quot;: null
+            }
+        ],
+        &quot;images&quot;: {
+            &quot;large&quot;: {
+                &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&quot;,
+                &quot;width&quot;: 385,
+                &quot;height&quot;: 500
+            },
+            &quot;medium&quot;: {
+                &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&quot;,
+                &quot;width&quot;: 123,
+                &quot;height&quot;: 160
+            },
+            &quot;small&quot;: {
+                &quot;url&quot;: &quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&quot;,
+                &quot;width&quot;: 58,
+                &quot;height&quot;: 75
+            }
+        },
+        &quot;options&quot;: [
+            {
+                &quot;k&quot;: &quot;Size&quot;,
+                &quot;v&quot;: &quot;2&quot;
+            },
+            {
+                &quot;k&quot;: &quot;Color&quot;,
+                &quot;v&quot;: &quot;Blossom&quot;
+            }
+        ]
+    },
+    &quot;success&quot;: true,
+    &quot;error&quot;: {}
 }
 </code></pre>
 

@@ -194,66 +194,57 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;token&amp;quot;: &amp;quot;YOUR_TOKEN&amp;quot;,
-    &amp;quot;userId&amp;quot;: 1000001,
-    &amp;quot;userName&amp;quot;: &amp;quot;saleswoman&amp;quot;,
-    &amp;quot;tenantId&amp;quot;: 10,
-    &amp;quot;tenantCode&amp;quot;: &amp;quot;LABS&amp;quot;,
-    &amp;quot;tenantName&amp;quot;: &amp;quot;LABS&amp;quot;,
-    &amp;quot;spots&amp;quot;: [
-      {
-        &amp;quot;id&amp;quot;: 2000001,
-        &amp;quot;tenantId&amp;quot;: 0,
-        &amp;quot;name&amp;quot;: &amp;quot;Event Hall&amp;quot;,
-        &amp;quot;contracts&amp;quot;: [
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;Ted Baker&amp;quot;,
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;Lilly Pulitzer&amp;quot;,
-          }
-        ]
-      },
-      {
-        &amp;quot;id&amp;quot;: 2000002,
-        &amp;quot;tenantId&amp;quot;: 0,
-        &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;,
-        &amp;quot;contracts&amp;quot;: [
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;EK&amp;quot;,
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;EA&amp;quot;,
-          }
-        ]
-      }
-    ],
-    &amp;quot;roles&amp;quot;: [
-      &amp;quot;salesman&amp;quot;,
-      &amp;quot;manager&amp;quot;
-    ]
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
+    &amp;quot;result&amp;quot;: {
+        &amp;quot;userId&amp;quot;: 11,
+        &amp;quot;userName&amp;quot;: &amp;quot;HANGUANG-EE-C30R&amp;quot;,
+        &amp;quot;tenantId&amp;quot;: 5,
+        &amp;quot;tenantCode&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
+        &amp;quot;tenantName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
+        &amp;quot;spots&amp;quot;: [
+            {
+                &amp;quot;id&amp;quot;: 26,
+                &amp;quot;channelId&amp;quot;: 12,
+                &amp;quot;code&amp;quot;: &amp;quot;EE-C30R&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;EE 北京中友&amp;quot;,
+                &amp;quot;colleagues&amp;quot;: [
+                    {
+                        &amp;quot;userId&amp;quot;: 19,
+                        &amp;quot;username&amp;quot;: &amp;quot;7000056022&amp;quot;,
+                        &amp;quot;displayName&amp;quot;: &amp;quot;李桥秀&amp;quot;
+                    },
+                    {
+                        &amp;quot;userId&amp;quot;: 17,
+                        &amp;quot;username&amp;quot;: &amp;quot;7000041934&amp;quot;,
+                        &amp;quot;displayName&amp;quot;: &amp;quot;康小伐&amp;quot;
+                    },
+                    {
+                        &amp;quot;userId&amp;quot;: 12,
+                        &amp;quot;username&amp;quot;: &amp;quot;6000079545&amp;quot;,
+                        &amp;quot;displayName&amp;quot;: &amp;quot;武凯&amp;quot;
+                    }
+                ]
+            }
+        ],
+        &amp;quot;roles&amp;quot;: [
+            &amp;quot;salesman&amp;quot;
+        ],
+        &amp;quot;currentSpotId&amp;quot;: 26,
+        &amp;quot;currentChannelId&amp;quot;: 12
+    },
+    &amp;quot;success&amp;quot;: true,
+    &amp;quot;error&amp;quot;: {}
 }
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Fail:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
-  &amp;quot;success&amp;quot;: false,
-  &amp;quot;result&amp;quot;: null,
-  &amp;quot;error&amp;quot;: {
-    &amp;quot;code&amp;quot;: 201,
-    &amp;quot;message&amp;quot;: &amp;quot;Login Failed. Invalid user name or password&amp;quot;
-  }
+    &amp;quot;result&amp;quot;: null,
+    &amp;quot;success&amp;quot;: false,
+    &amp;quot;error&amp;quot;: {
+        &amp;quot;code&amp;quot;: 201,
+        &amp;quot;message&amp;quot;: &amp;quot;Login Failed.\nInvalid password.&amp;quot;
+    }
 }
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -276,54 +267,45 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;token&amp;quot;: &amp;quot;YOUR_TOKEN&amp;quot;,
-    &amp;quot;userId&amp;quot;: 1000001,
-    &amp;quot;userName&amp;quot;: &amp;quot;saleswoman&amp;quot;,
-    &amp;quot;tenantId&amp;quot;: 10,
-    &amp;quot;tenantCode&amp;quot;: &amp;quot;LABS&amp;quot;,
-    &amp;quot;tenantName&amp;quot;: &amp;quot;LABS&amp;quot;,
-    &amp;quot;spots&amp;quot;: [
-      {
-        &amp;quot;id&amp;quot;: 2000001,
-        &amp;quot;tenantId&amp;quot;: 0,
-        &amp;quot;name&amp;quot;: &amp;quot;Event Hall&amp;quot;,
-        &amp;quot;contracts&amp;quot;: [
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;Ted Baker&amp;quot;,
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;Lilly Pulitzer&amp;quot;,
-          }
-        ]
-      },
-      {
-        &amp;quot;id&amp;quot;: 2000002,
-        &amp;quot;tenantId&amp;quot;: 0,
-        &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;,
-        &amp;quot;contracts&amp;quot;: [
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;EK&amp;quot;,
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;EA&amp;quot;,
-          }
-        ]
-      }
-    ],
-    &amp;quot;roles&amp;quot;: [
-      &amp;quot;salesman&amp;quot;,
-      &amp;quot;manager&amp;quot;
-    ]
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
+    &amp;quot;result&amp;quot;: {
+        &amp;quot;userId&amp;quot;: 11,
+        &amp;quot;userName&amp;quot;: &amp;quot;HANGUANG-EE-C30R&amp;quot;,
+        &amp;quot;tenantId&amp;quot;: 5,
+        &amp;quot;tenantCode&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
+        &amp;quot;tenantName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
+        &amp;quot;spots&amp;quot;: [
+            {
+                &amp;quot;id&amp;quot;: 26,
+                &amp;quot;channelId&amp;quot;: 12,
+                &amp;quot;code&amp;quot;: &amp;quot;EE-C30R&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;EE 北京中友&amp;quot;,
+                &amp;quot;colleagues&amp;quot;: [
+                    {
+                        &amp;quot;userId&amp;quot;: 19,
+                        &amp;quot;username&amp;quot;: &amp;quot;7000056022&amp;quot;,
+                        &amp;quot;displayName&amp;quot;: &amp;quot;李桥秀&amp;quot;
+                    },
+                    {
+                        &amp;quot;userId&amp;quot;: 17,
+                        &amp;quot;username&amp;quot;: &amp;quot;7000041934&amp;quot;,
+                        &amp;quot;displayName&amp;quot;: &amp;quot;康小伐&amp;quot;
+                    },
+                    {
+                        &amp;quot;userId&amp;quot;: 12,
+                        &amp;quot;username&amp;quot;: &amp;quot;6000079545&amp;quot;,
+                        &amp;quot;displayName&amp;quot;: &amp;quot;武凯&amp;quot;
+                    }
+                ]
+            }
+        ],
+        &amp;quot;roles&amp;quot;: [
+            &amp;quot;salesman&amp;quot;
+        ],
+        &amp;quot;currentSpotId&amp;quot;: 26,
+        &amp;quot;currentChannelId&amp;quot;: 12
+    },
+    &amp;quot;success&amp;quot;: true,
+    &amp;quot;error&amp;quot;: {}
 }
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -341,90 +323,78 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;set-spot&#34;&gt;Set Spot&lt;/h2&gt;
+&lt;!--## Set Spot
 
-&lt;p&gt;&lt;code&gt;/account/set-spot&lt;/code&gt;&lt;/p&gt;
+`/account/set-spot`
 
-&lt;h4 id=&#34;parameters-2&#34;&gt;Parameters&lt;/h4&gt;
+#### Parameters
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
+|Name|Required|Type|
+|---|---|---|
+|spotId|Yes|number|
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;spotId&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 
-&lt;h4 id=&#34;example-2&#34;&gt;Example&lt;/h4&gt;
+#### Example
 
-&lt;p&gt;Request:&lt;/p&gt;
+Request:
 
-&lt;p&gt;&lt;code&gt;pp://staging/account/set-spot?spotId=2&lt;/code&gt;&lt;/p&gt;
+`pp://staging/account/set-spot?spotId=2`
 
-&lt;p&gt;Success:&lt;/p&gt;
+Success:
 
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;token&amp;quot;: &amp;quot;YOUR_TOKEN&amp;quot;,
-    &amp;quot;userId&amp;quot;: 1000001,
-    &amp;quot;userName&amp;quot;: &amp;quot;saleswoman&amp;quot;,
-    &amp;quot;tenantId&amp;quot;: 10,
-    &amp;quot;tenantCode&amp;quot;: &amp;quot;LABS&amp;quot;,
-    &amp;quot;tenantName&amp;quot;: &amp;quot;LABS&amp;quot;,
-    &amp;quot;spots&amp;quot;: [
+```
+{
+  &#34;result&#34;: {
+    &#34;token&#34;: &#34;YOUR_TOKEN&#34;,
+    &#34;userId&#34;: 1000001,
+    &#34;userName&#34;: &#34;saleswoman&#34;,
+    &#34;tenantId&#34;: 10,
+    &#34;tenantCode&#34;: &#34;LABS&#34;,
+    &#34;tenantName&#34;: &#34;LABS&#34;,
+    &#34;spots&#34;: [
       {
-        &amp;quot;id&amp;quot;: 2000001,
-        &amp;quot;tenantId&amp;quot;: 0,
-        &amp;quot;name&amp;quot;: &amp;quot;Event Hall&amp;quot;,
-        &amp;quot;contracts&amp;quot;: [
+        &#34;id&#34;: 2000001,
+        &#34;tenantId&#34;: 0,
+        &#34;name&#34;: &#34;Event Hall&#34;,
+        &#34;contracts&#34;: [
           {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
+            &#34;BrandCode&#34;: &#34;Calvin Klein&#34;,
           },
           {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;Ted Baker&amp;quot;,
+            &#34;BrandCode&#34;: &#34;Ted Baker&#34;,
           },
           {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;Lilly Pulitzer&amp;quot;,
+            &#34;BrandCode&#34;: &#34;Lilly Pulitzer&#34;,
           }
         ]
       },
       {
-        &amp;quot;id&amp;quot;: 2000002,
-        &amp;quot;tenantId&amp;quot;: 0,
-        &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;,
-        &amp;quot;contracts&amp;quot;: [
+        &#34;id&#34;: 2000002,
+        &#34;tenantId&#34;: 0,
+        &#34;name&#34;: &#34;天山店&#34;,
+        &#34;contracts&#34;: [
           {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;EE&amp;quot;,
+            &#34;BrandCode&#34;: &#34;EE&#34;,
           },
           {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;EK&amp;quot;,
+            &#34;BrandCode&#34;: &#34;EK&#34;,
           },
           {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;EA&amp;quot;,
+            &#34;BrandCode&#34;: &#34;EA&#34;,
           }
         ]
       }
     ],
-    &amp;quot;roles&amp;quot;: [
-      &amp;quot;salesman&amp;quot;,
-      &amp;quot;manager&amp;quot;
+    &#34;roles&#34;: [
+      &#34;salesman&#34;,
+      &#34;manager&#34;
     ],
-    &amp;quot;currentSpotId&amp;quot;: 2000001
+    &#34;currentSpotId&#34;: 2000001
   },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
+  &#34;success&#34;: true,
+  &#34;error&#34;: {}
 }
-&lt;/code&gt;&lt;/pre&gt;
+```--&gt;
 
 &lt;hr /&gt;
 
@@ -432,7 +402,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;&lt;code&gt;/account/external-login&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;parameters-3&#34;&gt;Parameters&lt;/h4&gt;
+&lt;h4 id=&#34;parameters-2&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -475,7 +445,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;example-3&#34;&gt;Example&lt;/h4&gt;
+&lt;h4 id=&#34;example-2&#34;&gt;Example&lt;/h4&gt;
 
 &lt;p&gt;Request:&lt;/p&gt;
 
@@ -484,46 +454,45 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;token&amp;quot;: &amp;quot;YOUR_AUTH_TOKEN&amp;quot;,
-    &amp;quot;userId&amp;quot;: 9,
-    &amp;quot;userName&amp;quot;: &amp;quot;HANGUANG-EE-0000&amp;quot;,
-    &amp;quot;tenantId&amp;quot;: 5,
-    &amp;quot;tenantCode&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
-    &amp;quot;tenantName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
-    &amp;quot;spots&amp;quot;: [
-      {
-        &amp;quot;id&amp;quot;: 24,
-        &amp;quot;channelId&amp;quot;: 3,
-        &amp;quot;code&amp;quot;: &amp;quot;EE-0000&amp;quot;,
-        &amp;quot;name&amp;quot;: &amp;quot;HG Virtual Shop&amp;quot;,
-        &amp;quot;colleagues&amp;quot;: [
-          {
-            &amp;quot;userId&amp;quot;: 6,
-            &amp;quot;username&amp;quot;: &amp;quot;100000000123&amp;quot;,
-            &amp;quot;displayName&amp;quot;: &amp;quot;***&amp;quot;
-          },
-          {
-            &amp;quot;userId&amp;quot;: 7,
-            &amp;quot;username&amp;quot;: &amp;quot;100000000124&amp;quot;,
-            &amp;quot;displayName&amp;quot;: &amp;quot;***&amp;quot;
-          },
-          {
-            &amp;quot;userId&amp;quot;: 5,
-            &amp;quot;username&amp;quot;: &amp;quot;100000000126&amp;quot;,
-            &amp;quot;displayName&amp;quot;: &amp;quot;***&amp;quot;
-          }
-        ]
-      }
-    ],
-    &amp;quot;roles&amp;quot;: [
-      &amp;quot;salesman&amp;quot;
-    ],
-    &amp;quot;currentSpotId&amp;quot;: 24,
-    &amp;quot;currentChannelId&amp;quot;: 3
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
+    &amp;quot;result&amp;quot;: {
+        &amp;quot;userId&amp;quot;: 11,
+        &amp;quot;userName&amp;quot;: &amp;quot;HANGUANG-EE-C30R&amp;quot;,
+        &amp;quot;tenantId&amp;quot;: 5,
+        &amp;quot;tenantCode&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
+        &amp;quot;tenantName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
+        &amp;quot;spots&amp;quot;: [
+            {
+                &amp;quot;id&amp;quot;: 26,
+                &amp;quot;channelId&amp;quot;: 12,
+                &amp;quot;code&amp;quot;: &amp;quot;EE-C30R&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;EE 北京中友&amp;quot;,
+                &amp;quot;colleagues&amp;quot;: [
+                    {
+                        &amp;quot;userId&amp;quot;: 19,
+                        &amp;quot;username&amp;quot;: &amp;quot;7000056022&amp;quot;,
+                        &amp;quot;displayName&amp;quot;: &amp;quot;李桥秀&amp;quot;
+                    },
+                    {
+                        &amp;quot;userId&amp;quot;: 17,
+                        &amp;quot;username&amp;quot;: &amp;quot;7000041934&amp;quot;,
+                        &amp;quot;displayName&amp;quot;: &amp;quot;康小伐&amp;quot;
+                    },
+                    {
+                        &amp;quot;userId&amp;quot;: 12,
+                        &amp;quot;username&amp;quot;: &amp;quot;6000079545&amp;quot;,
+                        &amp;quot;displayName&amp;quot;: &amp;quot;武凯&amp;quot;
+                    }
+                ]
+            }
+        ],
+        &amp;quot;roles&amp;quot;: [
+            &amp;quot;salesman&amp;quot;
+        ],
+        &amp;quot;currentSpotId&amp;quot;: 26,
+        &amp;quot;currentChannelId&amp;quot;: 12
+    },
+    &amp;quot;success&amp;quot;: true,
+    &amp;quot;error&amp;quot;: {}
 }
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -536,52 +505,6 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
     &amp;quot;code&amp;quot;: 201,
     &amp;quot;message&amp;quot;: &amp;quot;Login Failed. Invalid token.&amp;quot;
   }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;create-token&#34;&gt;Create Token&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;/account/create-external-token&lt;/code&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;parameters-4&#34;&gt;Parameters&lt;/h4&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Desc&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;secret&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[KEY=VALUE]&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td&gt;JWT payload&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h4 id=&#34;example-4&#34;&gt;Example&lt;/h4&gt;
-
-&lt;p&gt;Request:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;pp://staging/account/create-external-token?secret=YOUR_SECRET&amp;amp;shopCode=C24A&amp;amp;userName=jackson&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Success:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;token&amp;quot;: &amp;quot;NEW_TOKEN&amp;quot;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -612,67 +535,45 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;token&amp;quot;: &amp;quot;YOUR_TOKEN&amp;quot;,
-    &amp;quot;userId&amp;quot;: 1000001,
-    &amp;quot;userName&amp;quot;: &amp;quot;saleswoman&amp;quot;,
-    &amp;quot;tenantId&amp;quot;: 10,
-    &amp;quot;tenantCode&amp;quot;: &amp;quot;LABS&amp;quot;,
-    &amp;quot;tenantName&amp;quot;: &amp;quot;LABS&amp;quot;,
-    &amp;quot;spots&amp;quot;: [
-      {
-        &amp;quot;id&amp;quot;: 2000001,
-        &amp;quot;tenantId&amp;quot;: 0,
-        &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
-        &amp;quot;contracts&amp;quot;: [
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
-            &amp;quot;ShopCode&amp;quot;: &amp;quot;&amp;quot;,
-            &amp;quot;IsChief&amp;quot;: false
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;Ted Baker&amp;quot;,
-            &amp;quot;ShopCode&amp;quot;: &amp;quot;&amp;quot;,
-            &amp;quot;IsChief&amp;quot;: false
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;Lilly Pulitzer&amp;quot;,
-            &amp;quot;ShopCode&amp;quot;: &amp;quot;&amp;quot;,
-            &amp;quot;IsChief&amp;quot;: false
-          }
-        ]
-      },
-      {
-        &amp;quot;id&amp;quot;: 2000002,
-        &amp;quot;tenantId&amp;quot;: 0,
-        &amp;quot;name&amp;quot;: &amp;quot;天山店&amp;quot;,
-        &amp;quot;contracts&amp;quot;: [
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-            &amp;quot;ShopCode&amp;quot;: &amp;quot;&amp;quot;,
-            &amp;quot;IsChief&amp;quot;: false
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;EK&amp;quot;,
-            &amp;quot;ShopCode&amp;quot;: &amp;quot;&amp;quot;,
-            &amp;quot;IsChief&amp;quot;: false
-          },
-          {
-            &amp;quot;BrandCode&amp;quot;: &amp;quot;EA&amp;quot;,
-            &amp;quot;ShopCode&amp;quot;: &amp;quot;&amp;quot;,
-            &amp;quot;IsChief&amp;quot;: false
-          }
-        ]
-      }
-    ],
-    &amp;quot;roles&amp;quot;: [
-      &amp;quot;salesman&amp;quot;,
-      &amp;quot;manager&amp;quot;
-    ],
-    &amp;quot;currentSpotId&amp;quot;: 2000001
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
+    &amp;quot;result&amp;quot;: {
+        &amp;quot;userId&amp;quot;: 11,
+        &amp;quot;userName&amp;quot;: &amp;quot;HANGUANG-EE-C30R&amp;quot;,
+        &amp;quot;tenantId&amp;quot;: 5,
+        &amp;quot;tenantCode&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
+        &amp;quot;tenantName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
+        &amp;quot;spots&amp;quot;: [
+            {
+                &amp;quot;id&amp;quot;: 26,
+                &amp;quot;channelId&amp;quot;: 12,
+                &amp;quot;code&amp;quot;: &amp;quot;EE-C30R&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;EE 北京中友&amp;quot;,
+                &amp;quot;colleagues&amp;quot;: [
+                    {
+                        &amp;quot;userId&amp;quot;: 19,
+                        &amp;quot;username&amp;quot;: &amp;quot;7000056022&amp;quot;,
+                        &amp;quot;displayName&amp;quot;: &amp;quot;李桥秀&amp;quot;
+                    },
+                    {
+                        &amp;quot;userId&amp;quot;: 17,
+                        &amp;quot;username&amp;quot;: &amp;quot;7000041934&amp;quot;,
+                        &amp;quot;displayName&amp;quot;: &amp;quot;康小伐&amp;quot;
+                    },
+                    {
+                        &amp;quot;userId&amp;quot;: 12,
+                        &amp;quot;username&amp;quot;: &amp;quot;6000079545&amp;quot;,
+                        &amp;quot;displayName&amp;quot;: &amp;quot;武凯&amp;quot;
+                    }
+                ]
+            }
+        ],
+        &amp;quot;roles&amp;quot;: [
+            &amp;quot;salesman&amp;quot;
+        ],
+        &amp;quot;currentSpotId&amp;quot;: 26,
+        &amp;quot;currentChannelId&amp;quot;: 12
+    },
+    &amp;quot;success&amp;quot;: true,
+    &amp;quot;error&amp;quot;: {}
 }
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -691,7 +592,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h2 id=&#34;get-system-information&#34;&gt;Get system information&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;/context/settings&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/context/system&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h4&gt;
 
@@ -706,22 +607,22 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;setting&amp;quot;: {
-      &amp;quot;system&amp;quot;: {
-        &amp;quot;allowOffline&amp;quot;: false,
-        &amp;quot;traceInterval&amp;quot;: 10
-      },
-      &amp;quot;price&amp;quot;: {
-        &amp;quot;roundDigit&amp;quot;: 2,
-        &amp;quot;roundStrategy&amp;quot;: &amp;quot;round&amp;quot;,
-        &amp;quot;currency&amp;quot;: &amp;quot;CYN&amp;quot;
-      }
+    &amp;quot;result&amp;quot;: {
+        &amp;quot;version&amp;quot;: &amp;quot;0.0.6&amp;quot;,
+        &amp;quot;setting&amp;quot;: {
+            &amp;quot;system&amp;quot;: {
+                &amp;quot;allowOffline&amp;quot;: false,
+                &amp;quot;traceInterval&amp;quot;: 10
+            },
+            &amp;quot;price&amp;quot;: {
+                &amp;quot;roundDigit&amp;quot;: 2,
+                &amp;quot;roundStrategy&amp;quot;: &amp;quot;round&amp;quot;,
+                &amp;quot;currency&amp;quot;: &amp;quot;CYN&amp;quot;
+            }
+        }        
     },
-    &amp;quot;version&amp;quot;: &amp;quot;0.0.3&amp;quot;
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
+    &amp;quot;success&amp;quot;: true,
+    &amp;quot;error&amp;quot;: {}
 }
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -809,7 +710,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp://staging/catalog/search-contents?q=42&amp;amp;skipCount=0&amp;amp;maxResultCount=10&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/catalog/search-contents?q=CD&amp;amp;skipCount=0&amp;amp;maxResultCount=10&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
@@ -817,30 +718,32 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
     &amp;quot;result&amp;quot;: {
         &amp;quot;items&amp;quot;: [
             {
-                &amp;quot;id&amp;quot;: 10,
-                &amp;quot;code&amp;quot;: &amp;quot;42AB600&amp;quot;,
-                &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Jeans Women&#39;s Garment Dyed Ankle Skinny Pant&amp;quot;,
-                &amp;quot;desc&amp;quot;: &amp;quot;&amp;lt;p&amp;gt;Mid-rise - sits below natural waist - skinny fit. Through hip and thigh - super skinny at ankle. Through waist, hip and thigh - skinny at ankle&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Five-pocket styling with signature omega stitch on back pocket.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Zip fly with button closure&amp;lt;/p&amp;gt;&amp;lt;&amp;quot;,
-                &amp;quot;listPrice&amp;quot;: 69.5,
-                &amp;quot;salePrice&amp;quot;: 50,
-                &amp;quot;offerName&amp;quot;: &amp;quot;Summer Promotion! ￥50&amp;quot;,
+                &amp;quot;id&amp;quot;: 23,
+                &amp;quot;code&amp;quot;: &amp;quot;CD7C1B4P&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Women&#39;s Scuba Crepe Starburst Sheath Dress&amp;quot;,
+                &amp;quot;desc&amp;quot;: &amp;quot;&amp;lt;p&amp;gt;Starburst detail&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Sheath dress&amp;lt;/p&amp;gt;&amp;quot;,
+                &amp;quot;listPrice&amp;quot;: 89.98,
                 &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
                 &amp;quot;offers&amp;quot;: [
                     {
-                        &amp;quot;id&amp;quot;: 8,
-                        &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Hot Sale&amp;quot;,
-                        &amp;quot;salePrice&amp;quot;: 50,
-                        &amp;quot;channelName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
-                        &amp;quot;startAt&amp;quot;: &amp;quot;2017-01-01T00:00:00Z&amp;quot;,
-                        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-31T00:00:00Z&amp;quot;
+                        &amp;quot;id&amp;quot;: 1928,
+                        &amp;quot;code&amp;quot;: &amp;quot;C194017&amp;quot;,
+                        &amp;quot;name&amp;quot;: &amp;quot;VIP Sale&amp;quot;,
+                        &amp;quot;salePrice&amp;quot;: 71.18,
+                        &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-08T12:46:00Z&amp;quot;,
+                        &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-09T12:46:00Z&amp;quot;,
+                        &amp;quot;requirement&amp;quot;: {
+                            &amp;quot;customerGroup&amp;quot;: &amp;quot;VIP&amp;quot;
+                        }
                     },
                     {
-                        &amp;quot;id&amp;quot;: 9,
-                        &amp;quot;name&amp;quot;: &amp;quot;All Brand 10% Discount&amp;quot;,
-                        &amp;quot;salePrice&amp;quot;: 62.55,
-                        &amp;quot;channelName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
-                        &amp;quot;startAt&amp;quot;: &amp;quot;2017-01-01T00:00:00Z&amp;quot;,
-                        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-31T00:00:00Z&amp;quot;
+                        &amp;quot;id&amp;quot;: 1925,
+                        &amp;quot;code&amp;quot;: &amp;quot;S194014&amp;quot;,
+                        &amp;quot;name&amp;quot;: &amp;quot;Hot Sale&amp;quot;,
+                        &amp;quot;salePrice&amp;quot;: 89.98,
+                        &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-08T12:46:00Z&amp;quot;,
+                        &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-09T12:46:00Z&amp;quot;,
+                        &amp;quot;requirement&amp;quot;: null
                     }
                 ],
                 &amp;quot;options&amp;quot;: {
@@ -850,7 +753,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
                         &amp;quot;Rose Dust&amp;quot;,
                         &amp;quot;Vanilla Ice&amp;quot;
                     ],
-                    &amp;quot;Size&amp;quot;: [&amp;quot;26&amp;quot;, &amp;quot;27&amp;quot;, &amp;quot;28&amp;quot;, &amp;quot;29&amp;quot;, &amp;quot;30&amp;quot;, &amp;quot;31&amp;quot;, &amp;quot;32&amp;quot;, &amp;quot;33&amp;quot;]
+                    &amp;quot;Size&amp;quot;: [&amp;quot;26&amp;quot;,&amp;quot;27&amp;quot;,&amp;quot;28&amp;quot;,&amp;quot;29&amp;quot;,&amp;quot;30&amp;quot;,&amp;quot;31&amp;quot;,&amp;quot;32&amp;quot;,&amp;quot;33&amp;quot;]
                 },
                 &amp;quot;attributes&amp;quot;: [
                     {
@@ -868,33 +771,28 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
                 ],
                 &amp;quot;images&amp;quot;: {
                     &amp;quot;large&amp;quot;: {
-                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&amp;quot;,
                         &amp;quot;width&amp;quot;: 385,
                         &amp;quot;height&amp;quot;: 500
                     },
                     &amp;quot;medium&amp;quot;: {
-                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&amp;quot;,
                         &amp;quot;width&amp;quot;: 123,
                         &amp;quot;height&amp;quot;: 160
                     },
                     &amp;quot;small&amp;quot;: {
-                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&amp;quot;,
                         &amp;quot;width&amp;quot;: 58,
                         &amp;quot;height&amp;quot;: 75
                     }
-                },
-                &amp;quot;skus&amp;quot;: null,
-                &amp;quot;channelInfos&amp;quot;: null,
-                &amp;quot;tags&amp;quot;: null
+                }
             },
             {
-                &amp;quot;id&amp;quot;: 13,
-                &amp;quot;code&amp;quot;: &amp;quot;42AB616&amp;quot;,
-                &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Jeans Women&#39;s Utility Short&amp;quot;,
-                &amp;quot;desc&amp;quot;: &amp;quot;&amp;lt;p&amp;gt;These utility shorts are comfortable and stylish. They pair well with a Calvin Klein tee for a modern look&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Inseam: 3.5 inch&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Features large front and back utility pockets which give this short a fashionable look&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Button fly with zip clo&amp;quot;,
-                &amp;quot;listPrice&amp;quot;: 49.5,
-                &amp;quot;salePrice&amp;quot;: 49.5,
-                &amp;quot;offerName&amp;quot;: &amp;quot;&amp;quot;,
+                &amp;quot;id&amp;quot;: 21,
+                &amp;quot;code&amp;quot;: &amp;quot;CD7C1B4P&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Women&#39;s Scuba Crepe Starburst Sheath Dress&amp;quot;,
+                &amp;quot;desc&amp;quot;: &amp;quot;&amp;lt;p&amp;gt;Starburst detail&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Sheath dress&amp;lt;/p&amp;gt;&amp;quot;,
+                &amp;quot;listPrice&amp;quot;: 89.98,
                 &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
                 &amp;quot;options&amp;quot;: {
                     &amp;quot;Color&amp;quot;: [
@@ -904,8 +802,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
                         &amp;quot;Poise&amp;quot;,
                         &amp;quot;Snow White&amp;quot;
                     ],
-                    &amp;quot;Size&amp;quot;: [&amp;quot;25&amp;quot;, &amp;quot;26&amp;quot;, &amp;quot;27&amp;quot;, &amp;quot;28&amp;quot;, &amp;quot;29&amp;quot;, &amp;quot;30&amp;quot;, &amp;quot;31&amp;quot;, &amp;quot;32&amp;quot;, &amp;quot;33&amp;quot;]
-                    ]
+                    &amp;quot;Size&amp;quot;: [&amp;quot;25&amp;quot;,&amp;quot;26&amp;quot;,&amp;quot;27&amp;quot;,&amp;quot;28&amp;quot;,&amp;quot;29&amp;quot;,&amp;quot;30&amp;quot;,&amp;quot;31&amp;quot;,&amp;quot;32&amp;quot;,&amp;quot;33&amp;quot;]
                 },
                 &amp;quot;attributes&amp;quot;: [
                     {
@@ -923,24 +820,21 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
                 ],
                 &amp;quot;images&amp;quot;: {
                     &amp;quot;large&amp;quot;: {
-                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/41oEs6gO5BL.jpg&amp;quot;,
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&amp;quot;,
                         &amp;quot;width&amp;quot;: 385,
                         &amp;quot;height&amp;quot;: 500
                     },
                     &amp;quot;medium&amp;quot;: {
-                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/41oEs6gO5BL._SL160_.jpg&amp;quot;,
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&amp;quot;,
                         &amp;quot;width&amp;quot;: 123,
                         &amp;quot;height&amp;quot;: 160
                     },
                     &amp;quot;small&amp;quot;: {
-                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/41oEs6gO5BL._SL75_.jpg&amp;quot;,
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&amp;quot;,
                         &amp;quot;width&amp;quot;: 58,
                         &amp;quot;height&amp;quot;: 75
                     }
-                },
-                &amp;quot;skus&amp;quot;: null,
-                &amp;quot;channelInfos&amp;quot;: null,
-                &amp;quot;tags&amp;quot;: null
+                }
             }
         ],
         &amp;quot;totalCount&amp;quot;: 2
@@ -978,133 +872,191 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp://staging/catalog/get-content?id=10&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/catalog/get-content?id=23&lt;/code&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;id&amp;quot;: 10,
-    &amp;quot;code&amp;quot;: &amp;quot;42AB600&amp;quot;,
-    &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Jeans Women&#39;s Garment Dyed Ankle Skinny Pant&amp;quot;,
-    &amp;quot;desc&amp;quot;: &amp;quot;&amp;lt;p&amp;gt;Mid-rise - sits below natural waist - skinny fit. Through hip and thigh - super skinny at ankle. Through waist, hip and thigh - skinny at ankle&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Five-pocket styling with signature omega stitch on back pocket.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Zip fly with button closure&amp;lt;/p&amp;gt;&amp;lt;&amp;quot;,
-    &amp;quot;listPrice&amp;quot;: 69.5,
-    &amp;quot;salePrice&amp;quot;: 50,
-    &amp;quot;offerName&amp;quot;: &amp;quot;Summer Promotion! ￥50&amp;quot;,
-    &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
-    &amp;quot;offers&amp;quot;: [
-        {
-            &amp;quot;id&amp;quot;: 8,
-            &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Hot Sale&amp;quot;,
-            &amp;quot;salePrice&amp;quot;: 50,
-            &amp;quot;channelName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
-            &amp;quot;startAt&amp;quot;: &amp;quot;2017-01-01T00:00:00Z&amp;quot;,
-            &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-31T00:00:00Z&amp;quot;
-        },
-        {
-            &amp;quot;id&amp;quot;: 9,
-            &amp;quot;name&amp;quot;: &amp;quot;All Brand 10% Discount&amp;quot;,
-            &amp;quot;salePrice&amp;quot;: 62.55,
-            &amp;quot;channelName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
-            &amp;quot;startAt&amp;quot;: &amp;quot;2017-01-01T00:00:00Z&amp;quot;,
-            &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-31T00:00:00Z&amp;quot;
-        }
-    ],
-    &amp;quot;options&amp;quot;: {
-      &amp;quot;Color&amp;quot;: [
-        &amp;quot;Ivy Mist&amp;quot;,
-        &amp;quot;Monument&amp;quot;,
-        &amp;quot;Rose Dust&amp;quot;,
-        &amp;quot;Vanilla Ice&amp;quot;
-      ],
-      &amp;quot;Size&amp;quot;: [&amp;quot;26&amp;quot;, &amp;quot;27&amp;quot;, &amp;quot;28&amp;quot;, &amp;quot;29&amp;quot;, &amp;quot;30&amp;quot;, &amp;quot;31&amp;quot;, &amp;quot;32&amp;quot;, &amp;quot;33&amp;quot;]
-    },
-    &amp;quot;attributes&amp;quot;: [
-      {
-        &amp;quot;k&amp;quot;: &amp;quot;ProductGroup&amp;quot;,
-        &amp;quot;v&amp;quot;: &amp;quot;Apparel&amp;quot;
-      },
-      {
-        &amp;quot;k&amp;quot;: &amp;quot;ProductType&amp;quot;,
-        &amp;quot;v&amp;quot;: &amp;quot;PANTS&amp;quot;
-      },
-      {
-        &amp;quot;k&amp;quot;: &amp;quot;Department&amp;quot;,
-        &amp;quot;v&amp;quot;: &amp;quot;womens&amp;quot;
-      }
-    ],
-    &amp;quot;images&amp;quot;: {
-      &amp;quot;large&amp;quot;: {
-        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-        &amp;quot;width&amp;quot;: 385,
-        &amp;quot;height&amp;quot;: 500
-      },
-      &amp;quot;medium&amp;quot;: {
-        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-        &amp;quot;width&amp;quot;: 123,
-        &amp;quot;height&amp;quot;: 160
-      },
-      &amp;quot;small&amp;quot;: {
-        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-        &amp;quot;width&amp;quot;: 58,
-        &amp;quot;height&amp;quot;: 75
-      }
-    },
-    &amp;quot;skus&amp;quot;: [
-      {
-        &amp;quot;id&amp;quot;: 168,
-        &amp;quot;contentId&amp;quot;: 10,
-        &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Jeans Women&#39;s Gmt Dyed Ankle Skinny Pant, Ivy Mist, 26&amp;quot;,
-        &amp;quot;code&amp;quot;: &amp;quot;42AB600-0&amp;quot;,
-        &amp;quot;listPrice&amp;quot;: 69.5,
-        &amp;quot;salePrice&amp;quot;: 69.5,
-        &amp;quot;images&amp;quot;: {
-          &amp;quot;large&amp;quot;: {
-            &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-            &amp;quot;width&amp;quot;: 385,
-            &amp;quot;height&amp;quot;: 500
-          },
-          &amp;quot;medium&amp;quot;: {
-            &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-            &amp;quot;width&amp;quot;: 123,
-            &amp;quot;height&amp;quot;: 160
-          },
-          &amp;quot;small&amp;quot;: {
-            &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-            &amp;quot;width&amp;quot;: 58,
-            &amp;quot;height&amp;quot;: 75
-          }
-        },
-        &amp;quot;options&amp;quot;: [
-          {
-            &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-            &amp;quot;v&amp;quot;: &amp;quot;26&amp;quot;
-          },
-          {
-            &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-            &amp;quot;v&amp;quot;: &amp;quot;Ivy Mist&amp;quot;
-          }
+    &amp;quot;result&amp;quot;: {
+        &amp;quot;id&amp;quot;: 23,
+        &amp;quot;code&amp;quot;: &amp;quot;CD7C1B4P&amp;quot;,
+        &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Women&#39;s Scuba Crepe Starburst Sheath Dress&amp;quot;,
+        &amp;quot;desc&amp;quot;: &amp;quot;&amp;lt;p&amp;gt;Starburst detail&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Sheath dress&amp;lt;/p&amp;gt;&amp;quot;,
+        &amp;quot;listPrice&amp;quot;: 89.98,
+        &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
+        &amp;quot;offers&amp;quot;: [
+            {
+                &amp;quot;id&amp;quot;: 1928,
+                &amp;quot;code&amp;quot;: &amp;quot;C194017&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;VIP Sale&amp;quot;,
+                &amp;quot;salePrice&amp;quot;: 71.18,
+                &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-08T12:46:00Z&amp;quot;,
+                &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-09T12:46:00Z&amp;quot;,
+                &amp;quot;requirement&amp;quot;: {
+                    &amp;quot;customerGroup&amp;quot;: &amp;quot;VIP&amp;quot;
+                }
+            },
+            {
+                &amp;quot;id&amp;quot;: 1925,
+                &amp;quot;code&amp;quot;: &amp;quot;S194014&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;Hot Sale&amp;quot;,
+                &amp;quot;salePrice&amp;quot;: 89.98,
+                &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-08T12:46:00Z&amp;quot;,
+                &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-09T12:46:00Z&amp;quot;,
+                &amp;quot;requirement&amp;quot;: null
+            }
         ],
-        &amp;quot;uids&amp;quot;: [
-          {
-            &amp;quot;id&amp;quot;: 107,
-            &amp;quot;skuId&amp;quot;: 168,
-            &amp;quot;idType&amp;quot;: &amp;quot;EAN&amp;quot;,
-            &amp;quot;uid&amp;quot;: &amp;quot;0637865273456&amp;quot;
-          },
-          {
-            &amp;quot;id&amp;quot;: 108,
-            &amp;quot;skuId&amp;quot;: 168,
-            &amp;quot;idType&amp;quot;: &amp;quot;UPC&amp;quot;,
-            &amp;quot;uid&amp;quot;: &amp;quot;637865273456&amp;quot;
-          }
+        &amp;quot;options&amp;quot;: {
+            &amp;quot;Color&amp;quot;: [
+                &amp;quot;Ivy Mist&amp;quot;,
+                &amp;quot;Monument&amp;quot;,
+                &amp;quot;Rose Dust&amp;quot;,
+                &amp;quot;Vanilla Ice&amp;quot;
+            ],
+            &amp;quot;Size&amp;quot;: [&amp;quot;26&amp;quot;, &amp;quot;27&amp;quot;, &amp;quot;28&amp;quot;, &amp;quot;29&amp;quot;, &amp;quot;30&amp;quot;, &amp;quot;31&amp;quot;, &amp;quot;32&amp;quot;, &amp;quot;33&amp;quot;]
+        },
+        &amp;quot;attributes&amp;quot;: [
+            {
+                &amp;quot;k&amp;quot;: &amp;quot;ProductGroup&amp;quot;,
+                &amp;quot;v&amp;quot;: &amp;quot;Apparel&amp;quot;
+            },
+            {
+                &amp;quot;k&amp;quot;: &amp;quot;ProductType&amp;quot;,
+                &amp;quot;v&amp;quot;: &amp;quot;PANTS&amp;quot;
+            },
+            {
+                &amp;quot;k&amp;quot;: &amp;quot;Department&amp;quot;,
+                &amp;quot;v&amp;quot;: &amp;quot;womens&amp;quot;
+            }
+        ],
+        &amp;quot;images&amp;quot;: {
+            &amp;quot;large&amp;quot;: {
+                &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&amp;quot;,
+                &amp;quot;width&amp;quot;: 385,
+                &amp;quot;height&amp;quot;: 500
+            },
+            &amp;quot;medium&amp;quot;: {
+                &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&amp;quot;,
+                &amp;quot;width&amp;quot;: 123,
+                &amp;quot;height&amp;quot;: 160
+            },
+            &amp;quot;small&amp;quot;: {
+                &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&amp;quot;,
+                &amp;quot;width&amp;quot;: 58,
+                &amp;quot;height&amp;quot;: 75
+            }
+        },
+        &amp;quot;skus&amp;quot;: [
+            {
+                &amp;quot;id&amp;quot;: 502,
+                &amp;quot;contentId&amp;quot;: 23,
+                &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Women&#39;s Scuba Crepe Starburst Sheath Dress, Blossom, 2&amp;quot;,
+                &amp;quot;code&amp;quot;: &amp;quot;CD7C1B4P-0&amp;quot;,
+                &amp;quot;images&amp;quot;: {
+                    &amp;quot;large&amp;quot;: {
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&amp;quot;,
+                        &amp;quot;width&amp;quot;: 385,
+                        &amp;quot;height&amp;quot;: 500
+                    },
+                    &amp;quot;medium&amp;quot;: {
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&amp;quot;,
+                        &amp;quot;width&amp;quot;: 123,
+                        &amp;quot;height&amp;quot;: 160
+                    },
+                    &amp;quot;small&amp;quot;: {
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&amp;quot;,
+                        &amp;quot;width&amp;quot;: 58,
+                        &amp;quot;height&amp;quot;: 75
+                    }
+                },
+                &amp;quot;options&amp;quot;: [
+                    {
+                        &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
+                        &amp;quot;v&amp;quot;: &amp;quot;2&amp;quot;
+                    },
+                    {
+                        &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
+                        &amp;quot;v&amp;quot;: &amp;quot;Blossom&amp;quot;
+                    }
+                ],
+                &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
+                &amp;quot;contentCode&amp;quot;: &amp;quot;CD7C1B4P&amp;quot;,
+                &amp;quot;listPrice&amp;quot;: 89.98
+            },
+            {
+                &amp;quot;id&amp;quot;: 503,
+                &amp;quot;contentId&amp;quot;: 23,
+                &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Women&#39;s Scuba Crepe Starburst Sheath Dress, Cerulean, 2&amp;quot;,
+                &amp;quot;code&amp;quot;: &amp;quot;CD7C1B4P-1&amp;quot;,
+                &amp;quot;images&amp;quot;: {
+                    &amp;quot;large&amp;quot;: {
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&amp;quot;,
+                        &amp;quot;width&amp;quot;: 385,
+                        &amp;quot;height&amp;quot;: 500
+                    },
+                    &amp;quot;medium&amp;quot;: {
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&amp;quot;,
+                        &amp;quot;width&amp;quot;: 123,
+                        &amp;quot;height&amp;quot;: 160
+                    },
+                    &amp;quot;small&amp;quot;: {
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&amp;quot;,
+                        &amp;quot;width&amp;quot;: 58,
+                        &amp;quot;height&amp;quot;: 75
+                    }
+                },
+                &amp;quot;options&amp;quot;: [
+                    {
+                        &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
+                        &amp;quot;v&amp;quot;: &amp;quot;2&amp;quot;
+                    },
+                    {
+                        &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
+                        &amp;quot;v&amp;quot;: &amp;quot;Cerulean&amp;quot;
+                    }
+                ],
+                &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
+                &amp;quot;contentCode&amp;quot;: &amp;quot;CD7C1B4P&amp;quot;,
+                &amp;quot;listPrice&amp;quot;: 89.98
+            },
+            {
+                &amp;quot;id&amp;quot;: 504,
+                &amp;quot;contentId&amp;quot;: 23,
+                &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Women&#39;s Scuba Crepe Starburst Sheath Dress, Popcorn, 2&amp;quot;,
+                &amp;quot;code&amp;quot;: &amp;quot;CD7C1B4P-2&amp;quot;,
+                &amp;quot;images&amp;quot;: {
+                    &amp;quot;large&amp;quot;: {
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&amp;quot;,
+                        &amp;quot;width&amp;quot;: 385,
+                        &amp;quot;height&amp;quot;: 500
+                    },
+                    &amp;quot;medium&amp;quot;: {
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&amp;quot;,
+                        &amp;quot;width&amp;quot;: 123,
+                        &amp;quot;height&amp;quot;: 160
+                    },
+                    &amp;quot;small&amp;quot;: {
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&amp;quot;,
+                        &amp;quot;width&amp;quot;: 58,
+                        &amp;quot;height&amp;quot;: 75
+                    }
+                },
+                &amp;quot;options&amp;quot;: [
+                    {
+                        &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
+                        &amp;quot;v&amp;quot;: &amp;quot;2&amp;quot;
+                    },
+                    {
+                        &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
+                        &amp;quot;v&amp;quot;: &amp;quot;Popcorn&amp;quot;
+                    }
+                ],
+                &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
+                &amp;quot;contentCode&amp;quot;: &amp;quot;CD7C1B4P&amp;quot;,
+                &amp;quot;listPrice&amp;quot;: 89.98
+            }
         ]
-      },
-      /* ... sku ... */      
-    ],
-    &amp;quot;channelInfos&amp;quot;: null,
-    &amp;quot;tags&amp;quot;: null
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
+    },
+    &amp;quot;success&amp;quot;: true,
+    &amp;quot;error&amp;quot;: {}
 }
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -1148,7 +1100,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp://staging/catalog/search-skus?q=42&amp;amp;skipCount=0&amp;amp;maxResultCount=10&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/catalog/search-skus?q=CD&amp;amp;skipCount=0&amp;amp;maxResultCount=10&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
@@ -1156,46 +1108,48 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
     &amp;quot;result&amp;quot;: {
         &amp;quot;items&amp;quot;: [
             {
-                &amp;quot;id&amp;quot;: 168,
-                &amp;quot;contentId&amp;quot;: 10,
-                &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Jeans Women&#39;s Gmt Dyed Ankle Skinny Pant, Ivy Mist, 26&amp;quot;,
-                &amp;quot;code&amp;quot;: &amp;quot;42AB600-0&amp;quot;,
-                &amp;quot;listPrice&amp;quot;: 69.5,
-                &amp;quot;salePrice&amp;quot;: 50,
-                &amp;quot;offerName&amp;quot;: &amp;quot;Summer Promotion! ￥50&amp;quot;,
+                &amp;quot;id&amp;quot;: 502,
+                &amp;quot;contentId&amp;quot;: 23,
+                &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Women&#39;s Scuba Crepe Starburst Sheath Dress, Blossom, 2&amp;quot;,
+                &amp;quot;code&amp;quot;: &amp;quot;CD7C1B4P-0&amp;quot;,
                 &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
-                &amp;quot;contentCode&amp;quot;: &amp;quot;42AB600&amp;quot;,
+                &amp;quot;contentCode&amp;quot;: &amp;quot;CD7C1B4P&amp;quot;,
+                &amp;quot;listPrice&amp;quot;: 89.98,
                 &amp;quot;offers&amp;quot;: [
                     {
-                        &amp;quot;id&amp;quot;: 8,
-                        &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Hot Sale&amp;quot;,
-                        &amp;quot;salePrice&amp;quot;: 50,
-                        &amp;quot;channelName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
-                        &amp;quot;startAt&amp;quot;: &amp;quot;2017-01-01T00:00:00Z&amp;quot;,
-                        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-31T00:00:00Z&amp;quot;
+                        &amp;quot;id&amp;quot;: 1928,
+                        &amp;quot;code&amp;quot;: &amp;quot;C194017&amp;quot;,
+                        &amp;quot;name&amp;quot;: &amp;quot;VIP Sale&amp;quot;,
+                        &amp;quot;salePrice&amp;quot;: 71.18,
+                        &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-08T12:46:00Z&amp;quot;,
+                        &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-09T12:46:00Z&amp;quot;,
+                        &amp;quot;requirement&amp;quot;: {
+                            &amp;quot;customerGroup&amp;quot;: &amp;quot;VIP&amp;quot;
+                        }
                     },
                     {
-                        &amp;quot;id&amp;quot;: 9,
-                        &amp;quot;name&amp;quot;: &amp;quot;All Brand 10% Discount&amp;quot;,
-                        &amp;quot;salePrice&amp;quot;: 62.55,
-                        &amp;quot;channelName&amp;quot;: &amp;quot;HANGUANG&amp;quot;,
-                        &amp;quot;startAt&amp;quot;: &amp;quot;2017-01-01T00:00:00Z&amp;quot;,
-                        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-31T00:00:00Z&amp;quot;
+                        &amp;quot;id&amp;quot;: 1925,
+                        &amp;quot;code&amp;quot;: &amp;quot;S194014&amp;quot;,
+                        &amp;quot;name&amp;quot;: &amp;quot;Hot Sale&amp;quot;,
+                        &amp;quot;salePrice&amp;quot;: 89.98,
+                        &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-08T12:46:00Z&amp;quot;,
+                        &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-09T12:46:00Z&amp;quot;,
+                        &amp;quot;requirement&amp;quot;: null
                     }
                 ],
                 &amp;quot;images&amp;quot;: {
                     &amp;quot;large&amp;quot;: {
-                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&amp;quot;,
                         &amp;quot;width&amp;quot;: 385,
                         &amp;quot;height&amp;quot;: 500
                     },
                     &amp;quot;medium&amp;quot;: {
-                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&amp;quot;,
                         &amp;quot;width&amp;quot;: 123,
                         &amp;quot;height&amp;quot;: 160
                     },
                     &amp;quot;small&amp;quot;: {
-                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&amp;quot;,
                         &amp;quot;width&amp;quot;: 58,
                         &amp;quot;height&amp;quot;: 75
                     }
@@ -1203,37 +1157,57 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
                 &amp;quot;options&amp;quot;: [
                     {
                         &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-                        &amp;quot;v&amp;quot;: &amp;quot;26&amp;quot;
+                        &amp;quot;v&amp;quot;: &amp;quot;2&amp;quot;
                     },
                     {
                         &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-                        &amp;quot;v&amp;quot;: &amp;quot;Ivy Mist&amp;quot;
+                        &amp;quot;v&amp;quot;: &amp;quot;Blossom&amp;quot;
                     }
                 ]
             },
             {
-                &amp;quot;id&amp;quot;: 169,
-                &amp;quot;contentId&amp;quot;: 10,
-                &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Jeans Women&#39;s Gmt Dyed Ankle Skinny Pant, Monument, 26&amp;quot;,
-                &amp;quot;code&amp;quot;: &amp;quot;42AB600-1&amp;quot;,
-                &amp;quot;listPrice&amp;quot;: 69.5,
-                &amp;quot;salePrice&amp;quot;: 50,
-                &amp;quot;offerName&amp;quot;: &amp;quot;Summer Promotion! ￥50&amp;quot;,
+                &amp;quot;id&amp;quot;: 503,
+                &amp;quot;contentId&amp;quot;: 23,
+                &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Women&#39;s Scuba Crepe Starburst Sheath Dress, Cerulean, 2&amp;quot;,
+                &amp;quot;code&amp;quot;: &amp;quot;CD7C1B4P-1&amp;quot;,
                 &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
-                &amp;quot;contentCode&amp;quot;: &amp;quot;42AB600&amp;quot;,
+                &amp;quot;contentCode&amp;quot;: &amp;quot;CD7C1B4P&amp;quot;,
+                &amp;quot;listPrice&amp;quot;: 89.98,
+                &amp;quot;offers&amp;quot;: [
+                    {
+                        &amp;quot;id&amp;quot;: 1928,
+                        &amp;quot;code&amp;quot;: &amp;quot;C194017&amp;quot;,
+                        &amp;quot;name&amp;quot;: &amp;quot;VIP Sale&amp;quot;,
+                        &amp;quot;salePrice&amp;quot;: 71.18,
+                        &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-08T12:46:00Z&amp;quot;,
+                        &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-09T12:46:00Z&amp;quot;,
+                        &amp;quot;requirement&amp;quot;: {
+                            &amp;quot;customerGroup&amp;quot;: &amp;quot;VIP&amp;quot;
+                        }
+                    },
+                    {
+                        &amp;quot;id&amp;quot;: 1925,
+                        &amp;quot;code&amp;quot;: &amp;quot;S194014&amp;quot;,
+                        &amp;quot;name&amp;quot;: &amp;quot;Hot Sale&amp;quot;,
+                        &amp;quot;salePrice&amp;quot;: 89.98,
+                        &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-08T12:46:00Z&amp;quot;,
+                        &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-09T12:46:00Z&amp;quot;,
+                        &amp;quot;requirement&amp;quot;: null
+                    }
+                ],
                 &amp;quot;images&amp;quot;: {
                     &amp;quot;large&amp;quot;: {
-                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&amp;quot;,
                         &amp;quot;width&amp;quot;: 385,
                         &amp;quot;height&amp;quot;: 500
                     },
                     &amp;quot;medium&amp;quot;: {
-                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&amp;quot;,
                         &amp;quot;width&amp;quot;: 123,
                         &amp;quot;height&amp;quot;: 160
                     },
                     &amp;quot;small&amp;quot;: {
-                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
+                        &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&amp;quot;,
                         &amp;quot;width&amp;quot;: 58,
                         &amp;quot;height&amp;quot;: 75
                     }
@@ -1241,25 +1215,26 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
                 &amp;quot;options&amp;quot;: [
                     {
                         &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-                        &amp;quot;v&amp;quot;: &amp;quot;26&amp;quot;
+                        &amp;quot;v&amp;quot;: &amp;quot;2&amp;quot;
                     },
                     {
                         &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-                        &amp;quot;v&amp;quot;: &amp;quot;Monument&amp;quot;
+                        &amp;quot;v&amp;quot;: &amp;quot;Cerulean&amp;quot;
                     }
                 ]
             }
+            /* ... */
         ],
-        &amp;quot;totalCount&amp;quot;: 76
+        &amp;quot;totalCount&amp;quot;: 87
     },
     &amp;quot;success&amp;quot;: true,
     &amp;quot;error&amp;quot;: {}
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;deprecated-search-products&#34;&gt;[Deprecated]&lt;del&gt;Search products&lt;/del&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;get-sku&#34;&gt;Get sku&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;/catalog/search-products&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/catalog/get-sku&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;parameters-4&#34;&gt;Parameters&lt;/h4&gt;
 
@@ -1269,26 +1244,23 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;th&gt;Name&lt;/th&gt;
 &lt;th&gt;Required&lt;/th&gt;
 &lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Desc&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;q&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;id&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;uid&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
 &lt;td&gt;string&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;skipCount&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;maxResultCount&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;barcode number&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1297,48 +1269,75 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp://staging/catalog/search-products?q=EK&amp;amp;skipCount=0&amp;amp;maxResultCount=10&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/catalog/get-sku?id=502&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp://staging/catalog/get-sku?uid=0888380454565&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;items&amp;quot;: [
-      {
-        &amp;quot;uid&amp;quot;: &amp;quot;305228&amp;quot;,
-        &amp;quot;name&amp;quot;: &amp;quot;EKJP6CV102, (59)Navy, (135)135&amp;quot;,
-        &amp;quot;listPrice&amp;quot;: 450,
-        &amp;quot;salePrice&amp;quot;: 450,
-        &amp;quot;skuCode&amp;quot;: &amp;quot;EKJP6CV10259135&amp;quot;,
-        &amp;quot;contentCode&amp;quot;: &amp;quot;EKJP6CV102&amp;quot;,
-        &amp;quot;brandCode&amp;quot;: &amp;quot;EK&amp;quot;
-      },
-      /* ... */
-      {
-        &amp;quot;uid&amp;quot;: &amp;quot;305279&amp;quot;,
-        &amp;quot;name&amp;quot;: &amp;quot;EKAP7S111K, (25)Pink, (200)200&amp;quot;,
-        &amp;quot;listPrice&amp;quot;: 398,
-        &amp;quot;salePrice&amp;quot;: 398,
-        &amp;quot;skuCode&amp;quot;: &amp;quot;EKAP7S111K25200&amp;quot;,
-        &amp;quot;contentCode&amp;quot;: &amp;quot;EKAP7S111K&amp;quot;,
-        &amp;quot;brandCode&amp;quot;: &amp;quot;EK&amp;quot;
-      }
-    ],
-    &amp;quot;totalCount&amp;quot;: 11939
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Fail:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;success&amp;quot;: false,
-  &amp;quot;error&amp;quot;: {
-    &amp;quot;code&amp;quot;: 300,
-    &amp;quot;message&amp;quot;: &amp;quot;Cannot search products.&amp;quot;
-  }
+    &amp;quot;result&amp;quot;: {
+        &amp;quot;id&amp;quot;: 502,
+        &amp;quot;contentId&amp;quot;: 23,
+        &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Women&#39;s Scuba Crepe Starburst Sheath Dress, Blossom, 2&amp;quot;,
+        &amp;quot;code&amp;quot;: &amp;quot;CD7C1B4P-0&amp;quot;,
+        &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
+        &amp;quot;contentCode&amp;quot;: &amp;quot;CD7C1B4P&amp;quot;,
+        &amp;quot;listPrice&amp;quot;: 89.98,
+        &amp;quot;offers&amp;quot;: [
+            {
+                &amp;quot;id&amp;quot;: 1928,
+                &amp;quot;code&amp;quot;: &amp;quot;C194017&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;VIP Sale&amp;quot;,
+                &amp;quot;salePrice&amp;quot;: 71.18,
+                &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-08T12:46:00Z&amp;quot;,
+                &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-09T12:46:00Z&amp;quot;,
+                &amp;quot;requirement&amp;quot;: {
+                    &amp;quot;customerGroup&amp;quot;: &amp;quot;VIP&amp;quot;
+                }
+            },
+            {
+                &amp;quot;id&amp;quot;: 1925,
+                &amp;quot;code&amp;quot;: &amp;quot;S194014&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;Hot Sale&amp;quot;,
+                &amp;quot;salePrice&amp;quot;: 89.98,
+                &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-08T12:46:00Z&amp;quot;,
+                &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-09T12:46:00Z&amp;quot;,
+                &amp;quot;requirement&amp;quot;: null
+            }
+        ],
+        &amp;quot;images&amp;quot;: {
+            &amp;quot;large&amp;quot;: {
+                &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL.jpg&amp;quot;,
+                &amp;quot;width&amp;quot;: 385,
+                &amp;quot;height&amp;quot;: 500
+            },
+            &amp;quot;medium&amp;quot;: {
+                &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL160_.jpg&amp;quot;,
+                &amp;quot;width&amp;quot;: 123,
+                &amp;quot;height&amp;quot;: 160
+            },
+            &amp;quot;small&amp;quot;: {
+                &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/31ks25FUmyL._SL75_.jpg&amp;quot;,
+                &amp;quot;width&amp;quot;: 58,
+                &amp;quot;height&amp;quot;: 75
+            }
+        },
+        &amp;quot;options&amp;quot;: [
+            {
+                &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
+                &amp;quot;v&amp;quot;: &amp;quot;2&amp;quot;
+            },
+            {
+                &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
+                &amp;quot;v&amp;quot;: &amp;quot;Blossom&amp;quot;
+            }
+        ]
+    },
+    &amp;quot;success&amp;quot;: true,
+    &amp;quot;error&amp;quot;: {}
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -1352,6 +1351,239 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
       <guid>http://pangpanglabs.github.io/api/cart/</guid>
       <description>
 
+&lt;h2 id=&#34;cart-result-example&#34;&gt;Cart result example&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;result&amp;quot;: {
+        &amp;quot;id&amp;quot;: 3520,
+        &amp;quot;tenantId&amp;quot;: 4,
+        &amp;quot;listPrice&amp;quot;: 3588,
+        &amp;quot;salePrice&amp;quot;: 2511.6,
+        &amp;quot;quantity&amp;quot;: 4,
+        &amp;quot;discount&amp;quot;: 1076.4,
+        &amp;quot;remainAmount&amp;quot;: 1033.6,
+        &amp;quot;customerInfo&amp;quot;: {
+            &amp;quot;id&amp;quot;: 1065586,
+            &amp;quot;no&amp;quot;: &amp;quot;0000053147&amp;quot;,
+            &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
+            &amp;quot;mobile&amp;quot;: &amp;quot;13818448893&amp;quot;,
+            &amp;quot;grade&amp;quot;: 3,
+            &amp;quot;cardType&amp;quot;: &amp;quot;diamondCard&amp;quot;,
+            &amp;quot;mileage&amp;quot;: {
+                &amp;quot;currentPoints&amp;quot;: 78,
+                &amp;quot;totalEarnPoints&amp;quot;: 1227,
+                &amp;quot;totalRedeemPoints&amp;quot;: 1149,
+                &amp;quot;totalSaleAmount&amp;quot;: 39422.94
+            },
+            &amp;quot;benefit&amp;quot;: {
+                &amp;quot;mileage&amp;quot;: 78,
+                &amp;quot;max_mileage_percent&amp;quot;: 50,
+                &amp;quot;discount_percent&amp;quot;: 5,
+                &amp;quot;max_discount_price&amp;quot;: 0,
+                &amp;quot;birthday_discount_percent&amp;quot;: 0,
+                &amp;quot;max_birthday_price&amp;quot;: 0
+            }
+        },
+        &amp;quot;mileage&amp;quot;: {
+            &amp;quot;current&amp;quot;: 78,
+            &amp;quot;available&amp;quot;: 78,
+            &amp;quot;use&amp;quot;: 78
+        },
+        &amp;quot;couponInfo&amp;quot;: {
+            &amp;quot;no&amp;quot;: &amp;quot;EEB5AA500E8539665E&amp;quot;,
+            &amp;quot;title&amp;quot;: &amp;quot;多级折扣型&amp;quot;,
+            &amp;quot;desc&amp;quot;: &amp;quot;多级折扣型&amp;quot;,
+            &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-02T16:00:00Z&amp;quot;,
+            &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-01T15:59:59Z&amp;quot;,
+            &amp;quot;enable&amp;quot;: true,
+            &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,
+            &amp;quot;eventId&amp;quot;: &amp;quot;EE2017050013&amp;quot;,
+            &amp;quot;offerName&amp;quot;: &amp;quot;多级折扣型&amp;quot;
+        },
+        &amp;quot;info&amp;quot;: {
+            &amp;quot;receipt&amp;quot;: &amp;quot;483017401830101&amp;quot;
+        },
+        &amp;quot;payments&amp;quot;: [
+            {
+                &amp;quot;method&amp;quot;: &amp;quot;ALIPAY&amp;quot;,
+                &amp;quot;amount&amp;quot;: 50
+            },
+            {
+                &amp;quot;method&amp;quot;: &amp;quot;WXPAY&amp;quot;,
+                &amp;quot;amount&amp;quot;: 350
+            },
+            {
+                &amp;quot;method&amp;quot;: &amp;quot;CASH&amp;quot;,
+                &amp;quot;amount&amp;quot;: 1000
+            }
+        ],
+        &amp;quot;items&amp;quot;: [
+            {
+                &amp;quot;id&amp;quot;: 4638,
+                &amp;quot;sku&amp;quot;: {
+                    &amp;quot;id&amp;quot;: 184184,
+                    &amp;quot;contentId&amp;quot;: 21673,
+                    &amp;quot;name&amp;quot;: &amp;quot;EEYC64T51M, (62)Hunter, (160)160&amp;quot;,
+                    &amp;quot;code&amp;quot;: &amp;quot;EEYC64T51M62160&amp;quot;,
+                    &amp;quot;images&amp;quot;: null,
+                    &amp;quot;options&amp;quot;: [
+                        {
+                            &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
+                            &amp;quot;v&amp;quot;: &amp;quot;(160)160&amp;quot;
+                        },
+                        {
+                            &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
+                            &amp;quot;v&amp;quot;: &amp;quot;(62)Hunter&amp;quot;
+                        }
+                    ],
+                    &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
+                    &amp;quot;contentCode&amp;quot;: &amp;quot;EEYC64T51M&amp;quot;,
+                    &amp;quot;listPrice&amp;quot;: 598,
+                    &amp;quot;offers&amp;quot;: [
+                        {
+                            &amp;quot;id&amp;quot;: 1952,
+                            &amp;quot;code&amp;quot;: &amp;quot;C108097&amp;quot;,
+                            &amp;quot;name&amp;quot;: &amp;quot;百货店vip 9折&amp;quot;,
+                            &amp;quot;salePrice&amp;quot;: 538.2,
+                            &amp;quot;channelName&amp;quot;: &amp;quot;北京汉光&amp;quot;,
+                            &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-01T00:00:00Z&amp;quot;,
+                            &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-02T00:00:00Z&amp;quot;,
+                            &amp;quot;requirement&amp;quot;: {}
+                        }
+                    ]
+                },
+                &amp;quot;offer&amp;quot;: {
+                    &amp;quot;id&amp;quot;: 1952,
+                    &amp;quot;code&amp;quot;: &amp;quot;C108097&amp;quot;,
+                    &amp;quot;name&amp;quot;: &amp;quot;百货店vip 9折&amp;quot;,
+                    &amp;quot;salePrice&amp;quot;: 538.2,
+                    &amp;quot;channelName&amp;quot;: &amp;quot;北京汉光&amp;quot;,
+                    &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-01T00:00:00Z&amp;quot;,
+                    &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-02T00:00:00Z&amp;quot;,
+                    &amp;quot;requirement&amp;quot;: {}
+                },
+                &amp;quot;quantity&amp;quot;: 2,
+                &amp;quot;listPrice&amp;quot;: 1196,
+                &amp;quot;salePrice&amp;quot;: 1076.4,
+                &amp;quot;discount&amp;quot;: 119.6
+            },
+            {
+                &amp;quot;id&amp;quot;: 4639,
+                &amp;quot;sku&amp;quot;: {
+                    &amp;quot;id&amp;quot;: 184184,
+                    &amp;quot;contentId&amp;quot;: 21673,
+                    &amp;quot;name&amp;quot;: &amp;quot;EEYC64T51M, (62)Hunter, (160)160&amp;quot;,
+                    &amp;quot;code&amp;quot;: &amp;quot;EEYC64T51M62160&amp;quot;,
+                    &amp;quot;images&amp;quot;: null,
+                    &amp;quot;options&amp;quot;: [
+                        {
+                            &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
+                            &amp;quot;v&amp;quot;: &amp;quot;(160)160&amp;quot;
+                        },
+                        {
+                            &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
+                            &amp;quot;v&amp;quot;: &amp;quot;(62)Hunter&amp;quot;
+                        }
+                    ],
+                    &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
+                    &amp;quot;contentCode&amp;quot;: &amp;quot;EEYC64T51M&amp;quot;,
+                    &amp;quot;listPrice&amp;quot;: 598,
+                    &amp;quot;offers&amp;quot;: [
+                        {
+                            &amp;quot;id&amp;quot;: 1952,
+                            &amp;quot;code&amp;quot;: &amp;quot;C108097&amp;quot;,
+                            &amp;quot;name&amp;quot;: &amp;quot;百货店vip 9折&amp;quot;,
+                            &amp;quot;salePrice&amp;quot;: 538.2,
+                            &amp;quot;channelName&amp;quot;: &amp;quot;北京汉光&amp;quot;,
+                            &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-01T00:00:00Z&amp;quot;,
+                            &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-02T00:00:00Z&amp;quot;,
+                            &amp;quot;requirement&amp;quot;: {}
+                        }
+                    ]
+                },
+                &amp;quot;offer&amp;quot;: null,
+                &amp;quot;quantity&amp;quot;: 2,
+                &amp;quot;listPrice&amp;quot;: 1196,
+                &amp;quot;salePrice&amp;quot;: 717.6,
+                &amp;quot;discount&amp;quot;: 478.4
+            },
+            {
+                &amp;quot;id&amp;quot;: 4640,
+                &amp;quot;sku&amp;quot;: {
+                    &amp;quot;id&amp;quot;: 186184,
+                    &amp;quot;contentId&amp;quot;: 24108,
+                    &amp;quot;name&amp;quot;: &amp;quot;EETJ72403A, (52)D/Blue, (165)165&amp;quot;,
+                    &amp;quot;code&amp;quot;: &amp;quot;EETJ72403A52165&amp;quot;,
+                    &amp;quot;images&amp;quot;: null,
+                    &amp;quot;options&amp;quot;: [
+                        {
+                            &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
+                            &amp;quot;v&amp;quot;: &amp;quot;(165)165&amp;quot;
+                        },
+                        {
+                            &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
+                            &amp;quot;v&amp;quot;: &amp;quot;(52)D/Blue&amp;quot;
+                        }
+                    ],
+                    &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
+                    &amp;quot;contentCode&amp;quot;: &amp;quot;EETJ72403A&amp;quot;,
+                    &amp;quot;listPrice&amp;quot;: 598,
+                    &amp;quot;offers&amp;quot;: [
+                        {
+                            &amp;quot;id&amp;quot;: 1952,
+                            &amp;quot;code&amp;quot;: &amp;quot;C108097&amp;quot;,
+                            &amp;quot;name&amp;quot;: &amp;quot;百货店vip 9折&amp;quot;,
+                            &amp;quot;salePrice&amp;quot;: 538.2,
+                            &amp;quot;channelName&amp;quot;: &amp;quot;北京汉光&amp;quot;,
+                            &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-01T00:00:00Z&amp;quot;,
+                            &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-02T00:00:00Z&amp;quot;,
+                            &amp;quot;requirement&amp;quot;: {
+                                &amp;quot;customerGroup&amp;quot;: &amp;quot;VIP&amp;quot;
+                            }
+                        }
+                    ]
+                },
+                &amp;quot;offer&amp;quot;: null,
+                &amp;quot;quantity&amp;quot;: 2,
+                &amp;quot;listPrice&amp;quot;: 1196,
+                &amp;quot;salePrice&amp;quot;: 717.6,
+                &amp;quot;discount&amp;quot;: 478.4
+            }
+        ],
+        &amp;quot;suggests&amp;quot;: [
+            {
+                &amp;quot;name&amp;quot;: &amp;quot;EERA72505 Bundle Sale&amp;quot;,
+                &amp;quot;desc&amp;quot;: &amp;quot;&amp;quot;,
+                &amp;quot;listPrice&amp;quot;: 796,
+                &amp;quot;salePrice&amp;quot;: 600,
+                &amp;quot;startAt&amp;quot;: &amp;quot;2017-04-13T11:32:47Z&amp;quot;,
+                &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-13T11:32:47Z&amp;quot;,
+                &amp;quot;channelName&amp;quot;: &amp;quot;北京汉光&amp;quot;,
+                &amp;quot;virtualContents&amp;quot;: [
+                    {
+                        &amp;quot;code&amp;quot;: &amp;quot;EERA72505R&amp;quot;,
+                        &amp;quot;listPrice&amp;quot;: 498,
+                        &amp;quot;salePrice&amp;quot;: 400
+                    },
+                    {
+                        &amp;quot;code&amp;quot;: &amp;quot;EERA72505B&amp;quot;,
+                        &amp;quot;listPrice&amp;quot;: 298,
+                        &amp;quot;salePrice&amp;quot;: 200
+                    }
+                ]
+            }
+        ],
+        &amp;quot;userId&amp;quot;: 14,
+        &amp;quot;spotId&amp;quot;: 26,
+        &amp;quot;salesmanId&amp;quot;: 3149,
+        &amp;quot;createdAt&amp;quot;: &amp;quot;2017-05-11T16:19:33Z&amp;quot;,
+        &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-05-11T16:24:19.216021056Z&amp;quot;
+    },
+    &amp;quot;success&amp;quot;: true,
+    &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;create-cart&#34;&gt;Create cart&lt;/h2&gt;
 
 &lt;p&gt;&lt;code&gt;/cart/create-cart&lt;/code&gt;&lt;/p&gt;
@@ -1362,53 +1594,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
 
-&lt;p&gt;Request:&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;pp://staging/cart/create-cart&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Success:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;id&amp;quot;: 1349,
-    &amp;quot;tenantId&amp;quot;: 12,
-    &amp;quot;listPrice&amp;quot;: 0,
-    &amp;quot;salePrice&amp;quot;: 0,
-    &amp;quot;quantity&amp;quot;: 0,
-    &amp;quot;discount&amp;quot;: 0,
-    &amp;quot;remainAmount&amp;quot;: 0,
-    &amp;quot;mileage&amp;quot;: {
-      &amp;quot;current&amp;quot;: 0,
-      &amp;quot;available&amp;quot;: 0,
-      &amp;quot;use&amp;quot;: 0
-    },
-    &amp;quot;customerInfo&amp;quot;: null,
-    &amp;quot;couponInfo&amp;quot;: null,
-    &amp;quot;info&amp;quot;: null,
-    &amp;quot;payments&amp;quot;: null,
-    &amp;quot;userId&amp;quot;: 1000001,
-    &amp;quot;spotId&amp;quot;: 2000001,
-    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-29T07:47:02.773134948Z&amp;quot;,
-    &amp;quot;updatedAt&amp;quot;: &amp;quot;0001-01-01T00:00:00Z&amp;quot;,
-    &amp;quot;items&amp;quot;: null,
-    &amp;quot;suggests&amp;quot;: null
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Fail:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;success&amp;quot;: false,
-  &amp;quot;result&amp;quot;: null,
-  &amp;quot;error&amp;quot;: {
-    &amp;quot;code&amp;quot;: 404,
-    &amp;quot;message&amp;quot;: &amp;quot;Cannot create cart.&amp;quot;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;
 
@@ -1456,165 +1642,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h4 id=&#34;example-1&#34;&gt;Example&lt;/h4&gt;
 
-&lt;p&gt;Request:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;pp://staging/cart/add-item?cartId=1349&amp;amp;skuId=184184&amp;amp;quantity=2&amp;amp;offerId=8&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Success:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;id&amp;quot;: 1349,
-    &amp;quot;tenantId&amp;quot;: 12,
-    &amp;quot;listPrice&amp;quot;: 1694,
-    &amp;quot;salePrice&amp;quot;: 1498,
-    &amp;quot;quantity&amp;quot;: 3,
-    &amp;quot;discount&amp;quot;: 196,
-    &amp;quot;remainAmount&amp;quot;: 1498,
-    &amp;quot;customerInfo&amp;quot;: null,
-    &amp;quot;mileage&amp;quot;: {
-      &amp;quot;current&amp;quot;: 0,
-      &amp;quot;available&amp;quot;: 0,
-      &amp;quot;use&amp;quot;: 0
-    },
-    &amp;quot;couponInfo&amp;quot;: null,
-    &amp;quot;info&amp;quot;: null,
-    &amp;quot;payments&amp;quot;: null,
-    &amp;quot;userId&amp;quot;: 1000002,
-    &amp;quot;spotId&amp;quot;: 2000001,
-    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-04-13T15:50:41Z&amp;quot;,
-    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-04-13T16:03:30.373911583Z&amp;quot;,
-    &amp;quot;items&amp;quot;: [
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184184,
-          &amp;quot;contentId&amp;quot;: 15579,
-          &amp;quot;name&amp;quot;: &amp;quot;EERA72505B, (30)Yellow, (160)160&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 498,
-          &amp;quot;salePrice&amp;quot;: 498,
-          &amp;quot;offerName&amp;quot;: &amp;quot;&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(160)160&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(30)Yellow&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;listPrice&amp;quot;: 498,
-        &amp;quot;salePrice&amp;quot;: 498,
-        &amp;quot;discount&amp;quot;: 0
-      },
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184413,
-          &amp;quot;contentId&amp;quot;: 15621,
-          &amp;quot;name&amp;quot;: &amp;quot;EETA72553N, (59)Navy, (155)155&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 598,
-          &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(155)155&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(59)Navy&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;offerId&amp;quot;: 8,
-        &amp;quot;quantity&amp;quot;: 2,
-        &amp;quot;listPrice&amp;quot;: 1196,
-        &amp;quot;salePrice&amp;quot;: 1000,
-        &amp;quot;discount&amp;quot;: 196
-      }
-    ],
-    &amp;quot;suggests&amp;quot;: [
-      {
-        &amp;quot;name&amp;quot;: &amp;quot;EERA72505 Bundle Sale&amp;quot;,
-        &amp;quot;desc&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;listPrice&amp;quot;: 796,
-        &amp;quot;salePrice&amp;quot;: 600,
-        &amp;quot;startAt&amp;quot;: &amp;quot;2017-04-13T11:32:47Z&amp;quot;,
-        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-13T11:32:47Z&amp;quot;,
-        &amp;quot;channelId&amp;quot;: 0,
-        &amp;quot;virtualContents&amp;quot;: [
-          {
-            &amp;quot;contentId&amp;quot;: 15579,
-            &amp;quot;listPrice&amp;quot;: 498,
-            &amp;quot;salePrice&amp;quot;: 400
-          },
-          {
-            &amp;quot;contentId&amp;quot;: 15628,
-            &amp;quot;listPrice&amp;quot;: 298,
-            &amp;quot;salePrice&amp;quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Fail:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;success&amp;quot;: false,
-  &amp;quot;result&amp;quot;: null,
-  &amp;quot;error&amp;quot;: {
-    &amp;quot;code&amp;quot;: 401,
-    &amp;quot;message&amp;quot;: &amp;quot;Cannot add item to current cart.\nCannot find product for &#39;skuId:12&#39;&amp;quot;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/cart/add-item?cartId=1349&amp;amp;skuId=502&amp;amp;quantity=2&amp;amp;offerId=1928&lt;/code&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1662,171 +1690,13 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h4 id=&#34;example-2&#34;&gt;Example&lt;/h4&gt;
 
-&lt;p&gt;Request:&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;pp://staging/cart/remove-item?cartId=1349&amp;amp;skuId=184184&amp;amp;quantity=1&amp;amp;offerId=8&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Success:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;id&amp;quot;: 1349,
-    &amp;quot;tenantId&amp;quot;: 12,
-    &amp;quot;listPrice&amp;quot;: 1096,
-    &amp;quot;salePrice&amp;quot;: 998,
-    &amp;quot;quantity&amp;quot;: 2,
-    &amp;quot;discount&amp;quot;: 98,
-    &amp;quot;remainAmount&amp;quot;: 998,
-    &amp;quot;customerInfo&amp;quot;: null,
-    &amp;quot;mileage&amp;quot;: {
-      &amp;quot;current&amp;quot;: 0,
-      &amp;quot;available&amp;quot;: 0,
-      &amp;quot;use&amp;quot;: 0
-    },
-    &amp;quot;couponInfo&amp;quot;: null,
-    &amp;quot;info&amp;quot;: null,
-    &amp;quot;payments&amp;quot;: null,
-    &amp;quot;userId&amp;quot;: 1000002,
-    &amp;quot;spotId&amp;quot;: 2000001,
-    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-04-13T15:50:41Z&amp;quot;,
-    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-04-13T16:00:48.401563037Z&amp;quot;,
-    &amp;quot;items&amp;quot;: [
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184184,
-          &amp;quot;contentId&amp;quot;: 15579,
-          &amp;quot;name&amp;quot;: &amp;quot;EERA72505B, (30)Yellow, (160)160&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 498,
-          &amp;quot;salePrice&amp;quot;: 498,
-          &amp;quot;offerName&amp;quot;: &amp;quot;&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(160)160&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(30)Yellow&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;listPrice&amp;quot;: 498,
-        &amp;quot;salePrice&amp;quot;: 498,
-        &amp;quot;discount&amp;quot;: 0
-      },
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184413,
-          &amp;quot;contentId&amp;quot;: 15621,
-          &amp;quot;name&amp;quot;: &amp;quot;EETA72553N, (59)Navy, (155)155&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 598,
-          &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(155)155&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(59)Navy&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;offerId&amp;quot;: 8,
-        &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;listPrice&amp;quot;: 598,
-        &amp;quot;salePrice&amp;quot;: 500,
-        &amp;quot;discount&amp;quot;: 98
-      }
-    ],
-    &amp;quot;suggests&amp;quot;: [
-      {
-        &amp;quot;name&amp;quot;: &amp;quot;EERA72505 Bundle Sale&amp;quot;,
-        &amp;quot;desc&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;listPrice&amp;quot;: 796,
-        &amp;quot;salePrice&amp;quot;: 600,
-        &amp;quot;startAt&amp;quot;: &amp;quot;2017-04-13T11:32:47Z&amp;quot;,
-        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-13T11:32:47Z&amp;quot;,
-        &amp;quot;channelId&amp;quot;: 0,
-        &amp;quot;virtualContents&amp;quot;: [
-          {
-            &amp;quot;contentId&amp;quot;: 15579,
-            &amp;quot;listPrice&amp;quot;: 498,
-            &amp;quot;salePrice&amp;quot;: 400
-          },
-          {
-            &amp;quot;contentId&amp;quot;: 15628,
-            &amp;quot;listPrice&amp;quot;: 298,
-            &amp;quot;salePrice&amp;quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Fail:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;success&amp;quot;: false,
-  &amp;quot;result&amp;quot;: null,
-  &amp;quot;error&amp;quot;: {
-    &amp;quot;code&amp;quot;: 402,
-    &amp;quot;message&amp;quot;: &amp;quot;Cannot remove item from current cart.\nCannot find item for &#39;skuId:12&#39; in current cart\n&amp;quot;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;set-customer&#34;&gt;Set customer&lt;/h2&gt;
+&lt;h2 id=&#34;change-item-offer&#34;&gt;Change item offer&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;/cart/set-customer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/cart/edit-item&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;parameters-3&#34;&gt;Parameters&lt;/h4&gt;
 
@@ -1847,186 +1717,28 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;itemId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;offerId&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
 &lt;h4 id=&#34;example-3&#34;&gt;Example&lt;/h4&gt;
 
-&lt;p&gt;Request:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/cart/edit-item?cartId=1349&amp;amp;itemId=4638&amp;amp;offerId=0&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp://staging/cart/set-customer?cartId=1349&amp;amp;no=EE0000053147&lt;/code&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;Success:&lt;/p&gt;
+&lt;h2 id=&#34;set-customer&#34;&gt;Set customer&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;id&amp;quot;: 1349,
-    &amp;quot;tenantId&amp;quot;: 12,
-    &amp;quot;listPrice&amp;quot;: 1096,
-    &amp;quot;salePrice&amp;quot;: 998,
-    &amp;quot;quantity&amp;quot;: 2,
-    &amp;quot;discount&amp;quot;: 98,
-    &amp;quot;remainAmount&amp;quot;: 998,
-    &amp;quot;customerInfo&amp;quot;: {
-      &amp;quot;id&amp;quot;: 1065586,
-      &amp;quot;no&amp;quot;: &amp;quot;0000053147&amp;quot;,
-      &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-      &amp;quot;mobile&amp;quot;: &amp;quot;13818448893&amp;quot;,
-      &amp;quot;grade&amp;quot;: 3,
-      &amp;quot;cardType&amp;quot;: &amp;quot;diamondCard&amp;quot;,
-      &amp;quot;mileage&amp;quot;: {
-        &amp;quot;currentPoints&amp;quot;: 208,
-        &amp;quot;totalEarnPoints&amp;quot;: 1108,
-        &amp;quot;totalRedeemPoints&amp;quot;: 900,
-        &amp;quot;totalSaleAmount&amp;quot;: 36330.94
-      },
-      &amp;quot;benefit&amp;quot;: {
-        &amp;quot;mileage&amp;quot;: 208,
-        &amp;quot;max_mileage_percent&amp;quot;: 50,
-        &amp;quot;discount_percent&amp;quot;: 5,
-        &amp;quot;max_discount_price&amp;quot;: 0,
-        &amp;quot;birthday_discount_percent&amp;quot;: 30,
-        &amp;quot;max_birthday_price&amp;quot;: 5000
-      }
-    },
-    &amp;quot;mileage&amp;quot;: {
-      &amp;quot;current&amp;quot;: 208,
-      &amp;quot;available&amp;quot;: 208,
-      &amp;quot;use&amp;quot;: 0
-    },
-    &amp;quot;couponInfo&amp;quot;: null,
-    &amp;quot;info&amp;quot;: null,
-    &amp;quot;payments&amp;quot;: null,
-    &amp;quot;userId&amp;quot;: 1000002,
-    &amp;quot;spotId&amp;quot;: 2000001,
-    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-04-13T15:50:41Z&amp;quot;,
-    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-04-13T16:00:48.401563037Z&amp;quot;,
-    &amp;quot;items&amp;quot;: [
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184184,
-          &amp;quot;contentId&amp;quot;: 15579,
-          &amp;quot;name&amp;quot;: &amp;quot;EERA72505B, (30)Yellow, (160)160&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 498,
-          &amp;quot;salePrice&amp;quot;: 498,
-          &amp;quot;offerName&amp;quot;: &amp;quot;&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(160)160&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(30)Yellow&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;listPrice&amp;quot;: 498,
-        &amp;quot;salePrice&amp;quot;: 498,
-        &amp;quot;discount&amp;quot;: 0
-      },
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184413,
-          &amp;quot;contentId&amp;quot;: 15621,
-          &amp;quot;name&amp;quot;: &amp;quot;EETA72553N, (59)Navy, (155)155&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 598,
-          &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(155)155&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(59)Navy&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;listPrice&amp;quot;: 598,
-        &amp;quot;salePrice&amp;quot;: 500,
-        &amp;quot;discount&amp;quot;: 98
-      }
-    ],
-    &amp;quot;suggests&amp;quot;: [
-      {
-        &amp;quot;name&amp;quot;: &amp;quot;EERA72505 Bundle Sale&amp;quot;,
-        &amp;quot;desc&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;listPrice&amp;quot;: 796,
-        &amp;quot;salePrice&amp;quot;: 600,
-        &amp;quot;startAt&amp;quot;: &amp;quot;2017-04-13T11:32:47Z&amp;quot;,
-        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-13T11:32:47Z&amp;quot;,
-        &amp;quot;channelId&amp;quot;: 0,
-        &amp;quot;virtualContents&amp;quot;: [
-          {
-            &amp;quot;contentId&amp;quot;: 15579,
-            &amp;quot;listPrice&amp;quot;: 498,
-            &amp;quot;salePrice&amp;quot;: 400
-          },
-          {
-            &amp;quot;contentId&amp;quot;: 15628,
-            &amp;quot;listPrice&amp;quot;: 298,
-            &amp;quot;salePrice&amp;quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;set-coupon&#34;&gt;Set coupon&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;/cart/set-coupon&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/cart/set-customer&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;parameters-4&#34;&gt;Parameters&lt;/h4&gt;
 
@@ -2056,184 +1768,47 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h4 id=&#34;example-4&#34;&gt;Example&lt;/h4&gt;
 
-&lt;p&gt;Request:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/cart/set-customer?cartId=1349&amp;amp;no=EE0000053147&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;set-coupon&#34;&gt;Set coupon&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/cart/set-coupon&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-5&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;cartId&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;example-5&#34;&gt;Example&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;pp://staging/cart/set-coupon?cartId=1349&amp;amp;no=EE4EEDE03E762A2AA2&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Success:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;id&amp;quot;: 1349,
-    &amp;quot;tenantId&amp;quot;: 12,
-    &amp;quot;listPrice&amp;quot;: 1096,
-    &amp;quot;salePrice&amp;quot;: 898,
-    &amp;quot;quantity&amp;quot;: 2,
-    &amp;quot;discount&amp;quot;: 198,
-    &amp;quot;remainAmount&amp;quot;: 898,
-    &amp;quot;customerInfo&amp;quot;: {
-      &amp;quot;id&amp;quot;: 1065586,
-      &amp;quot;no&amp;quot;: &amp;quot;0000053147&amp;quot;,
-      &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-      &amp;quot;mobile&amp;quot;: &amp;quot;13818448893&amp;quot;,
-      &amp;quot;grade&amp;quot;: 3,
-      &amp;quot;cardType&amp;quot;: &amp;quot;diamondCard&amp;quot;,
-      &amp;quot;mileage&amp;quot;: {
-        &amp;quot;currentPoints&amp;quot;: 208,
-        &amp;quot;totalEarnPoints&amp;quot;: 1108,
-        &amp;quot;totalRedeemPoints&amp;quot;: 900,
-        &amp;quot;totalSaleAmount&amp;quot;: 36330.94
-      },
-      &amp;quot;benefit&amp;quot;: {
-        &amp;quot;mileage&amp;quot;: 208,
-        &amp;quot;max_mileage_percent&amp;quot;: 50,
-        &amp;quot;discount_percent&amp;quot;: 5,
-        &amp;quot;max_discount_price&amp;quot;: 0,
-        &amp;quot;birthday_discount_percent&amp;quot;: 30,
-        &amp;quot;max_birthday_price&amp;quot;: 5000
-      }
-    },
-    &amp;quot;mileage&amp;quot;: {
-      &amp;quot;current&amp;quot;: 208,
-      &amp;quot;available&amp;quot;: 208,
-      &amp;quot;use&amp;quot;: 0
-    },
-    &amp;quot;couponInfo&amp;quot;: {
-      &amp;quot;no&amp;quot;: &amp;quot;EE4EEDE03E762A2AA2&amp;quot;,
-      &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,
-      &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-      &amp;quot;eventId&amp;quot;: &amp;quot;EE2017030024&amp;quot;
-    },
-    &amp;quot;info&amp;quot;: null,
-    &amp;quot;payments&amp;quot;: null,
-    &amp;quot;userId&amp;quot;: 1000002,
-    &amp;quot;spotId&amp;quot;: 2000001,
-    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-04-13T15:50:41Z&amp;quot;,
-    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-04-13T16:00:48.401563037Z&amp;quot;,
-    &amp;quot;items&amp;quot;: [
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184184,
-          &amp;quot;contentId&amp;quot;: 15579,
-          &amp;quot;name&amp;quot;: &amp;quot;EERA72505B, (30)Yellow, (160)160&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 498,
-          &amp;quot;salePrice&amp;quot;: 398,
-          &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(160)160&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(30)Yellow&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;listPrice&amp;quot;: 498,
-        &amp;quot;salePrice&amp;quot;: 398,
-        &amp;quot;discount&amp;quot;: 100
-      },
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184413,
-          &amp;quot;contentId&amp;quot;: 15621,
-          &amp;quot;name&amp;quot;: &amp;quot;EETA72553N, (59)Navy, (155)155&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 598,
-          &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(155)155&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(59)Navy&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;listPrice&amp;quot;: 598,
-        &amp;quot;salePrice&amp;quot;: 500,
-        &amp;quot;discount&amp;quot;: 98
-      }
-    ],
-    &amp;quot;suggests&amp;quot;: [
-      {
-        &amp;quot;name&amp;quot;: &amp;quot;EERA72505 Bundle Sale&amp;quot;,
-        &amp;quot;desc&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;listPrice&amp;quot;: 796,
-        &amp;quot;salePrice&amp;quot;: 600,
-        &amp;quot;startAt&amp;quot;: &amp;quot;2017-04-13T11:32:47Z&amp;quot;,
-        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-13T11:32:47Z&amp;quot;,
-        &amp;quot;channelId&amp;quot;: 0,
-        &amp;quot;virtualContents&amp;quot;: [
-          {
-            &amp;quot;contentId&amp;quot;: 15579,
-            &amp;quot;listPrice&amp;quot;: 498,
-            &amp;quot;salePrice&amp;quot;: 400
-          },
-          {
-            &amp;quot;contentId&amp;quot;: 15628,
-            &amp;quot;listPrice&amp;quot;: 298,
-            &amp;quot;salePrice&amp;quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;set-info&#34;&gt;Set info&lt;/h2&gt;
 
 &lt;p&gt;&lt;code&gt;/cart/set-info&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;parameters-5&#34;&gt;Parameters&lt;/h4&gt;
+&lt;h4 id=&#34;parameters-6&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -2259,189 +1834,15 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;example-5&#34;&gt;Example&lt;/h4&gt;
-
-&lt;p&gt;Request:&lt;/p&gt;
+&lt;h4 id=&#34;example-6&#34;&gt;Example&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;pp://staging/cart/set-info?cartId=326&amp;amp;receipt=193018485875930103&amp;amp;casher=nancy&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Success:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;id&amp;quot;: 1349,
-    &amp;quot;tenantId&amp;quot;: 12,
-    &amp;quot;listPrice&amp;quot;: 1096,
-    &amp;quot;salePrice&amp;quot;: 898,
-    &amp;quot;quantity&amp;quot;: 2,
-    &amp;quot;discount&amp;quot;: 198,
-    &amp;quot;remainAmount&amp;quot;: 898,
-    &amp;quot;customerInfo&amp;quot;: {
-      &amp;quot;id&amp;quot;: 1065586,
-      &amp;quot;no&amp;quot;: &amp;quot;0000053147&amp;quot;,
-      &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-      &amp;quot;mobile&amp;quot;: &amp;quot;13818448893&amp;quot;,
-      &amp;quot;grade&amp;quot;: 3,
-      &amp;quot;cardType&amp;quot;: &amp;quot;diamondCard&amp;quot;,
-      &amp;quot;mileage&amp;quot;: {
-        &amp;quot;currentPoints&amp;quot;: 208,
-        &amp;quot;totalEarnPoints&amp;quot;: 1108,
-        &amp;quot;totalRedeemPoints&amp;quot;: 900,
-        &amp;quot;totalSaleAmount&amp;quot;: 36330.94
-      },
-      &amp;quot;benefit&amp;quot;: {
-        &amp;quot;mileage&amp;quot;: 208,
-        &amp;quot;max_mileage_percent&amp;quot;: 50,
-        &amp;quot;discount_percent&amp;quot;: 5,
-        &amp;quot;max_discount_price&amp;quot;: 0,
-        &amp;quot;birthday_discount_percent&amp;quot;: 30,
-        &amp;quot;max_birthday_price&amp;quot;: 5000
-      }
-    },
-    &amp;quot;mileage&amp;quot;: {
-      &amp;quot;current&amp;quot;: 208,
-      &amp;quot;available&amp;quot;: 208,
-      &amp;quot;use&amp;quot;: 0
-    },
-    &amp;quot;couponInfo&amp;quot;: {
-      &amp;quot;no&amp;quot;: &amp;quot;EE4EEDE03E762A2AA2&amp;quot;,
-      &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,
-      &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-      &amp;quot;eventId&amp;quot;: &amp;quot;EE2017030024&amp;quot;
-    },
-    &amp;quot;info&amp;quot;: {
-      &amp;quot;receipt&amp;quot;: &amp;quot;193018485875930103&amp;quot;,
-      &amp;quot;casher&amp;quot;: &amp;quot;nancy&amp;quot;
-    },
-    &amp;quot;payments&amp;quot;: null,
-    &amp;quot;userId&amp;quot;: 1000002,
-    &amp;quot;spotId&amp;quot;: 2000001,
-    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-04-13T15:50:41Z&amp;quot;,
-    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-04-13T16:00:48.401563037Z&amp;quot;,
-    &amp;quot;items&amp;quot;: [
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184184,
-          &amp;quot;contentId&amp;quot;: 15579,
-          &amp;quot;name&amp;quot;: &amp;quot;EERA72505B, (30)Yellow, (160)160&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 498,
-          &amp;quot;salePrice&amp;quot;: 398,
-          &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(160)160&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(30)Yellow&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;listPrice&amp;quot;: 498,
-        &amp;quot;salePrice&amp;quot;: 398,
-        &amp;quot;discount&amp;quot;: 100
-      },
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184413,
-          &amp;quot;contentId&amp;quot;: 15621,
-          &amp;quot;name&amp;quot;: &amp;quot;EETA72553N, (59)Navy, (155)155&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 598,
-          &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(155)155&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(59)Navy&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;listPrice&amp;quot;: 598,
-        &amp;quot;salePrice&amp;quot;: 500,
-        &amp;quot;discount&amp;quot;: 98
-      }
-    ],
-    &amp;quot;suggests&amp;quot;: [
-      {
-        &amp;quot;name&amp;quot;: &amp;quot;EERA72505 Bundle Sale&amp;quot;,
-        &amp;quot;desc&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;listPrice&amp;quot;: 796,
-        &amp;quot;salePrice&amp;quot;: 600,
-        &amp;quot;startAt&amp;quot;: &amp;quot;2017-04-13T11:32:47Z&amp;quot;,
-        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-13T11:32:47Z&amp;quot;,
-        &amp;quot;channelId&amp;quot;: 0,
-        &amp;quot;virtualContents&amp;quot;: [
-          {
-            &amp;quot;contentId&amp;quot;: 15579,
-            &amp;quot;listPrice&amp;quot;: 498,
-            &amp;quot;salePrice&amp;quot;: 400
-          },
-          {
-            &amp;quot;contentId&amp;quot;: 15628,
-            &amp;quot;listPrice&amp;quot;: 298,
-            &amp;quot;salePrice&amp;quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;use-mileage&#34;&gt;Use mileage&lt;/h2&gt;
 
 &lt;p&gt;&lt;code&gt;/cart/use-mileage&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;parameters-6&#34;&gt;Parameters&lt;/h4&gt;
+&lt;h4 id=&#34;parameters-7&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -2467,189 +1868,15 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;example-6&#34;&gt;Example&lt;/h4&gt;
-
-&lt;p&gt;Request:&lt;/p&gt;
+&lt;h4 id=&#34;example-7&#34;&gt;Example&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;pp://staging/cart/use-mileage?cartId=1349&amp;amp;amount=208&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Success:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;id&amp;quot;: 1349,
-    &amp;quot;tenantId&amp;quot;: 12,
-    &amp;quot;listPrice&amp;quot;: 1096,
-    &amp;quot;salePrice&amp;quot;: 898,
-    &amp;quot;quantity&amp;quot;: 2,
-    &amp;quot;discount&amp;quot;: 198,
-    &amp;quot;remainAmount&amp;quot;: 690,
-    &amp;quot;customerInfo&amp;quot;: {
-      &amp;quot;id&amp;quot;: 1065586,
-      &amp;quot;no&amp;quot;: &amp;quot;0000053147&amp;quot;,
-      &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-      &amp;quot;mobile&amp;quot;: &amp;quot;13818448893&amp;quot;,
-      &amp;quot;grade&amp;quot;: 3,
-      &amp;quot;cardType&amp;quot;: &amp;quot;diamondCard&amp;quot;,
-      &amp;quot;mileage&amp;quot;: {
-        &amp;quot;currentPoints&amp;quot;: 208,
-        &amp;quot;totalEarnPoints&amp;quot;: 1108,
-        &amp;quot;totalRedeemPoints&amp;quot;: 900,
-        &amp;quot;totalSaleAmount&amp;quot;: 36330.94
-      },
-      &amp;quot;benefit&amp;quot;: {
-        &amp;quot;mileage&amp;quot;: 208,
-        &amp;quot;max_mileage_percent&amp;quot;: 50,
-        &amp;quot;discount_percent&amp;quot;: 5,
-        &amp;quot;max_discount_price&amp;quot;: 0,
-        &amp;quot;birthday_discount_percent&amp;quot;: 30,
-        &amp;quot;max_birthday_price&amp;quot;: 5000
-      }
-    },
-    &amp;quot;mileage&amp;quot;: {
-      &amp;quot;current&amp;quot;: 208,
-      &amp;quot;available&amp;quot;: 208,
-      &amp;quot;use&amp;quot;: 208
-    },
-    &amp;quot;couponInfo&amp;quot;: {
-      &amp;quot;no&amp;quot;: &amp;quot;EE4EEDE03E762A2AA2&amp;quot;,
-      &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,
-      &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-      &amp;quot;eventId&amp;quot;: &amp;quot;EE2017030024&amp;quot;
-    },
-    &amp;quot;info&amp;quot;: {
-      &amp;quot;receipt&amp;quot;: &amp;quot;193018485875930103&amp;quot;,
-      &amp;quot;casher&amp;quot;: &amp;quot;nancy&amp;quot;
-    },
-    &amp;quot;payments&amp;quot;: null,
-    &amp;quot;userId&amp;quot;: 1000002,
-    &amp;quot;spotId&amp;quot;: 2000001,
-    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-04-13T15:50:41Z&amp;quot;,
-    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-04-13T16:00:48.401563037Z&amp;quot;,
-    &amp;quot;items&amp;quot;: [
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184184,
-          &amp;quot;contentId&amp;quot;: 15579,
-          &amp;quot;name&amp;quot;: &amp;quot;EERA72505B, (30)Yellow, (160)160&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 498,
-          &amp;quot;salePrice&amp;quot;: 398,
-          &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(160)160&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(30)Yellow&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;listPrice&amp;quot;: 498,
-        &amp;quot;salePrice&amp;quot;: 398,
-        &amp;quot;discount&amp;quot;: 100
-      },
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184413,
-          &amp;quot;contentId&amp;quot;: 15621,
-          &amp;quot;name&amp;quot;: &amp;quot;EETA72553N, (59)Navy, (155)155&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 598,
-          &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(155)155&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(59)Navy&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;listPrice&amp;quot;: 598,
-        &amp;quot;salePrice&amp;quot;: 500,
-        &amp;quot;discount&amp;quot;: 98
-      }
-    ],
-    &amp;quot;suggests&amp;quot;: [
-      {
-        &amp;quot;name&amp;quot;: &amp;quot;EERA72505 Bundle Sale&amp;quot;,
-        &amp;quot;desc&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;listPrice&amp;quot;: 796,
-        &amp;quot;salePrice&amp;quot;: 600,
-        &amp;quot;startAt&amp;quot;: &amp;quot;2017-04-13T11:32:47Z&amp;quot;,
-        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-13T11:32:47Z&amp;quot;,
-        &amp;quot;channelId&amp;quot;: 0,
-        &amp;quot;virtualContents&amp;quot;: [
-          {
-            &amp;quot;contentId&amp;quot;: 15579,
-            &amp;quot;listPrice&amp;quot;: 498,
-            &amp;quot;salePrice&amp;quot;: 400
-          },
-          {
-            &amp;quot;contentId&amp;quot;: 15628,
-            &amp;quot;listPrice&amp;quot;: 298,
-            &amp;quot;salePrice&amp;quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;set-payment&#34;&gt;Set payment&lt;/h2&gt;
 
 &lt;p&gt;&lt;code&gt;/cart/set-payment&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;parameters-7&#34;&gt;Parameters&lt;/h4&gt;
+&lt;h4 id=&#34;parameters-8&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -2681,194 +1908,15 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;example-7&#34;&gt;Example&lt;/h4&gt;
-
-&lt;p&gt;Request:&lt;/p&gt;
+&lt;h4 id=&#34;example-8&#34;&gt;Example&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;pp://staging/cart/set-payment?cartId=1349&amp;amp;method=alipay&amp;amp;amount=690&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Success:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;id&amp;quot;: 1349,
-    &amp;quot;tenantId&amp;quot;: 12,
-    &amp;quot;listPrice&amp;quot;: 1096,
-    &amp;quot;salePrice&amp;quot;: 898,
-    &amp;quot;quantity&amp;quot;: 2,
-    &amp;quot;discount&amp;quot;: 198,
-    &amp;quot;remainAmount&amp;quot;: 0,
-    &amp;quot;customerInfo&amp;quot;: {
-      &amp;quot;id&amp;quot;: 1065586,
-      &amp;quot;no&amp;quot;: &amp;quot;0000053147&amp;quot;,
-      &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-      &amp;quot;mobile&amp;quot;: &amp;quot;13818448893&amp;quot;,
-      &amp;quot;grade&amp;quot;: 3,
-      &amp;quot;cardType&amp;quot;: &amp;quot;diamondCard&amp;quot;,
-      &amp;quot;mileage&amp;quot;: {
-        &amp;quot;currentPoints&amp;quot;: 208,
-        &amp;quot;totalEarnPoints&amp;quot;: 1108,
-        &amp;quot;totalRedeemPoints&amp;quot;: 900,
-        &amp;quot;totalSaleAmount&amp;quot;: 36330.94
-      },
-      &amp;quot;benefit&amp;quot;: {
-        &amp;quot;mileage&amp;quot;: 208,
-        &amp;quot;max_mileage_percent&amp;quot;: 50,
-        &amp;quot;discount_percent&amp;quot;: 5,
-        &amp;quot;max_discount_price&amp;quot;: 0,
-        &amp;quot;birthday_discount_percent&amp;quot;: 30,
-        &amp;quot;max_birthday_price&amp;quot;: 5000
-      }
-    },
-    &amp;quot;mileage&amp;quot;: {
-      &amp;quot;current&amp;quot;: 208,
-      &amp;quot;available&amp;quot;: 208,
-      &amp;quot;use&amp;quot;: 208
-    },
-    &amp;quot;couponInfo&amp;quot;: {
-      &amp;quot;no&amp;quot;: &amp;quot;EE4EEDE03E762A2AA2&amp;quot;,
-      &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,
-      &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-      &amp;quot;eventId&amp;quot;: &amp;quot;EE2017030024&amp;quot;
-    },
-    &amp;quot;info&amp;quot;: {
-      &amp;quot;receipt&amp;quot;: &amp;quot;193018485875930103&amp;quot;,
-      &amp;quot;casher&amp;quot;: &amp;quot;nancy&amp;quot;
-    },
-    &amp;quot;payments&amp;quot;: [
-      {
-        &amp;quot;method&amp;quot;: &amp;quot;alipay&amp;quot;,
-        &amp;quot;amount&amp;quot;: 690
-      }
-    ],
-    &amp;quot;userId&amp;quot;: 1000002,
-    &amp;quot;spotId&amp;quot;: 2000001,
-    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-04-13T15:50:41Z&amp;quot;,
-    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-04-13T16:00:48.401563037Z&amp;quot;,
-    &amp;quot;items&amp;quot;: [
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184184,
-          &amp;quot;contentId&amp;quot;: 15579,
-          &amp;quot;name&amp;quot;: &amp;quot;EERA72505B, (30)Yellow, (160)160&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 498,
-          &amp;quot;salePrice&amp;quot;: 398,
-          &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(160)160&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(30)Yellow&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;listPrice&amp;quot;: 498,
-        &amp;quot;salePrice&amp;quot;: 398,
-        &amp;quot;discount&amp;quot;: 100
-      },
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184413,
-          &amp;quot;contentId&amp;quot;: 15621,
-          &amp;quot;name&amp;quot;: &amp;quot;EETA72553N, (59)Navy, (155)155&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 598,
-          &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(155)155&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(59)Navy&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;listPrice&amp;quot;: 598,
-        &amp;quot;salePrice&amp;quot;: 500,
-        &amp;quot;discount&amp;quot;: 98
-      }
-    ],
-    &amp;quot;suggests&amp;quot;: [
-      {
-        &amp;quot;name&amp;quot;: &amp;quot;EERA72505 Bundle Sale&amp;quot;,
-        &amp;quot;desc&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;listPrice&amp;quot;: 796,
-        &amp;quot;salePrice&amp;quot;: 600,
-        &amp;quot;startAt&amp;quot;: &amp;quot;2017-04-13T11:32:47Z&amp;quot;,
-        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-13T11:32:47Z&amp;quot;,
-        &amp;quot;channelId&amp;quot;: 0,
-        &amp;quot;virtualContents&amp;quot;: [
-          {
-            &amp;quot;contentId&amp;quot;: 15579,
-            &amp;quot;listPrice&amp;quot;: 498,
-            &amp;quot;salePrice&amp;quot;: 400
-          },
-          {
-            &amp;quot;contentId&amp;quot;: 15628,
-            &amp;quot;listPrice&amp;quot;: 298,
-            &amp;quot;salePrice&amp;quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;remove-cart&#34;&gt;Remove cart&lt;/h2&gt;
 
 &lt;p&gt;&lt;code&gt;/cart/remove-cart&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;parameters-8&#34;&gt;Parameters&lt;/h4&gt;
+&lt;h4 id=&#34;parameters-9&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -2888,32 +1936,9 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;example-8&#34;&gt;Example&lt;/h4&gt;
-
-&lt;p&gt;Request:&lt;/p&gt;
+&lt;h4 id=&#34;example-9&#34;&gt;Example&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;pp://staging/cart/remove-cart?cartId=1349&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Success:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;result&amp;quot;: null,
-  &amp;quot;error&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Fail:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;success&amp;quot;: false,
-  &amp;quot;result&amp;quot;: null,
-  &amp;quot;error&amp;quot;: {
-    &amp;quot;code&amp;quot;: 405,
-    &amp;quot;message&amp;quot;: &amp;quot;Cannot remove current cart.&amp;quot;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;
 
@@ -2921,73 +1946,13 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;&lt;code&gt;/cart/all-carts&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;parameters-9&#34;&gt;Parameters&lt;/h4&gt;
+&lt;h4 id=&#34;parameters-10&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;p&gt;None&lt;/p&gt;
 
-&lt;h4 id=&#34;example-9&#34;&gt;Example&lt;/h4&gt;
-
-&lt;p&gt;Request:&lt;/p&gt;
+&lt;h4 id=&#34;example-10&#34;&gt;Example&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;pp://staging/cart/all-carts&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Success:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: [
-    {
-      &amp;quot;id&amp;quot;: 347,
-      &amp;quot;tenantId&amp;quot;: 12,
-      &amp;quot;listPrice&amp;quot;: 148,
-      &amp;quot;salePrice&amp;quot;: 148,
-      &amp;quot;quantity&amp;quot;: 1,
-      &amp;quot;discount&amp;quot;: 0,
-      &amp;quot;remainAmount&amp;quot;: 148,
-      &amp;quot;customerInfo&amp;quot;: null,
-      &amp;quot;mileage&amp;quot;: {
-        &amp;quot;current&amp;quot;: 0,
-        &amp;quot;available&amp;quot;: 0,
-        &amp;quot;use&amp;quot;: 0
-      },
-      &amp;quot;couponInfo&amp;quot;: null,
-      &amp;quot;info&amp;quot;: null,
-      &amp;quot;payments&amp;quot;: null,
-      &amp;quot;userId&amp;quot;: 1000002,
-      &amp;quot;spotId&amp;quot;: 2000001,
-      &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-29T16:10:45Z&amp;quot;,
-      &amp;quot;updatedAt&amp;quot;: &amp;quot;0001-01-01T00:00:00Z&amp;quot;,
-      &amp;quot;items&amp;quot;: null,
-      &amp;quot;suggests&amp;quot;: null
-    },
-    {
-      &amp;quot;id&amp;quot;: 352,
-      &amp;quot;tenantId&amp;quot;: 12,
-      &amp;quot;listPrice&amp;quot;: 0,
-      &amp;quot;salePrice&amp;quot;: 0,
-      &amp;quot;quantity&amp;quot;: 0,
-      &amp;quot;discount&amp;quot;: 0,
-      &amp;quot;remainAmount&amp;quot;: 0,
-      &amp;quot;customerInfo&amp;quot;: null,
-      &amp;quot;mileage&amp;quot;: {
-        &amp;quot;current&amp;quot;: 0,
-        &amp;quot;available&amp;quot;: 0,
-        &amp;quot;use&amp;quot;: 0
-      },
-      &amp;quot;couponInfo&amp;quot;: null,
-      &amp;quot;info&amp;quot;: null,
-      &amp;quot;payments&amp;quot;: null,
-      &amp;quot;userId&amp;quot;: 1000002,
-      &amp;quot;spotId&amp;quot;: 2000001,
-      &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-29T16:31:33Z&amp;quot;,
-      &amp;quot;updatedAt&amp;quot;: &amp;quot;0001-01-01T00:00:00Z&amp;quot;,
-      &amp;quot;items&amp;quot;: null,
-      &amp;quot;suggests&amp;quot;: null
-    }
-  ],
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;
 
@@ -2995,7 +1960,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;&lt;code&gt;/cart/get-cart&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;parameters-10&#34;&gt;Parameters&lt;/h4&gt;
+&lt;h4 id=&#34;parameters-11&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -3015,194 +1980,15 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;example-10&#34;&gt;Example&lt;/h4&gt;
-
-&lt;p&gt;Request:&lt;/p&gt;
+&lt;h4 id=&#34;example-11&#34;&gt;Example&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;pp://staging/cart/get-cart?cartId=1349&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Success:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;id&amp;quot;: 1349,
-    &amp;quot;tenantId&amp;quot;: 12,
-    &amp;quot;listPrice&amp;quot;: 1096,
-    &amp;quot;salePrice&amp;quot;: 898,
-    &amp;quot;quantity&amp;quot;: 2,
-    &amp;quot;discount&amp;quot;: 198,
-    &amp;quot;remainAmount&amp;quot;: 0,
-    &amp;quot;customerInfo&amp;quot;: {
-      &amp;quot;id&amp;quot;: 1065586,
-      &amp;quot;no&amp;quot;: &amp;quot;0000053147&amp;quot;,
-      &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-      &amp;quot;mobile&amp;quot;: &amp;quot;13818448893&amp;quot;,
-      &amp;quot;grade&amp;quot;: 3,
-      &amp;quot;cardType&amp;quot;: &amp;quot;diamondCard&amp;quot;,
-      &amp;quot;mileage&amp;quot;: {
-        &amp;quot;currentPoints&amp;quot;: 208,
-        &amp;quot;totalEarnPoints&amp;quot;: 1108,
-        &amp;quot;totalRedeemPoints&amp;quot;: 900,
-        &amp;quot;totalSaleAmount&amp;quot;: 36330.94
-      },
-      &amp;quot;benefit&amp;quot;: {
-        &amp;quot;mileage&amp;quot;: 208,
-        &amp;quot;max_mileage_percent&amp;quot;: 50,
-        &amp;quot;discount_percent&amp;quot;: 5,
-        &amp;quot;max_discount_price&amp;quot;: 0,
-        &amp;quot;birthday_discount_percent&amp;quot;: 30,
-        &amp;quot;max_birthday_price&amp;quot;: 5000
-      }
-    },
-    &amp;quot;mileage&amp;quot;: {
-      &amp;quot;current&amp;quot;: 208,
-      &amp;quot;available&amp;quot;: 208,
-      &amp;quot;use&amp;quot;: 208
-    },
-    &amp;quot;couponInfo&amp;quot;: {
-      &amp;quot;no&amp;quot;: &amp;quot;EE4EEDE03E762A2AA2&amp;quot;,
-      &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,
-      &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-      &amp;quot;eventId&amp;quot;: &amp;quot;EE2017030024&amp;quot;
-    },
-    &amp;quot;info&amp;quot;: {
-      &amp;quot;receipt&amp;quot;: &amp;quot;193018485875930103&amp;quot;,
-      &amp;quot;casher&amp;quot;: &amp;quot;nancy&amp;quot;
-    },
-    &amp;quot;payments&amp;quot;: [
-      {
-        &amp;quot;method&amp;quot;: &amp;quot;alipay&amp;quot;,
-        &amp;quot;amount&amp;quot;: 690
-      }
-    ],
-    &amp;quot;userId&amp;quot;: 1000002,
-    &amp;quot;spotId&amp;quot;: 2000001,
-    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-04-13T15:50:41Z&amp;quot;,
-    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-04-13T16:00:48.401563037Z&amp;quot;,
-    &amp;quot;items&amp;quot;: [
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184184,
-          &amp;quot;contentId&amp;quot;: 15579,
-          &amp;quot;name&amp;quot;: &amp;quot;EERA72505B, (30)Yellow, (160)160&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EERA72505B30160&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 498,
-          &amp;quot;salePrice&amp;quot;: 398,
-          &amp;quot;offerName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(160)160&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(30)Yellow&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;listPrice&amp;quot;: 498,
-        &amp;quot;salePrice&amp;quot;: 398,
-        &amp;quot;discount&amp;quot;: 100
-      },
-      {
-        &amp;quot;sku&amp;quot;: {
-          &amp;quot;id&amp;quot;: 184413,
-          &amp;quot;contentId&amp;quot;: 15621,
-          &amp;quot;name&amp;quot;: &amp;quot;EETA72553N, (59)Navy, (155)155&amp;quot;,
-          &amp;quot;code&amp;quot;: &amp;quot;EETA72553N59155&amp;quot;,
-          &amp;quot;listPrice&amp;quot;: 598,
-          &amp;quot;salePrice&amp;quot;: 500,
-          &amp;quot;offerName&amp;quot;: &amp;quot;EETA72553N Discount! ￥500&amp;quot;,
-          &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;contentCode&amp;quot;: &amp;quot;EE&amp;quot;,
-          &amp;quot;images&amp;quot;: {
-              &amp;quot;large&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 385,
-                  &amp;quot;height&amp;quot;: 500
-              },
-              &amp;quot;medium&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 123,
-                  &amp;quot;height&amp;quot;: 160
-              },
-              &amp;quot;small&amp;quot;: {
-                  &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                  &amp;quot;width&amp;quot;: 58,
-                  &amp;quot;height&amp;quot;: 75
-              }
-          },
-          &amp;quot;options&amp;quot;: [
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(155)155&amp;quot;
-            },
-            {
-              &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-              &amp;quot;v&amp;quot;: &amp;quot;(59)Navy&amp;quot;
-            }
-          ]
-        },
-        &amp;quot;quantity&amp;quot;: 1,
-        &amp;quot;listPrice&amp;quot;: 598,
-        &amp;quot;salePrice&amp;quot;: 500,
-        &amp;quot;discount&amp;quot;: 98
-      }
-    ],
-    &amp;quot;suggests&amp;quot;: [
-      {
-        &amp;quot;name&amp;quot;: &amp;quot;EERA72505 Bundle Sale&amp;quot;,
-        &amp;quot;desc&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;listPrice&amp;quot;: 796,
-        &amp;quot;salePrice&amp;quot;: 600,
-        &amp;quot;startAt&amp;quot;: &amp;quot;2017-04-13T11:32:47Z&amp;quot;,
-        &amp;quot;endAt&amp;quot;: &amp;quot;2017-05-13T11:32:47Z&amp;quot;,
-        &amp;quot;channelId&amp;quot;: 0,
-        &amp;quot;virtualContents&amp;quot;: [
-          {
-            &amp;quot;contentId&amp;quot;: 15579,
-            &amp;quot;listPrice&amp;quot;: 498,
-            &amp;quot;salePrice&amp;quot;: 400
-          },
-          {
-            &amp;quot;contentId&amp;quot;: 15628,
-            &amp;quot;listPrice&amp;quot;: 298,
-            &amp;quot;salePrice&amp;quot;: 200
-          }
-        ]
-      }
-    ]
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;set-salesman&#34;&gt;Set salesman&lt;/h2&gt;
 
 &lt;p&gt;&lt;code&gt;/cart/set-salesman&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;parameters-11&#34;&gt;Parameters&lt;/h4&gt;
+&lt;h4 id=&#34;parameters-12&#34;&gt;Parameters&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -3228,29 +2014,9 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;example-11&#34;&gt;Example&lt;/h4&gt;
-
-&lt;p&gt;Request:&lt;/p&gt;
+&lt;h4 id=&#34;example-12&#34;&gt;Example&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;pp://staging/cart/set-salesman?cartId=1349&amp;amp;salesmanId=58&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Success:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;result&amp;quot;: {
-    &amp;quot;id&amp;quot;: 1349,
-    &amp;quot;tenantId&amp;quot;: 12,
-    &amp;quot;userId&amp;quot;: 1000002,
-    &amp;quot;spotId&amp;quot;: 2000001,
-    &amp;quot;salesmanId&amp;quot;: 58,
-    &amp;quot;createdAt&amp;quot;: &amp;quot;2017-04-13T15:50:41Z&amp;quot;,
-    &amp;quot;updatedAt&amp;quot;: &amp;quot;2017-04-13T16:00:48.401563037Z&amp;quot;,
-    /* ... */
-  },
-  &amp;quot;success&amp;quot;: true,
-  &amp;quot;error&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -3294,135 +2060,226 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
 
-&lt;p&gt;Request:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;pp://staging/order/place-order?cartId=1&amp;amp;uid=1705021039401&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/order/place-order?cartId=1&amp;amp;uid=20170501138400031&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
     &amp;quot;result&amp;quot;: {
-        &amp;quot;id&amp;quot;: 132,
-        &amp;quot;orderNo&amp;quot;: &amp;quot;14907758150132&amp;quot;,
-        &amp;quot;uid&amp;quot;: &amp;quot;1705021039401&amp;quot;,
-        &amp;quot;quantity&amp;quot;: 3,
-        &amp;quot;listPrice&amp;quot;: 125.5,
-        &amp;quot;salePrice&amp;quot;: 114.3,
-        &amp;quot;discount&amp;quot;: 11.2,
+        &amp;quot;id&amp;quot;: 1212,
+        &amp;quot;orderNo&amp;quot;: &amp;quot;14945206951212&amp;quot;,
+        &amp;quot;uid&amp;quot;: &amp;quot;20170501138400031&amp;quot;,
+        &amp;quot;quantity&amp;quot;: 4,
+        &amp;quot;listPrice&amp;quot;: 3588,
+        &amp;quot;salePrice&amp;quot;: 2511.6,
+        &amp;quot;discount&amp;quot;: 1076.4,
         &amp;quot;items&amp;quot;: [
             {
                 &amp;quot;seq&amp;quot;: 1,
-                &amp;quot;skuId&amp;quot;: 169,
+                &amp;quot;skuId&amp;quot;: 184184,
                 &amp;quot;sku&amp;quot;: {
-                    &amp;quot;id&amp;quot;: 169,
-                    &amp;quot;contentId&amp;quot;: 10,
-                    &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Jeans Women&#39;s Gmt Dyed Ankle Skinny Pant, Monument, 26&amp;quot;,
-                    &amp;quot;code&amp;quot;: &amp;quot;42AB600-1&amp;quot;,
-                    &amp;quot;listPrice&amp;quot;: 69.5,
-                    &amp;quot;salePrice&amp;quot;: 69.5,
-                    &amp;quot;discountName&amp;quot;: &amp;quot;&amp;quot;,
-                    &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
-                    &amp;quot;contentCode&amp;quot;: &amp;quot;42AB600&amp;quot;,
-                    &amp;quot;images&amp;quot;: {
-                        &amp;quot;large&amp;quot;: {
-                            &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                            &amp;quot;width&amp;quot;: 385,
-                            &amp;quot;height&amp;quot;: 500
-                        },
-                        &amp;quot;medium&amp;quot;: {
-                            &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                            &amp;quot;width&amp;quot;: 123,
-                            &amp;quot;height&amp;quot;: 160
-                        },
-                        &amp;quot;small&amp;quot;: {
-                            &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                            &amp;quot;width&amp;quot;: 58,
-                            &amp;quot;height&amp;quot;: 75
-                        }
-                    },
-                    &amp;quot;options&amp;quot;: [
-                        {
-                            &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-                            &amp;quot;v&amp;quot;: &amp;quot;26&amp;quot;
-                        },
-                        {
-                            &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-                            &amp;quot;v&amp;quot;: &amp;quot;Monument&amp;quot;
-                        }
-                    ]
-                },
-                &amp;quot;quantity&amp;quot;: 1,
-                &amp;quot;listPrice&amp;quot;: 69.5,
-                &amp;quot;salePrice&amp;quot;: 69.5,
-                &amp;quot;discount&amp;quot;: 0
-            },
-            {
-                &amp;quot;seq&amp;quot;: 2,
-                &amp;quot;skuId&amp;quot;: 2454,
-                &amp;quot;sku&amp;quot;: {
-                    &amp;quot;id&amp;quot;: 2454,
-                    &amp;quot;contentId&amp;quot;: 445,
-                    &amp;quot;name&amp;quot;: &amp;quot;EEAA8A011, 101, 000&amp;quot;,
-                    &amp;quot;code&amp;quot;: &amp;quot;EEAA8A011101000&amp;quot;,
-                    &amp;quot;listPrice&amp;quot;: 28,
-                    &amp;quot;salePrice&amp;quot;: 22.4,
-                    &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-                    &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-                    &amp;quot;contentCode&amp;quot;: &amp;quot;EEAA8A011&amp;quot;,
+                    &amp;quot;id&amp;quot;: 184184,
+                    &amp;quot;contentId&amp;quot;: 21673,
+                    &amp;quot;name&amp;quot;: &amp;quot;EEYC64T51M, (62)Hunter, (160)160&amp;quot;,
+                    &amp;quot;code&amp;quot;: &amp;quot;EEYC64T51M62160&amp;quot;,
                     &amp;quot;images&amp;quot;: null,
                     &amp;quot;options&amp;quot;: [
                         {
                             &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-                            &amp;quot;v&amp;quot;: &amp;quot;(000)生产代表尺寸&amp;quot;
+                            &amp;quot;v&amp;quot;: &amp;quot;(160)160&amp;quot;
                         },
                         {
                             &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-                            &amp;quot;v&amp;quot;: &amp;quot;(101)red&amp;quot;
+                            &amp;quot;v&amp;quot;: &amp;quot;(62)Hunter&amp;quot;
+                        }
+                    ],
+                    &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
+                    &amp;quot;contentCode&amp;quot;: &amp;quot;EEYC64T51M&amp;quot;,
+                    &amp;quot;listPrice&amp;quot;: 598,
+                    &amp;quot;offers&amp;quot;: [
+                        {
+                            &amp;quot;id&amp;quot;: 1952,
+                            &amp;quot;name&amp;quot;: &amp;quot;百货店vip 9折&amp;quot;,
+                            &amp;quot;salePrice&amp;quot;: 538.2,
+                            &amp;quot;channelName&amp;quot;: &amp;quot;北京汉光&amp;quot;,
+                            &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-01T00:00:00Z&amp;quot;,
+                            &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-02T00:00:00Z&amp;quot;,
+                            &amp;quot;requirement&amp;quot;: {
+                                    &amp;quot;customerGroup&amp;quot;: &amp;quot;VIP&amp;quot;
+                            }
                         }
                     ]
                 },
+                &amp;quot;offer&amp;quot;: {
+                    &amp;quot;id&amp;quot;: 1952,                    
+                    &amp;quot;name&amp;quot;: &amp;quot;百货店vip 9折&amp;quot;,
+                    &amp;quot;salePrice&amp;quot;: 538.2,
+                    &amp;quot;channelName&amp;quot;: &amp;quot;北京汉光&amp;quot;,
+                    &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-01T00:00:00Z&amp;quot;,
+                    &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-02T00:00:00Z&amp;quot;,
+                    &amp;quot;requirement&amp;quot;: {
+                                    &amp;quot;customerGroup&amp;quot;: &amp;quot;VIP&amp;quot;
+                            }
+                },
                 &amp;quot;quantity&amp;quot;: 2,
-                &amp;quot;listPrice&amp;quot;: 56,
-                &amp;quot;salePrice&amp;quot;: 44.8,
-                &amp;quot;discount&amp;quot;: 11.2
+                &amp;quot;listPrice&amp;quot;: 1196,
+                &amp;quot;salePrice&amp;quot;: 1076.4,
+                &amp;quot;discount&amp;quot;: 119.6
+            },
+            {
+                &amp;quot;seq&amp;quot;: 2,
+                &amp;quot;skuId&amp;quot;: 184184,
+                &amp;quot;sku&amp;quot;: {
+                    &amp;quot;id&amp;quot;: 184184,
+                    &amp;quot;contentId&amp;quot;: 21673,
+                    &amp;quot;name&amp;quot;: &amp;quot;EEYC64T51M, (62)Hunter, (160)160&amp;quot;,
+                    &amp;quot;code&amp;quot;: &amp;quot;EEYC64T51M62160&amp;quot;,
+                    &amp;quot;images&amp;quot;: null,
+                    &amp;quot;options&amp;quot;: [
+                        {
+                            &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
+                            &amp;quot;v&amp;quot;: &amp;quot;(160)160&amp;quot;
+                        },
+                        {
+                            &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
+                            &amp;quot;v&amp;quot;: &amp;quot;(62)Hunter&amp;quot;
+                        }
+                    ],
+                    &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
+                    &amp;quot;contentCode&amp;quot;: &amp;quot;EEYC64T51M&amp;quot;,
+                    &amp;quot;listPrice&amp;quot;: 598,
+                    &amp;quot;offers&amp;quot;: [
+                        {
+                            &amp;quot;id&amp;quot;: 1952,
+                            &amp;quot;code&amp;quot;: &amp;quot;C108097&amp;quot;,
+                            &amp;quot;name&amp;quot;: &amp;quot;百货店vip 9折&amp;quot;,
+                            &amp;quot;salePrice&amp;quot;: 538.2,
+                            &amp;quot;channelId&amp;quot;: 12,
+                            &amp;quot;channelName&amp;quot;: &amp;quot;北京汉光&amp;quot;,
+                            &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-01T00:00:00Z&amp;quot;,
+                            &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-02T00:00:00Z&amp;quot;,
+                            &amp;quot;requirement&amp;quot;: {}
+                        }
+                    ]
+                },
+                &amp;quot;offer&amp;quot;: null,
+                &amp;quot;quantity&amp;quot;: 2,
+                &amp;quot;listPrice&amp;quot;: 1196,
+                &amp;quot;salePrice&amp;quot;: 717.6,
+                &amp;quot;discount&amp;quot;: 478.4
+            },
+            {
+                &amp;quot;seq&amp;quot;: 3,
+                &amp;quot;skuId&amp;quot;: 186184,
+                &amp;quot;sku&amp;quot;: {
+                    &amp;quot;id&amp;quot;: 186184,
+                    &amp;quot;contentId&amp;quot;: 24108,
+                    &amp;quot;name&amp;quot;: &amp;quot;EETJ72403A, (52)D/Blue, (165)165&amp;quot;,
+                    &amp;quot;code&amp;quot;: &amp;quot;EETJ72403A52165&amp;quot;,
+                    &amp;quot;images&amp;quot;: null,
+                    &amp;quot;options&amp;quot;: [
+                        {
+                            &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
+                            &amp;quot;v&amp;quot;: &amp;quot;(165)165&amp;quot;
+                        },
+                        {
+                            &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
+                            &amp;quot;v&amp;quot;: &amp;quot;(52)D/Blue&amp;quot;
+                        }
+                    ],
+                    &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
+                    &amp;quot;contentCode&amp;quot;: &amp;quot;EETJ72403A&amp;quot;,
+                    &amp;quot;listPrice&amp;quot;: 598,
+                    &amp;quot;offers&amp;quot;: [
+                        {
+                            &amp;quot;id&amp;quot;: 1952,
+                            &amp;quot;code&amp;quot;: &amp;quot;C108097&amp;quot;,
+                            &amp;quot;name&amp;quot;: &amp;quot;百货店vip 9折&amp;quot;,
+                            &amp;quot;salePrice&amp;quot;: 538.2,
+                            &amp;quot;channelId&amp;quot;: 12,
+                            &amp;quot;channelName&amp;quot;: &amp;quot;北京汉光&amp;quot;,
+                            &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-01T00:00:00Z&amp;quot;,
+                            &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-02T00:00:00Z&amp;quot;,
+                            &amp;quot;requirement&amp;quot;: {}
+                        }
+                    ]
+                },
+                &amp;quot;offer&amp;quot;: null,
+                &amp;quot;quantity&amp;quot;: 2,
+                &amp;quot;listPrice&amp;quot;: 1196,
+                &amp;quot;salePrice&amp;quot;: 717.6,
+                &amp;quot;discount&amp;quot;: 478.4
             }
         ],
+        &amp;quot;customerId&amp;quot;: 1065586,
         &amp;quot;couponInfo&amp;quot;: {
-            &amp;quot;no&amp;quot;: &amp;quot;EE4E52FEF46F7B30DE&amp;quot;,
-            &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,            
-            &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-            &amp;quot;eventId&amp;quot;: &amp;quot;EE2017030024&amp;quot;
-        }
+            &amp;quot;no&amp;quot;: &amp;quot;EEB5AA500E8539665E&amp;quot;,
+            &amp;quot;title&amp;quot;: &amp;quot;多级折扣型&amp;quot;,
+            &amp;quot;desc&amp;quot;: &amp;quot;多级折扣型&amp;quot;,
+            &amp;quot;startAt&amp;quot;: &amp;quot;2017-05-02T16:00:00Z&amp;quot;,
+            &amp;quot;endAt&amp;quot;: &amp;quot;2017-06-01T15:59:59Z&amp;quot;,
+            &amp;quot;enable&amp;quot;: true,
+            &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,
+            &amp;quot;eventId&amp;quot;: &amp;quot;EE2017050013&amp;quot;,
+            &amp;quot;offerName&amp;quot;: &amp;quot;多级折扣型&amp;quot;
+        },
         &amp;quot;customerInfo&amp;quot;: {
             &amp;quot;id&amp;quot;: 1065586,
             &amp;quot;no&amp;quot;: &amp;quot;0000053147&amp;quot;,
             &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
             &amp;quot;mobile&amp;quot;: &amp;quot;13818448893&amp;quot;,
             &amp;quot;grade&amp;quot;: 3,
-            &amp;quot;cardType&amp;quot;: &amp;quot;purpleCard&amp;quot;,
+            &amp;quot;cardType&amp;quot;: &amp;quot;diamondCard&amp;quot;,
             &amp;quot;mileage&amp;quot;: {
-                &amp;quot;currentPoints&amp;quot;: 9000,
-                &amp;quot;totalEarnPoints&amp;quot;: 10000,
-                &amp;quot;totalRedeemPoints&amp;quot;: 10,
-                &amp;quot;totalSaleAmount&amp;quot;: &amp;quot;345.0&amp;quot;
+                &amp;quot;currentPoints&amp;quot;: 78,
+                &amp;quot;totalEarnPoints&amp;quot;: 1227,
+                &amp;quot;totalRedeemPoints&amp;quot;: 1149,
+                &amp;quot;totalSaleAmount&amp;quot;: 39422.94
+            },
+            &amp;quot;benefit&amp;quot;: {
+                &amp;quot;mileage&amp;quot;: 78,
+                &amp;quot;max_mileage_percent&amp;quot;: 50,
+                &amp;quot;discount_percent&amp;quot;: 5,
+                &amp;quot;max_discount_price&amp;quot;: 0,
+                &amp;quot;birthday_discount_percent&amp;quot;: 0,
+                &amp;quot;max_birthday_price&amp;quot;: 0
             }
         },
-        &amp;quot;mileage&amp;quot;: {        
-            &amp;quot;use&amp;quot;: 0
+        &amp;quot;mileage&amp;quot;: {
+            &amp;quot;current&amp;quot;: 78,
+            &amp;quot;available&amp;quot;: 78,
+            &amp;quot;use&amp;quot;: 78
         },
         &amp;quot;info&amp;quot;: {
-            &amp;quot;casher&amp;quot;: &amp;quot;nancy&amp;quot;,
-            &amp;quot;receipt&amp;quot;: &amp;quot;193018485875930103&amp;quot;
-        },        
+            &amp;quot;cashierName&amp;quot;: &amp;quot;6000026999&amp;quot;,
+            &amp;quot;chiefBrandCode&amp;quot;: &amp;quot;EE&amp;quot;,
+            &amp;quot;shopCode&amp;quot;: &amp;quot;C30R&amp;quot;,
+            &amp;quot;shopInfo&amp;quot;: [
+                {
+                    &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
+                    &amp;quot;isChief&amp;quot;: true,
+                    &amp;quot;shopCode&amp;quot;: &amp;quot;C30R&amp;quot;
+                }
+            ]
+        },
         &amp;quot;payments&amp;quot;: [
-        {
-            &amp;quot;method&amp;quot;: &amp;quot;alipay&amp;quot;,
-            &amp;quot;amount&amp;quot;: 114.3
-        }
-        &amp;quot;userId&amp;quot;: 1000001,
-        &amp;quot;spotId&amp;quot;: 2000001,
-        &amp;quot;tenantId&amp;quot;: 12,
-        &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-29T08:23:35.27528848Z&amp;quot;
+            {
+                &amp;quot;method&amp;quot;: &amp;quot;ALIPAY&amp;quot;,
+                &amp;quot;amount&amp;quot;: 50
+            },
+            {
+                &amp;quot;method&amp;quot;: &amp;quot;WXPAY&amp;quot;,
+                &amp;quot;amount&amp;quot;: 350
+            },
+            {
+                &amp;quot;method&amp;quot;: &amp;quot;CASH&amp;quot;,
+                &amp;quot;amount&amp;quot;: 1000
+            }
+        ],
+        &amp;quot;userId&amp;quot;: 14,        
+        &amp;quot;spotId&amp;quot;: 26,
+        &amp;quot;tenantId&amp;quot;: 4,
+        &amp;quot;createdAt&amp;quot;: &amp;quot;2017-05-11T16:38:15.499788223Z&amp;quot;
     },
     &amp;quot;success&amp;quot;: true,
     &amp;quot;error&amp;quot;: {}
@@ -3457,139 +2314,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h4 id=&#34;example-1&#34;&gt;Example&lt;/h4&gt;
 
-&lt;p&gt;Request:&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;pp://staging/order/get-order?orderId=132&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Success:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    &amp;quot;result&amp;quot;: {
-        &amp;quot;id&amp;quot;: 132,
-        &amp;quot;orderNo&amp;quot;: &amp;quot;14907758150132&amp;quot;,
-        &amp;quot;quantity&amp;quot;: 3,
-        &amp;quot;listPrice&amp;quot;: 125.5,
-        &amp;quot;salePrice&amp;quot;: 114.3,
-        &amp;quot;discount&amp;quot;: 11.2,
-        &amp;quot;items&amp;quot;: [
-            {
-                &amp;quot;seq&amp;quot;: 1,
-                &amp;quot;skuId&amp;quot;: 169,
-                &amp;quot;sku&amp;quot;: {
-                    &amp;quot;id&amp;quot;: 169,
-                    &amp;quot;contentId&amp;quot;: 10,
-                    &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Jeans Women&#39;s Gmt Dyed Ankle Skinny Pant, Monument, 26&amp;quot;,
-                    &amp;quot;code&amp;quot;: &amp;quot;42AB600-1&amp;quot;,
-                    &amp;quot;listPrice&amp;quot;: 69.5,
-                    &amp;quot;salePrice&amp;quot;: 69.5,
-                    &amp;quot;discountName&amp;quot;: &amp;quot;&amp;quot;,
-                    &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
-                    &amp;quot;contentCode&amp;quot;: &amp;quot;42AB600&amp;quot;,
-                    &amp;quot;images&amp;quot;: {
-                        &amp;quot;large&amp;quot;: {
-                            &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                            &amp;quot;width&amp;quot;: 385,
-                            &amp;quot;height&amp;quot;: 500
-                        },
-                        &amp;quot;medium&amp;quot;: {
-                            &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                            &amp;quot;width&amp;quot;: 123,
-                            &amp;quot;height&amp;quot;: 160
-                        },
-                        &amp;quot;small&amp;quot;: {
-                            &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                            &amp;quot;width&amp;quot;: 58,
-                            &amp;quot;height&amp;quot;: 75
-                        }
-                    },
-                    &amp;quot;options&amp;quot;: [
-                        {
-                            &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-                            &amp;quot;v&amp;quot;: &amp;quot;26&amp;quot;
-                        },
-                        {
-                            &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-                            &amp;quot;v&amp;quot;: &amp;quot;Monument&amp;quot;
-                        }
-                    ]
-                },
-                &amp;quot;quantity&amp;quot;: 1,
-                &amp;quot;listPrice&amp;quot;: 69.5,
-                &amp;quot;salePrice&amp;quot;: 69.5,
-                &amp;quot;discount&amp;quot;: 0
-            },
-            {
-                &amp;quot;seq&amp;quot;: 2,
-                &amp;quot;skuId&amp;quot;: 2454,
-                &amp;quot;sku&amp;quot;: {
-                    &amp;quot;id&amp;quot;: 2454,
-                    &amp;quot;contentId&amp;quot;: 445,
-                    &amp;quot;name&amp;quot;: &amp;quot;EEAA8A011, 101, 000&amp;quot;,
-                    &amp;quot;code&amp;quot;: &amp;quot;EEAA8A011101000&amp;quot;,
-                    &amp;quot;listPrice&amp;quot;: 28,
-                    &amp;quot;salePrice&amp;quot;: 22.4,
-                    &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-                    &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-                    &amp;quot;contentCode&amp;quot;: &amp;quot;EEAA8A011&amp;quot;,
-                    &amp;quot;images&amp;quot;: null,
-                    &amp;quot;options&amp;quot;: [
-                        {
-                            &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-                            &amp;quot;v&amp;quot;: &amp;quot;(000)生产代表尺寸&amp;quot;
-                        },
-                        {
-                            &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-                            &amp;quot;v&amp;quot;: &amp;quot;(101)red&amp;quot;
-                        }
-                    ]
-                },
-                &amp;quot;quantity&amp;quot;: 2,
-                &amp;quot;listPrice&amp;quot;: 56,
-                &amp;quot;salePrice&amp;quot;: 44.8,
-                &amp;quot;discount&amp;quot;: 11.2
-            }
-        ],
-        &amp;quot;couponInfo&amp;quot;: {
-            &amp;quot;no&amp;quot;: &amp;quot;EE4E52FEF46F7B30DE&amp;quot;,
-            &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,            
-            &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-            &amp;quot;eventId&amp;quot;: &amp;quot;EE2017030024&amp;quot;
-        }
-        &amp;quot;customerInfo&amp;quot;: {
-            &amp;quot;id&amp;quot;: 1065586,
-            &amp;quot;no&amp;quot;: &amp;quot;0000053147&amp;quot;,
-            &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-            &amp;quot;mobile&amp;quot;: &amp;quot;13818448893&amp;quot;,
-            &amp;quot;grade&amp;quot;: 3,
-            &amp;quot;cardType&amp;quot;: &amp;quot;purpleCard&amp;quot;,
-            &amp;quot;mileage&amp;quot;: {
-                &amp;quot;currentPoints&amp;quot;: 9000,
-                &amp;quot;totalEarnPoints&amp;quot;: 10000,
-                &amp;quot;totalRedeemPoints&amp;quot;: 10,
-                &amp;quot;totalSaleAmount&amp;quot;: &amp;quot;345.0&amp;quot;
-            }
-        },
-        &amp;quot;mileage&amp;quot;: {        
-            &amp;quot;use&amp;quot;: 0
-        },
-        &amp;quot;info&amp;quot;: {
-            &amp;quot;casher&amp;quot;: &amp;quot;nancy&amp;quot;,
-            &amp;quot;receipt&amp;quot;: &amp;quot;193018485875930103&amp;quot;
-        },        
-        &amp;quot;payments&amp;quot;: [
-        {
-            &amp;quot;method&amp;quot;: &amp;quot;alipay&amp;quot;,
-            &amp;quot;amount&amp;quot;: 114.3
-        }
-        &amp;quot;userId&amp;quot;: 1000001,
-        &amp;quot;spotId&amp;quot;: 2000001,
-        &amp;quot;tenantId&amp;quot;: 12,
-        &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-29T08:23:35.27528848Z&amp;quot;
-    },
-    &amp;quot;success&amp;quot;: true,
-    &amp;quot;error&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;
 
@@ -3620,6 +2345,18 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;td&gt;No&lt;/td&gt;
 &lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;startAt&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;endAt&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -3627,59 +2364,16 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;p&gt;Request:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;pp://staging/order/all-orders?skipCount=0&amp;amp;maxResultCount=10&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pp://staging/order/all-orders?skipCount=0&amp;amp;maxResultCount=10&amp;amp;startAt=2017-05-01&amp;amp;endAt=2017-05-31&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Success:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
     &amp;quot;result&amp;quot;: {
         &amp;quot;items&amp;quot;: [
-            {
-                &amp;quot;id&amp;quot;: 132,
-                &amp;quot;orderNo&amp;quot;: &amp;quot;14907758150132&amp;quot;,
-                &amp;quot;quantity&amp;quot;: 3,
-                &amp;quot;listPrice&amp;quot;: 125.5,
-                &amp;quot;salePrice&amp;quot;: 114.3,
-                &amp;quot;discount&amp;quot;: 11.2,                
-                &amp;quot;couponInfo&amp;quot;: {
-                    &amp;quot;no&amp;quot;: &amp;quot;EE4E52FEF46F7B30DE&amp;quot;,
-                    &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,            
-                    &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-                    &amp;quot;eventId&amp;quot;: &amp;quot;EE2017030024&amp;quot;
-                }
-                &amp;quot;customerInfo&amp;quot;: {
-                    &amp;quot;id&amp;quot;: 1065586,
-                    &amp;quot;no&amp;quot;: &amp;quot;0000053147&amp;quot;,
-                    &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-                    &amp;quot;mobile&amp;quot;: &amp;quot;13818448893&amp;quot;,
-                    &amp;quot;grade&amp;quot;: 3,
-                    &amp;quot;cardType&amp;quot;: &amp;quot;purpleCard&amp;quot;,
-                    &amp;quot;mileage&amp;quot;: {
-                        &amp;quot;currentPoints&amp;quot;: 9000,
-                        &amp;quot;totalEarnPoints&amp;quot;: 10000,
-                        &amp;quot;totalRedeemPoints&amp;quot;: 10,
-                        &amp;quot;totalSaleAmount&amp;quot;: &amp;quot;345.0&amp;quot;
-                    }
-                },
-                &amp;quot;mileage&amp;quot;: {        
-                    &amp;quot;use&amp;quot;: 0
-                },
-                &amp;quot;info&amp;quot;: {
-                    &amp;quot;casher&amp;quot;: &amp;quot;nancy&amp;quot;,
-                    &amp;quot;receipt&amp;quot;: &amp;quot;193018485875930103&amp;quot;
-                },        
-                &amp;quot;payments&amp;quot;: [
-                {
-                    &amp;quot;method&amp;quot;: &amp;quot;alipay&amp;quot;,
-                    &amp;quot;amount&amp;quot;: 114.3
-                }
-                &amp;quot;userId&amp;quot;: 1000001,
-                &amp;quot;spotId&amp;quot;: 2000001,
-                &amp;quot;tenantId&amp;quot;: 12,
-                &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-29T08:23:35Z&amp;quot;
-            }            
+            /* ... */         
         ],
-        &amp;quot;totalCount&amp;quot;: 1
+        &amp;quot;totalCount&amp;quot;: 28
     },
     &amp;quot;success&amp;quot;: true,
     &amp;quot;error&amp;quot;: {}
@@ -3718,140 +2412,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h4 id=&#34;example-3&#34;&gt;Example&lt;/h4&gt;
 
-&lt;p&gt;Request:&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;pp://staging/order/return?orderId=132&amp;amp;uid=1705021039402&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Success:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    &amp;quot;result&amp;quot;: {
-        &amp;quot;id&amp;quot;: 132,
-        &amp;quot;orderNo&amp;quot;: &amp;quot;14907758150132&amp;quot;,
-        &amp;quot;uid&amp;quot;: &amp;quot;1705021039402&amp;quot;,
-        &amp;quot;quantity&amp;quot;: -3,
-        &amp;quot;listPrice&amp;quot;: -125.5,
-        &amp;quot;salePrice&amp;quot;: -114.3,
-        &amp;quot;discount&amp;quot;: -11.2,
-        &amp;quot;items&amp;quot;: [
-            {
-                &amp;quot;seq&amp;quot;: 1,
-                &amp;quot;skuId&amp;quot;: 169,
-                &amp;quot;sku&amp;quot;: {
-                    &amp;quot;id&amp;quot;: 169,
-                    &amp;quot;contentId&amp;quot;: 10,
-                    &amp;quot;name&amp;quot;: &amp;quot;Calvin Klein Jeans Women&#39;s Gmt Dyed Ankle Skinny Pant, Monument, 26&amp;quot;,
-                    &amp;quot;code&amp;quot;: &amp;quot;42AB600-1&amp;quot;,
-                    &amp;quot;listPrice&amp;quot;: 69.5,
-                    &amp;quot;salePrice&amp;quot;: 69.5,
-                    &amp;quot;discountName&amp;quot;: &amp;quot;&amp;quot;,
-                    &amp;quot;brandCode&amp;quot;: &amp;quot;Calvin Klein&amp;quot;,
-                    &amp;quot;contentCode&amp;quot;: &amp;quot;42AB600&amp;quot;,
-                    &amp;quot;images&amp;quot;: {
-                        &amp;quot;large&amp;quot;: {
-                            &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL.jpg&amp;quot;,
-                            &amp;quot;width&amp;quot;: 385,
-                            &amp;quot;height&amp;quot;: 500
-                        },
-                        &amp;quot;medium&amp;quot;: {
-                            &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL160_.jpg&amp;quot;,
-                            &amp;quot;width&amp;quot;: 123,
-                            &amp;quot;height&amp;quot;: 160
-                        },
-                        &amp;quot;small&amp;quot;: {
-                            &amp;quot;url&amp;quot;: &amp;quot;https://images-na.ssl-images-amazon.com/images/I/310neZo0MKL._SL75_.jpg&amp;quot;,
-                            &amp;quot;width&amp;quot;: 58,
-                            &amp;quot;height&amp;quot;: 75
-                        }
-                    },
-                    &amp;quot;options&amp;quot;: [
-                        {
-                            &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-                            &amp;quot;v&amp;quot;: &amp;quot;26&amp;quot;
-                        },
-                        {
-                            &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-                            &amp;quot;v&amp;quot;: &amp;quot;Monument&amp;quot;
-                        }
-                    ]
-                },
-                &amp;quot;quantity&amp;quot;: -1,
-                &amp;quot;listPrice&amp;quot;: -69.5,
-                &amp;quot;salePrice&amp;quot;: -69.5,
-                &amp;quot;discount&amp;quot;: 0
-            },
-            {
-                &amp;quot;seq&amp;quot;: 2,
-                &amp;quot;skuId&amp;quot;: 2454,
-                &amp;quot;sku&amp;quot;: {
-                    &amp;quot;id&amp;quot;: 2454,
-                    &amp;quot;contentId&amp;quot;: 445,
-                    &amp;quot;name&amp;quot;: &amp;quot;EEAA8A011, 101, 000&amp;quot;,
-                    &amp;quot;code&amp;quot;: &amp;quot;EEAA8A011101000&amp;quot;,
-                    &amp;quot;listPrice&amp;quot;: 28,
-                    &amp;quot;salePrice&amp;quot;: 22.4,
-                    &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-                    &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-                    &amp;quot;contentCode&amp;quot;: &amp;quot;EEAA8A011&amp;quot;,
-                    &amp;quot;images&amp;quot;: null,
-                    &amp;quot;options&amp;quot;: [
-                        {
-                            &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;,
-                            &amp;quot;v&amp;quot;: &amp;quot;(000)生产代表尺寸&amp;quot;
-                        },
-                        {
-                            &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;,
-                            &amp;quot;v&amp;quot;: &amp;quot;(101)red&amp;quot;
-                        }
-                    ]
-                },
-                &amp;quot;quantity&amp;quot;: -2,
-                &amp;quot;listPrice&amp;quot;: -56,
-                &amp;quot;salePrice&amp;quot;: -44.8,
-                &amp;quot;discount&amp;quot;: -11.2
-            }
-        ],
-        &amp;quot;couponInfo&amp;quot;: {
-            &amp;quot;no&amp;quot;: &amp;quot;EE4E52FEF46F7B30DE&amp;quot;,
-            &amp;quot;couponType&amp;quot;: &amp;quot;Discount&amp;quot;,            
-            &amp;quot;discountName&amp;quot;: &amp;quot;8折优惠&amp;quot;,
-            &amp;quot;eventId&amp;quot;: &amp;quot;EE2017030024&amp;quot;
-        }
-        &amp;quot;customerInfo&amp;quot;: {
-            &amp;quot;id&amp;quot;: 1065586,
-            &amp;quot;no&amp;quot;: &amp;quot;0000053147&amp;quot;,
-            &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;,
-            &amp;quot;mobile&amp;quot;: &amp;quot;13818448893&amp;quot;,
-            &amp;quot;grade&amp;quot;: 3,
-            &amp;quot;cardType&amp;quot;: &amp;quot;purpleCard&amp;quot;,
-            &amp;quot;mileage&amp;quot;: {
-                &amp;quot;currentPoints&amp;quot;: 9000,
-                &amp;quot;totalEarnPoints&amp;quot;: 10000,
-                &amp;quot;totalRedeemPoints&amp;quot;: 10,
-                &amp;quot;totalSaleAmount&amp;quot;: &amp;quot;345.0&amp;quot;
-            }
-        },
-        &amp;quot;mileage&amp;quot;: {        
-            &amp;quot;use&amp;quot;: 0
-        },
-        &amp;quot;info&amp;quot;: {
-            &amp;quot;casher&amp;quot;: &amp;quot;nancy&amp;quot;,
-            &amp;quot;receipt&amp;quot;: &amp;quot;193018485875930103&amp;quot;
-        },        
-        &amp;quot;payments&amp;quot;: [
-        {
-            &amp;quot;method&amp;quot;: &amp;quot;alipay&amp;quot;,
-            &amp;quot;amount&amp;quot;: -114.3
-        }
-        &amp;quot;userId&amp;quot;: 1000001,
-        &amp;quot;spotId&amp;quot;: 2000001,
-        &amp;quot;tenantId&amp;quot;: 12,
-        &amp;quot;createdAt&amp;quot;: &amp;quot;2017-03-29T08:23:35.27528848Z&amp;quot;
-    },
-    &amp;quot;success&amp;quot;: true,
-    &amp;quot;error&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
