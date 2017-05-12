@@ -2602,7 +2602,7 @@ P2PosInit(path);
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;skuID&lt;/td&gt;
+&lt;td&gt;skuId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
 &lt;td&gt;number&lt;/td&gt;
 &lt;/tr&gt;
