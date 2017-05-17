@@ -389,17 +389,27 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;tr&gt;
 &lt;td&gt;501&lt;/td&gt;
-&lt;td&gt;Cannot get orders.&lt;/td&gt;
+&lt;td&gt;Cannot search orders.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;502&lt;/td&gt;
-&lt;td&gt;Cannot find the order(&lt;code&gt;{id}&lt;/code&gt;).&lt;/td&gt;
+&lt;td&gt;The order is not exist.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;503&lt;/td&gt;
 &lt;td&gt;Cannot return the order(&lt;code&gt;{id}&lt;/code&gt;).&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;504&lt;/td&gt;
+&lt;td&gt;The order has canceled.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;505&lt;/td&gt;
+&lt;td&gt;The order status is invalid.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -538,11 +548,11 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
 
-&lt;h3 id=&#34;current-v0-0-7&#34;&gt;Current(v0.0.7)&lt;/h3&gt;
+&lt;h3 id=&#34;current-v0-1-0&#34;&gt;Current(v0.1.0)&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
   
@@ -555,7 +565,7 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 &lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
   
@@ -571,158 +581,53 @@ All features are definded in &lt;strong&gt;uri format&lt;/strong&gt; and all res
 
 &lt;h3 id=&#34;archived-versions&#34;&gt;Archived versions&lt;/h3&gt;
 
-&lt;ul&gt;
-&lt;li&gt;0.0.6
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Version&lt;/th&gt;
+&lt;th&gt;Android&lt;/th&gt;
+&lt;th&gt;iOS&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.6/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  pos.aar
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.6/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  Pos.framework.zip
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;0.0.5
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0.0.7&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.5/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  pos.aar
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.5/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  Pos.framework.zip
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;0.0.4
+&lt;tr&gt;
+&lt;td&gt;0.0.6&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.6/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.6/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.4/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  pos.aar
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.4/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  Pos.framework.zip
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;v0.0.3
+&lt;tr&gt;
+&lt;td&gt;0.0.5&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.5/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.5/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.3/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  pos.aar
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.3/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  Pos.framework.zip
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;v0.0.2
+&lt;tr&gt;
+&lt;td&gt;0.0.4&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.4/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.4/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.2/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  pos.aar
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.2/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  Pos.framework.zip
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;tr&gt;
+&lt;td&gt;0.0.3&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.3/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.3/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;0.0.2&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.2/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.2/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;!--### Inventory management
 
@@ -1218,7 +1123,20 @@ Pos.init(path);
 &lt;h4 id=&#34;download&#34;&gt;Download&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Current(v0.0.7)
+&lt;li&gt;Current(v0.1.0)
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  pos.aar
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;0.0.7
 &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
@@ -1503,7 +1421,20 @@ P2PosInit(path);
 &lt;h4 id=&#34;download&#34;&gt;Download&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Current(v0.0.7)
+&lt;li&gt;Current(v0.1.0)
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  Pos.framework.zip
+  
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;v0.0.7
 &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
@@ -2336,7 +2267,7 @@ P2PosInit(path);
 
 &lt;pre&gt;&lt;code&gt;{
     &amp;quot;result&amp;quot;: {
-        &amp;quot;id&amp;quot;: 3520,
+        &amp;quot;id&amp;quot;: &amp;quot;3520&amp;quot;,
         &amp;quot;tenantId&amp;quot;: 4,
         &amp;quot;listPrice&amp;quot;: 3588,
         &amp;quot;salePrice&amp;quot;: 2511.6,
@@ -2400,7 +2331,7 @@ P2PosInit(path);
         ],
         &amp;quot;items&amp;quot;: [
             {
-                &amp;quot;id&amp;quot;: 4638,
+                &amp;quot;id&amp;quot;: &amp;quot;4638&amp;quot;,
                 &amp;quot;sku&amp;quot;: {
                     &amp;quot;id&amp;quot;: 184184,
                     &amp;quot;contentId&amp;quot;: 21673,
@@ -2449,7 +2380,7 @@ P2PosInit(path);
                 &amp;quot;discount&amp;quot;: 119.6
             },
             {
-                &amp;quot;id&amp;quot;: 4639,
+                &amp;quot;id&amp;quot;: &amp;quot;4639&amp;quot;,
                 &amp;quot;sku&amp;quot;: {
                     &amp;quot;id&amp;quot;: 184184,
                     &amp;quot;contentId&amp;quot;: 21673,
@@ -2489,7 +2420,7 @@ P2PosInit(path);
                 &amp;quot;discount&amp;quot;: 478.4
             },
             {
-                &amp;quot;id&amp;quot;: 4640,
+                &amp;quot;id&amp;quot;: &amp;quot;4640&amp;quot;,
                 &amp;quot;sku&amp;quot;: {
                     &amp;quot;id&amp;quot;: 186184,
                     &amp;quot;contentId&amp;quot;: 24108,
@@ -2598,7 +2529,7 @@ P2PosInit(path);
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -2646,7 +2577,7 @@ P2PosInit(path);
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -2694,13 +2625,13 @@ P2PosInit(path);
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;itemId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -2736,7 +2667,7 @@ P2PosInit(path);
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -2770,7 +2701,7 @@ P2PosInit(path);
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -2804,7 +2735,7 @@ P2PosInit(path);
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -2838,7 +2769,7 @@ P2PosInit(path);
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -2872,7 +2803,7 @@ P2PosInit(path);
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -2912,7 +2843,7 @@ P2PosInit(path);
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -2956,7 +2887,7 @@ P2PosInit(path);
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -2984,7 +2915,7 @@ P2PosInit(path);
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -3028,7 +2959,7 @@ P2PosInit(path);
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -3047,7 +2978,7 @@ P2PosInit(path);
 
 &lt;pre&gt;&lt;code&gt;{
     &amp;quot;result&amp;quot;: {
-        &amp;quot;id&amp;quot;: 1212,
+        &amp;quot;id&amp;quot;: &amp;quot;1212&amp;quot;,
         &amp;quot;orderNo&amp;quot;: &amp;quot;14945206951212&amp;quot;,
         &amp;quot;uid&amp;quot;: &amp;quot;20170501138400031&amp;quot;,
         &amp;quot;quantity&amp;quot;: 4,
@@ -3288,7 +3219,7 @@ P2PosInit(path);
 &lt;tr&gt;
 &lt;td&gt;orderId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -3380,7 +3311,7 @@ P2PosInit(path);
 &lt;tr&gt;
 &lt;td&gt;orderId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;

@@ -1355,7 +1355,7 @@ Success:
 
 &lt;pre&gt;&lt;code&gt;{
     &amp;quot;result&amp;quot;: {
-        &amp;quot;id&amp;quot;: 3520,
+        &amp;quot;id&amp;quot;: &amp;quot;3520&amp;quot;,
         &amp;quot;tenantId&amp;quot;: 4,
         &amp;quot;listPrice&amp;quot;: 3588,
         &amp;quot;salePrice&amp;quot;: 2511.6,
@@ -1419,7 +1419,7 @@ Success:
         ],
         &amp;quot;items&amp;quot;: [
             {
-                &amp;quot;id&amp;quot;: 4638,
+                &amp;quot;id&amp;quot;: &amp;quot;4638&amp;quot;,
                 &amp;quot;sku&amp;quot;: {
                     &amp;quot;id&amp;quot;: 184184,
                     &amp;quot;contentId&amp;quot;: 21673,
@@ -1468,7 +1468,7 @@ Success:
                 &amp;quot;discount&amp;quot;: 119.6
             },
             {
-                &amp;quot;id&amp;quot;: 4639,
+                &amp;quot;id&amp;quot;: &amp;quot;4639&amp;quot;,
                 &amp;quot;sku&amp;quot;: {
                     &amp;quot;id&amp;quot;: 184184,
                     &amp;quot;contentId&amp;quot;: 21673,
@@ -1508,7 +1508,7 @@ Success:
                 &amp;quot;discount&amp;quot;: 478.4
             },
             {
-                &amp;quot;id&amp;quot;: 4640,
+                &amp;quot;id&amp;quot;: &amp;quot;4640&amp;quot;,
                 &amp;quot;sku&amp;quot;: {
                     &amp;quot;id&amp;quot;: 186184,
                     &amp;quot;contentId&amp;quot;: 24108,
@@ -1617,7 +1617,7 @@ Success:
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -1665,7 +1665,7 @@ Success:
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -1713,13 +1713,13 @@ Success:
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;itemId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -1755,7 +1755,7 @@ Success:
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -1789,7 +1789,7 @@ Success:
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -1823,7 +1823,7 @@ Success:
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -1857,7 +1857,7 @@ Success:
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -1891,7 +1891,7 @@ Success:
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -1931,7 +1931,7 @@ Success:
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1975,7 +1975,7 @@ Success:
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -2003,7 +2003,7 @@ Success:
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -2047,7 +2047,7 @@ Success:
 &lt;tr&gt;
 &lt;td&gt;cartId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -2066,7 +2066,7 @@ Success:
 
 &lt;pre&gt;&lt;code&gt;{
     &amp;quot;result&amp;quot;: {
-        &amp;quot;id&amp;quot;: 1212,
+        &amp;quot;id&amp;quot;: &amp;quot;1212&amp;quot;,
         &amp;quot;orderNo&amp;quot;: &amp;quot;14945206951212&amp;quot;,
         &amp;quot;uid&amp;quot;: &amp;quot;20170501138400031&amp;quot;,
         &amp;quot;quantity&amp;quot;: 4,
@@ -2307,7 +2307,7 @@ Success:
 &lt;tr&gt;
 &lt;td&gt;orderId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -2399,7 +2399,7 @@ Success:
 &lt;tr&gt;
 &lt;td&gt;orderId&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;number&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;

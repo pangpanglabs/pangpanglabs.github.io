@@ -256,17 +256,27 @@
 
 &lt;tr&gt;
 &lt;td&gt;501&lt;/td&gt;
-&lt;td&gt;Cannot get orders.&lt;/td&gt;
+&lt;td&gt;Cannot search orders.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;502&lt;/td&gt;
-&lt;td&gt;Cannot find the order(&lt;code&gt;{id}&lt;/code&gt;).&lt;/td&gt;
+&lt;td&gt;The order is not exist.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;503&lt;/td&gt;
 &lt;td&gt;Cannot return the order(&lt;code&gt;{id}&lt;/code&gt;).&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;504&lt;/td&gt;
+&lt;td&gt;The order has canceled.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;505&lt;/td&gt;
+&lt;td&gt;The order status is invalid.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

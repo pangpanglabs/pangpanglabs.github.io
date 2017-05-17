@@ -44,11 +44,11 @@
 
 &lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
 
-&lt;h3 id=&#34;current-v0-0-7&#34;&gt;Current(v0.0.7)&lt;/h3&gt;
+&lt;h3 id=&#34;current-v0-1-0&#34;&gt;Current(v0.1.0)&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
   
@@ -61,7 +61,7 @@
 &lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
   
@@ -77,158 +77,53 @@
 
 &lt;h3 id=&#34;archived-versions&#34;&gt;Archived versions&lt;/h3&gt;
 
-&lt;ul&gt;
-&lt;li&gt;0.0.6
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Version&lt;/th&gt;
+&lt;th&gt;Android&lt;/th&gt;
+&lt;th&gt;iOS&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.6/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  pos.aar
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.6/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  Pos.framework.zip
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;0.0.5
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0.0.7&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.5/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  pos.aar
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.5/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  Pos.framework.zip
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;0.0.4
+&lt;tr&gt;
+&lt;td&gt;0.0.6&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.6/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.6/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.4/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  pos.aar
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.4/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  Pos.framework.zip
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;v0.0.3
+&lt;tr&gt;
+&lt;td&gt;0.0.5&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.5/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.5/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.3/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  pos.aar
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.3/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  Pos.framework.zip
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;v0.0.2
+&lt;tr&gt;
+&lt;td&gt;0.0.4&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.4/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.4/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.2/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  pos.aar
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.2/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  Pos.framework.zip
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;tr&gt;
+&lt;td&gt;0.0.3&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.3/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.3/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;0.0.2&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.2/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.2/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;!--### Inventory management
 
