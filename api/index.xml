@@ -2313,6 +2313,12 @@ Success:
 &lt;/tr&gt;
 
 &lt;tr&gt;
+&lt;td&gt;orderNo&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
 &lt;td&gt;uid&lt;/td&gt;
 &lt;td&gt;-&lt;/td&gt;
 &lt;td&gt;string&lt;/td&gt;
@@ -2320,7 +2326,7 @@ Success:
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;Either &lt;code&gt;orderId&lt;/code&gt; or &lt;code&gt;uid&lt;/code&gt; is a required.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;One of &lt;code&gt;orderId&lt;/code&gt;, &lt;code&gt;orderNo&lt;/code&gt; or &lt;code&gt;uid&lt;/code&gt; is a required.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;example-1&#34;&gt;Example&lt;/h4&gt;
 
@@ -2413,6 +2419,12 @@ Success:
 &lt;/tr&gt;
 
 &lt;tr&gt;
+&lt;td&gt;parentOrderNo&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
 &lt;td&gt;parentUid&lt;/td&gt;
 &lt;td&gt;-&lt;/td&gt;
 &lt;td&gt;string&lt;/td&gt;
@@ -2426,7 +2438,7 @@ Success:
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;Either &lt;code&gt;parentOrderId&lt;/code&gt; or &lt;code&gt;parentUid&lt;/code&gt; is a required.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;One of &lt;code&gt;parentOrderId&lt;/code&gt;, &lt;code&gt;parentOrderNo&lt;/code&gt; or &lt;code&gt;parentUid&lt;/code&gt; is a required.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;example-3&#34;&gt;Example&lt;/h4&gt;
 
