@@ -631,11 +631,19 @@
 <tbody>
 <tr>
 <td>orderId</td>
-<td>Yes</td>
+<td>-</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>uid</td>
+<td>-</td>
 <td>string</td>
 </tr>
 </tbody>
 </table>
+
+<p><strong>Either <code>orderId</code> or <code>uid</code> is a required.</strong></p>
 
 <h4 id="example-1">Example</h4>
 
@@ -722,8 +730,14 @@
 
 <tbody>
 <tr>
-<td>orderId</td>
-<td>Yes</td>
+<td>parentOrderId</td>
+<td>-</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>parentUid</td>
+<td>-</td>
 <td>string</td>
 </tr>
 
@@ -735,9 +749,11 @@
 </tbody>
 </table>
 
+<p><strong>Either <code>parentOrderId</code> or <code>parentUid</code> is a required.</strong></p>
+
 <h4 id="example-3">Example</h4>
 
-<p><code>pp://staging/order/return?orderId=132&amp;uid=1705021039402</code></p>
+<p><code>pp://staging/order/return?parentOrderId=132&amp;uid=1705021039402</code></p>
 
 
       
