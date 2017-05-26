@@ -3355,6 +3355,78 @@ P2PosInit(path);
 &lt;h4 id=&#34;example-3&#34;&gt;Example&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;pp://staging/order/return?parentOrderId=132&amp;amp;uid=1705021039402&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;return-order-and-resale&#34;&gt;Return order and resale&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;/order/return-and-resale&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;parameters-4&#34;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;parentOrderId&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;parentOrderNo&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;parentUid&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;uid&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;items[&lt;code&gt;seq&lt;/code&gt;]&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;integer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;One of &lt;code&gt;parentOrderId&lt;/code&gt;, &lt;code&gt;parentOrderNo&lt;/code&gt; or &lt;code&gt;parentUid&lt;/code&gt; is a required.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;example-4&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Request:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pp://staging/order/return-and-resale?parentOrderId=132&amp;amp;uid=1705021039402&amp;amp;items[2]=2&amp;amp;items[1]=1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;result&amp;quot;: {
+        &amp;quot;order&amp;quot;: {
+            /* returned order */
+        },
+        &amp;quot;cart&amp;quot;: {
+            /* resale cart */
+        }
+    },
+    &amp;quot;success&amp;quot;: true,
+    &amp;quot;error&amp;quot;: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
