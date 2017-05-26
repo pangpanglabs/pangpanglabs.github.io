@@ -1129,7 +1129,7 @@ Pos.init(path);
 &lt;h4 id=&#34;download&#34;&gt;Download&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Current(v0.1.1)
+&lt;li&gt;&lt;p&gt;Current(v0.1.1)
 &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.1/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
@@ -1141,7 +1141,21 @@ Pos.init(path);
   pos.aar
   
 &lt;/a&gt;
-&lt;/li&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Archived versions
+&lt;a  href=&#34;https://pangpanglabs.github.io/introduction/#archived-versions&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-external-link&#34;&gt;&lt;/i&gt;
+    
+  
+  click
+  
+&lt;/a&gt;
+&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&#34;in-project-structure&#34;&gt;In Project Structure&lt;/h4&gt;
@@ -1349,7 +1363,7 @@ P2PosInit(path);
 &lt;h4 id=&#34;download&#34;&gt;Download&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Current(v0.1.1)
+&lt;li&gt;&lt;p&gt;Current(v0.1.1)
 &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.1/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
@@ -1361,7 +1375,21 @@ P2PosInit(path);
   Pos.framework.zip
   
 &lt;/a&gt;
-&lt;/li&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Archived versions
+&lt;a  href=&#34;https://pangpanglabs.github.io/introduction/#archived-versions&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-external-link&#34;&gt;&lt;/i&gt;
+    
+  
+  click
+  
+&lt;/a&gt;
+&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&#34;project-setting&#34;&gt;Project Setting&lt;/h4&gt;
