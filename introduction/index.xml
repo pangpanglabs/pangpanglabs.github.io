@@ -44,11 +44,11 @@
 
 &lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
 
-&lt;h3 id=&#34;current-v0-1-0&#34;&gt;Current(v0.1.0)&lt;/h3&gt;
+&lt;h3 id=&#34;current-v0-1-1&#34;&gt;Current(v0.1.1)&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.1/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
   
@@ -61,7 +61,7 @@
 &lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.1/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
   
@@ -87,6 +87,12 @@
 &lt;/thead&gt;
 
 &lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0.1.0&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
 &lt;tr&gt;
 &lt;td&gt;0.0.7&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
