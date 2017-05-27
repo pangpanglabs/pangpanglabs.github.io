@@ -78,6 +78,20 @@ Pos.init(path);
 &lt;/a&gt;
 &lt;/p&gt;&lt;/li&gt;
 
+&lt;li&gt;&lt;p&gt;v0.1.0
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  pos.aar
+  
+&lt;/a&gt;
+&lt;/p&gt;&lt;/li&gt;
+
 &lt;li&gt;&lt;p&gt;Archived versions
 &lt;a  href=&#34;https://pangpanglabs.github.io/introduction/#archived-versions&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
@@ -171,6 +185,20 @@ P2PosInit(path);
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Current(v0.1.1)
 &lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.1/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+    
+  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
+    
+  
+  Pos.framework.zip
+  
+&lt;/a&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;v0.1.0
+&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
   
   
   
