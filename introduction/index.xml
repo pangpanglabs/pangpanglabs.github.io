@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Introduction-rsses on PangPang Labs</title>
-    <link>http://pangpanglabs.github.io/introduction/index.xml</link>
-    <description>Recent content in Introduction-rsses on PangPang Labs</description>
+    <title>Introductions on PangPang Labs</title>
+    <link>http://pangpanglabs.github.io/introduction/</link>
+    <description>Recent content in Introductions on PangPang Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://pangpanglabs.github.io/introduction/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://pangpanglabs.github.io/introduction/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Introduction</title>
@@ -14,198 +16,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://pangpanglabs.github.io/introduction/</guid>
-      <description>
-
-&lt;h1 id=&#34;start-a-business-for-free&#34;&gt;Start A Business For Free&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Available on iOS and Android devices&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;Cloud-based&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;Work offline&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://pangpanglabs.github.io/images/pos.png&#34; alt=&#34;PangPang POS&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
-
-&lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Shopping cart&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Promotion &amp;amp; Membership &lt;em&gt;(~ 2017.02.28)&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Sales statistics &lt;em&gt;(~ 2017.03.15)&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Reselling &amp;amp; Online delivery &lt;em&gt;(~ 2017.03.31)&lt;/em&gt;
-&lt;!--- [ ] Legacy Interface *(~ 2017.01.15)*--&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;not-supported&#34;&gt;Not Supported&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;User Interface&lt;/li&gt;
-&lt;li&gt;Payment&lt;/li&gt;
-&lt;li&gt;Push &amp;amp; Notification&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
-
-&lt;h3 id=&#34;current-v0-1-1&#34;&gt;Current(v0.1.1)&lt;/h3&gt;
-
-&lt;p&gt;This release adds graceful error handling.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.1/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  pos.aar
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.1/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  Pos.framework.zip
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;v0-1-0&#34;&gt;v0.1.0&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Android SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  pos.aar
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;iOS SDK&lt;br /&gt;
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  Pos.framework.zip
-  
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;archived-versions&#34;&gt;Archived versions&lt;/h3&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Version&lt;/th&gt;
-&lt;th&gt;Android&lt;/th&gt;
-&lt;th&gt;iOS&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;0.0.7&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.7/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;0.0.6&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.6/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.6/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;0.0.5&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.5/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.5/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;0.0.4&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.4/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.4/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;0.0.3&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.3/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.3/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;0.0.2&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.2/pos.aar&#34;&gt;pos.aar&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.0.2/Pos.framework.zip&#34;&gt;Pos.framework.zip&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;!--### Inventory management
-
-- **Items import**  
-  Quickly add thousands of items using the CSV-spreadsheets.  
-  Or use your own ETL tool.
-- **Track Inventory**  
-  Track the stock of products and their components.
-- **Low stock notifications**  
-  Receive daily notifications about low stock to make the necessary item orders in time.
-
-### Employee management
-
-- **Sales by employees**  
-  Track each employee performance and take informed business decisions.
-- **Smart management**  
-  Information on the workload per hour allows for efficient managament of your staff.
-- **Access rights**  
-  Manage access to sensitive information and functions.
-
-### Sales analytics
-
-- **Sales trend**  
-  Track the sales growth or decline compared with the previous day, week, month and promptly react to changes.
-- **Popular items**  
-  Sales by item analytics allows the best-selling items to be determined and therefore the right purchasing decisions can be made.
-- **Shifts**  
-  Identify the cash lack at the end of the shift and track employees inaccuracy or manipulations.
-- **Receipts history**  
-  Receipts history review allows you to monitor each transaction: sales, refunds, discounts.
-- **Reports export**  
-  Export sales data to the spreadsheets for detailed analysis.
-
----
-
-- Discounts  
-  Apply discounts to the receipt or specific items.
-- Refunds  
-  Refund the selected item or all items on the receipt.
-- Multi Store
-- Products management
-  - 
-- Customer management
-- Inventory management
-- Employee management
-- Sales analytics
-- Loyalty program
-- Customer communication--&gt;
-</description>
+      <description>Start A Business For Free Available on iOS and Android devices
+Cloud-based
+Work offline
+Features Shopping cart Promotion &amp;amp; Membership (~ 2017.02.28) Sales statistics (~ 2017.03.15) Reselling &amp;amp; Online delivery (~ 2017.03.31)   Not Supported  User Interface Payment Push &amp;amp; Notification  Downloads Current(v0.1.2) This release adds graceful error handling.
+ Android SDK
+ pos.aar   iOS SDK
+ Pos.framework.zip    Archived versions    Version Android iOS     0.</description>
     </item>
     
   </channel>

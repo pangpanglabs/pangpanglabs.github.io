@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Global-settings-rsses on PangPang Labs</title>
-    <link>http://pangpanglabs.github.io/global-settings/index.xml</link>
-    <description>Recent content in Global-settings-rsses on PangPang Labs</description>
+    <title>Global-settings on PangPang Labs</title>
+    <link>http://pangpanglabs.github.io/global-settings/</link>
+    <description>Recent content in Global-settings on PangPang Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://pangpanglabs.github.io/global-settings/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://pangpanglabs.github.io/global-settings/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Global Settings</title>
@@ -14,80 +16,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://pangpanglabs.github.io/global-settings/</guid>
-      <description>
-
-&lt;h2 id=&#34;system&#34;&gt;System&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;System.AllowOffline&lt;/td&gt;
-&lt;td&gt;boolean&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;System.TraceInterval&lt;/td&gt;
-&lt;td&gt;integer&lt;/td&gt;
-&lt;td&gt;sending trace log to server interval(seconds)&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;60&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;shoppingcart&#34;&gt;ShoppingCart&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;ShoppingCart.Price.RoundPoint&lt;/td&gt;
-&lt;td&gt;integer&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;2&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;ShoppingCart.Price.RoundStrategy&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;quot;floor&amp;quot;&lt;/code&gt;round down &lt;br /&gt; &lt;code&gt;&amp;quot;ceil&amp;quot;&lt;/code&gt;: round up &lt;br /&gt; &lt;code&gt;&amp;quot;round&amp;quot;&lt;/code&gt;: round to the nearest integer&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;quot;round&amp;quot;&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;ShoppingCart.Price.Culture&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;quot;USD&amp;quot;&lt;/code&gt;($), &lt;code&gt;&amp;quot;EUR&amp;quot;&lt;/code&gt;(€), &lt;code&gt;&amp;quot;CNY&amp;quot;&lt;/code&gt;(¥), &lt;code&gt;&amp;quot;KRW&amp;quot;&lt;/code&gt;(₩)&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;quot;CNY&amp;quot;&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;ShoppingCart.Payment&lt;/td&gt;
-&lt;td&gt;string array&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;quot;alipay&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;wxpay&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;cash&amp;quot;&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;[&amp;quot;alipay&amp;quot;, &amp;quot;wxpay&amp;quot;]&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description>System    Code Type Description Default     System.AllowOffline boolean  true   System.TraceInterval integer sending trace log to server interval(seconds) 60    ShoppingCart    Code Type Description Default     ShoppingCart.Price.RoundPoint integer  2   ShoppingCart.Price.RoundStrategy string &amp;quot;floor&amp;quot;round down &amp;quot;ceil&amp;quot;: round up &amp;quot;round&amp;quot;: round to the nearest integer &amp;quot;round&amp;quot;   ShoppingCart.Price.Culture string &amp;quot;USD&amp;quot;($), &amp;quot;EUR&amp;quot;(€), &amp;quot;CNY&amp;quot;(¥), &amp;quot;KRW&amp;quot;(₩) &amp;quot;CNY&amp;quot;   ShoppingCart.</description>
     </item>
     
   </channel>

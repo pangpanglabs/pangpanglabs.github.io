@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Getting-started-rsses on PangPang Labs</title>
-    <link>http://pangpanglabs.github.io/getting-started/index.xml</link>
-    <description>Recent content in Getting-started-rsses on PangPang Labs</description>
+    <title>Getting-starteds on PangPang Labs</title>
+    <link>http://pangpanglabs.github.io/getting-started/</link>
+    <description>Recent content in Getting-starteds on PangPang Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://pangpanglabs.github.io/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://pangpanglabs.github.io/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Getting Started</title>
@@ -14,12 +16,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://pangpanglabs.github.io/getting-started/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://pangpanglabs.github.io/getting-started/android/&#34;&gt;Android&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://pangpanglabs.github.io/getting-started/ios/&#34;&gt;iOS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://pangpanglabs.github.io/getting-started/web-api/&#34;&gt;Web API&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> Android iOS Web API  </description>
     </item>
     
     <item>
@@ -28,103 +25,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://pangpanglabs.github.io/getting-started/android/</guid>
-      <description>
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Set Permission in &lt;code&gt;AndroidManifest.xml&lt;/code&gt; file&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Import&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;import cn.p2shop.pos.Pos;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Init&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;String path;
-if (android.os.Build.VERSION.SDK_INT &amp;gt;=android.os.Build.VERSION_CODES.LOLLIPOP){
-    path = getNoBackupFilesDir().getAbsolutePath();
-} else{
-    path = getFilesDir().getAbsolutePath();
-}
-Pos.init(path);
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Call API&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;String result = Pos.call(&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-&lt;h3 id=&#34;setting&#34;&gt;Setting&lt;/h3&gt;
-
-&lt;h4 id=&#34;download&#34;&gt;Download&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Current(v0.1.1)
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.1/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  pos.aar
-  
-&lt;/a&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;v0.1.0
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/pos.aar&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  pos.aar
-  
-&lt;/a&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Archived versions
-&lt;a  href=&#34;https://pangpanglabs.github.io/introduction/#archived-versions&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-external-link&#34;&gt;&lt;/i&gt;
-    
-  
-  click
-  
-&lt;/a&gt;
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;in-project-structure&#34;&gt;In Project Structure&lt;/h4&gt;
-
-&lt;ol&gt;
-&lt;li&gt;click &lt;code&gt;+&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;select &lt;code&gt;import .JAR/.AAR Package&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;click &lt;code&gt;Next&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;select &lt;code&gt;pos.aar&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;click &lt;code&gt;Finish&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;click &lt;code&gt;OK&lt;/code&gt; and re-open &lt;code&gt;Project Structure&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;select &lt;code&gt;app&lt;/code&gt; modules&lt;/li&gt;
-&lt;li&gt;select &lt;code&gt;Dependencies&lt;/code&gt; tab&lt;/li&gt;
-&lt;li&gt;click &lt;code&gt;+&lt;/code&gt; button&lt;/li&gt;
-&lt;li&gt;select &lt;code&gt;3. Module Dependency&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;select &lt;code&gt;possdk&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;click &lt;code&gt;OK&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-</description>
+      <description>Set Permission in AndroidManifest.xml file
+&amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt;  Import
+import cn.p2shop.pos.Pos;  Init
+String path; if (android.os.Build.VERSION.SDK_INT &amp;gt;=android.os.Build.VERSION_CODES.LOLLIPOP){ path = getNoBackupFilesDir().getAbsolutePath(); } else{ path = getFilesDir().getAbsolutePath(); } Pos.init(path);  Call API
+String result = Pos.call(&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);    Setting Download  Current(v0.1.1)  pos.aar   Archived versions  click    In Project Structure  click + select import .JAR/.AAR Package click Next select pos.aar file click Finish click OK and re-open Project Structure select app modules select Dependencies tab click + button select 3.</description>
     </item>
     
     <item>
@@ -133,113 +38,13 @@ Pos.init(path);
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://pangpanglabs.github.io/getting-started/ios/</guid>
-      <description>
-
-&lt;h3 id=&#34;swift&#34;&gt;Swift&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Import&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;import Pos
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Init&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]
-P2PosInit(path)
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Call API&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;let result = P2PosCall(&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;objective-c&#34;&gt;Objective-C&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Import&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#import &amp;lt;Pos/Pos.h&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Init&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;NSString* path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,
-                                                      NSUserDomainMask,
-                                                      YES) objectAtIndex:0];
-P2PosInit(path);
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Call API&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;NSString* result = P2PosCall(@&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-&lt;h3 id=&#34;setting&#34;&gt;Setting&lt;/h3&gt;
-
-&lt;h4 id=&#34;download&#34;&gt;Download&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Current(v0.1.1)
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.1/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  Pos.framework.zip
-  
-&lt;/a&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;v0.1.0
-&lt;a  href=&#34;http://possdk.oss-cn-hangzhou.aliyuncs.com/0.1.0/Pos.framework.zip&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-cloud-download&#34;&gt;&lt;/i&gt;
-    
-  
-  Pos.framework.zip
-  
-&lt;/a&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Archived versions
-&lt;a  href=&#34;https://pangpanglabs.github.io/introduction/#archived-versions&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-external-link&#34;&gt;&lt;/i&gt;
-    
-  
-  click
-  
-&lt;/a&gt;
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;project-setting&#34;&gt;Project Setting&lt;/h4&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Extract &lt;code&gt;Pos.framework.zip&lt;/code&gt; file.&lt;/li&gt;
-&lt;li&gt;Drag and Drop &lt;code&gt;Pos.framework&lt;/code&gt; to Xcode project.&lt;/li&gt;
-&lt;li&gt;in &lt;code&gt;Project&lt;/code&gt;-&amp;gt;&lt;code&gt;Target&lt;/code&gt;-&amp;gt;&lt;code&gt;Build Settings&lt;/code&gt;&lt;br /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Search &lt;code&gt;Enable Bitcode&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;set &lt;code&gt;NO&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-</description>
+      <description>Swift  Import
+import Pos  Init
+let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0] P2PosInit(path)  Call API
+let result = P2PosCall(&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;)   Objective-C  Import
+#import &amp;lt;Pos/Pos.h&amp;gt;  Init
+NSString* path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0]; P2PosInit(path);  Call API
+NSString* result = P2PosCall(@&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);    Setting Download  Current(v0.1.2)  Pos.framework.zip   Archived versions  click    Project Setting  Extract Pos.framework.zip file. Drag and Drop Pos.</description>
     </item>
     
     <item>
@@ -248,19 +53,7 @@ P2PosInit(path);
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://pangpanglabs.github.io/getting-started/web-api/</guid>
-      <description>&lt;a  href=&#34;http://staging.p2shop.cn:54100/docs/#/PosAPI&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
-  
-  
-  
-    
-  &lt;i class=&#34;fa fa-hand-pointer-o&#34;&gt;&lt;/i&gt;
-    
-  
-  Try with Swagger UI!
-  
-&lt;/a&gt;
-
-</description>
+      <description> Try with Swagger UI!  </description>
     </item>
     
   </channel>
