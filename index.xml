@@ -164,10 +164,9 @@ import Pos  Init</description>
       <description>Start A Business For Free Available on iOS and Android devices
 Cloud-based
 Work offline
-Features Shopping cart Promotion &amp;amp; Membership (~ 2017.02.28) Sales statistics (~ 2017.03.15) Reselling &amp;amp; Online delivery (~ 2017.03.31)   Not Supported  User Interface Payment Push &amp;amp; Notification  Downloads Current(v0.1.2) This release adds graceful error handling.
- Android SDK
- pos.aar   iOS SDK
- Pos.framework.zip    Archived versions    Version Android iOS     0.</description>
+Features Shopping cart Promotion &amp;amp; Membership (~ 2017.02.28) Sales statistics (~ 2017.03.15) Reselling &amp;amp; Online delivery (~ 2017.03.31)   Not Supported  User Interface Payment Push &amp;amp; Notification  Downloads Current(v0.1.2)   New Features:
+ Adds /cart/clear-cart API  Bug Fixes:  Fixes issue error parsing     Android SDK:
+ pos.</description>
     </item>
     
     <item>
