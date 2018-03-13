@@ -1,29 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Apis on PangPang Labs</title>
+    <title>API Description on PangPang Labs</title>
     <link>http://pangpanglabs.github.io/api/</link>
-    <description>Recent content in Apis on PangPang Labs</description>
+    <description>Recent content in API Description on PangPang Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
 	<atom:link href="http://pangpanglabs.github.io/api/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>API Description</title>
-      <link>http://pangpanglabs.github.io/api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://pangpanglabs.github.io/api/</guid>
-      <description>How to Initialize SDK PosSDK use local database. When initializing, you have to send the path where the database file will be stored.
-Android  For using network, Android require extra permissions.
-Set Permission in AndroidManifest.xml file
-&amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt;  Import
-import cn.p2shop.pos.Pos;  Init
-String path; if (android.os.Build.VERSION.SDK_INT &amp;gt;=android.os.Build.VERSION_CODES.LOLLIPOP){ path = getNoBackupFilesDir().getAbsolutePath(); } else{ path = getFilesDir().getAbsolutePath(); } Pos.init(path);   iOS Swift  Import
-import Pos  Init</description>
-    </item>
     
     <item>
       <title>Account</title>
@@ -76,7 +61,7 @@ Success:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://pangpanglabs.github.io/api/cart/</guid>
-      <description>Cart result example { &amp;quot;result&amp;quot;: { &amp;quot;id&amp;quot;: &amp;quot;10685&amp;quot;, &amp;quot;userId&amp;quot;: 171, &amp;quot;salesmanId&amp;quot;: 174, &amp;quot;spotId&amp;quot;: 12, &amp;quot;tenantId&amp;quot;: 2, &amp;quot;channelId&amp;quot;: 413, &amp;quot;quantity&amp;quot;: 6, &amp;quot;listPrice&amp;quot;: 2302, &amp;quot;salePrice&amp;quot;: 1740.34, &amp;quot;discount&amp;quot;: 561.66, &amp;quot;remainAmount&amp;quot;: 1740.34, &amp;quot;items&amp;quot;: [ { &amp;quot;id&amp;quot;: &amp;quot;1&amp;quot;, &amp;quot;sku&amp;quot;: { &amp;quot;id&amp;quot;: 108235, &amp;quot;name&amp;quot;: &amp;quot;XXXXXS601D, (26)L/Pink, (FRE)FREE&amp;quot;, &amp;quot;contentId&amp;quot;: 15664, &amp;quot;brandId&amp;quot;: 1, &amp;quot;code&amp;quot;: &amp;quot;XXXXXS601D26FRE&amp;quot;, &amp;quot;contentCode&amp;quot;: &amp;quot;XXXXXS601D&amp;quot;, &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;, &amp;quot;listPrice&amp;quot;: 710, &amp;quot;options&amp;quot;: [ { &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;(FRE)FREE&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;(26)L/Pink&amp;quot; } ], &amp;quot;attributes&amp;quot;: [ { &amp;quot;k&amp;quot;: &amp;quot;ItemCode&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;AB&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;Year&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;2017&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;SeasonCode&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;S&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;SaleMonth&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;6&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;ContentTypeCode&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;P&amp;quot; } ] }, &amp;quot;quantity&amp;quot;: 1, &amp;quot;listPrice&amp;quot;: 710, &amp;quot;salePrice&amp;quot;: 454.</description>
+      <description>Cart result example { &amp;quot;result&amp;quot;: { &amp;quot;id&amp;quot;: 10685, &amp;quot;userId&amp;quot;: 171, &amp;quot;salesmanId&amp;quot;: 174, &amp;quot;spotId&amp;quot;: 12, &amp;quot;tenantId&amp;quot;: 2, &amp;quot;channelId&amp;quot;: 413, &amp;quot;quantity&amp;quot;: 6, &amp;quot;listPrice&amp;quot;: 2302, &amp;quot;salePrice&amp;quot;: 1740.34, &amp;quot;discount&amp;quot;: 561.66, &amp;quot;remainAmount&amp;quot;: 1740.34, &amp;quot;items&amp;quot;: [ { &amp;quot;id&amp;quot;: 1, &amp;quot;sku&amp;quot;: { &amp;quot;id&amp;quot;: 108235, &amp;quot;name&amp;quot;: &amp;quot;XXXXXS601D, (26)L/Pink, (FRE)FREE&amp;quot;, &amp;quot;contentId&amp;quot;: 15664, &amp;quot;brandId&amp;quot;: 1, &amp;quot;code&amp;quot;: &amp;quot;XXXXXS601D26FRE&amp;quot;, &amp;quot;contentCode&amp;quot;: &amp;quot;XXXXXS601D&amp;quot;, &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;, &amp;quot;listPrice&amp;quot;: 710, &amp;quot;options&amp;quot;: [ { &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;(FRE)FREE&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;(26)L/Pink&amp;quot; } ], &amp;quot;attributes&amp;quot;: [ { &amp;quot;k&amp;quot;: &amp;quot;ItemCode&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;AB&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;Year&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;2017&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;SeasonCode&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;S&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;SaleMonth&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;6&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;ContentTypeCode&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;P&amp;quot; } ] }, &amp;quot;quantity&amp;quot;: 1, &amp;quot;listPrice&amp;quot;: 710, &amp;quot;salePrice&amp;quot;: 454.</description>
     </item>
     
     <item>
@@ -88,7 +73,7 @@ Success:
       <description>Place order /order/place-order
 Parameters    Name Required Type     cartId Yes string   uid No string    Example pp://staging/order/place-order?cartId=1&amp;amp;uid=20170501138400031
 Success:
-{ &amp;quot;id&amp;quot;: &amp;quot;10685&amp;quot;, &amp;quot;orderNo&amp;quot;: &amp;quot;15028499890685&amp;quot;, &amp;quot;uid&amp;quot;: &amp;quot;EE20170815140238&amp;quot;, &amp;quot;parentId&amp;quot;: &amp;quot;0&amp;quot;, &amp;quot;quantity&amp;quot;: 6, &amp;quot;listPrice&amp;quot;: 2302, &amp;quot;salePrice&amp;quot;: 1740.34, &amp;quot;discount&amp;quot;: 561.66, &amp;quot;items&amp;quot;: [ { &amp;quot;seq&amp;quot;: 1, &amp;quot;sku&amp;quot;: { &amp;quot;id&amp;quot;: 108235, &amp;quot;name&amp;quot;: &amp;quot;XXXXXS601D, (26)L/Pink, (FRE)FREE&amp;quot;, &amp;quot;contentId&amp;quot;: 15664, &amp;quot;brandId&amp;quot;: 1, &amp;quot;code&amp;quot;: &amp;quot;XXXXXS601D26FRE&amp;quot;, &amp;quot;contentCode&amp;quot;: &amp;quot;XXXXXS601D&amp;quot;, &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;, &amp;quot;listPrice&amp;quot;: 710, &amp;quot;options&amp;quot;: [ { &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;(FRE)FREE&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;(26)L/Pink&amp;quot; } ], &amp;quot;attributes&amp;quot;: [ { &amp;quot;k&amp;quot;: &amp;quot;ItemCode&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;AB&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;Year&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;2017&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;SeasonCode&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;S&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;SaleMonth&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;6&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;ContentTypeCode&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;P&amp;quot; } ] }, &amp;quot;quantity&amp;quot;: 1, &amp;quot;listPrice&amp;quot;: 710, &amp;quot;salePrice&amp;quot;: 454.</description>
+{ &amp;quot;id&amp;quot;: 10685, &amp;quot;orderNo&amp;quot;: &amp;quot;15028499890685&amp;quot;, &amp;quot;uid&amp;quot;: &amp;quot;EE20170815140238&amp;quot;, &amp;quot;parentId&amp;quot;: &amp;quot;0&amp;quot;, &amp;quot;quantity&amp;quot;: 6, &amp;quot;listPrice&amp;quot;: 2302, &amp;quot;salePrice&amp;quot;: 1740.34, &amp;quot;discount&amp;quot;: 561.66, &amp;quot;items&amp;quot;: [ { &amp;quot;seq&amp;quot;: 1, &amp;quot;sku&amp;quot;: { &amp;quot;id&amp;quot;: 108235, &amp;quot;name&amp;quot;: &amp;quot;XXXXXS601D, (26)L/Pink, (FRE)FREE&amp;quot;, &amp;quot;contentId&amp;quot;: 15664, &amp;quot;brandId&amp;quot;: 1, &amp;quot;code&amp;quot;: &amp;quot;XXXXXS601D26FRE&amp;quot;, &amp;quot;contentCode&amp;quot;: &amp;quot;XXXXXS601D&amp;quot;, &amp;quot;brandCode&amp;quot;: &amp;quot;EE&amp;quot;, &amp;quot;listPrice&amp;quot;: 710, &amp;quot;options&amp;quot;: [ { &amp;quot;k&amp;quot;: &amp;quot;Size&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;(FRE)FREE&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;Color&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;(26)L/Pink&amp;quot; } ], &amp;quot;attributes&amp;quot;: [ { &amp;quot;k&amp;quot;: &amp;quot;ItemCode&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;AB&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;Year&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;2017&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;SeasonCode&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;S&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;SaleMonth&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;6&amp;quot; }, { &amp;quot;k&amp;quot;: &amp;quot;ContentTypeCode&amp;quot;, &amp;quot;v&amp;quot;: &amp;quot;P&amp;quot; } ] }, &amp;quot;quantity&amp;quot;: 1, &amp;quot;listPrice&amp;quot;: 710, &amp;quot;salePrice&amp;quot;: 454.</description>
     </item>
     
   </channel>

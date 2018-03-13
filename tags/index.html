@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>API Description :: PangPang Labs</title>
+    <title>Tags :: PangPang Labs</title>
     
     
     <link href="/css/nucleus.css?1520917747" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/api/">
+  <body class="" data-url="/tags/">
     <nav id="sidebar" class="">
 
 
@@ -184,8 +184,8 @@
   
     
     <li data-nav-id="/api/" title="API Description" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/api/">
@@ -387,13 +387,7 @@
                     
           
           
-            
-            
-          
-          
-            <a href='/'>PangPang Labs</a> > API Description
-          
-         
+            Tags
           
            
                   </span>
@@ -401,37 +395,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#how-to-initialize-sdk">How to Initialize SDK</a>
-<ul>
-<li>
-<ul>
-<li><a href="#android">Android</a></li>
-<li><a href="#ios">iOS</a>
-<ul>
-<li><a href="#swift">Swift</a></li>
-<li><a href="#objective-c">Objective-C</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><a href="#how-to-use-sdk-features">How to use SDK features</a>
-<ul>
-<li>
-<ul>
-<li><a href="#android-1">Android</a></li>
-<li><a href="#ios-1">iOS</a>
-<ul>
-<li><a href="#swift-1">Swift</a></li>
-<li><a href="#objective-c-1">Objective-C</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
+
     </div>
 </div>
 
@@ -443,135 +407,11 @@
         
         <div id="body-inner">
           
-            <h1>API Description</h1>
+            <h1>Tags</h1>
           
 
         
 
-
-
-<p><img src="/images/sdk.png" alt="PangPang POS" /></p>
-
-<h2 id="how-to-initialize-sdk">How to Initialize SDK</h2>
-
-<p>PosSDK use local database. When initializing, you have to send the path where the database file will be stored.</p>
-
-<h4 id="android">Android</h4>
-
-<ol>
-<li><p>For using network, Android require extra permissions.
-Set Permission in <code>AndroidManifest.xml</code> file</p>
-
-<pre><code>&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
-</code></pre></li>
-
-<li><p>Import</p>
-
-<pre><code>import cn.p2shop.pos.Pos;
-</code></pre></li>
-
-<li><p>Init</p>
-
-<pre><code>String path;
-if (android.os.Build.VERSION.SDK_INT &gt;=android.os.Build.VERSION_CODES.LOLLIPOP){
-    path = getNoBackupFilesDir().getAbsolutePath();
-} else{
-    path = getFilesDir().getAbsolutePath();
-}
-Pos.init(path);
-</code></pre></li>
-</ol>
-
-<h4 id="ios">iOS</h4>
-
-<h5 id="swift">Swift</h5>
-
-<ol>
-<li><p>Import</p>
-
-<pre><code>import Pos
-</code></pre></li>
-
-<li><p>Init</p>
-
-<pre><code>let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]
-P2PosInit(path)
-</code></pre></li>
-</ol>
-
-<h5 id="objective-c">Objective-C</h5>
-
-<ol>
-<li><p>Import</p>
-
-<pre><code>#import &lt;Pos/Pos.h&gt;
-</code></pre></li>
-
-<li><p>Init</p>
-
-<pre><code>NSString* path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,
-                                                      NSUserDomainMask,
-                                                      YES) objectAtIndex:0];
-P2PosInit(path);
-</code></pre></li>
-</ol>
-
-<hr />
-
-<h2 id="how-to-use-sdk-features">How to use SDK features</h2>
-
-<p>After initializing, you can use all features.
-All features are definded in <strong>uri format</strong> and all results are <strong>json string</strong>.</p>
-
-<p>The features are described in child pages.</p>
-
-<ul>
-<li><a href="/api/account">Account</a></li>
-<li><a href="/api/context">Context</a></li>
-<li><a href="/api/catalog">Catalog</a></li>
-<li><a href="/api/cart">Cart</a></li>
-<li><a href="/api/order">Order</a></li>
-</ul>
-
-<p>PosSDK use custom uri format like this.</p>
-
-<pre><code>pp://production/account/login?tenant=LABS&amp;username=salesman&amp;password=1234
-</code></pre>
-
-<ul>
-<li>scheme: <code>pp</code></li>
-<li>host: <code>staging</code> or <code>production</code></li>
-<li>path: api endpoint</li>
-<li>query: parameters</li>
-</ul>
-
-<p>This is json response format. All json data should have 3 properties - <code>success</code>, <code>result</code>, <code>error</code>.</p>
-
-<pre><code>{
-  success: true, /* true or false */
-  result: {},    /* actual result of api */
-  error: {}      /* error information */
-}
-</code></pre>
-
-<p>You can call SDK features like this:</p>
-
-<h4 id="android-1">Android</h4>
-
-<pre><code>String result = Pos.call(&quot;pp://staging/account/login?tenant=LABS&amp;username=salesman&amp;password=1234&quot;);
-</code></pre>
-
-<h4 id="ios-1">iOS</h4>
-
-<h5 id="swift-1">Swift</h5>
-
-<pre><code>let result = P2PosCall(&quot;pp://staging/account/login?tenant=LABS&amp;username=salesman&amp;password=1234&quot;)
-</code></pre>
-
-<h5 id="objective-c-1">Objective-C</h5>
-
-<pre><code>NSString* result = P2PosCall(@&quot;pp://staging/account/login?tenant=LABS&amp;username=salesman&amp;password=1234&quot;);
-</code></pre>
 
 
 <footer class=" footline" >
@@ -690,7 +530,6 @@ All features are definded in <strong>uri format</strong> and all results are <st
             
                 
                     
-                    
                 
                 
 
@@ -698,25 +537,6 @@ All features are definded in <strong>uri format</strong> and all results are <st
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -782,6 +602,22 @@ All features are definded in <strong>uri format</strong> and all results are <st
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -824,10 +660,8 @@ All features are definded in <strong>uri format</strong> and all results are <st
 
 
         
-            <a class="nav nav-prev" href="/getting-started/web-api/" title="Web API"> <i class="fa fa-chevron-left"></i></a>
         
-        
-            <a class="nav nav-next" href="/api/account/" title="Account" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

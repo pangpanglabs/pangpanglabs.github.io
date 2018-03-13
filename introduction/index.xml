@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Introductions on PangPang Labs</title>
+    <title>Introduction on PangPang Labs</title>
     <link>http://pangpanglabs.github.io/introduction/</link>
-    <description>Recent content in Introductions on PangPang Labs</description>
+    <description>Recent content in Introduction on PangPang Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
 	<atom:link href="http://pangpanglabs.github.io/introduction/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Introduction</title>
-      <link>http://pangpanglabs.github.io/introduction/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://pangpanglabs.github.io/introduction/</guid>
-      <description>Start A Business For Free Available on iOS and Android devices
-Cloud-based
-Work offline
-Features Shopping cart Promotion &amp;amp; Membership (~ 2017.02.28) Sales statistics (~ 2017.03.15) Reselling &amp;amp; Online delivery (~ 2017.03.31)   Not Supported  User Interface Payment Push &amp;amp; Notification  Downloads Current(v0.1.2) This release fixes issue parsing error
-and adds /cart/clear-cart API.
- Android SDK
- pos.aar   iOS SDK
- Pos.framework.zip    v0.</description>
-    </item>
     
   </channel>
 </rss>

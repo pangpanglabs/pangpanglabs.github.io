@@ -11,11 +11,23 @@
   </url>
   
   <url>
+    <loc>http://pangpanglabs.github.io/introduction/</loc>
+  </url>
+  
+  <url>
     <loc>http://pangpanglabs.github.io/api/context/</loc>
   </url>
   
   <url>
+    <loc>http://pangpanglabs.github.io/getting-started/</loc>
+  </url>
+  
+  <url>
     <loc>http://pangpanglabs.github.io/getting-started/ios/</loc>
+  </url>
+  
+  <url>
+    <loc>http://pangpanglabs.github.io/api/</loc>
   </url>
   
   <url>
@@ -31,56 +43,19 @@
   </url>
   
   <url>
+    <loc>http://pangpanglabs.github.io/usecase/</loc>
+  </url>
+  
+  <url>
+    <loc>http://pangpanglabs.github.io/error-code/</loc>
+  </url>
+  
+  <url>
     <loc>http://pangpanglabs.github.io/api/order/</loc>
   </url>
   
   <url>
-    <loc>http://pangpanglabs.github.io/api/</loc>
-  </url>
-  
-  <url>
-    <loc>http://pangpanglabs.github.io/api/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://pangpanglabs.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://pangpanglabs.github.io/error-code/</loc>
-  </url>
-  
-  <url>
-    <loc>http://pangpanglabs.github.io/error-code/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://pangpanglabs.github.io/getting-started/</loc>
-  </url>
-  
-  <url>
-    <loc>http://pangpanglabs.github.io/getting-started/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://pangpanglabs.github.io/global-settings/</loc>
-  </url>
-  
-  <url>
-    <loc>http://pangpanglabs.github.io/global-settings/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://pangpanglabs.github.io/introduction/</loc>
-  </url>
-  
-  <url>
-    <loc>http://pangpanglabs.github.io/introduction/</loc>
     <priority>0</priority>
   </url>
   
@@ -91,15 +66,6 @@
   
   <url>
     <loc>http://pangpanglabs.github.io/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://pangpanglabs.github.io/usecase/</loc>
-  </url>
-  
-  <url>
-    <loc>http://pangpanglabs.github.io/usecase/</loc>
     <priority>0</priority>
   </url>
   

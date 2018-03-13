@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Getting-starteds on PangPang Labs</title>
+    <title>Getting Started on PangPang Labs</title>
     <link>http://pangpanglabs.github.io/getting-started/</link>
-    <description>Recent content in Getting-starteds on PangPang Labs</description>
+    <description>Recent content in Getting Started on PangPang Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
 	<atom:link href="http://pangpanglabs.github.io/getting-started/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Getting Started</title>
-      <link>http://pangpanglabs.github.io/getting-started/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://pangpanglabs.github.io/getting-started/</guid>
-      <description> Android iOS Web API  </description>
-    </item>
     
     <item>
       <title>Android</title>
@@ -29,7 +20,7 @@
 &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt;  Import
 import cn.p2shop.pos.Pos;  Init
 String path; if (android.os.Build.VERSION.SDK_INT &amp;gt;=android.os.Build.VERSION_CODES.LOLLIPOP){ path = getNoBackupFilesDir().getAbsolutePath(); } else{ path = getFilesDir().getAbsolutePath(); } Pos.init(path);  Call API
-String result = Pos.call(&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);    Setting Download  Current(v0.1.1)  pos.aar   Archived versions  click    In Project Structure  click + select import .JAR/.AAR Package click Next select pos.aar file click Finish click OK and re-open Project Structure select app modules select Dependencies tab click + button select 3.</description>
+String result = Pos.call(&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);    Setting Download  Current(v0.1.3)  pos.aar   Archived versions  click    In Project Structure  click + select import .JAR/.AAR Package click Next select pos.aar file click Finish click OK and re-open Project Structure select app modules select Dependencies tab click + button select 3.</description>
     </item>
     
     <item>
@@ -44,7 +35,7 @@ let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMas
 let result = P2PosCall(&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;)   Objective-C  Import
 #import &amp;lt;Pos/Pos.h&amp;gt;  Init
 NSString* path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0]; P2PosInit(path);  Call API
-NSString* result = P2PosCall(@&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);    Setting Download  Current(v0.1.2)  Pos.framework.zip   Archived versions  click    Project Setting  Extract Pos.framework.zip file. Drag and Drop Pos.</description>
+NSString* result = P2PosCall(@&amp;quot;pp://staging/account/login?tenant=LABS&amp;amp;username=salesman&amp;amp;password=1234&amp;quot;);    Setting Download  Current(v0.1.3)  Pos.framework.zip   Archived versions  click    Project Setting  Extract Pos.framework.zip file. Drag and Drop Pos.</description>
     </item>
     
     <item>

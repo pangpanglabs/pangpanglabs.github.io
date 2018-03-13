@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Error-codes on PangPang Labs</title>
+    <title>Error Code Description on PangPang Labs</title>
     <link>http://pangpanglabs.github.io/error-code/</link>
-    <description>Recent content in Error-codes on PangPang Labs</description>
+    <description>Recent content in Error Code Description on PangPang Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
 	<atom:link href="http://pangpanglabs.github.io/error-code/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Error Code Description</title>
-      <link>http://pangpanglabs.github.io/error-code/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://pangpanglabs.github.io/error-code/</guid>
-      <description>System    Code Description     100 UknownError   101 Pos is not initialized.   102 Host name is not set. use staging or production   103 Host name:{host} is not supported   104 Cannot access to database file. Please check the pos-init process.   105 Not Found. {path} is not defined path.   106 Remote Call failed.   107 {name} is required parameter.</description>
-    </item>
     
   </channel>
 </rss>
